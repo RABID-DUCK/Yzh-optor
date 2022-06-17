@@ -161,7 +161,11 @@
                                             $img = 'null.png';
                                         }   
                             ?>
-
+                            <style>
+                                .item{
+                                    display: none;
+                                }
+                            </style>
                             <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
                                 <div class="product-thumb transition">
                                     <div class="image">
@@ -243,31 +247,38 @@
 
                     <!-- ПОКАЗАТЬ ЕЩЁ -->
                     <script>
-                document.addEventListener("DOMContentLoaded", function(event) {
-                    // let item = $('.container-modules');
-                    //             let show_more = $('#hide-items');
-                    //             let n = 5;
-                    //             function showMore_(n){
-                    //                 for(let i=0; i<item.length; i++){
-                                        
-                    //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                    //                     if(n===item.length) $(show_more).attr('display', 'none');
-                                    
-                    //             }
-                    //         };       
-                                 $('.item').slice(3);
+                                var itemms = document.querySelectorAll('.item');
+                                show__more = document.getElementById('show_more');
+                                var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
+                                nn = 5;
+                                function MoreShow(n){
+                                    for(var i=0; i < itemms.length; i++){
+                                        if(i < nn){
+                                            itemms[i].style.display = 'block';
+                                            ajaxloadingLatest.classList.add('spin-ajax');
+                                            if(nn === itemms.length) {
+                                                show__more.style.display = 'none';
 
+                                            }
+                                        }else{
+                                            break;
+                                        }
+                                    }
+                                }
+                                MoreShow(nn);
+                                show__more.onclick = function(e){
+                                    e.preventDefault();
+                                     nn += 5;
+                                     MoreShow(nn);
+                                }
+                    </script>
+                    <script>
+                document.addEventListener("DOMContentLoaded", function(event) {                       
                             $(document).on('click', '.latest-ajax-load0', function () {
                             $.ajax({
                                 url: 'add_items.php?route=extension/module/latest_grid/getNextPage',
                                 type: 'post',
                                 dataType: 'html',
-                                beforeSend: function () {
-                                    $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                },
-                                complete: function () {
-                                    $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                },
                                 success: function (data) {
                                     $data = $(data);
                                     var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
