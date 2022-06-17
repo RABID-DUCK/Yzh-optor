@@ -218,6 +218,7 @@
                             <span class="latest-ajax-load0" id="show_more">Показать еще</span>
                         </div>
                     </div>
+                    <p>asdasd</p>
                     <script>
                         document.addEventListener("DOMContentLoaded", function() {
                                 let item = $('#hide-items');
