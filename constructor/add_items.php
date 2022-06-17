@@ -73,7 +73,11 @@
                     mysqli_query($conn, "DELETE FROM `items` WHERE `items`.`id` = '$elem_id'");
                 }
             ?>
+<<<<<<< HEAD
              </tr> </thead>
+=======
+            </tr> </thead>
+>>>>>>> daa83c11d053465daa56017b57d1bae5a82beb95
             <?php $elems = mysqli_query($conn, "SELECT * FROM items");
            foreach ($elems as $elem) {
             switch (strlen($elem['id'])) {
@@ -111,8 +115,13 @@
                         <input onclick="del_elem(<?=$elem['id']?>)" type="submit" name="delete" id="bd_del" value="Удалить">
                     </td>
                 </tr>
+<<<<<<< HEAD
             <?php }; ?>
             <script>
+=======
+                <?php }; ?>
+                <script>
+>>>>>>> daa83c11d053465daa56017b57d1bae5a82beb95
                     function del_elem(id) {
                         document.getElementById("elem_del_id").value = id;
                     }
