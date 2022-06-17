@@ -68,8 +68,12 @@
                     $available_item = trim($_POST["available"]);
                     mysqli_query($conn, "INSERT INTO `items` (`id`, `name`, `price`, `category`, `img`, `available`) VALUES ('$id_item', '$name_item', '$price_item', '$category_item', '$img_item', '$available_item')");
                 }
+                if (isset($_POST['delete'])) {
+                    $elem_id = trim($_POST["elem_del_id"]);
+                    mysqli_query($conn, "DELETE FROM `items` WHERE `items`.`id` = '$elem_id'");
+                }
             ?>
-            </form> </tr> </thead>
+            </tr> </thead>
             <?php $elems = mysqli_query($conn, "SELECT * FROM items");
            foreach ($elems as $elem) {
             switch (strlen($elem['id'])) {
@@ -103,9 +107,18 @@
                         else
                             echo 'Нет в наличии';
                     ?></td>
-                    <td></td>
+                    <td>
+                        <input onclick="del_elem(<?=$elem['id']?>)" type="submit" name="delete" id="bd_del" value="Удалить">
+                    </td>
                 </tr>
-            <?php }; ?>
+                <?php }; ?>
+                <script>
+                    function del_elem(id) {
+                        document.getElementById("elem_del_id").value = id;
+                    }
+                </script>
+                <input type="hidden" name="elem_del_id" id="elem_del_id" value="-">
+            </form>
         </table>
     </div>
 
