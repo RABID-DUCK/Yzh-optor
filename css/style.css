@@ -114,7 +114,7 @@ table > thead > tr > th {
     visibility: hidden;
   }
 }
-.item {
+.item_hidden {
   display: none;
 }
 @media (min-width: 992px) {
