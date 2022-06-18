@@ -3518,7 +3518,7 @@
                 style="font-size: 14px; transition: transform 0.2s ease 0s; transform: rotate(-180deg);"></span></span>
             <p dir="ltr"
                style="line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:12pt;">
-                <span style="font-size:10.5pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Email:</span><span
+                <span style="fontsubcribe-size:10.5pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Email:</span><span
                     style="font-size:10.5pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> Yuzh.Optor@mail.ru</span>
             </p>
         </div>
@@ -3529,6 +3529,22 @@
     <!-- скрипт звонка -->
     <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
     <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;"><div class="mfp-container mfp-ajax-holder mfp-s-ready"><div class="mfp-content"><div id="popup-callback" class="wcb-4">
+        <style>
+            .mfp-close{
+                right: -30px !important;
+                background: transparent none repeat scroll 0 0;
+                border: 0 none;
+                color: #fff !important;
+                cursor: pointer !important;
+                font-size: 55px;
+                height: 45px;
+                outline: medium none;
+                position: absolute;
+                top: -10px;
+                width: 45px;
+                z-index: 1060;
+            }
+        </style>
         <div class="popup-heading"><i class=""></i>&nbsp;&nbsp;Заказать обратный звонок</div>
         <div class="popup-center">
             <form id="feedback" action="constructor/form.php" method="post">
@@ -3568,7 +3584,7 @@
 
                     <div class="popup-footer">
                         <div class="col-xs-12 text-center"></div>
-                        <input type="submit" name="submit" value="Заказать звонок">
+                        <input class="btn-callback ladda-button" type="submit" name="submit" value="Заказать звонок" style="margin-left: 72px;">
                     </div>
                     
                     </div>
@@ -3581,7 +3597,24 @@
         </div>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
-                $('#feedback')
+                $('#feedback').submit(function(e) {
+                    e.preventDefault();
+                    $.ajax({
+                        type: "POST",
+                        url: "constructor/form.php",
+                        data: $(this).serialize(),
+                        success: function(response){
+                            // let jsonData = JSON.parse(response);
+                            if(response.success == "1"){
+                                alert('Упс! Что-то пошло не так...');
+                            }
+                            else{
+                                $('.hide-call, .mfp-wrap').addClass('hide-zvonok');
+                                alert('Звонок запрошен. С вами свяжутся в ближайшее время!');
+                            }
+                        }
+                    });
+                });
         });       
         </script>
         <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div>
@@ -3605,7 +3638,7 @@
         });
     });
     </script>
-    <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
+    <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"></div></div></div>
 
 <!-- конец его бля -->
 
