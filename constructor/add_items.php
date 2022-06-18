@@ -73,7 +73,7 @@
                     mysqli_query($conn, "DELETE FROM `items` WHERE `items`.`id` = '$elem_id'");
                 }
             ?>
-             </tr> </thead>
+            </tr> </thead>
             <?php $elems = mysqli_query($conn, "SELECT * FROM items");
            foreach ($elems as $elem) {
             switch (strlen($elem['id'])) {
@@ -108,16 +108,16 @@
                             echo 'Нет в наличии';
                     ?></td>
                     <td>
-                        <input onclick="del_elem(<?=$elem['id']?>)" type="submit" name="delete" id="bd_del" value="Удалить">
+                        <input onclick="del_elem(<?=trim($elem['id'], $characters = '0')?>)" type="submit" name="delete" id="delete" value="Удалить">
                     </td>
                 </tr>
-            <?php }; ?>
-            <script>
+                <?php }; ?>
+                <script>
                     function del_elem(id) {
                         document.getElementById("elem_del_id").value = id;
                     }
                 </script>
-                <input type="hidden" name="elem_del_id" id="elem_del_id" value="-">
+                <input type="hidden" name="elem_del_id" id="elem_del_id" value=<?= $elem['id'] ?>>
             </form>
         </table>
     </div>
@@ -238,38 +238,31 @@
 
                     <!-- ПОКАЗАТЬ ЕЩЁ -->
                     <script>
-                                var itemms = document.querySelectorAll('.item');
-                                show__more = document.getElementById('show_more');
-                                var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                                nn = 5;
-                                function MoreShow(nn){
-                                    for(var i=0; i < itemms.length; i++){
-                                        if(i < nn){
-                                            itemms[i].style.display = 'block';
-                                            ajaxloadingLatest.classList.add('spin-ajax');
-                                            if(nn === itemms.length) {
-                                                show__more.style.display = 'none';
+                document.addEventListener("DOMContentLoaded", function(event) {
+                    // let item = $('.container-modules');
+                    //             let show_more = $('#hide-items');
+                    //             let n = 5;
+                    //             function showMore_(n){
+                    //                 for(let i=0; i<item.length; i++){
+                                        
+                    //                     $(item[i]).slice(5).toggleClass('item_hidden');
+                    //                     if(n===item.length) $(show_more).attr('display', 'none');
+                                    
+                    //             }
+                    //         };       
+                                 $('.item').slice(3);
 
-                                            }
-                                        }else{
-                                            break;
-                                        }
-                                    }
-                                }
-                                MoreShow(nn);
-                                show__more.onclick = function(e){
-                                    e.preventDefault();
-                                     nn += 5;
-                                     MoreShow(nn);
-                                }
-                    </script>
-                    <script>
-                document.addEventListener("DOMContentLoaded", function(event) {                       
                             $(document).on('click', '.latest-ajax-load0', function () {
                             $.ajax({
                                 url: 'add_items.php?route=extension/module/latest_grid/getNextPage',
                                 type: 'post',
                                 dataType: 'html',
+                                beforeSend: function () {
+                                    $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
+                                },
+                                complete: function () {
+                                    $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
+                                },
                                 success: function (data) {
                                     $data = $(data);
                                     var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
