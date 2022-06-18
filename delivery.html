@@ -3531,7 +3531,7 @@
     <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;"><div class="mfp-container mfp-ajax-holder mfp-s-ready"><div class="mfp-content"><div id="popup-callback" class="wcb-4">
         <div class="popup-heading"><i class=""></i>&nbsp;&nbsp;Заказать обратный звонок</div>
         <div class="popup-center">
-            <form action="constructor/form.php" method="post">
+            <form id="feedback" action="constructor/form.php" method="post">
                     <div class="col-xs-12">
                                 <div class="form-group sections_block_rquaired">
                         <div class="input-group margin-bottom-sm">			
@@ -3565,19 +3565,30 @@
                         <input type="text" name="time_callback_on" value="" class="form-control start" placeholder="Когда Вам Перезвонить:">
                         <input type="hidden" name="time_callback_off" value="">
                     </div>
-                              
-                <input type="hidden" id="callback_url" value="" name="url_site">	
+
+                    <div class="popup-footer">
+                        <div class="col-xs-12 text-center"></div>
+                        <input type="submit" name="submit" value="Заказать звонок">
+                    </div>
+                    
+                    </div>
+                <input type="hidden" value="" name="url_site">	
             </div>
             
             
             <div class="anytext-callback marb col-xs-12 text-center"></div>
             </form>
         </div>
-        <div class="popup-footer">
-            <div class="col-xs-12 text-center">
-            <button onclick="sendCallback();" type="submit" class="btn-callback ladda-button" data-style="expand-left"><span class="ladda-label">Заказать звонок</span></button>
-            </div>
-        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                $('#feedback')
+        });       
+        </script>
+        <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div>
+        </div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
+    
+    <!-- конец его бля -->
+    
     <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"> 
     <script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
     <script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
@@ -3592,10 +3603,10 @@
         var ContactouterHeight = $('#callbackpro_contacts').outerHeight()-6;
         $(function(){$('#callbackpro_contacts').css({'top':-ContactouterHeight});});
         });
+    });
     </script>
     <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
 
-});
 <!-- конец его бля -->
 
 <script>
@@ -3604,6 +3615,8 @@
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         return emailReg.test($email);
     }
+
+
 
     $(document).ready(function () {
         $('#subcribe').click(function () {

@@ -1,25 +1,29 @@
 <?php
+     $email = "onetaphack@gmail.com";
 
-
-     $name_email = "Заказать обратный звоно"; // tema 
+     $tema_email = "Заказать обратный звоно"; // tema 
      $num_email = trim($_POST['phone']); // nomer telephone
-     $email = "Yuzh.Optor@mail.ru";
-
-     $description_email = htmlspecialchars($_POST['comment_buyer']); // opisaniye
-     $description_email = trim($description_email);
-
-     $when_call_email = ""; // kogda zvonit
-
      $user_email = trim($_POST['email_buyer']); // pochta usera
      $user_email = "=?utf-8?B?".base64_encode($user_email)."?=";
+     $description_email = htmlspecialchars($_POST['comment_buyer']); // opisaniye
+     $description_email = trim($description_email);
+     $when_call_email = $_POST['time_callback_on']; // kogda zvonit
 
      $headers = "FROM: $user_email" . "\r\n" .
     "Replay-To: $user_email" . "\r\n" .
     "X-Mailer: PHP/" .phpversion();
 
-     if(mail($email, $name_email, "$description_email \n\r $num_email", $headers)){
+     if(mail($email, $tema_email, "Номер телефона: ".$num_email."\n\r".
+     "Почта покупателя: ".$user_email."\n\r"."Комментарий к форме: ".".
+     $description_email.\n\r"."Когда перезвонить: ".$when_call_email,
+      $headers)){
         echo "<script>";
-        echo "alert('Сообщение отправлено');";
+        echo "alert('Звонок запрошен. С вами свяжутся в ближайшее время!');";
+        echo "</script>";
+     }
+     else{
+        echo "<script>";
+        echo "alert('Упс! Что-то пошло не так :/ ');";
         echo "</script>";
      }
 
