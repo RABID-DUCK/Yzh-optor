@@ -242,7 +242,7 @@
                                 show__more = document.getElementById('show_more');
                                 var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
                                 nn = 5;
-                                function MoreShow(n){
+                                function MoreShow(nn){
                                     for(var i=0; i < itemms.length; i++){
                                         if(i < nn){
                                             itemms[i].style.display = 'block';
