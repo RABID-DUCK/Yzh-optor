@@ -64,12 +64,12 @@ table > thead > tr th > select {
   width: 100%;
   background-color: #36393F;
 }
-table > thead > tr > td > select > option[value="0"],
-table > thead > tr th > select > option[value="0"] {
+table > thead > tr > td > select.actual > option[value="0"],
+table > thead > tr th > select.actual > option[value="0"] {
   color: #F04747;
 }
-table > thead > tr > td > select > option[value="1"],
-table > thead > tr th > select > option[value="1"] {
+table > thead > tr > td > select.actual > option[value="1"],
+table > thead > tr th > select.actual > option[value="1"] {
   color: #43B581;
 }
 table > thead > tr > th {

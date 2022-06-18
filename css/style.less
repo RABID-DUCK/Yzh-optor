@@ -74,13 +74,15 @@ table {
                 >select {
                     width: 100%;
                     background-color: @grey;
-                    >option[value="0"]
-                    {
-                        color: @red;
-                    }
-                    >option[value="1"]
-                    {
-                        color: @green;
+                    &.actual{
+                        >option[value="0"]
+                        {
+                            color: @red;
+                        }
+                        >option[value="1"]
+                        {
+                            color: @green;
+                        }
                     }
                 }
             }

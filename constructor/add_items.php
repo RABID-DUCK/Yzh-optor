@@ -55,9 +55,19 @@ $dir_img = __DIR__ . './../img/tovaru/';
                 <td><input type="text" name="id" id="bd_id" placeholder="Индекс"></td>
                 <td><input type="text" name="name" id="bd_name" placeholder="Имя"></td>
                 <td><input type="text" name="price" id="bd_price" placeholder="Цена"></td>
-                <td><input type="text" name="category" id="bd_category" placeholder="Категории"></td>
+                <td><select type="text" name="category" id="bd_category" placeholder="Категории">
+                    <?php
+                        $first_categorys = mysqli_query($conn, "SELECT * FROM `category`");
+                        foreach ($first_categorys as $ct) {?>
+                            <option value="<?=$ct['first_id']?>"><?=$ct['third_name']?> &gt; <?=$ct['second_name']?> &gt; <?=$ct['first_name']?></option>
+                        <?php
+                        };
+                    ?>
+                </select>
+
+                </td>
                 <td><input type="text" name="img" placeholder="Формат (png, jpg, jpeg)"></td>
-                <td><select name="available" id="bd_available">
+                <td><select name="available" id="bd_available" class="actual">
                         <option value="1">В наличии</option>
                         <option value="0">Нет в наличии</option>
                     </select></td>
@@ -67,10 +77,11 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     $id_item = trim($_POST["id"]);
                     $name_item = $_POST["name"];
                     $price_item = trim($_POST["price"]);
-                    $category_item = $_POST["category"];
                     $img_item = trim($_POST["img"]);
                     $available_item = trim($_POST["available"]);
-                    mysqli_query($conn, "INSERT INTO `items` (`id`, `name`, `price`, `category`, `img`, `available`) VALUES ('$id_item', '$name_item', '$price_item', '$category_item', '$img_item', '$available_item')");
+                    $category_item = trim($_POST["category"]);  
+                    $ct_item = mysqli_fetch_all(mysqli_query($conn, "SELECT `second_id`, `third_id` FROM `category` WHERE `first_id` = '$category_item'"))[0];
+                    mysqli_query($conn, "INSERT INTO `items` (`id`, `name`, `price`, `first_id`, `second_id`, `third_id`, `img`, `available`) VALUES ('$id_item', '$name_item', '$price_item', '$category_item', '$ct_item[0]', '$ct_item[1]', '$img_item', '$available_item')");
                 }
                 if (isset($_POST['delete'])) {
                     $elem_id = trim($_POST["elem_del_id"]);
@@ -104,7 +115,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                 <td><?= $elem['id'] ?></td>
                 <td><?= $elem['name'] ?></td>
                 <td><?= $elem['price'] ?> руб.</td>
-                <td><?= $elem['category'] ?></td>
+                <td><?= $elem[''] ?></td>
                 <td><img src="../img/tovaru/<?= $img ?>" alt="Товар <?= $elem['id'] ?>"></td>
                 <td><?php
                     if ($elem['available'])
