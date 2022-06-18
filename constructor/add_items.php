@@ -108,14 +108,17 @@
                             echo 'Нет в наличии';
                     ?></td>
                     <td>
-                        <input onclick="del_elem(<?=$elem['id']?>)" type="submit" name="delete" id="bd_del" value="Удалить">
+                        <input onclick="del_elem(<?=trim($elem['id'], $characters = '0')?>)" type="submit" name="delete" id="delete" value="Удалить">
                     </td>
                 </tr>
                 <?php }; ?>
                 <script>
-
+                    function del_elem(id) {
+                        console.log(id);
+                        document.getElementById("elem_del_id").value = id;
+                    }
                 </script>
-                <input type="hidden" name="elem_del_id" id="elem_del_id" value="<?= $elem['id'] ?>">
+                <input type="hidden" name="elem_del_id" id="elem_del_id" value=<?= $elem['id'] ?>>
             </form>
         </table>
     </div>
