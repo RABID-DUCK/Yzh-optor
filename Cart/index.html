@@ -1654,7 +1654,8 @@ $('#search a').click(function(){
     </div>
     </div>
 	<script>
-$(document).ready(function() {
+		window.addEventListener('DOMContentLoaded', (event) => {
+			$(document).ready(function() {
 	var width_fmns = viewport().width;
 	if (width_fmns >= 992) {
 		if($("#top-fixed").length==0) {
@@ -1771,9 +1772,10 @@ $('#top-fixed .btn-search').bind('click', function() {
 		url += '&category_id=' + encodeURIComponent(category_id) + '&sub_category=true';
 	}
 	location = url;
+			});
+		});
+	});
 
-});
-});
 </script>
 	
 </header><div class="container">
