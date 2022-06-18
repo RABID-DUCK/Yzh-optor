@@ -155,7 +155,8 @@
     </style>
     <script src="js/ns-cache/_64b8609b55b5e3556b172af674a9b309.js"></script>
     <script>
-        function init(elem, options) {
+        window.addEventListener('DOMContentLoaded', (event) => {
+            function init(elem, options) {
             elem.addClass('countdownHolder');
             $.each(['Days', 'Hours', 'Minutes', 'Sec'], function (i) {
                 var clas;
@@ -210,6 +211,8 @@
                 $('#messageLoadPage').hide();
             }
         }
+});
+        
     </script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -1526,7 +1529,8 @@
             </div>
             <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                 <script>
-                    $(document).ready(function () {
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        $(document).ready(function () {
                         var category_id_page = $('#content select[name=\'category_id\']').find("option:selected").attr("value");
                         var category_id_html = $('#content select[name=\'category_id\']').find("option:selected").html();
 
@@ -1535,6 +1539,7 @@
                         $(".category-name").html(category_id_html);
                         $('.select-category').find('.filter-option').html(category_id_html)
                     });
+                });     
                 </script>
                 <div id="searchtop">
                     <div id="search" class="input-group pt20">
@@ -1580,13 +1585,16 @@
                     <div id="search_word" class="hidden-xs hidden-sm">Я ищу, например, <a> Ведра</a></div>
                 </div>
                 <script>
-                    $('#search a').click(function () {
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        $('#search a').click(function () {
                         $("#selected_category").val($(this).attr('data-idsearch'));
                         $('.category-name').html($(this).html());
                     });
+                });
                 </script>
                 <script>
-                    $(document).ready(function () {
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        $(document).ready(function () {
                         var autoSearch = $('#searchtop input[name="search"]');
 
                         var customAutocompleteSearchtop = null;
@@ -1701,9 +1709,11 @@
                             }
                         });
                     });
+                });
                 </script>
                 <script>
-                    $(document).on('click', '#search-fixed-top input[name="search"]', function () {
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        $(document).on('click', '#search-fixed-top input[name="search"]', function () {
                         var autoSearchFixed = $('#search-fixed-top input[name="search"]');
                         var customAutocomplete = null;
                         $('#search-fixed-top ul.dropdown-menu.autosearch').remove();
@@ -1818,6 +1828,7 @@
                             }
                         });
                     });
+                });
                 </script>
             </div>
         </div>
@@ -3520,7 +3531,7 @@
     <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;"><div class="mfp-container mfp-ajax-holder mfp-s-ready"><div class="mfp-content"><div id="popup-callback" class="wcb-4">
         <div class="popup-heading"><i class=""></i>&nbsp;&nbsp;Заказать обратный звонок</div>
         <div class="popup-center">
-            <form id="callback_data" data-ajax-submit="" enctype="multipart/form-data" method="post">
+            <form action="constructor/form.php" method="post">
                     <div class="col-xs-12">
                                 <div class="form-group sections_block_rquaired">
                         <div class="input-group margin-bottom-sm">			
@@ -3571,7 +3582,8 @@
     <script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
     <script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
     <script>
-    $('.start').datetimepicker({
+        window.addEventListener('DOMContentLoaded', (event) => {
+            $('.start').datetimepicker({
         pickDate: true,
         minDate : moment(),
         pickTime: true
@@ -3582,11 +3594,13 @@
         });
     </script>
     <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
+
+});
 <!-- конец его бля -->
 
 <script>
-
-    function validateEmail($email) {
+    window.addEventListener('DOMContentLoaded', (event) => {
+        function validateEmail($email) {
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         return emailReg.test($email);
     }
@@ -3633,6 +3647,8 @@
 
         })
     });
+});
+   
 </script>
 
 
@@ -3660,7 +3676,8 @@ function price_format(n) {
     <div class="tcb-layout3"></div>
 </div>
 <script>
-    function get_modal_callbacking() {
+    window.addEventListener('DOMContentLoaded', (event) => {
+        function get_modal_callbacking() {
         $.magnificPopup.open({
             tLoading: loading_masked_img,
             items: {
@@ -3669,6 +3686,7 @@ function price_format(n) {
             },
         });
     }
+});
 </script>
 <footer>
     <div class="footer-top">
