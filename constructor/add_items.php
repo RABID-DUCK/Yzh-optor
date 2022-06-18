@@ -148,7 +148,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                 <div class="title-module"><span>Перчатки</span></div>
                 <div class="product-slider">
                     <div class="container-modules latest_gv latest_grid0">
-                        <?php
+                        <?php 
                         foreach ($elems as $elem) {
                             switch (strlen($elem['id'])) {
                                 case 1:
@@ -280,8 +280,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                 itemms[i].style.display = 'block';
                                 ajaxloadingLatest.classList.add('spin-ajax');
                                 if (nn === itemms.length) {
-                                    show__more.style.display = 'none';
-
                                 }
                             } else {
                                 break;
