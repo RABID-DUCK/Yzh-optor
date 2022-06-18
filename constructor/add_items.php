@@ -73,11 +73,7 @@
                     mysqli_query($conn, "DELETE FROM `items` WHERE `items`.`id` = '$elem_id'");
                 }
             ?>
-<<<<<<< HEAD
-             </tr> </thead>
-=======
             </tr> </thead>
->>>>>>> daa83c11d053465daa56017b57d1bae5a82beb95
             <?php $elems = mysqli_query($conn, "SELECT * FROM items");
            foreach ($elems as $elem) {
             switch (strlen($elem['id'])) {
@@ -115,18 +111,11 @@
                         <input onclick="del_elem(<?=$elem['id']?>)" type="submit" name="delete" id="bd_del" value="Удалить">
                     </td>
                 </tr>
-<<<<<<< HEAD
-            <?php }; ?>
-            <script>
-=======
                 <?php }; ?>
                 <script>
->>>>>>> daa83c11d053465daa56017b57d1bae5a82beb95
-                    function del_elem(id) {
-                        document.getElementById("elem_del_id").value = id;
-                    }
+
                 </script>
-                <input type="hidden" name="elem_del_id" id="elem_del_id" value="-">
+                <input type="hidden" name="elem_del_id" id="elem_del_id" value="<?= $elem['id'] ?>">
             </form>
         </table>
     </div>
@@ -237,30 +226,38 @@
                         </div>
                         <div class="showmore-latest0 box-showmore">
                             <div class="ajaxloadingLatest"></div>
-                            <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
+                            <span class="latest-ajax-load0" id="show_more">Показать еще</span>
                         </div>
                     </div>
-
-                    <!-- ПОКАЗАТЬ ЕЩЁ -->
                     <script>
-                document.addEventListener("DOMContentLoaded", function(event) {
-                    // let item = $('.container-modules');
-                    //             let show_more = $('#hide-items');
-                    //             let n = 5;
-                    //             function showMore_(n){
-                    //                 for(let i=0; i<item.length; i++){
-                                        
-                    //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                    //                     if(n===item.length) $(show_more).attr('display', 'none');
-                                    
-                    //             }
-                    //         };       
-                                 $('.item').slice(3);
+                        document.addEventListener("DOMContentLoaded", function() {
+                                let item = $('#hide-items');
+                                let show_more = $('#show-more');
+                                let n = 5;
+
+                                function showMore_(n){
+                                    for(let i=0; i<item.length; i++){
+                                        if(i<n){
+                                            item[i].style.display = 'block';
+                                            if(n===item.length) show_more.style.display = 'none';
+                                        }else{
+                                            break;
+                                        }
+                                    }
+                                }
+                                showMore_(n);
+                                show_more.click = function(e){
+                                    e.preventDefault();
+                                    n += 5;
+                                    showMore(n);
+                                }
+
 
                             $(document).on('click', '.latest-ajax-load0', function () {
                             $.ajax({
-                                url: 'add_items.php?route=extension/module/latest_grid/getNextPage',
+                                url: 'index.php?route=extension/module/latest_grid/getNextPage',
                                 type: 'post',
+                                data: 'page=' + $(this).attr('data-nextpage') + '&module=0&setting=YToxMjp7czo0OiJuYW1lIjtzOjA6IiI7czoxMjoidGl0bGVfbW9kdWxlIjtzOjA6IiI7czoxMToiY2F0ZWdvcnlfaWQiO3M6MzoiMTM2IjtzOjE5OiJmaWx0ZXJfc3ViX2NhdGVnb3J5IjtzOjE6IjEiO3M6MTU6InN0YXR1c19zaG93bW9yZSI7czoxOiIxIjtzOjk6ImxpbWl0X21heCI7czoyOiIyMCI7czo1OiJsaW1pdCI7czoxOiI1IjtzOjEyOiJsaW1pdF90YWJsZXQiO3M6MToiMyI7czo5OiJsaW1pdF9tb2IiO3M6MToiMiI7czo1OiJ3aWR0aCI7czozOiIyMDAiO3M6NjoiaGVpZ2h0IjtzOjM6IjIwMCI7czo2OiJzdGF0dXMiO3M6MToiMSI7fQ==',
                                 dataType: 'html',
                                 beforeSend: function () {
                                     $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
@@ -270,15 +267,23 @@
                                 },
                                 success: function (data) {
                                     $data = $(data);
-                                    var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                    $('.latest_grid0').append($products); // ебашим его после каждого блока
+                                    var $products = $data.find('.latest_grid0 > div.item');
+                                    var $product_img = $products.find('a > img');
+
+                                    $product_img.each(function () {
+                                        if ($(this).attr('data-additional-hover')) {
+                                            var img_src = $(this).attr('data-additional-hover');
+                                            $(this).addClass('main-img');
+                                            $(this).after('<img src="' + img_src + '" class="additional-img-hover img-responsive" title="' + $(this).attr('alt') + '" />');
+                                        }
+                                    });
+                                    $('.latest_grid0').append($products);
+                                    $('.showmore-latest0').replaceWith($data.find('.showmore-latest0'));
                                 }
                             });
                         })
-                    }); 
+                    });       
                     </script>
-                            <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
                     <script>
                         document.addEventListener('DOMContentLoaded', function() {
                             $('.latest_grid0').each(function () {
