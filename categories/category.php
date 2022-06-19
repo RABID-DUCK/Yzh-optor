@@ -7,7 +7,7 @@
 <!DOCTYPE HTML>
 <html dir="ltr" lang="ru">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -263,51 +263,7 @@
         <div class="container">
             <div class="row">
                 <div class="menu_fix col-sm-3 col-md-3">
-                    <nav id="menu" class="btn-group btn-block">
-                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bars"></i>
-                            <span class="text-category">Категории</span>
-                        </button>
-
-                    <ul id="menu-list" class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-img" href="javascript:void(0);"></a>
-                        </li>
-                    <li class="hidden-md hidden-lg">
-                        <a class="dropdown-img" href="../delivery.html">Доставка</a>
-                    </li>        
-
-                    <?php foreach((array)$third_name as $u_third): ?>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>    
-                        <a href="AVTOPRINADLEZhNOSTI" class="parent-link dropdown-img">
-                                <i class="fa fa-angle-down arrow"></i><?= $u_third ?></a>          
-                        <?php endforeach; ?>
-
-                        <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                             <div class="dropdown-inner">
-
-                             <?php foreach((array)$second_name as $u_second): ?>
-                        <ul class="list-unstyled nsmenu-haschild">
-                                <li class="nsmenu-issubchild"><a href="#/avtoaksessuary/">
-                                    <i class="fa fa-angle-down arrow"></i> <?= $u_second ?></a>
-                                <?php endforeach; ?>
-
-                                <?php foreach((array)$first_name as $u_first): ?>
-                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                    <li class="">
-                                        <a href="#/avtoaksessuary/avto-salfetki/"><?= $u_first ?></a>
-                                    </li>   
-                                <?php endforeach; ?>      
-
-                            </li>    
-                    </li>                              
-                </ul>
-
-                    </nav>
+                    
                 </div>
                 <div class="phone_fix col-sm-2 col-md-3 ">
                     <div id="phone">
@@ -420,6 +376,7 @@
             </div>
         </div>
     </div>
+    
     <header>
         <div class="container">
             <div class="row vertical-align">
@@ -549,146 +506,60 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container category" id="category">
             <div class="row">
                 <div class="col-sm-12 col-md-3 menu-box ">
-                    <nav id="menu" class="btn-group btn-block">
+                <nav id="menu" class="btn-group btn-block">
                         <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bars"></i>
                             <span class="text-category">Категории</span>
                         </button>
-                        <ul id="menu-list" class="dropdown-menu">
 
-                            <li>
-                                <a class="dropdown-img" href="javascript:void(0);">
-                                </a>
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="../delivery.html">
-                                    Доставка </a>
-                            </li>
+                    <ul id="menu-list" class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-img" href="javascript:void(0);"></a>
+                        </li>
+                    <li class="hidden-md hidden-lg">
+                        <a class="dropdown-img" href="../delivery.html">Доставка</a>
+                    </li>        
+
+                    <?php
+                     $third_name = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
+                    foreach($third_name as $u_third): ?>
                             <li class="dropdown ">
                                 <span class="toggle-child">
                                     <i class="fa fa-plus plus"></i>
                                     <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="avtoprinadlezhnosti/index.html" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    АВТОПРИНАДЛЕЖНОСТИ </a>
+                                </span>    
+                        <a href="AVTOPRINADLEZhNOSTI" class="parent-link dropdown-img">
+                                <i class="fa fa-angle-down arrow"></i><?= $u_third["third_name"] ?></a>          
+                        <?php endforeach; ?>
 
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a href="avtoprinadlezhnosti/avtoaksessuary/index.html"><i
-                                                        class="fa fa-angle-down arrow"></i> Автоаксессуары </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/index.html">
-                                                            Авто салфетки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoaksessuary/zhilet-signalnyy/index.html">
-                                                            Жилет сигнальный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoaksessuary/kanistra/index.html">
-                                                            Канистра </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoaksessuary/prikurivatel/index.html">
-                                                            Прикуриватель </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoaksessuary/shchetki-skrebki/index.html">
-                                                            Щетки-скребки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="avtoprinadlezhnosti/avtoinstrumenty/index.html"><i
-                                                        class="fa fa-angle-down arrow"></i> Автоинструменты </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/blok-odnorolnyy-s-kryukom/index.html">
-                                                            Блок однорольный с крюком </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/vorotok/index.html">
-                                                            Вороток </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/klyuch-balonnyy/index.html">
-                                                            Ключ балонный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/kompressory-/index.html">
-                                                            Компрессоры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/lebedka/index.html">
-                                                            Лебедка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/montazhka/index.html">
-                                                            Монтажка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/nabor-dlya-remonta/index.html">
-                                                            Набор для ремонта </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/styazhka-gruza/index.html">
-                                                            Стяжка груза </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/tal-tsepnaya/index.html">
-                                                            Таль Цепная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtoinstrumenty/tross-buksirovochnyy/index.html">
-                                                            Тросс буксировочный </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="avtoprinadlezhnosti/avtokhimiya/index.html"><i
-                                                        class="fa fa-angle-down arrow"></i> Автохимия </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="avtoprinadlezhnosti/avtokhimiya/antirzhavchina-smazka/index.html">
-                                                            Антиржавчина - Смазка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a href="avtoprinadlezhnosti/avtokhimiya/maslo/index.html">
-                                                            Масло </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
+                             <div class="dropdown-inner">
 
-
-                            </li>
-                        </ul>
-                    </nav>
+                             <?php
+                              $second_name = mysqli_query($conn, "SELECT DISTINCT `second_name` FROM `category`");
+                             foreach($second_name as $u_second): ?>
+                        <ul class="list-unstyled nsmenu-haschild">
+                                <li class="nsmenu-issubchild"><a href="#/avtoaksessuary/">
+                                    <i class="fa fa-angle-down arrow"></i> <?= $u_second["second_name"]; ?></a>
+                                <?php endforeach; ?>
+                                
+                        <?php
+                            $first_name = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category`");
+                            foreach($first_name as $u_first): ?>
+                        <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
+                            <li class="">
+                                <a href="#/avtoaksessuary/avto-salfetki/"><?= $u_first["first_name"] ?></a>
+                            </li>   
+                        <?php endforeach; ?>      
+                    </li>    
+                </li>                              
+            </ul>
+        </nav>
+    </ul>
+    
                 </div>
                 <div class="col-md-9 hidden-xs hidden-sm clearfix">
                     <nav id="additional-menu" class="navbar hmenu_type">
@@ -807,13 +678,12 @@
 
                     $(window).scroll(function () {
                         if ($(this).scrollTop() > 200) {
-                            $('header .shopping-cart #cart').removeClass('open');
-                            $('#top-fixed').addClass('sticky-header-1');
+                            $('#category').addClass('category');
                         } else {
-                            $('#top-fixed').removeClass('sticky-header-1');
+                            $('#category').removeClass('category');
                         }
                     });
-                    $('#top-fixed #menu-list').menuAim({
+                    $('#category #menu-list').menuAim({
                         activateCallback: activateSubmenu_fixed,
                         deactivateCallback: deactivateSubmenu_fixed,
                     });
