@@ -6,12 +6,8 @@
 
 <!DOCTYPE HTML>
 <html dir="ltr" lang="ru">
-
-<!-- Mirrored from Yuzh.Optor.ru/about_us by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jun 2022 11:13:23 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
-
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
