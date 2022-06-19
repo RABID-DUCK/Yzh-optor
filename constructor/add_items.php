@@ -7,7 +7,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
 <html>
 
 <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Админ панель Yuzh.Optor</title>
@@ -55,7 +55,9 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                 <?php
                                 $first_categorys = mysqli_query($conn, "SELECT * FROM `category`");
                                 foreach ($first_categorys as $ct) { ?>
-                                    <option <?if ($ct['first_id'] == trim($_POST["category"])) echo 'selected'?> value="<?= $ct['first_id'] ?>"><?= $ct['third_name'] ?> &gt; <?= $ct['second_name'] ?> &gt; <?= $ct['first_name'] ?></option>
+                                    <option <?php if ($ct['first_id'] == trim($_POST["category"])) echo 'selected'?> value="<?= $ct['first_id'] ?>">
+                                    <?= $ct['third_name'] ?> &gt; <?= $ct['second_name'] ?> &gt; <?= $ct['first_name'] ?>
+                                </option>
                                 <?php
                                 };
                                 ?>
