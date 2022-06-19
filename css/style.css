@@ -1,45 +1,40 @@
-table {
+.main-table {
+  height: 100%;
+  width: 100%;
   background-color: #36393F;
+}
+.scroll {
+  height: 935px;
+  overflow-y: auto;
+}
+table {
+  width: 100%;
   box-sizing: border-box;
   color: white;
-  width: 100%;
   padding: 15px;
   border-collapse: collapse;
+  border-bottom: 2px solid #2F3136;
 }
-table > tbody > tr {
-  transition: background 0.5s;
-}
-table > tbody > tr > td {
-  padding: 5px 15px;
-  border-top: 2px solid #2F3136;
-  transition: 0.5s;
-}
-table > tbody > tr > td:nth-child(1) {
-  text-align: center;
-}
-table > tbody > tr > td:not(:nth-child(1)) {
-  border-left: 2px solid #2F3136;
-  transition: 0.5s;
-}
-table > tbody > tr > td > img {
-  height: 70px;
-}
-table > tbody > tr > td > input[type="submit"] {
+table input {
   width: 100%;
   height: 100%;
   background-color: #36393F;
+  color: white;
 }
-table > tbody > tr:hover {
-  background: #7289DA;
+table select {
+  height: 100%;
+  background-color: #36393F;
+  color: white;
 }
 table > thead > tr {
   transition: background 0.5s;
 }
 table > thead > tr > td,
 table > thead > tr th {
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-top: 2px solid #2F3136;
   transition: 0.5s;
+  text-align: center;
 }
 table > thead > tr > td:not(:nth-child(1)),
 table > thead > tr th:not(:nth-child(1)) {
@@ -48,21 +43,7 @@ table > thead > tr th:not(:nth-child(1)) {
 }
 table > thead > tr > td > input[type="text"],
 table > thead > tr th > input[type="text"] {
-  width: 100%;
-  height: 100%;
   padding-left: 5px;
-  background-color: #36393F;
-}
-table > thead > tr > td > input[type="submit"],
-table > thead > tr th > input[type="submit"] {
-  width: 100%;
-  height: 100%;
-  background-color: #36393F;
-}
-table > thead > tr > td > select,
-table > thead > tr th > select {
-  width: 100%;
-  background-color: #36393F;
 }
 table > thead > tr > td > select.actual > option[value="0"],
 table > thead > tr th > select.actual > option[value="0"] {
@@ -75,6 +56,25 @@ table > thead > tr th > select.actual > option[value="1"] {
 table > thead > tr > th {
   color: #7289DA;
 }
+table > tbody > tr {
+  transition: background 0.5s;
+}
+table > tbody > tr > td {
+  padding: 5px 15px;
+  border-top: 2px solid #2F3136;
+  transition: 0.5s;
+  text-align: center;
+}
+table > tbody > tr > td:not(:nth-child(1)) {
+  border-left: 2px solid #2F3136;
+  transition: 0.5s;
+}
+table > tbody > tr > td > img {
+  height: 70px;
+}
+table > tbody > tr:hover {
+  background: #7289DA;
+}
 .product-thumb > .image {
   height: 200px;
   display: flex;
@@ -82,7 +82,7 @@ table > thead > tr > th {
   align-items: center;
 }
 .product-thumb > .image > a > img {
-  width: 200px;
+  width: 100px;
 }
 .connect_php {
   z-index: 223231231;
