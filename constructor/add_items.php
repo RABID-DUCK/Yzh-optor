@@ -256,7 +256,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="" title="" data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -277,6 +277,65 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     </div>
 
                     <!-- ПОКАЗАТЬ ЕЩЁ -->
+                            <style>
+                                .modalka-buy{
+                                    display: block;
+                                    opacity: 1;
+                                    background-color: #f9f9f9;
+                                    border: 1px solid #dfe4eb;
+                                    border-radius: 4px;
+                                    width: 600px;
+                                    height: 520px;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 25%;
+                                }
+                                .modalka-buy #close-call{
+                                    color: black;
+                                    z-index: 21321;
+                                    font-size: 49px;
+                                }
+                                .buy-hidden{
+                                    opacity: 0.7;
+                                    filter: blur(4px);
+                                }
+                                .ebat{
+                                    display: none;
+                                }
+                                .modalka-buy button.btn-callback{
+                                    background-color: #47c843;
+                                    border-color: #2cad28;
+                                    border-style: solid;
+                                    border-width: 1px 1px 2px;
+                                    color: #fff;
+                                    font-size: 13px;
+                                    padding: 8px 20px;
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                }
+                                .modalka-buy button.btn-callback:hover{
+                                    opacity: 0.8;
+                                    font-weight: 700;
+                                }
+                                @media (max-width: 800px){
+                                    .modalka-buy{
+                                        width: auto;
+                                        left: 10;
+                                    }
+                                }
+                            </style>
+                            
+                            <script>
+                                 document.addEventListener("DOMContentLoaded", function(event) {
+                                $('[data-toggle-buy]').click(function() {
+                                    $('.container').toggleClass('buy-hidden');
+                                   
+                                });   
+                                // $('[close-buy]').click(function () {
+                                //         $('.modalka-buy').toggleClass('ebat');
+                                //     });           
+                            });
+                            </script>
 
                     <script>
                         var itemms = document.querySelectorAll('.item');
@@ -358,6 +417,107 @@ $dir_img = __DIR__ . './../img/tovaru/';
         </div>
     </div>
 
+        <div class="modalka-buy ebat" >
+        <button title="Close (Esc)" type="button" class="mfp-close" id="close-call" close-buy>×</button>
+        <div class="col-sm-12" style="margin-top: 50px;">	
+			<div class="well well-sm products" style="margin-top:10px;">
+				<div class="product">
+					<div class="row">
+						<div class="col-xs-12 col-sm-5">
+							<div class="image">
+								<img src="../img/tovaru/<?= $img ?>" alt="<?= $elem['name'] ?>" width="130px" height="100px">							</div>
+							<div class="pr-name quick-cell">
+								<div class="quick-cell-content">
+                                <?= $elem['name'] ?>								</div>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-7">
+							<div class="col-xs-6 quantity_quickorder quick-cell" style="margin-top: 20px;">
+							<div class="quick-cell-content pquantity" >
+								<div class="input-group popup-quantity" >
+									<span class="input-group-btn">
+										<input class="btn btn-update-popup" type="button" id="decrease_quickorder" value="-" onclick="btnminus_quickorder(1);recalculateprice_quickorder();">									
+									</span>
+									<input type="text" class="form-control input-sm qty_quickorder" name="quantity" id="htop_quickorder" size="2" value="1">
+									<span class="input-group-btn">
+										<input class="btn btn-update-popup" type="button" id="increase_quickorder" value="+" onclick="btnplus_quickorder(1);recalculateprice_quickorder();">
+									</span>
+								</div>
+							</div>
+						</div>
+						<script>
+							function btnminus_quickorder(minimum){
+								var $input = $('#htop_quickorder');
+								var count = parseInt($input.val()) - parseInt(minimum);
+								count = count < parseInt(1) ? parseInt(1) : count;
+								$input.val(count);
+								$input.change();										
+							}
+							function btnplus_quickorder(minimum){
+								var $input = $('#htop_quickorder');
+								var count = parseInt($input.val()) + parseInt(minimum);
+								$input.val(count);
+								$input.change();
+							};	
+							</script>
+							<div class="col-xs-6 text-center quick-cell" style="margin-top: 20px;">
+								<div class="quick-cell-content">
+									<div class="price_fast"><span id="formated_price_quickorder" data-price="24.9600"><?= $elem['price'] ?> руб.</span></div>
+									    <input type="hidden" id="price_tax_plus_options" name="price_tax" value="24.96">
+										<input type="hidden" id="price_no_tax_plus_options" name="price_no_tax" value="24.96">	
+										<input id="total_form" type="hidden" value="24.96" name="total_fast">																		
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>	
+			</div>
+		</div>
+        <div class="popup-center">
+                        <form id="callback_data" data-ajax-submit="" enctype="multipart/form-data" method="post">
+                            <div class="col-xs-12">
+                                <div class="form-group sections_block_rquaired">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-name" class="form-control contact-name" type="text" placeholder="Ваше имя" value="" name="name">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-user fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_name_callback" class="error_callback"></div>
+                                </div>
+                                <div class="form-group sections_block_rquaired">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_phone_callback" class="error_callback"></div>
+                                </div>
+                                <div class="form-group sections_block">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-email" class="form-control contact-email" type="text" placeholder="Email" value="" name="email_buyer">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-envelope fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_email_callback" class="error_callback"></div>
+                                </div>
+                                <div class="form-group sections_block">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-comment" class="form-control contact-comment" type="text" placeholder="Комментарий" value="" name="comment_buyer">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-comment fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_comment_callback" class="error_callback"></div>
+                                </div>
+
+                                <input type="hidden" id="callback_url" value="" name="url_site">
+                            </div>
+
+
+                            <div class="anytext-callback marb col-xs-12 text-center"></div>
+                        </form>
+                        <div class="popup-footer">
+                        <div class="col-xs-12 text-center">
+                            <button onclick="sendCallback();" type="submit" class="btn-callback ladda-button" data-style="expand-left"><span class="ladda-label">Оформить заказ</span></button>
+                        </div>
+                    </div>
+                    </div>
+        </div>
 
     <!-- ===================================================================================== -->
 
