@@ -364,16 +364,24 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 </div>
             </div>
         </div>
+        <style>
+            .hide-cat{
+                display: block;
+            }
+            .hide-cat-hide{
+                display: none !important;
+            }
+        </style>
         <div class="container" id="category">
             <div class="row">
                 <div class="col-sm-12 col-md-3 menu-box ">
                     <nav id="menu" class="btn-group btn-block open">
-                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown">
+                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown" id="but">
                             <i class="fa fa-bars"></i>
                             <span class="text-category">Категории</span>
                         </button>
 
-                        <ul id="menu-list" class="dropdown-menu">
+                        <ul id="menu-list" class="dropdown-menu hide-cat">
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.html">Доставка</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.html">Оплата</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.html">О нас</a></li>
@@ -410,6 +418,24 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     </nav>
 
                 </div>
+                <script>
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        $(window).scroll(function() {
+                        if ($(this).scrollTop() > 200) {
+                            $('#menu-list').removeClass('hide-cat');
+                            $('#menu-list').addClass('hide-cat-hide');
+                        } else {
+                            $('#menu-list').removeClass('hide-cat-hide');
+                            $('#menu-list').addClass('hide-cat');
+                        }
+                    });
+                    $('#but').on("click", function() {
+                        console.log('adasd');
+                         $('#menu-list').removeClass('hide-cat-hide');
+                    });
+                });
+                    
+                </script>
                 <div class="col-md-9 hidden-xs hidden-sm clearfix">
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
@@ -622,97 +648,91 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     }
                 });
             </script>
-            <div class="sw-80 col-md-9">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
+                        <div class="sw-80 col-md-9">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="img/image/cache/catalog/slide/1kesfypegejdpiq2pwcipmg-1140x380.png" alt="строительные матеиралы">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox"  style="height: 285px !important;">
+                            <div class="item active">
+                            <img src="img/image/cache/catalog/slide/3cd41d7615087debd08018cb3b5e1edf-1140x380.jpg" alt="...">
                             <div class="carousel-caption">
-
+                                ...
                             </div>
-                        </div>
-                        <div class="item">
-                            <img src="img/image/cache/catalog/slide/3cd41d7615087debd08018cb3b5e1edf-1140x380.jpg" alt="садовые вещи">
+                            </div>
+                            <div class="item">
+                            <img src="img/image/cache/catalog/slide/1kesfypegejdpiq2pwcipmg-1140x380.png" alt="...">
                             <div class="carousel-caption">
-
+                                ...
                             </div>
-                        </div>
-                        <div class="item">
-                            <img src="img/image/cache/catalog/slide/tovary-dlya-doma_111043_1-1140x380.jpg" alt="огородный инвентарь">
+                            </div>
+                            <div class="item">
+                            <img src="img/image/cache/catalog/slide/tovary-dlya-doma_111043_1-1140x380.jpg" alt="...">
                             <div class="carousel-caption">
+                                ...
                             </div>
+                            </div>
+                            ...
                         </div>
 
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <script>
-                    < !--
-                    $('#slideshow0').owlCarousel({
-                        items: 6,
-                        autoPlay: 7000,
-                        singleItem: true,
-                        navigation: true,
-                        navigationText: ['<span class="slideshow-btn-prev"></span>', '<span class="slideshow-btn-next"></span>'],
-                        pagination: true,
-                        transitionStyle: 'fadeUp'
-                    });
-                    -- >
-                </script>
-                <div class="row banner-blocks-container banner-block-16984">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="banner-item is_a_link" onclick="banner_link_open('oplata')">
-                            <div class="banner-image">
-                                <img src="img/image/cache/catalog/image/icon/oplata-60x60.png" alt="Оплата">
-                            </div>
-                            <div class="banner-info">
-                                <div class="banner-title">Оплата</div>
-                                <div class="banner-description">Узнайте как оплатить!</div>
-                            </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="banner-item is_a_link" onclick="banner_link_open('delivery')">
-                            <div class="banner-image">
-                                <img src="img/image/cache/catalog/image/icon/truck_photo-60x60.png" alt="Доставка">
-                            </div>
-                            <div class="banner-info">
-                                <div class="banner-title">Доставка</div>
-                                <div class="banner-description">Мы отправим ваш заказ в любую точку России и СНГ!</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <div class="banner-item ">
-                            <div class="banner-image">
-                                <img src="img/image/cache/catalog/image/icon/vopros-60x60.png" alt="Поддержка 24/7">
-                            </div>
-                            <div class="banner-info">
-                                <div class="banner-title">Поддержка 24/7</div>
-                                <div class="banner-description">У Вас возникли вопросы?</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+  <div class="owl-controls clickable">
+    <div class="owl-pagination">
+        <div class="owl-page"><span class=""></span></div>
+        <div class="owl-page"><span class=""></span></div>
+        <div class="owl-page active"><span class=""></span></div></div><div class="owl-buttons">
+            <div class="owl-prev"><span class="slideshow-btn-prev"></span></div><div class="owl-next"><span class="slideshow-btn-next"></span></div></div></div></div>
+<div class="row banner-blocks-container banner-block-44858">
+		<div class="col-xs-12 col-sm-6 col-md-4" style="width: 272px;">
+		<div class="banner-item is_a_link" onclick="banner_link_open('oplata')">
+				<div class="banner-image">
+					<img src="img/image/cache/catalog/image/icon/oplata-60x60.png" alt="Оплата">
+				</div>
+				<div class="banner-info">
+					<div class="banner-title">Оплата</div>
+					<div class="banner-description">Узнайте как оплатить!</div>
+				</div>			
+		</div>
+	</div>
+		<div class="col-xs-12 col-sm-6 col-md-4" style="width: 272px;">
+		<div class="banner-item is_a_link" onclick="banner_link_open('delivery')">
+				<div class="banner-image">
+					<img src="img/image/cache/catalog/image/icon/truck_photo-60x60.png" alt="Доставка">
+				</div>
+				<div class="banner-info">
+					<div class="banner-title">Доставка</div>
+					<div class="banner-description">Мы отправим ваш заказ в любую точку России и СНГ!</div>
+				</div>			
+		</div>
+	</div>
+		<div class="col-xs-12 col-sm-6 col-md-4" style="width: 272px;">
+		<div class="banner-item ">
+				<div class="banner-image">
+					<img src="img/image/cache/catalog/image/icon/vopros-60x60.png" alt="Поддержка 24/7">
+				</div>
+				<div class="banner-info">
+					<div class="banner-title">Поддержка 24/7</div>
+					<div class="banner-description">У Вас возникли вопросы?</div>
+				</div>			
+		</div>
+	</div>
+	</div>
+    </div>
         <div class="row">
             <div class="col-sm-12">
                 <div class="container-module">
@@ -1760,6 +1780,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
     </div>
     </div>
     </div>
+
+</div>
+       
 
 
     <div class="box-bg-full bg_mode_pos_2">
