@@ -122,6 +122,9 @@ table > tbody > tr:hover {
 .item_hidden {
   display: none;
 }
+.hide {
+  display: block;
+}
 @media (min-width: 992px) {
   #column-left {
     margin-top: 320px;
