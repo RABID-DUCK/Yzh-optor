@@ -481,7 +481,7 @@ $first_name = mysqli_query($conn, "SELECT `first_name` FROM category");
                 </div>
             </div>
         </div>
-        <div class="container category" id="category">
+        <div class="container" id="category">
             <div class="row">
                 <div class="col-sm-12 col-md-3 menu-box ">
                     <nav id="menu" class="btn-group btn-block">
@@ -491,7 +491,10 @@ $first_name = mysqli_query($conn, "SELECT `first_name` FROM category");
                         </button>
 
                         <ul id="menu-list" class="dropdown-menu">
-
+                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.html">Доставка</a></li>
+                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.html">Оплата</a></li>
+                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.html">О нас</a></li>
+                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.html">Контакты</a></li>
                             <?php
                                 $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
                                 foreach ($elems1 as $i1 => $elem1) { ?>
@@ -500,7 +503,7 @@ $first_name = mysqli_query($conn, "SELECT `first_name` FROM category");
                                         <a href="#" class="parent-link dropdown-img"><?=$elem1['third_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                        <div class="dropdown-inner">
+                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled nsmenu-haschild">
                                             <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
                                                 foreach ($elems2 as $i2 => $elem2) 
