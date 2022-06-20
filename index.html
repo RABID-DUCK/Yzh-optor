@@ -366,7 +366,7 @@
                                             р.</b></span></span>
                             </button>
 
-                            <ul class="dropdown-menu pull-right">
+                            <ul class="dropdown-menu pull-right" id="korzina">
                                 <li>
                                     <p class="text-center">В корзине пусто!</p>
                                 </li>
@@ -1320,20 +1320,26 @@
                                                     recalc_quantity(6367, count,, '', '.latest_grid0', 'latest_gv');
                                                 }
                                             function btnplus_cat_price_latest_gv6367(minimum) {
-                                                var $input = $('#input_quantity_mod_latest_grid06367');
+                                                var $input = $('#cart.addinput_quantity_mod_latest_grid06367');
                                                 var count = parseInt($input.val()) + parseInt(minimum);
                                                 $input.val(count);
                                                 $input.change();
                                                 recalc_quantity(6367, count,, '', '.latest_grid0', 'latest_gv');
                                             };																				
                                         </script>
+                                        <script>
+                                           
+                                                window.addEventListener('DOMContentLoaded', (event) => {
+                                                    
+                                            });
+
+                                        </script>
                                         <div class="actions">
                                             <div class="wishlist"><button class="btn btn-wishlist" type="button"
                                                     data-toggle="tooltip" title="" onclick="wishlist.add('6367');"
                                                     data-original-title="В закладки"><i
                                                         class="fa fa-heart"></i></button></div>
-                                            <div class="cart"><button class="btn btn-general" type="button"
-                                                    onclick="cart.add('6367','latest_gv', get_cart_quantity('6367','.latest_grid0'));"><i
+                                            <div class="cart"><button class="btn btn-general" type="button" id="cart-total" data-pr="pr1"><i
                                                         class="fa fa-shopping-basket"></i> <span>В
                                                         корзину</span></button></div>
                                             <div class="compare"><button class="btn btn-compare" type="button"
