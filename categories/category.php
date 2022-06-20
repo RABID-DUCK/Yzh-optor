@@ -502,16 +502,15 @@ $first_name = mysqli_query($conn, "SELECT `first_name` FROM category");
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled nsmenu-haschild">
-                                            <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
+                                            <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
                                                 foreach ($elems2 as $i2 => $elem2) 
                                                 { ?>
                                                 <li class="nsmenu-issubchild">
                                                     <a href="#"><?=$elem2['second_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id`, `second_id`, `third_id` FROM `category` WHERE ``");
-                                                            foreach ($elems3 as $i3 => $elem3 ) { 
-                                                                print_r($elem3['first_id'].$elem3['second_id'].$elem3['third_id']);?>    
-                                                            <li class=""><a href="#"><?=$elem3['first_name']?> <?php echo('К1:'.$i1.' К2:'.$i2.' К3:'.$i3)?></a></li> <!-- Категория 1 -->
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            foreach ($elems3 as $i3 => $elem3 ) { ?>    
+                                                            <li class=""><a href="#"><?=$elem3['first_name']?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
                                                         </ul>
                                                 </li>
