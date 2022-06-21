@@ -147,6 +147,59 @@ table {
     }
 }
 
+.modalka-buy {
+    display: block;
+    opacity: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #dfe4eb;
+    border-radius: 4px;
+    width: 600px;
+    height: 520px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    z-index: 32131;
+}
+
+.modalka-buy #close-call {
+    color: black;
+    z-index: 21321;
+    font-size: 49px;
+}
+
+.buy-hidden {
+    opacity: 0.7;
+    filter: blur(4px);
+}
+
+.ebat {
+    display: none;
+}
+
+.modalka-buy button.btn-callback {
+    background-color: #47c843;
+    border-color: #2cad28;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.modalka-buy button.btn-callback:hover {
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .modalka-buy {
+        width: auto;
+        left: 10;
+    }
+}
+
 .item_hidden{
     display: none;
 }

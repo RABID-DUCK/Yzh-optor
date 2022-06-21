@@ -420,23 +420,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     </nav>
 
                 </div>
-                <script>
-                    window.addEventListener('DOMContentLoaded', (event) => {
-                        $(window).scroll(function() {
-                            if ($(this).scrollTop() > 200) {
-                                $('#menu-list').removeClass('hide-cat');
-                                $('#menu-list').addClass('hide-cat-hide');
-                            } else {
-                                $('#menu-list').removeClass('hide-cat-hide');
-                                $('#menu-list').addClass('hide-cat');
-                            }
-                        });
-                        $('#but').on("click", function() {
-                            console.log('adasd');
-                            $('#menu-list').removeClass('hide-cat-hide');
-                        });
-                    });
-                </script>
                 <div class="col-md-9 hidden-xs hidden-sm clearfix">
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
@@ -457,6 +440,19 @@ $dir_img = __DIR__ . '/img/tovaru/';
         </div>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
+                $(window).scroll(function() {
+                            if ($(this).scrollTop() > 200) {
+                                $('#menu-list').removeClass('hide-cat');
+                                $('#menu-list').addClass('hide-cat-hide');
+                            } else {
+                                $('#menu-list').removeClass('hide-cat-hide');
+                                $('#menu-list').addClass('hide-cat');
+                            }
+                        });
+                        $('#but').on("click", function() {
+                            console.log('adasd');
+                            $('#menu-list').removeClass('hide-cat-hide');
+                });
                 $(document).ready(function() {
                     var width_fmns = viewport().width;
                     if (width_fmns >= 300) {
@@ -650,7 +646,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 });
             </script>
             <div class="sw-80 col-md-9">
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div id="carousel-example-generic" class="carousel slide owl-carousel" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -735,9 +731,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 <div class="container-module">
                     <div class="title-module"><span>Перчатки</span></div>
                     <div class="product-slider">
-                        <div class="container-modules latest_gv latest_grid0">
-                            <?php
-                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='14' LIMIT 20");
+                        <div class="container-modules latest_gv latest_grid0" id="cont1">
+                        <?php
+                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='14' limit 5");
                             foreach ($elems as $elem) {
                                 switch (strlen($elem['id'])) {
                                     case 1:
@@ -751,18 +747,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                     default:
                                         break;
-                                }
-                                if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                    $img = basename($img[0]);
-                                } else {
-                                    $img = 'null.png';
-                                }
+                                }   
                             ?>
-                                <style>
-                                    .item {
-                                        display: none;
-                                    }
-                                </style>
                                 <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
                                     <div class="product-thumb transition">
                                         <div class="image">
@@ -776,15 +762,15 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
                                             </div>
-                                            <a href="">
+                                            <a href="#">
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                             </a>
                                         </div>
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a href=""><?= $elem['name'] ?></a>
+                                                <a href="#"><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -798,7 +784,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                     <span class="quantity-reviews">
                                                         <!-- FIXME Сделать ссылку на элемент -->
-                                                        <a data-placement="right" data-toggle="tooltip" title="" data-original-title="отзывов">0</a>
+                                                        <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
                                                     </span>
                                                 </span>
                                             </div>
@@ -824,8 +810,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <?php $name = str_replace('"', "", $elem['name']); ?>
-                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?= (int)$elem['id'] ?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder" type="button" onclick="" data-toggle-buy data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -840,149 +825,17 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             ?>
                         </div>
                         <div class="showmore-latest0 box-showmore">
-                            <div class="ajaxloadingLatest"></div>
-                            <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
+                            <div class="ajaxloadingLatest spin-ajax"></div>
+                            <span data-nextpage="2" onclick="take_items('cont1', 'second_id', '14', 5, 10)" class="latest-ajax-load0" id="show_more">Показать еще</span>
                         </div>
                     </div>
-
-                    <!-- ПОКАЗАТЬ ЕЩЁ -->
-                    <style>
-                        .modalka-buy {
-                            display: block;
-                            opacity: 1;
-                            background-color: #f9f9f9;
-                            border: 1px solid #dfe4eb;
-                            border-radius: 4px;
-                            width: 600px;
-                            height: 520px;
-                            position: absolute;
-                            top: 50%;
-                            left: 25%;
-                            z-index: 32131;
-                        }
-
-                        .modalka-buy #close-call {
-                            color: black;
-                            z-index: 21321;
-                            font-size: 49px;
-                        }
-
-                        .buy-hidden {
-                            opacity: 0.7;
-                            filter: blur(4px);
-                        }
-
-                        .ebat {
-                            display: none;
-                        }
-
-                        .modalka-buy button.btn-callback {
-                            background-color: #47c843;
-                            border-color: #2cad28;
-                            border-style: solid;
-                            border-width: 1px 1px 2px;
-                            color: #fff;
-                            font-size: 13px;
-                            padding: 8px 20px;
-                            text-transform: uppercase;
-                            font-weight: bold;
-                        }
-
-                        .modalka-buy button.btn-callback:hover {
-                            opacity: 0.8;
-                            font-weight: 700;
-                        }
-
-                        @media (max-width: 800px) {
-                            .modalka-buy {
-                                width: auto;
-                                left: 10;
-                            }
-                        }
-                    </style>
-
-                    <script>
-                        var itemms = document.querySelectorAll('.item');
-                        show__more = document.getElementById('show_more');
-                        var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                        nn = 5;
-
-                        function MoreShow(n) {
-                            for (var i = 0; i < itemms.length; i++) {
-                                if (i < nn) {
-                                    itemms[i].style.display = 'block';
-                                    ajaxloadingLatest.classList.add('spin-ajax');
-                                    if (nn === itemms.length) {}
-                                } else {
-                                    break;
-                                }
-                            }
-                        }
-
-                        MoreShow(nn);
-                        show__more.onclick = function(e) {
-                            e.preventDefault();
-                            nn += 5;
-                            MoreShow(nn);
-                        }
-                    </script>
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function(event) {
-                            // let item = $('.container-modules');
-                            //             let show_more = $('#hide-items');
-                            //             let n = 5;
-                            //             function showMore_(n){
-                            //                 for(let i=0; i<item.length; i++){
-
-                            //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                            //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                            //             }
-                            //         };
-                            $('.item').slice(3);
-
-                            $(document).on('click', '.latest-ajax-load0', function() {
-                                $.ajax({
-                                    url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                    type: 'post',
-                                    dataType: 'html',
-                                    beforeSend: function() {
-                                        $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                    },
-                                    complete: function() {
-                                        $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                    },
-                                    success: function(data) {
-                                        $data = $(data);
-                                        var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                        $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                    }
-                                });
-                            })
-                        });
-                    </script>
-                    <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            $('.latest_grid0').each(function() {
-                                if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                    var items = $(this).children('div.item');
-                                    items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                    items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                }
-                            });
-
-                            if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                        });
-                    </script>
                 </div>
                 <div class="container-module">
                     <div class="title-module"><span>Поливочный инвентарь</span></div>
                     <div class="product-slider">
-                        <div class="container-modules latest_gv latest_grid0">
-                            <?php
-                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='11' limit 20");
+                    <div class="container-modules latest_gv latest_grid0" id="cont2">
+                        <?php
+                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='11' limit 5");
                             foreach ($elems as $elem) {
                                 switch (strlen($elem['id'])) {
                                     case 1:
@@ -996,18 +849,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                     default:
                                         break;
-                                }
-                                if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                    $img = basename($img[0]);
-                                } else {
-                                    $img = 'null.png';
-                                }
+                                }   
                             ?>
-                                <style>
-                                    .item {
-                                        display: none;
-                                    }
-                                </style>
                                 <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
                                     <div class="product-thumb transition">
                                         <div class="image">
@@ -1021,15 +864,15 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
                                             </div>
-                                            <a>
+                                            <a href="#">
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                             </a>
                                         </div>
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a><?= $elem['name'] ?></a>
+                                                <a href="#"><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -1043,7 +886,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                     <span class="quantity-reviews">
                                                         <!-- FIXME Сделать ссылку на элемент -->
-                                                        <a data-placement="right" data-toggle="tooltip" title="" data-original-title="отзывов">0</a>
+                                                        <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
                                                     </span>
                                                 </span>
                                             </div>
@@ -1069,8 +912,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <?php $name = str_replace('"', "", $elem['name']); ?>
-                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?= (int)$elem['id'] ?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder" type="button" onclick="" data-toggle-buy data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -1080,171 +922,15 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                     </div>
                                 </div>
-
-
                             <?php
                             };
                             ?>
                         </div>
                         <div class="showmore-latest0 box-showmore">
-                            <div class="ajaxloadingLatest"></div>
-                            <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
+                            <div class="ajaxloadingLatest spin-ajax"></div>
+                            <span data-nextpage="2" onclick="take_items('cont2', 'second_id', '11', 5, 10)" class="latest-ajax-load0" id="show_more">Показать еще</span>
                         </div>
-                    </div>
-
-                    <!-- ПОКАЗАТЬ ЕЩЁ -->
-                    <style>
-                        .modalka-buy {
-                            display: block;
-                            opacity: 1;
-                            background-color: #f9f9f9;
-                            border: 1px solid #dfe4eb;
-                            border-radius: 4px;
-                            width: 600px;
-                            height: 520px;
-                            position: absolute;
-                            top: 50%;
-                            left: 25%;
-                        }
-
-                        .modalka-buy #close-call {
-                            color: black;
-                            z-index: 21321;
-                            font-size: 49px;
-                        }
-
-                        .buy-hidden {
-                            opacity: 0.7;
-                            filter: blur(4px);
-                        }
-
-                        .ebat {
-                            display: none;
-                        }
-
-                        .modalka-buy button.btn-callback {
-                            background-color: #47c843;
-                            border-color: #2cad28;
-                            border-style: solid;
-                            border-width: 1px 1px 2px;
-                            color: #fff;
-                            font-size: 13px;
-                            padding: 8px 20px;
-                            text-transform: uppercase;
-                            font-weight: bold;
-                        }
-
-                        .modalka-buy button.btn-callback:hover {
-                            opacity: 0.8;
-                            font-weight: 700;
-                        }
-
-                        @media (max-width: 800px) {
-                            .modalka-buy {
-                                width: auto;
-                                left: 10;
-                            }
-                        }
-                    </style>
-
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function(event) {
-                                    $('[data-toggle-buy]').click(function() {
-                                        $('.container').toggleClass('buy-hidden');
-
-                                    });
-                    </script>
-                    <script>
-                        function btnminus_quickorder(minimum) {
-                            var $input = $('#htop_quickorder');
-                            var count = parseInt($input.val()) - parseInt(minimum);
-                            count = count < parseInt(1) ? parseInt(1) : count;
-                            $input.val(count);
-                            $input.change();
-                        }
-
-                        function btnplus_quickorder(minimum) {
-                            var $input = $('#htop_quickorder');
-                            var count = parseInt($input.val()) + parseInt(minimum);
-                            $input.val(count);
-                            $input.change();
-                        };
-                    </script>
-                    <script>
-                        var itemms = document.querySelectorAll('.item');
-                        show__more = document.getElementById('show_more');
-                        var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                        nn = 5;
-
-                        function MoreShow(n) {
-                            for (var i = 0; i < itemms.length; i++) {
-                                if (i < nn) {
-                                    itemms[i].style.display = 'block';
-                                    ajaxloadingLatest.classList.add('spin-ajax');
-                                    if (nn === itemms.length) {}
-                                } else {
-                                    break;
-                                }
-                            }
-                        }
-
-                        MoreShow(nn);
-                        show__more.onclick = function(e) {
-                            e.preventDefault();
-                            nn += 5;
-                            MoreShow(nn);
-                        }
-                    </script>
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function(event) {
-                            // let item = $('.container-modules');
-                            //             let show_more = $('#hide-items');
-                            //             let n = 5;
-                            //             function showMore_(n){
-                            //                 for(let i=0; i<item.length; i++){
-
-                            //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                            //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                            //             }
-                            //         };
-                            $('.item').slice(3);
-
-                            $(document).on('click', '.latest-ajax-load0', function() {
-                                $.ajax({
-                                    url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                    type: 'post',
-                                    dataType: 'html',
-                                    beforeSend: function() {
-                                        $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                    },
-                                    complete: function() {
-                                        $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                    },
-                                    success: function(data) {
-                                        $data = $(data);
-                                        var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                        $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                    }
-                                });
-                            })
-                        });
-                    </script>
-                    <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            $('.latest_grid0').each(function() {
-                                if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                    var items = $(this).children('div.item');
-                                    items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                    items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                }
-                            });
-
-                            if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                        });
-                    </script>
+                    </div>  
                 </div>
                 <div class="categorywall-container categorywall-0">
                     <div class="title-module"><span>Популярные категории</span></div>
@@ -1367,9 +1053,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 <div class="container-module">
                     <div class="title-module"><span>Автопринадлежности</span></div>
                     <div class="product-slider">
-                        <div class="container-modules latest_gv latest_grid0">
-                            <?php
-                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `third_id`='0' limit 20");
+                    <div class="container-modules latest_gv latest_grid0" id="cont3">
+                        <?php
+                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `third_id`='0' limit 5");
                             foreach ($elems as $elem) {
                                 switch (strlen($elem['id'])) {
                                     case 1:
@@ -1383,18 +1069,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                     default:
                                         break;
-                                }
-                                if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                    $img = basename($img[0]);
-                                } else {
-                                    $img = 'null.png';
-                                }
+                                }   
                             ?>
-                                <style>
-                                    .item {
-                                        display: none;
-                                    }
-                                </style>
                                 <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
                                     <div class="product-thumb transition">
                                         <div class="image">
@@ -1410,7 +1086,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <a href="#">
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                             </a>
                                         </div>
 
@@ -1456,7 +1132,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder" type="button" onclick="" data-toggle-buy data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -1471,141 +1147,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             ?>
                         </div>
                         <div class="showmore-latest0 box-showmore">
-                            <div class="ajaxloadingLatest"></div>
-                            <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
+                            <div class="ajaxloadingLatest spin-ajax"></div>
+                            <span data-nextpage="2" onclick="take_items('cont3', 'third_id', '0', 5, 10)" class="latest-ajax-load0" id="show_more">Показать еще</span>
                         </div>
-                    </div>
-
-                    <!-- ПОКАЗАТЬ ЕЩЁ -->
-                    <style>
-                        .modalka-buy {
-                            display: block;
-                            opacity: 1;
-                            background-color: #f9f9f9;
-                            border: 1px solid #dfe4eb;
-                            border-radius: 4px;
-                            width: 600px;
-                            height: 520px;
-                            position: absolute;
-                            top: 50%;
-                            left: 25%;
-                        }
-
-                        .modalka-buy #close-call {
-                            color: black;
-                            z-index: 21321;
-                            font-size: 49px;
-                        }
-
-                        .buy-hidden {
-                            opacity: 0.7;
-                            filter: blur(4px);
-                        }
-
-                        .ebat {
-                            display: none;
-                        }
-
-                        .modalka-buy button.btn-callback {
-                            background-color: #47c843;
-                            border-color: #2cad28;
-                            border-style: solid;
-                            border-width: 1px 1px 2px;
-                            color: #fff;
-                            font-size: 13px;
-                            padding: 8px 20px;
-                            text-transform: uppercase;
-                            font-weight: bold;
-                        }
-
-                        .modalka-buy button.btn-callback:hover {
-                            opacity: 0.8;
-                            font-weight: 700;
-                        }
-
-                        @media (max-width: 800px) {
-                            .modalka-buy {
-                                width: auto;
-                                left: 10;
-                            }
-                        }
-                    </style>
-
-                    <script>
-                        var itemms = document.querySelectorAll('.item');
-                        show__more = document.getElementById('show_more');
-                        var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                        nn = 5;
-
-                        function MoreShow(n) {
-                            for (var i = 0; i < itemms.length; i++) {
-                                if (i < nn) {
-                                    itemms[i].style.display = 'block';
-                                    ajaxloadingLatest.classList.add('spin-ajax');
-                                    if (nn === itemms.length) {}
-                                } else {
-                                    break;
-                                }
-                            }
-                        }
-
-                        MoreShow(nn);
-                        show__more.onclick = function(e) {
-                            e.preventDefault();
-                            nn += 5;
-                            MoreShow(nn);
-                        }
-                    </script>
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function(event) {
-                            // let item = $('.container-modules');
-                            //             let show_more = $('#hide-items');
-                            //             let n = 5;
-                            //             function showMore_(n){
-                            //                 for(let i=0; i<item.length; i++){
-
-                            //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                            //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                            //             }
-                            //         };
-                            $('.item').slice(3);
-
-                            $(document).on('click', '.latest-ajax-load0', function() {
-                                $.ajax({
-                                    url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                    type: 'post',
-                                    dataType: 'html',
-                                    beforeSend: function() {
-                                        $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                    },
-                                    complete: function() {
-                                        $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                    },
-                                    success: function(data) {
-                                        $data = $(data);
-                                        var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                        $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                    }
-                                });
-                            })
-                        });
-                    </script>
-                    <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            $('.latest_grid0').each(function() {
-                                if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                    var items = $(this).children('div.item');
-                                    items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                    items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                }
-                            });
-
-                            if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                        });
-                    </script>
+                    </div>  
                 </div>
             </div>
             <div class="box-bg-full bg_mode_pos_2">
@@ -1632,11 +1177,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 default:
                                                     break;
                                             }
-                                            if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                                $img = basename($img[0]);
-                                            } else {
-                                                $img = 'null.png';
-                                            }
                                         ?>
 
                                             <div class="item no-slider col-xs-12 col-sm-6" id="hide-items">
@@ -1654,7 +1194,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                         </div>
                                                         <a>
                                                             <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                            <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                            <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                                         </a>
                                                     </div>
 
@@ -1720,82 +1260,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
                                     </div>
                                 </div>
-
-                                <script>
-                                    var itemms = document.querySelectorAll('.item');
-                                    show__more = document.getElementById('show_more');
-                                    var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                                    nn = 5;
-
-                                    function MoreShow(n) {
-                                        for (var i = 0; i < itemms.length; i++) {
-                                            if (i < nn) {
-                                                itemms[i].style.display = 'block';
-                                                ajaxloadingLatest.classList.add('spin-ajax');
-                                                if (nn === itemms.length) {}
-                                            } else {
-                                                break;
-                                            }
-                                        }
-                                    }
-
-                                    MoreShow(nn);
-                                    show__more.onclick = function(e) {
-                                        e.preventDefault();
-                                        nn += 5;
-                                        MoreShow(nn);
-                                    }
-                                </script>
-                                <script>
-                                    document.addEventListener("DOMContentLoaded", function(event) {
-                                        // let item = $('.container-modules');
-                                        //             let show_more = $('#hide-items');
-                                        //             let n = 5;
-                                        //             function showMore_(n){
-                                        //                 for(let i=0; i<item.length; i++){
-
-                                        //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                                        //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                                        //             }
-                                        //         };
-                                        $('.item').slice(3);
-
-                                        $(document).on('click', '.latest-ajax-load0', function() {
-                                            $.ajax({
-                                                url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                                type: 'post',
-                                                dataType: 'html',
-                                                beforeSend: function() {
-                                                    $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                                },
-                                                complete: function() {
-                                                    $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                                },
-                                                success: function(data) {
-                                                    $data = $(data);
-                                                    var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                                    $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                                }
-                                            });
-                                        })
-                                    });
-                                </script>
-                                <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', function() {
-                                        $('.latest_grid0').each(function() {
-                                            if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                                var items = $(this).children('div.item');
-                                                items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                                items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                            }
-                                        });
-
-                                        if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                                    });
-                                </script>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 pos3">
@@ -1819,11 +1283,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 default:
                                                     break;
                                             }
-                                            if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                                $img = basename($img[0]);
-                                            } else {
-                                                $img = 'null.png';
-                                            }
                                         ?>
 
                                             <div class="item no-slider col-xs-12 col-sm-6" id="hide-items">
@@ -1841,7 +1300,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                         </div>
                                                         <a href="#">
                                                             <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                            <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                            <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                                         </a>
                                                     </div>
 
@@ -1919,216 +1378,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
                                     </div>
                                 </div>
-
-                                <script>
-                                    var itemms = document.querySelectorAll('.item');
-                                    show__more = document.getElementById('show_more');
-                                    var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                                    nn = 5;
-
-                                    function MoreShow(n) {
-                                        for (var i = 0; i < itemms.length; i++) {
-                                            if (i < nn) {
-                                                itemms[i].style.display = 'block';
-                                                ajaxloadingLatest.classList.add('spin-ajax');
-                                                if (nn === itemms.length) {}
-                                            } else {
-                                                break;
-                                            }
-                                        }
-                                    }
-
-                                    MoreShow(nn);
-                                    show__more.onclick = function(e) {
-                                        e.preventDefault();
-                                        nn += 5;
-                                        MoreShow(nn);
-                                    }
-                                </script>
-                                <script>
-                                    document.addEventListener("DOMContentLoaded", function(event) {
-                                        // let item = $('.container-modules');
-                                        //             let show_more = $('#hide-items');
-                                        //             let n = 5;
-                                        //             function showMore_(n){
-                                        //                 for(let i=0; i<item.length; i++){
-
-                                        //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                                        //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                                        //             }
-                                        //         };
-                                        $('.item').slice(3);
-
-                                        $(document).on('click', '.latest-ajax-load0', function() {
-                                            $.ajax({
-                                                url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                                type: 'post',
-                                                dataType: 'html',
-                                                beforeSend: function() {
-                                                    $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                                },
-                                                complete: function() {
-                                                    $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                                },
-                                                success: function(data) {
-                                                    $data = $(data);
-                                                    var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                                    $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                                }
-                                            });
-                                        })
-                                    });
-                                </script>
-                                <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', function() {
-                                        $('.latest_grid0').each(function() {
-                                            if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                                var items = $(this).children('div.item');
-                                                items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                                items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                            }
-                                        });
-
-                                        if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                                    });
-                                </script>
                             </div>
                         </div>
-
-                        <!-- ПОКАЗАТЬ ЕЩЁ -->
-                        <style>
-                            .modalka-buy {
-                                display: block;
-                                opacity: 1;
-                                background-color: #f9f9f9;
-                                border: 1px solid #dfe4eb;
-                                border-radius: 4px;
-                                width: 600px;
-                                height: 520px;
-                                position: fixed;
-                                top: 50px;
-                                left: 25%;
-                                z-index: 1;
-                            }
-
-                            .modalka-buy #close-call {
-                                color: black;
-                                z-index: 21321;
-                                font-size: 49px;
-                            }
-
-                            .buy-hidden {
-                                opacity: 0.7;
-                                filter: blur(4px);
-                            }
-
-                            .ebat {
-                                display: none;
-                            }
-
-                            .modalka-buy button.btn-callback {
-                                background-color: #47c843;
-                                border-color: #2cad28;
-                                border-style: solid;
-                                border-width: 1px 1px 2px;
-                                color: #fff;
-                                font-size: 13px;
-                                padding: 8px 20px;
-                                text-transform: uppercase;
-                                font-weight: bold;
-                            }
-
-                            .modalka-buy button.btn-callback:hover {
-                                opacity: 0.8;
-                                font-weight: 700;
-                            }
-
-                            @media (max-width: 800px) {
-                                .modalka-buy {
-                                    width: auto;
-                                    left: 10;
-                                }
-                            }
-                        </style>
-
-                        <script>
-                            var itemms = document.querySelectorAll('.item');
-                            show__more = document.getElementById('show_more');
-                            var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                            nn = 5;
-
-                            function MoreShow(n) {
-                                for (var i = 0; i < itemms.length; i++) {
-                                    if (i < nn) {
-                                        itemms[i].style.display = 'block';
-                                        ajaxloadingLatest.classList.add('spin-ajax');
-                                        if (nn === itemms.length) {}
-                                    } else {
-                                        break;
-                                    }
-                                }
-                            }
-
-                            MoreShow(nn);
-                            show__more.onclick = function(e) {
-                                e.preventDefault();
-                                nn += 5;
-                                MoreShow(nn);
-                            }
-                        </script>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function(event) {
-                                // let item = $('.container-modules');
-                                //             let show_more = $('#hide-items');
-                                //             let n = 5;
-                                //             function showMore_(n){
-                                //                 for(let i=0; i<item.length; i++){
-
-                                //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                                //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                                //             }
-                                //         };
-                                $('.item').slice(3);
-
-                                $(document).on('click', '.latest-ajax-load0', function() {
-                                    $.ajax({
-                                        url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                        type: 'post',
-                                        dataType: 'html',
-                                        beforeSend: function() {
-                                            $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                        },
-                                        complete: function() {
-                                            $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                        },
-                                        success: function(data) {
-                                            $data = $(data);
-                                            var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                            $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                        }
-                                    });
-                                })
-                            });
-                        </script>
-                        <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                $('.latest_grid0').each(function() {
-                                    if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                        var items = $(this).children('div.item');
-                                        items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                        items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                    }
-                                });
-
-                                if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
@@ -2256,6 +1507,34 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     }
                 });
             });
+        };
+
+        function take_items(elem, category, id, start=0, end=5, limit=5) {
+            {
+                $.ajax({
+                    type: "POST",
+                    url: 'constructor/item.php',
+                    data: {                        
+                        'elem_category': category,
+                        'elem_id': id,
+                        'elem_start_i': start,
+                        'elem_end_i': end,
+                        'elem_lim': limit
+                    },
+                    success: function(response) {
+                        obj = $('#'+elem);
+                        if (response.length<20000)
+                        {
+                            obj.siblings('.box-showmore').addClass('item_hidden');
+                        }
+                        else {
+                            var btn = obj.siblings('.box-showmore').children('#show_more');
+                            btn.attr('onclick', "take_items('"+elem+"', '"+category+"', '"+id+"', '"+end+"', '"+(parseInt(end)+5)+"')");
+                        }
+                        obj.html(obj.html() + response);
+                    }
+                });
+            };
         };
     </script>
     <footer>

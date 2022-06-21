@@ -247,12 +247,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<?php
-$third_name = mysqli_query($conn, "SELECT `third_name` FROM category");
-$second_name = mysqli_query($conn, "SELECT `second_name` FROM category");
-$first_name = mysqli_query($conn, "SELECT `first_name` FROM category");
-?>
-
 <body class="product-category-1">
     <p id="back-top" style="display: none;"><a rel="nofollow" class="btn btn-default" href="#top"><i class="fa fa-chevron-up" style="font-size:18px;"></i></a></p>
     <div id="top-fixed" class="hidden-xs hidden-sm">
