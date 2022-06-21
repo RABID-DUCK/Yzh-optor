@@ -326,30 +326,30 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                     <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" onclick="return false;" data-idsearch="0">Везде</a></li>
-                                    <li><a href="#" onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
+                                    <li><a  onclick="return false;" data-idsearch="0">Везде</a></li>
+                                    <li><a  onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="21">Все для сантехники</a>
+                                    <li><a  onclick="return false;" data-idsearch="21">Все для сантехники</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
+                                    <li><a  onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
+                                    <li><a  onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
+                                    <li><a  onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
                                             ИНВЕНТАРЬ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
+                                    <li><a  onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
                                             ЗАЩИТЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
+                                    <li><a  onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
                                             ТОВАРЫ</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
+                                    <li><a  onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
+                                    <li><a  onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
 
                                 </ul>
                                 <input id="selected_category" type="hidden" name="category_id" value="0" />
@@ -391,7 +391,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             foreach ($elems1 as $i1 => $elem1) { ?>
                                 <li class="dropdown">
                                     <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                    <a href="#" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
+                                    <a  class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
                                         <div class="dropdown-inner">
@@ -399,11 +399,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
                                                 foreach ($elems2 as $i2 => $elem2) { ?>
                                                     <li class="nsmenu-issubchild">
-                                                        <a href="#"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                        <a ><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
                                                             <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
                                                             foreach ($elems3 as $i3 => $elem3) { ?>
-                                                                <li class=""><a href="#"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
+                                                                <li class=""><a ><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
                                                         </ul>
                                                     </li>
@@ -779,7 +779,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
                                             </div>
-                                            <a href="#">
+                                            <a href="">
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
                                                 <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                             </a>
@@ -787,7 +787,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a href="#"><?= $elem['name'] ?></a>
+                                                <a href=""><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -801,7 +801,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                     <span class="quantity-reviews">
                                                         <!-- FIXME Сделать ссылку на элемент -->
-                                                        <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
+                                                        <a data-placement="right" data-toggle="tooltip" title=""  data-original-title="отзывов">0</a>
                                                     </span>
                                                 </span>
                                             </div>
@@ -827,7 +827,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -860,6 +862,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             position: absolute;
                             top: 50%;
                             left: 25%;
+                            z-index: 32131;
                         }
 
                         .modalka-buy #close-call {
@@ -901,18 +904,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             }
                         }
                     </style>
-
-                    <script>
-                        document.addEventListener("DOMContentLoaded", function(event) {
-                            $('[data-toggle-buy]').click(function() {
-                                $('.container').toggleClass('buy-hidden');
-
-                            });
-                            // $('[close-buy]').click(function () {
-                            //         $('.modalka-buy').toggleClass('ebat');
-                            //     });           
-                        });
-                    </script>
 
                     <script>
                         var itemms = document.querySelectorAll('.item');
@@ -995,8 +986,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <div class="product-slider">
                         <div class="container-modules latest_gv latest_grid0">
                             <?php
-                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='11'");
-                            foreach ($elems as $elem) {
+                            $elems2 = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='11'");
+                            foreach ($elems2 as $elem) {
                                 switch (strlen($elem['id'])) {
                                     case 1:
                                         $elem['id'] = '000' . $elem['id'];
@@ -1034,7 +1025,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
                                             </div>
-                                            <a href="#">
+                                            <a >
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
                                                 <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                             </a>
@@ -1042,7 +1033,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a href="#"><?= $elem['name'] ?></a>
+                                                <a ><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -1056,7 +1047,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                     <span class="quantity-reviews">
                                                         <!-- FIXME Сделать ссылку на элемент -->
-                                                        <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
+                                                        <a data-placement="right" data-toggle="tooltip" title=""  data-original-title="отзывов">0</a>
                                                     </span>
                                                 </span>
                                             </div>
@@ -1082,7 +1073,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -1092,6 +1084,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                     </div>
                                 </div>
+                       
+
                             <?php
                             };
                             ?>
@@ -1163,12 +1157,22 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 $('.container').toggleClass('buy-hidden');
 
                             });
-                            // $('[close-buy]').click(function () {
-                            //         $('.modalka-buy').toggleClass('ebat');
-                            //     });           
-                        });
                     </script>
-
+<script>
+							function btnminus_quickorder(minimum){
+								var $input = $('#htop_quickorder');
+								var count = parseInt($input.val()) - parseInt(minimum);
+								count = count < parseInt(1) ? parseInt(1) : count;
+								$input.val(count);
+								$input.change();										
+							}
+							function btnplus_quickorder(minimum){
+								var $input = $('#htop_quickorder');
+								var count = parseInt($input.val()) + parseInt(minimum);
+								$input.val(count);
+								$input.change();
+							};	
+							</script>
                     <script>
                         var itemms = document.querySelectorAll('.item');
                         show__more = document.getElementById('show_more');
@@ -1362,7 +1366,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
                                                 </div>
-                                                <a href="#">
+                                                <a >
                                                     <!-- FIXME '#' Сделать ссылку на элемент -->
                                                     <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                                 </a>
@@ -1370,7 +1374,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                             <div class="caption">
                                                 <div class="product-name">
-                                                    <a href="#"><?= $elem['name'] ?></a>
+                                                    <a ><?= $elem['name'] ?></a>
                                                     <!-- FIXME Сделать ссылку на элемент -->
                                                 </div>
                                                 <div class="product-model"><?= $elem['id'] ?></div>
@@ -1384,7 +1388,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                         <span class="quantity-reviews">
                                                             <!-- FIXME Сделать ссылку на элемент -->
-                                                            <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
+                                                            <a data-placement="right" data-toggle="tooltip" title=""  data-original-title="отзывов">0</a>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -1410,9 +1414,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 </div>
                                                 <div class="actions-quick-order">
                                                     <div class="quick-order">
-                                                        <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
-                                                            <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
-                                                        </button>
+                                                    <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                    </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1491,9 +1496,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                     $('.container').toggleClass('buy-hidden');
 
                                 });
-                                // $('[close-buy]').click(function () {
-                                //         $('.modalka-buy').toggleClass('ebat');
-                                //     });           
+                                      
                             });
                         </script>
 
@@ -1721,10 +1724,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                             </div>
                                                             <div class="actions-quick-order">
                                                                 <div class="quick-order">
-                                                                    <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(4750);" title="" data-original-title="Купить в 1 клик">
-                                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                                        Купить в 1 клик
-                                                                    </button>
+                                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1843,7 +1846,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
                                                         </div>
-                                                        <a href="#">
+                                                        <a >
                                                             <!-- FIXME '#' Сделать ссылку на элемент -->
                                                             <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                                         </a>
@@ -1851,7 +1854,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                     <div class="caption">
                                                         <div class="product-name">
-                                                            <a href="#"><?= $elem['name'] ?></a>
+                                                            <a ><?= $elem['name'] ?></a>
                                                             <!-- FIXME Сделать ссылку на элемент -->
                                                         </div>
                                                         <div class="product-model"><?= $elem['id'] ?></div>
@@ -1865,7 +1868,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                                 <span class="quantity-reviews">
                                                                     <!-- FIXME Сделать ссылку на элемент -->
-                                                                    <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
+                                                                    <a data-placement="right" data-toggle="tooltip" title=""  data-original-title="отзывов">0</a>
                                                                 </span>
                                                             </span>
                                                         </div>
@@ -1891,9 +1894,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                         </div>
                                                         <div class="actions-quick-order">
                                                             <div class="quick-order">
-                                                                <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
-                                                                    <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
-                                                                </button>
+                                                            <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                    </button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1972,9 +1976,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             $('.container').toggleClass('buy-hidden');
 
                                         });
-                                        // $('[close-buy]').click(function () {
-                                        //         $('.modalka-buy').toggleClass('ebat');
-                                        //     });           
+                                                 
                                     });
                                 </script>
 
@@ -2139,9 +2141,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(4208);" title="Купить в 1 клик">
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
                                             </div>
@@ -2232,9 +2234,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(3022);" title="Купить в 1 клик">
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
                                             </div>
@@ -2324,9 +2326,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder hidden-quick-order" type="button" data-toggle="tooltip" onclick="fastorder_open(3942);" title="Купить в 1 клик" disabled>
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
                                             </div>
@@ -2418,9 +2420,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder hidden-quick-order" type="button" data-toggle="tooltip" onclick="fastorder_open(3201);" title="Купить в 1 клик" disabled>
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
                                             </div>
@@ -2512,9 +2514,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder hidden-quick-order" type="button" data-toggle="tooltip" onclick="fastorder_open(4281);" title="Купить в 1 клик" disabled>
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
+                                                <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button id="" class="btn btn-fastorder" type="submit" onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
                                             </div>
@@ -2572,6 +2574,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 <?php
                                 $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `third_id`='0'");
                                 foreach ($elems as $elem) {
+                                    $img = $elem['img'];
                                     switch (strlen($elem['id'])) {
                                         case 1:
                                             $elem['id'] = '000' . $elem['id'];
@@ -2584,11 +2587,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             break;
                                         default:
                                             break;
-                                    }
-                                    if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                        $img = basename($img[0]);
-                                    } else {
-                                        $img = 'null.png';
                                     }
                                 ?>
                                     <style>
@@ -2609,7 +2607,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
                                                 </div>
-                                                <a href="#">
+                                                <a >
                                                     <!-- FIXME '#' Сделать ссылку на элемент -->
                                                     <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                                 </a>
@@ -2617,7 +2615,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                             <div class="caption">
                                                 <div class="product-name">
-                                                    <a href="#"><?= $elem['name'] ?></a>
+                                                    <a ><?= $elem['name'] ?></a>
                                                     <!-- FIXME Сделать ссылку на элемент -->
                                                 </div>
                                                 <div class="product-model"><?= $elem['id'] ?></div>
@@ -2631,7 +2629,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                         <span class="quantity-reviews">
                                                             <!-- FIXME Сделать ссылку на элемент -->
-                                                            <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
+                                                            <a data-placement="right" data-toggle="tooltip" title=""  data-original-title="отзывов">0</a>
                                                         </span>
                                                     </span>
                                                 </div>
@@ -2657,9 +2655,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 </div>
                                                 <div class="actions-quick-order">
                                                     <div class="quick-order">
-                                                        <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
-                                                            <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
-                                                        </button>
+                                                    <?php $name=str_replace('"', "", $elem['name']);?>
+                                                    <button class="btn btn-fastorder " onclick="pokaz_modal('<?=(int)$elem['id']?>', '<?=$name?>', '<?=$img?>', '<?=$elem['price']?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                    </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2687,9 +2686,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 border-radius: 4px;
                                 width: 600px;
                                 height: 520px;
-                                position: absolute;
-                                top: 50%;
+                                position: fixed;
+                                top: 50px;
                                 left: 25%;
+                                z-index: 1;
                             }
 
                             .modalka-buy #close-call {
@@ -2731,18 +2731,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 }
                             }
                         </style>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function(event) {
-                                $('[data-toggle-buy]').click(function() {
-                                    $('.container').toggleClass('buy-hidden');
-
-                                });
-                                // $('[close-buy]').click(function () {
-                                //         $('.modalka-buy').toggleClass('ebat');
-                                //     });           
-                            });
-                        </script>
 
                         <script>
                             var itemms = document.querySelectorAll('.item');
@@ -2856,6 +2844,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
     </style>
 
+                           
     <!-- скрипт звонка -->
     <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
     <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;">
@@ -3036,8 +3025,38 @@ $dir_img = __DIR__ . '/img/tovaru/';
         //     });
         // }
     </script>
-    </div>
-    <footer>
+                             // document.getElementById(`img_`).setAttribute("src", "img/tovaru/"+img);
+                            // document.getElementById(`img_`).setAttribute("alt", "Товар "+id);
+                            // document.getElementById(`text_`).innerHTML=`${name}`;
+                            // document.getElementById(`price_`).innerHTML=`${price}`;
+            <div id="close-yey" class="hider">
+
+            </div>
+                    <script>  
+                        function pokaz_modal(id, name, img, price) {
+                            $(document).ready(function() {                            
+                                $.ajax({
+                                    type: "post",
+                                    url: 'constructor/form_buy.php',
+                                    data: {'name': id},
+                                    success: function(response){
+
+                                        $('#close-yey').html(response);
+
+                                        $('[data-toggle-buy]').on('click', function() {
+                                            $('#close-yey').removeClass('hider');
+                                        });
+
+                                        $('#close-buy-block').on('click', function() {
+                                            $('#close-yey').toggleClass('hider');
+                                        });
+
+                                    }
+                                });
+                            });
+                        };  
+                        </script>
+                    <footer>
         <div class="footer-top">
             <div class="container">
                 <div class="footer-ribbon">
@@ -3189,7 +3208,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

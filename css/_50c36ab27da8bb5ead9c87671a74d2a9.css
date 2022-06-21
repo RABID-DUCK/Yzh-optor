@@ -15627,6 +15627,67 @@ footer h3 {
     right: 4px
 }
 
+#close-yey{
+    font-size: 40px;
+    color: black;
+    position: fixed;
+    top: 15%;
+    right: 22%;
+    z-index: 234324234;
+    width: 50%;
+    height: 480px;
+    background-color: silver;
+    border-radius: 4px;
+}
+.quick-cell-content{
+    font-size: 14px;
+}
+
+.hider body{
+    overflow: hidden;
+}
+.hider{
+    display: none;
+}
+.modalka-buy:not(.hider) .container{
+    filter: none;
+}
+#close-buy-block{
+    position: absolute;
+    right: -40px;
+    top: 3px;
+}
+.blurchik{
+    filter: blur(4px);
+}
+.hider{
+    filter: none;
+}
+#close-yey .hider .container{
+    filter: blur(4px);
+}
+.ladda-button{
+    background-color: #47c843;
+    border-color: #2cad28;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ladda-button:hover{
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#htop_quickorder{
+    text-align: center;
+}
+
 .bootstrap-datetimepicker-widget td.active,
 .bootstrap-datetimepicker-widget td.active:hover {
     background-color: #428bca;
