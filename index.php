@@ -74,6 +74,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
         }
     </style>
     <link rel="stylesheet" href="css/ns-cache/_50c36ab27da8bb5ead9c87671a74d2a9.css" />
+    <script defer src="js/script.js"></script>
     <style>
         #cart:hover .dropdown-menu {
             display: block;
@@ -311,7 +312,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             </button>
 
                             <ul class="dropdown-menu pull-right">
-                                <li>
+                                <li class="list">
                                     <p class="text-center">В корзине пусто!</p>
                                 </li>
                             </ul>
@@ -659,7 +660,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     </ol>
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox" style="height: 285px !important;">
+                    <div class="carousel-inner" role="listbox">
                         <div class="item active">
                             <img src="img/image/cache/catalog/slide/3cd41d7615087debd08018cb3b5e1edf-1140x380.jpg" alt="...">
                             <div class="carousel-caption">
@@ -817,7 +818,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="">
+                                                    <button class="btn btn-general" type="button" onclick="" >
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
@@ -1023,13 +1024,13 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <a>
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded" id="img-tovaru">
                                             </a>
                                         </div>
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a><?= $elem['name'] ?></a>
+                                                <a id="product-name"><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -1062,7 +1063,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="">
+                                                    <button class="btn btn-general" type="button" onclick="" id="add_in_cart">
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
@@ -1148,11 +1149,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     </style>
 
                     <script>
-                        document.addEventListener("DOMContentLoaded", function(event) {
+                        document.addEventListener("DOMContentLoaded", function() {
                                     $('[data-toggle-buy]').click(function() {
                                         $('.container').toggleClass('buy-hidden');
-
                                     });
+                                });
                     </script>
                     <script>
                         function btnminus_quickorder(minimum) {

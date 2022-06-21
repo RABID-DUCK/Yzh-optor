@@ -1051,3 +1051,12 @@ function get_modal_callbacking() {
         },
     });
 }
+
+
+
+// корзuна -----------------
+// id-  cart  товары выводятся сюда
+// id-  add_in_cart  кнопка добавить в корзину
+    window.addEventListener('DOMContentLoaded', (event) => {
+        
+    });

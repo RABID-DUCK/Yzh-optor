@@ -499,6 +499,33 @@ screen and (max-height: 300px) {
     right: 0;
     padding-top: 0
 }
+.carousel-inner{
+    margin-bottom: 20px;
+    height: 240px !important;
+}
+
+.hover-hide ul{
+    display: none !important;
+}
+
+.hover-hide:hover ul{
+    display: block !important;
+}
+
+.mfp-close{
+    right: -30px !important;
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff !important;
+    cursor: pointer !important;
+    font-size: 55px;
+    height: 45px;
+    outline: medium none;
+    position: absolute;
+    top: -10px;
+    width: 45px;
+    z-index: 1060;
+}
 
 .owl-carousel .owl-wrapper:after {
     content: ".";
