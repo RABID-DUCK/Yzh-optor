@@ -153,7 +153,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                 document.getElementById("elem_del_id").value = id;
                             }
                         </script>
-                        <input type="hidden" name="elem_del_id" id="elem_del_id" value=<?= $elem['id'] ?>>
+                        <input type="hidden" name="elem_del_id" id="elem_del_id" value='<?= $elem['id'] ?>'>
                     </tbody>
                 </table>
             </div>

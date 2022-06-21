@@ -12,6 +12,10 @@
     transition: all 300ms ease-in-out 0s;
 }
 
+.fa-shopping-basket{
+    margin-right: 8px;
+}
+
 .mfp-bg {
     top: 0;
     left: 0;
