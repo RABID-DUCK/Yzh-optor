@@ -1,6 +1,17 @@
 if (localStorage.getItem('display') === null) {
     localStorage.setItem('display', 'grid');
 }
+
+// ----------------КОРЗИНА -------------------
+window.addEventListener('DOMContentLoaded', () => {
+    var items = {};
+
+});
+
+
+
+// --------------------Конец корзины-----------
+
 function init(elem, options) {
     elem.addClass('countdownHolder');
     $.each(['Days', 'Hours', 'Minutes', 'Sec'], function (i) {
@@ -447,7 +458,7 @@ function btnminus_cat_price_latest_gv6367(minimum) {
     count = count < parseInt(1) ? parseInt(1) : count;
     $input.val(count);
     $input.change();
-    recalc_quantity(6367, count, , '', '.latest_grid0', 'latest_gv');
+    recalc_quantity(6367, count, '', '.latest_grid0', 'latest_gv');
 }
 function btnplus_cat_price_latest_gv6367(minimum) {
     var $input = $('#input_quantity_mod_latest_grid06367');

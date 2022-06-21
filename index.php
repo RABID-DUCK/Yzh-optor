@@ -63,7 +63,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
         @font-face {
             font-display: swap;
             src: url('catalog/view/theme/newstore/stylesheet/fonts/RobotoCondensed-Bold.ttf');
-            font-style: bold;
+            font-style: normal;
             font-weight: 600;
         }
 
@@ -326,33 +326,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 <button id="change_category" type="button" class="btn btn-search-select dropdown-toggle" data-toggle="dropdown">
                                     <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
                                 </button>
-                                <ul class="dropdown-menu">
-                                    <li><a onclick="return false;" data-idsearch="0">Везде</a></li>
-                                    <li><a onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
-                                    </li>
-
-                                    <li><a onclick="return false;" data-idsearch="21">Все для сантехники</a>
-                                    </li>
-
-                                    <li><a onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
-                                            ИНВЕНТАРЬ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
-                                            ЗАЩИТЫ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
-                                            ТОВАРЫ</a>
-                                    </li>
-
-                                    <li><a onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
-
-                                </ul>
                                 <input id="selected_category" type="hidden" name="category_id" value="0" />
 
                             </div>
@@ -1008,6 +981,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         display: none;
                                     }
                                 </style>
+
+
+
                                 <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
                                     <div class="product-thumb transition">
                                         <div class="image">
@@ -1062,7 +1038,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="">
+                                                    <button class="btn btn-general" id="add_bts" type="button" data-action="add" onclick="add_in_cart(<?= $elem['id'] ?>)">
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
@@ -1154,6 +1130,35 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                     });
                     </script>
+
+                    <script>
+                        // document.addEventListener("DOMContentLoaded", function(event) {
+                    function add_in_cart(id){
+                        $(document).ready(function( {
+                            $('[data-action="add"]').on('click', function () {
+                                $.ajax({
+                                    url: 'to_cart.php',
+                                    type: 'post',
+                                    data: {
+                                        'name': id
+                                    },
+                                    successes: function (description, count = 1){
+                                        $('#cart_des').html(description);
+                                        $('#empty_cart').hide();
+                                        $('[data-action="add"]').click(function (){
+                                            count = $(this).find('.cart-quantity-header');
+                                            $(this).find('.cart-quantity-header', count+1);
+
+                                        })
+                                    }
+                                });
+                            }
+                        });
+                    }));
+                };
+                        // });
+                    </script>
+
                     <script>
                         function btnminus_quickorder(minimum) {
                             var $input = $('#htop_quickorder');
@@ -1194,6 +1199,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             nn += 5;
                             MoreShow(nn);
                         }
+                    </script>
+                    <script>
+                        window.addEventListener('DOMContentLoaded', () => {
+
+                        });
                     </script>
                     <script>
                         document.addEventListener("DOMContentLoaded", function(event) {
@@ -2258,6 +2268,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
             });
         };
     </script>
+    <script src="js/script.js"></script>
     <footer>
         <div class="footer-top">
             <div class="container">
