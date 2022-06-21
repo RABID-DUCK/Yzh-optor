@@ -239,6 +239,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
         }
     </style>
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="common-home">
@@ -250,8 +251,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
             <div class="row vertical-align">
                 <div class="col-xs-6 col-sm-12 col-md-3 text-center text-left-md logo-top">
                     <div id="logo">
-                        <a href="index.html">
-                            <img src="img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
+                        <a href="../index.html">
+                            <img src="../img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
                         </a>
                     </div>
                 </div>
@@ -276,7 +277,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 <li class="line-contact"></li>
                                 <li>
                                     <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
+                                        <div class="icon-image"><img src="../img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
                                         Yuzh.Optor@mail.ru
                                     </a>
                                 </li>
@@ -374,10 +375,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         </button>
 
                         <ul id="menu-list" class="dropdown-menu">
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.html">Доставка</a></li>
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.html">Оплата</a></li>
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.html">О нас</a></li>
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.html">Контакты</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.html">Доставка</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.html">Оплата</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.html">О нас</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.html">Контакты</a></li>
                             <?php
                             $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
                             foreach ($elems1 as $i1 => $elem1) { ?>
@@ -414,13 +415,13 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="delivery.html">
+                                <li><a class="no-img-parent-link" href="../delivery.html">
                                         Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="oplata.html">
+                                <li><a class="no-img-parent-link" href="../oplata.html">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="about_us.html">
+                                <li><a class="no-img-parent-link" href="../about_us.html">
                                         О нас</a></li>
-                                <li><a class="no-img-parent-link" href="Kontakct.html">
+                                <li><a class="no-img-parent-link" href="../Kontakct.html">
                                         Контакты</a></li>
                             </ul>
                         </div>
@@ -639,13 +640,13 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" class="display:none">
                             <img src="img/image/cache/catalog/slide/3cd41d7615087debd08018cb3b5e1edf-1140x380.jpg" alt="садовые вещи">
                             <div class="carousel-caption">
 
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" class="display:none">
                             <img src="img/image/cache/catalog/slide/tovary-dlya-doma_111043_1-1140x380.jpg" alt="огородный инвентарь">
                             <div class="carousel-caption">
                             </div>
@@ -720,7 +721,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <div class="product-slider">
                         <div class="container-modules latest_gv latest_grid0">
                             <?php
-                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='14'");
+                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='14' LIMIT 20");
                             foreach ($elems as $elem) {
                                 switch (strlen($elem['id'])) {
                                     case 1:
@@ -761,7 +762,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <a href="#">
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                <img src="../img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                             </a>
                                         </div>
 
@@ -975,7 +976,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <div class="product-slider">
                         <div class="container-modules latest_gv latest_grid0">
                             <?php
-                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='11'");
+                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='11' limit 20");
                             foreach ($elems as $elem) {
                                 switch (strlen($elem['id'])) {
                                     case 1:
@@ -1016,7 +1017,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             </div>
                                             <a href="#">
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                <img src="../img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
                                             </a>
                                         </div>
 
@@ -1231,109 +1232,154 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category  parent_category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <img src="categories/image/cache/catalog/image/pupular_category/95921_2-150x150.jpg" alt="СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ">
+                                    <img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/95921_2-150x150.jpg" alt="СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ">
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="categories/stroy-instrumenty-i-tovary/">СТРОЙ
-                                                ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/">СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
                                     </div>
                                 </div>
                                 <div class="item-sub-category nswc-host">
                                     <div class="nswc-viewport" style="padding-right: 14px; height: 155px; overflow: hidden;">
                                         <div class="nswc-container" style="overflow: hidden;">
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/">ГАЗ-ПЛИТА-ГОРЕЛКИ</a>
-                                            </div>
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/zamki/">ЗАМКИ</a>
-                                            </div>
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/">ИЗМЕРИТЕЛЬНЫЕ
-                                                    ИНСТРУМЕНТЫ</a></div>
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/">ИНСТРУМЕНТ
-                                                    МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/krepezh/">КРЕПЕЖ</a>
-                                            </div>
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/">РАСХОДНЫЕ
-                                                    МАТЕРИАЛЫ</a></div>
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/">РУЧНОЙ
-                                                    ИНСТРУМЕНТ</a></div>
-                                            <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/">СВАРОЧНОЕ
-                                                    ОБОРУДОВАНИЕ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/gaz-plita-gorelki/">ГАЗ-ПЛИТА-ГОРЕЛКИ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/zamki/">ЗАМКИ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/">ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/">ИНСТРУМЕНТ МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/krepezh/">КРЕПЕЖ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/">РАСХОДНЫЕ МАТЕРИАЛЫ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/ruchnoy-instrument/">РУЧНОЙ ИНСТРУМЕНТ</a></div>
+                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/">СВАРОЧНОЕ ОБОРУДОВАНИЕ</a></div>
                                         </div>
                                     </div>
                                     <div class="nswc-scrollbar" style="position: absolute; top: 0px; right: 0px; overflow: hidden; height: 152px;">
-                                        <div class="nswc-thumb" style="position: absolute; left: 0px; width: 100%; top: 0px; height: 130.889px;">
-                                        </div>
+                                        <div class="nswc-thumb" style="position: absolute; left: 0px; width: 100%; top: 0px; height: 118.575px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item-category ">
+                                <div class="wall-cat-image show-sub-cat-0">
+                                    <a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/27953642163111e8ae1fe8039a18cbef_a781eb93299111ebbe151c1b0db29d29-500x500-150x150.png" alt="Ведра"></a>
+                                </div>
+                                <div class="wall-cat-name">
+                                    <div class="display-table">
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/">Ведра</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item-category ">
+                                <div class="wall-cat-image show-sub-cat-0">
+                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2cc86d6cc67a11e68c733c970e011047_3bd1db41361011ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Диск Алмазный "></a>
+                                </div>
+                                <div class="wall-cat-name">
+                                    <div class="display-table">
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/">Диск Алмазный </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item-category ">
+                                <div class="wall-cat-image show-sub-cat-0">
+                                    <a href="https://xpert-ufa.ru/elektrotovary/svetilniki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/7876e744c27411eabe0c1c1b0db29d29_40f93b3f5fc911ebbe1a1c1b0db29d29-500x500-150x150.jpg" alt="Светильники"></a>
+                                </div>
+                                <div class="wall-cat-name">
+                                    <div class="display-table">
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/elektrotovary/svetilniki/">Светильники</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item-category ">
+                                <div class="wall-cat-image show-sub-cat-0">
+                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/5972713_image_large-150x150.jpg" alt="Серпянка,Сетка Штукатурная"></a>
+                                </div>
+                                <div class="wall-cat-name">
+                                    <div class="display-table">
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/">Серпянка,Сетка Штукатурная</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item-category ">
+                                <div class="wall-cat-image show-sub-cat-0">
+                                    <a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/autosalfetki-150x150.jpg" alt="Авто салфетки"></a>
+                                </div>
+                                <div class="wall-cat-name">
+                                    <div class="display-table">
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/">Авто салфетки</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item-category ">
+                                <div class="wall-cat-image show-sub-cat-0">
+                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/3af342b3459d11e5aad6f835ddca8acb_327c7180348c11ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Уголок-линейка"></a>
+                                </div>
+                                <div class="wall-cat-name">
+                                    <div class="display-table">
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/">Уголок-линейка</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="item-category ">
+                                <div class="wall-cat-image show-sub-cat-0">
+                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2e9f6a214a5711ebbe181c1b0db29d29_ebda8048a35611ebbe1c1c1b0db29d29-500x500-150x150.jpg" alt="Шпатель"></a>
+                                </div>
+                                <div class="wall-cat-name">
+                                    <div class="display-table">
+                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/">Шпатель</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <script>
-                    $(document).ready(function() {
-                        if (viewport().width >= 992) {
-                            $('.item-sub-category').scrollpanel({
-                                prefix: 'nswc-'
-                            });
-                        } else {
-                            $(document).on('click', '.show-sub-cat-0', function() {
-                                $(this).parent().find('.item-sub-category').toggleClass('active-sub-menu');
-                            });
-                        }
-                        $(window).resize(function() {
-                            if (viewport().width >= 992) {
-                                $('.item-sub-category').scrollpanel({
-                                    prefix: 'nswc-'
-                                });
-                            } else {
-                                $(document).on('click', '.show-sub-cat-0', function() {
-                                    $(this).parent().find('.item-sub-category').toggleClass('active-sub-menu');
-                                });
-                            }
-                        });
-                        if ($(".categorywall-0").parents("#column-left, #column-right").length) {
-                            $('.categorywall-0 .box-item').removeClass("col-sm-6 col-md-4 col-lg-3");
-                            $('.categorywall-0 .box-item').addClass("col-sm-12 col-md-12 col-lg-12");
-                        }
-                    });
-                </script>
-                <div>
-                    <div class="container-module">
-                        <div class="title-module"><span>Автопринадлежности</span></div>
-                        <div class="product-slider">
-                            <div class="container-modules latest_gv latest_grid0">
-                                <?php
-                                $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `third_id`='0'");
-                                foreach ($elems as $elem) {
-                                    switch (strlen($elem['id'])) {
-                                        case 1:
-                                            $elem['id'] = '000' . $elem['id'];
-                                            break;
-                                        case 2:
-                                            $elem['id'] = '00' . $elem['id'];
-                                            break;
-                                        case 3:
-                                            $elem['id'] = '0' . $elem['id'];
-                                            break;
-                                        default:
-                                            break;
+                <div class="container-module">
+                    <div class="title-module"><span>Автопринадлежности</span></div>
+                    <div class="product-slider">
+                        <div class="container-modules latest_gv latest_grid0">
+                            <?php
+                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `third_id`='0' limit 20");
+                            foreach ($elems as $elem) {
+                                switch (strlen($elem['id'])) {
+                                    case 1:
+                                        $elem['id'] = '000' . $elem['id'];
+                                        break;
+                                    case 2:
+                                        $elem['id'] = '00' . $elem['id'];
+                                        break;
+                                    case 3:
+                                        $elem['id'] = '0' . $elem['id'];
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                if ($img = glob($dir_img . $elem['id'] . '.*')) {
+                                    $img = basename($img[0]);
+                                } else {
+                                    $img = 'null.png';
+                                }
+                            ?>
+                                <style>
+                                    .item {
+                                        display: none;
                                     }
-                                    if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                        $img = basename($img[0]);
-                                    } else {
-                                        $img = 'null.png';
-                                    }
-                                ?>
-                                    <style>
-                                        .item {
-                                            display: none;
-                                        }
-                                    </style>
-                                    <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
-                                        <div class="product-thumb transition">
-                                            <div class="image">
-                                                <div class="stickers-ns">
-                                                    <!-- <div class="sticker-ns bestseller">
+                                </style>
+                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
+                                    <div class="product-thumb transition">
+                                        <div class="image">
+                                            <div class="stickers-ns">
+                                                <!-- <div class="sticker-ns bestseller">
                                                 <i class="fa fa fa-rocket "></i>
                                                 <span>Лидер продаж!</span>
                                             </div>
@@ -1341,447 +1387,229 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <i class="fa fa fa-eye "></i>
                                                 <span>Самые просматриваемые</span>
                                             </div> -->
-                                                </div>
-                                                <a href="#">
-                                                    <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                    <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
-                                                </a>
                                             </div>
+                                            <a href="#">
+                                                <!-- FIXME '#' Сделать ссылку на элемент -->
+                                                <img src="../img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                            </a>
+                                        </div>
 
-                                            <div class="caption">
-                                                <div class="product-name">
-                                                    <a href="#"><?= $elem['name'] ?></a>
-                                                    <!-- FIXME Сделать ссылку на элемент -->
-                                                </div>
-                                                <div class="product-model"><?= $elem['id'] ?></div>
-                                                <div class="rating">
-                                                    <span class="rating-box">
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                        <div class="caption">
+                                            <div class="product-name">
+                                                <a href="#"><?= $elem['name'] ?></a>
+                                                <!-- FIXME Сделать ссылку на элемент -->
+                                            </div>
+                                            <div class="product-model"><?= $elem['id'] ?></div>
+                                            <div class="rating">
+                                                <span class="rating-box">
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
 
-                                                        <span class="quantity-reviews">
-                                                            <!-- FIXME Сделать ссылку на элемент -->
-                                                            <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
-                                                        </span>
+                                                    <span class="quantity-reviews">
+                                                        <!-- FIXME Сделать ссылку на элемент -->
+                                                        <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
                                                     </span>
-                                                </div>
-                                                <div class="quantity_plus_minus">
-                                                    <div class="quantity_cont">
-                                                        <div class="input-group">
-                                                            <span class="input-group-btn">
-                                                                <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
-                                                            </span>
-                                                            <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
-                                                            <span class="input-group-btn">
-                                                                <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="actions">
-                                                    <div class="cart">
-                                                        <button class="btn btn-general" type="button" onclick="">
-                                                            <i class="fa fa-shopping-basket"></i><span>В корзину</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="actions-quick-order">
-                                                    <div class="quick-order">
-                                                        <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
-                                                            <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
-                                                        </button>
+                                                </span>
+                                            </div>
+                                            <div class="quantity_plus_minus">
+                                                <div class="quantity_cont">
+                                                    <div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
+                                                        </span>
+                                                        <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
-
-
+                                            <div class="actions">
+                                                <div class="cart">
+                                                    <button class="btn btn-general" type="button" onclick="">
+                                                        <i class="fa fa-shopping-basket"></i><span>В корзину</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="actions-quick-order">
+                                                <div class="quick-order">
+                                                    <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
+
+
                                     </div>
-                                <?php
-                                };
-                                ?>
-                            </div>
-                            <div class="showmore-latest0 box-showmore">
-                                <div class="ajaxloadingLatest"></div>
-                                <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
-                            </div>
+                                </div>
+                            <?php
+                            };
+                            ?>
                         </div>
-
-                        <!-- ПОКАЗАТЬ ЕЩЁ -->
-                        <style>
-                            .modalka-buy {
-                                display: block;
-                                opacity: 1;
-                                background-color: #f9f9f9;
-                                border: 1px solid #dfe4eb;
-                                border-radius: 4px;
-                                width: 600px;
-                                height: 520px;
-                                position: absolute;
-                                top: 50%;
-                                left: 25%;
-                            }
-
-                            .modalka-buy #close-call {
-                                color: black;
-                                z-index: 21321;
-                                font-size: 49px;
-                            }
-
-                            .buy-hidden {
-                                opacity: 0.7;
-                                filter: blur(4px);
-                            }
-
-                            .ebat {
-                                display: none;
-                            }
-
-                            .modalka-buy button.btn-callback {
-                                background-color: #47c843;
-                                border-color: #2cad28;
-                                border-style: solid;
-                                border-width: 1px 1px 2px;
-                                color: #fff;
-                                font-size: 13px;
-                                padding: 8px 20px;
-                                text-transform: uppercase;
-                                font-weight: bold;
-                            }
-
-                            .modalka-buy button.btn-callback:hover {
-                                opacity: 0.8;
-                                font-weight: 700;
-                            }
-
-                            @media (max-width: 800px) {
-                                .modalka-buy {
-                                    width: auto;
-                                    left: 10;
-                                }
-                            }
-                        </style>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function(event) {
-                                $('[data-toggle-buy]').click(function() {
-                                    $('.container').toggleClass('buy-hidden');
-
-                                });
-                                // $('[close-buy]').click(function () {
-                                //         $('.modalka-buy').toggleClass('ebat');
-                                //     });           
-                            });
-                        </script>
-
-                        <script>
-                            var itemms = document.querySelectorAll('.item');
-                            show__more = document.getElementById('show_more');
-                            var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                            nn = 5;
-
-                            function MoreShow(n) {
-                                for (var i = 0; i < itemms.length; i++) {
-                                    if (i < nn) {
-                                        itemms[i].style.display = 'block';
-                                        ajaxloadingLatest.classList.add('spin-ajax');
-                                        if (nn === itemms.length) {}
-                                    } else {
-                                        break;
-                                    }
-                                }
-                            }
-
-                            MoreShow(nn);
-                            show__more.onclick = function(e) {
-                                e.preventDefault();
-                                nn += 5;
-                                MoreShow(nn);
-                            }
-                        </script>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function(event) {
-                                // let item = $('.container-modules');
-                                //             let show_more = $('#hide-items');
-                                //             let n = 5;
-                                //             function showMore_(n){
-                                //                 for(let i=0; i<item.length; i++){
-
-                                //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                                //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                                //             }
-                                //         };
-                                $('.item').slice(3);
-
-                                $(document).on('click', '.latest-ajax-load0', function() {
-                                    $.ajax({
-                                        url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                        type: 'post',
-                                        dataType: 'html',
-                                        beforeSend: function() {
-                                            $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                        },
-                                        complete: function() {
-                                            $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                        },
-                                        success: function(data) {
-                                            $data = $(data);
-                                            var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                            $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                        }
-                                    });
-                                })
-                            });
-                        </script>
-                        <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                $('.latest_grid0').each(function() {
-                                    if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                        var items = $(this).children('div.item');
-                                        items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                        items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                    }
-                                });
-
-                                if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                            });
-                        </script>
-                    </div>
-                </div>
-            </div>
-            <div class="categorywall-container categorywall-0">
-                <div class="title-module"><span>Популярные категории</span></div>
-                <div class="wall-category-box">
-                    <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="item-category  parent_category ">
-                            <div class="wall-cat-image show-sub-cat-0">
-                                <img src="categories/image/cache/catalog/image/pupular_category/95921_2-150x150.jpg" alt="СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ">
-                            </div>
-                            <div class="wall-cat-name">
-                                <div class="display-table">
-                                    <div class="display-table-cell"><a href="categories/stroy-instrumenty-i-tovary/">СТРОЙ
-                                            ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
-                                </div>
-                            </div>
-                            <div class="item-sub-category nswc-host">
-                                <div class="nswc-viewport" style="padding-right: 14px; height: 155px; overflow: hidden;">
-                                    <div class="nswc-container" style="overflow: hidden;">
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/">ГАЗ-ПЛИТА-ГОРЕЛКИ</a>
-                                        </div>
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/zamki/">ЗАМКИ</a>
-                                        </div>
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/">ИЗМЕРИТЕЛЬНЫЕ
-                                                ИНСТРУМЕНТЫ</a></div>
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/">ИНСТРУМЕНТ
-                                                МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/krepezh/">КРЕПЕЖ</a>
-                                        </div>
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/">РАСХОДНЫЕ
-                                                МАТЕРИАЛЫ</a></div>
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/">РУЧНОЙ
-                                                ИНСТРУМЕНТ</a></div>
-                                        <div class="subcategory-name"><a href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/">СВАРОЧНОЕ
-                                                ОБОРУДОВАНИЕ</a></div>
-                                    </div>
-                                </div>
-                                <div class="nswc-scrollbar" style="position: absolute; top: 0px; right: 0px; overflow: hidden; height: 152px;">
-                                    <div class="nswc-thumb" style="position: absolute; left: 0px; width: 100%; top: 0px; height: 130.889px;">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="showmore-latest0 box-showmore">
+                            <div class="ajaxloadingLatest"></div>
+                            <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            <script>
-                $(document).ready(function() {
-                    if (viewport().width >= 992) {
-                        $('.item-sub-category').scrollpanel({
-                            prefix: 'nswc-'
-                        });
-                    } else {
-                        $(document).on('click', '.show-sub-cat-0', function() {
-                            $(this).parent().find('.item-sub-category').toggleClass('active-sub-menu');
-                        });
-                    }
-                    $(window).resize(function() {
-                        if (viewport().width >= 992) {
-                            $('.item-sub-category').scrollpanel({
-                                prefix: 'nswc-'
-                            });
-                        } else {
-                            $(document).on('click', '.show-sub-cat-0', function() {
-                                $(this).parent().find('.item-sub-category').toggleClass('active-sub-menu');
-                            });
+
+                    <!-- ПОКАЗАТЬ ЕЩЁ -->
+                    <style>
+                        .modalka-buy {
+                            display: block;
+                            opacity: 1;
+                            background-color: #f9f9f9;
+                            border: 1px solid #dfe4eb;
+                            border-radius: 4px;
+                            width: 600px;
+                            height: 520px;
+                            position: absolute;
+                            top: 50%;
+                            left: 25%;
                         }
-                    });
-                    if ($(".categorywall-0").parents("#column-left, #column-right").length) {
-                        $('.categorywall-0 .box-item').removeClass("col-sm-6 col-md-4 col-lg-3");
-                        $('.categorywall-0 .box-item').addClass("col-sm-12 col-md-12 col-lg-12");
-                    }
-                });
-            </script>
-            <div>
-                <div class="container-module product-category">
-                    <div class="title-module">
-                        <span>АВТОПРИНАДЛЕЖНОСТИ</span>
-                    </div>
-                    <div class="">
-                        <div id="tab-catprfeatured-0" class="">
-                            <div class="product-slider">
-                                <div class="container-modules tab-catprfeatured-0 owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                    <div class="owl-wrapper-outer">
-                                        <div class="owl-wrapper" style="width: 2340px; left: 0px; display: block;">
-                                            <div class="owl-item" style="width: 234px;">
-                                                <div class="item">
-                                                    <div class="product-thumb transition">
-                                                        <div class="quickview"><button class="btn btn-quickview" onclick="quickview_open(4750,'4750,3246,5613,3896,5137');"><i class="fa fa-external-link fa-fw"></i>Просмотр</button>
-                                                        </div>
-                                                        <div class="image">
-                                                            <div class="stickers-ns">
-                                                                <div class="sticker-ns popular">
-                                                                    <i class="fa fa fa-eye "></i>
-                                                                    <span>Самые просматриваемые</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="categories/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/salfetki-mikrofibra-city-up-nabor-iz-10sht-3030-%5B10%5D"><img data-src="categories/image/cache/catalog/0/5/8/0585/0585-200x200.jpg" src="image/catalog/lazyload/lazyload.jpg" alt="Салфетки микрофибра &quot;CITY UP&quot; (НАБОР из 10шт) (30*30 ) [10]" title="Салфетки микрофибра &quot;CITY UP&quot; (НАБОР из 10шт) (30*30 ) [10]" class="img-responsive lazyload"></a>
 
+                        .modalka-buy #close-call {
+                            color: black;
+                            z-index: 21321;
+                            font-size: 49px;
+                        }
 
-                                                        </div>
+                        .buy-hidden {
+                            opacity: 0.7;
+                            filter: blur(4px);
+                        }
 
-                                                        <div class="caption-tabs">
-                                                            <div class="product-name"><a href="categories/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/salfetki-mikrofibra-city-up-nabor-iz-10sht-3030-%5B10%5D">Салфетки
-                                                                    микрофибра "CITY UP" (НАБОР из 10шт) (30*30 )
-                                                                    [10]</a></div>
-                                                            <div class="product-model">0585</div>
-                                                            <div class="quantity_plus_minus">
-                                                                <div class="quantity_cont">
-                                                                    <div class="input-group">
-                                                                        <span class="input-group-btn">
-                                                                            <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_tab_catprfeatured4750('1');" type="button">-</button>
-                                                                        </span>
-                                                                        <input id="input_quantity_mod_tab_catprfeatured4750" class="form-control input-number-quantity4750" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(4750,1, ,'','.tab-catprfeatured-0','tabcatprfeatured0');" size="2" value="1">
-                                                                        <span class="input-group-btn">
-                                                                            <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_tab_catprfeatured4750('1');" type="button">+</button>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <script>
-                                                                function btnminus_cat_price_tab_catprfeatured4750(minimum) {
-                                                                    var $input = $('#input_quantity_mod_tab_catprfeatured4750');
-                                                                    var count = parseInt($input.val()) - parseInt(minimum);
-                                                                    count = count < parseInt(1) ? parseInt(1) : count;
-                                                                    $input.val(count);
-                                                                    $input.change();
-                                                                    recalc_quantity(4750, count, , '', '.tab-catprfeatured-0', 'tabcatprfeatured0');
-                                                                }
+                        .ebat {
+                            display: none;
+                        }
 
-                                                                function btnplus_cat_price_tab_catprfeatured4750(minimum) {
-                                                                    var $input = $('#input_quantity_mod_tab_catprfeatured4750');
-                                                                    var count = parseInt($input.val()) + parseInt(minimum);
-                                                                    $input.val(count);
-                                                                    $input.change();
-                                                                    recalc_quantity(4750, count, , '', '.tab-catprfeatured-0', 'tabcatprfeatured0');
-                                                                };
-                                                            </script>
-                                                            <div class="actions">
-                                                                <div class="wishlist"><button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="" onclick="wishlist.add('4750');" data-original-title="В закладки"><i class="fa fa-heart"></i></button></div>
-                                                                <div class="cart"><button class="btn btn-general" type="button" onclick="cart.add('4750','tabcatprfeatured0',get_cart_quantity('4750','.tab-catprfeatured-0'));"><i class="fa fa-shopping-basket"></i>
-                                                                        <span>В корзину</span></button></div>
+                        .modalka-buy button.btn-callback {
+                            background-color: #47c843;
+                            border-color: #2cad28;
+                            border-style: solid;
+                            border-width: 1px 1px 2px;
+                            color: #fff;
+                            font-size: 13px;
+                            padding: 8px 20px;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
 
-                                                                <div class="compare"><button class="btn btn-compare" type="button" data-toggle="tooltip" title="" onclick="compare.add('4750');" data-original-title="В сравнение"><i class="fa fa-exchange"></i></button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="actions-quick-order">
-                                                                <div class="quick-order">
-                                                                    <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(4750);" title="" data-original-title="Купить в 1 клик">
-                                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                                        Купить в 1 клик
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        .modalka-buy button.btn-callback:hover {
+                            opacity: 0.8;
+                            font-weight: 700;
+                        }
 
+                        @media (max-width: 800px) {
+                            .modalka-buy {
+                                width: auto;
+                                left: 10;
+                            }
+                        }
+                    </style>
 
-
-
-                                    <div class="owl-controls clickable" style="display: none;">
-                                        <div class="owl-buttons">
-                                            <div class="owl-prev">
-                                                <div class="btn btn-carousel-module next-prod"><i class="fa fa-angle-left arrow"></i></div>
-                                            </div>
-                                            <div class="owl-next">
-                                                <div class="btn btn-carousel-module prev-prod"><i class="fa fa-angle-right arrow"></i></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                     <script>
-                        $(document).ready(function() {
-                            max_height_div('.product-thumb .option.tabcatprfeatured0-opt');
+                        document.addEventListener("DOMContentLoaded", function(event) {
+                            $('[data-toggle-buy]').click(function() {
+                                $('.container').toggleClass('buy-hidden');
+
+                            });
+                            // $('[close-buy]').click(function () {
+                            //         $('.modalka-buy').toggleClass('ebat');
+                            //     });           
                         });
-                        $('.tab-catprfeatured-0').owlCarousel({
-                            responsiveBaseWidth: ".tab-catprfeatured-0",
-                            itemsCustom: [
-                                [0, 1],
-                                [500, 2],
-                                [750, 3],
-                                [950, 4],
-                                [1150, 5]
-                            ],
-                            slideSpeed: 200,
-                            paginationSpeed: 300,
-                            navigation: true,
-                            stopOnHover: true,
-                            touchDrag: false,
-                            pagination: false,
-                            navigationText: ['<div class="btn btn-carousel-module next-prod"><i class="fa fa-angle-left arrow"></i></div>', '<div class="btn btn-carousel-module prev-prod"><i class="fa fa-angle-right arrow"></i></div>'],
+                    </script>
+
+                    <script>
+                        var itemms = document.querySelectorAll('.item');
+                        show__more = document.getElementById('show_more');
+                        var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
+                        nn = 5;
+
+                        function MoreShow(n) {
+                            for (var i = 0; i < itemms.length; i++) {
+                                if (i < nn) {
+                                    itemms[i].style.display = 'block';
+                                    ajaxloadingLatest.classList.add('spin-ajax');
+                                    if (nn === itemms.length) {}
+                                } else {
+                                    break;
+                                }
+                            }
+                        }
+
+                        MoreShow(nn);
+                        show__more.onclick = function(e) {
+                            e.preventDefault();
+                            nn += 5;
+                            MoreShow(nn);
+                        }
+                    </script>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function(event) {
+                            // let item = $('.container-modules');
+                            //             let show_more = $('#hide-items');
+                            //             let n = 5;
+                            //             function showMore_(n){
+                            //                 for(let i=0; i<item.length; i++){
+
+                            //                     $(item[i]).slice(5).toggleClass('item_hidden');
+                            //                     if(n===item.length) $(show_more).attr('display', 'none');
+
+                            //             }
+                            //         };
+                            $('.item').slice(3);
+
+                            $(document).on('click', '.latest-ajax-load0', function() {
+                                $.ajax({
+                                    url: 'index.php?route=extension/module/latest_grid/getNextPage',
+                                    type: 'post',
+                                    dataType: 'html',
+                                    beforeSend: function() {
+                                        $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
+                                    },
+                                    complete: function() {
+                                        $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
+                                    },
+                                    success: function(data) {
+                                        $data = $(data);
+                                        var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
+                                        $('.latest_grid0').append($products); // ебашим его после каждого блока
+                                    }
+                                });
+                            })
+                        });
+                    </script>
+                    <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            $('.latest_grid0').each(function() {
+                                if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
+                                    var items = $(this).children('div.item');
+                                    items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
+                                    items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
+                                }
+                            });
+
+                            if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
                         });
                     </script>
                 </div>
             </div>
-        </div>
-    </div>
-    </div>
-    </div>
-
-
-    <div class="box-bg-full bg_mode_pos_2">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 pos2">
-                    <div>
-                        <script>
-                            var style = document.createElement('style');
-                            style.type = 'text/css';
-                            var bb = '.productany48624 .title-module:after{border-bottom:2px solid #FF760D}';
-                            var border_bottom = document.createTextNode(bb);
-                            var head = document.getElementsByTagName('head')[0];
-                            style.appendChild(border_bottom);
-                            head.appendChild(style);
-                        </script>
+            <div class="box-bg-full bg_mode_pos_2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 pos2">
                             <div class="container-module">
                                 <div class="title-module"><span style="color:#FF760D;">Ручной инструмент</span></div>
                                 <div class="product-slider">
                                     <div class="container-modules latest_gv latest_grid0">
                                         <?php
-                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='11'");
+                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='22' limit 10");
                                         foreach ($elems as $elem) {
                                             switch (strlen($elem['id'])) {
                                                 case 1:
@@ -1802,23 +1630,19 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 $img = 'null.png';
                                             }
                                         ?>
-                                            <style>
-                                                .item {
-                                                    display: none;
-                                                }
-                                            </style>
-                                            <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
+
+                                            <div class="item no-slider col-xs-12 col-sm-6" id="hide-items">
                                                 <div class="product-thumb transition">
                                                     <div class="image">
                                                         <div class="stickers-ns">
                                                             <!-- <div class="sticker-ns bestseller">
-                                                <i class="fa fa fa-rocket "></i>
-                                                <span>Лидер продаж!</span>
-                                            </div>
-                                            <div class="sticker-ns popular">
-                                                <i class="fa fa fa-eye "></i>
-                                                <span>Самые просматриваемые</span>
-                                            </div> -->
+                                                            <i class="fa fa fa-rocket "></i>
+                                                            <span>Лидер продаж!</span>
+                                                        </div>
+                                                        <div class="sticker-ns popular">
+                                                            <i class="fa fa fa-eye "></i>
+                                                            <span>Самые просматриваемые</span>
+                                                        </div> -->
                                                         </div>
                                                         <a href="#">
                                                             <!-- FIXME '#' Сделать ссылку на элемент -->
@@ -1887,73 +1711,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
                                     </div>
                                 </div>
-
-                                <!-- ПОКАЗАТЬ ЕЩЁ -->
-                                <style>
-                                    .modalka-buy {
-                                        display: block;
-                                        opacity: 1;
-                                        background-color: #f9f9f9;
-                                        border: 1px solid #dfe4eb;
-                                        border-radius: 4px;
-                                        width: 600px;
-                                        height: 520px;
-                                        position: absolute;
-                                        top: 50%;
-                                        left: 25%;
-                                    }
-
-                                    .modalka-buy #close-call {
-                                        color: black;
-                                        z-index: 21321;
-                                        font-size: 49px;
-                                    }
-
-                                    .buy-hidden {
-                                        opacity: 0.7;
-                                        filter: blur(4px);
-                                    }
-
-                                    .ebat {
-                                        display: none;
-                                    }
-
-                                    .modalka-buy button.btn-callback {
-                                        background-color: #47c843;
-                                        border-color: #2cad28;
-                                        border-style: solid;
-                                        border-width: 1px 1px 2px;
-                                        color: #fff;
-                                        font-size: 13px;
-                                        padding: 8px 20px;
-                                        text-transform: uppercase;
-                                        font-weight: bold;
-                                    }
-
-                                    .modalka-buy button.btn-callback:hover {
-                                        opacity: 0.8;
-                                        font-weight: 700;
-                                    }
-
-                                    @media (max-width: 800px) {
-                                        .modalka-buy {
-                                            width: auto;
-                                            left: 10;
-                                        }
-                                    }
-                                </style>
-
-                                <script>
-                                    document.addEventListener("DOMContentLoaded", function(event) {
-                                        $('[data-toggle-buy]').click(function() {
-                                            $('.container').toggleClass('buy-hidden');
-
-                                        });
-                                        // $('[close-buy]').click(function () {
-                                        //         $('.modalka-buy').toggleClass('ebat');
-                                        //     });           
-                                    });
-                                </script>
 
                                 <script>
                                     var itemms = document.querySelectorAll('.item');
@@ -2031,809 +1788,201 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                     });
                                 </script>
                             </div>
-                            <div class="container-modules productany carousel_numb_productany48624 owl-carousel">
-                                <div class="item">
-                                    <div class="product-thumb transition">
-                                        <div class="quickview">
-                                            <button class="btn btn-quickview" onclick="quickview_open(4208,'4208,3022,3942,3201,4281');"><i class="fa fa-external-link fa-fw"></i>Просмотр
-                                            </button>
-                                        </div>
-                                        <div class="image">
-                                            <div class="stickers-ns">
-                                                <div class="sticker-ns popular">
-                                                    <i class="fa fa fa-eye "></i>
-                                                    <span>Самые просматриваемые</span>
-                                                </div>
-                                            </div>
-
-                                            <a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/otvertki/otvertka-v-nabore-lechgtools-29-pcs-2-otvertki-treshchetka-s-nasadkami-%5b48%5d.html"><img data-src="categories/image/cache/catalog/2/4/2/2420/2420-200x200.jpg" src="img/image/catalog/lazyload/lazyload.html" alt="Отвертка в наборе &quot;LECHGTOOLS&quot; 29 PCS (2 Отвертки-трещетка с  насадками) [48]" title="Отвертка в наборе &quot;LECHGTOOLS&quot; 29 PCS (2 Отвертки-трещетка с  насадками) [48]" class="img-responsive lazyload" /></a>
-
-
-                                        </div>
-
-                                        <div class="caption">
-                                            <div class="product-name"><a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/otvertki/otvertka-v-nabore-lechgtools-29-pcs-2-otvertki-treshchetka-s-nasadkami-%5b48%5d.html">Отвертка
-                                                    в наборе &quot;LECHGTOOLS&quot; 29 PCS (2 Отвертки-трещетка с
-                                                    насадками)
-                                                    [48]</a></div>
-                                            <div class="product-model">2420</div>
-                                            <div class="rating">
-                                                <span class="rating-box">
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-
-                                                    <span class="quantity-reviews"><a data-placement="right" data-toggle="tooltip" title="отзывов" href="stroy-instrumenty-i-tovary/ruchnoy-instrument/otvertki/otvertka-v-nabore-lechgtools-29-pcs-2-otvertki-treshchetka-s-nasadkami-%5b48%5d/index.html#tab-review">0</a></span>
-                                                </span>
-                                            </div>
-
-                                            <div class="quantity_plus_minus">
-                                                <div class="quantity_cont">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_productany48624_4208('1');" type="button">-</button>
-                                                        </span>
-                                                        <input id="input_quantity_mod_productany48624_4208" class="form-control input-number-quantity4208" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(4208,1, ,'','.carousel_numb_productany48624','productany48624');" size="2" value="1">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_productany48624_4208('1');" type="button">+</button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <script>
-                                                function btnminus_cat_price_productany48624_4208(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_4208');
-                                                    var count = parseInt($input.val()) - parseInt(minimum);
-                                                    count = count < parseInt(1) ? parseInt(1) : count;
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(4208, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                }
-
-                                                function btnplus_cat_price_productany48624_4208(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_4208');
-                                                    var count = parseInt($input.val()) + parseInt(minimum);
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(4208, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                };
-                                            </script>
-                                            <div class="actions">
-                                                <div class="wishlist">
-                                                    <button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('4208');"><i class="fa fa-heart"></i></button>
-                                                </div>
-                                                <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="cart.add('4208','productany48624', get_cart_quantity('4208','.carousel_numb_productany48624'));">
-                                                        <i class="fa fa-shopping-basket"></i> <span>В корзину</span>
-                                                    </button>
-                                                </div>
-
-                                                <div class="compare">
-                                                    <button class="btn btn-compare" type="button" data-toggle="tooltip" title="В сравнение" onclick="compare.add('4208');"><i class="fa fa-exchange"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="actions-quick-order">
-                                                <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(4208);" title="Купить в 1 клик">
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="product-thumb transition">
-                                        <div class="quickview">
-                                            <button class="btn btn-quickview" onclick="quickview_open(3022,'4208,3022,3942,3201,4281');"><i class="fa fa-external-link fa-fw"></i>Просмотр
-                                            </button>
-                                        </div>
-                                        <div class="image">
-                                            <div class="stickers-ns">
-                                                <div class="sticker-ns popular">
-                                                    <i class="fa fa fa-eye "></i>
-                                                    <span>Самые просматриваемые</span>
-                                                </div>
-                                            </div>
-
-                                            <a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/bokorezy/bokorez-lux-professional-6-%5b6120%5d.html"><img data-src="categories/image/cache/catalog/0/6/6/0661/0661-200x200.jpg" src="img/image/catalog/lazyload/lazyload.html" alt="Бокорез LUX professional №6 [6/120]" title="Бокорез LUX professional №6 [6/120]" class="img-responsive lazyload" /></a>
-
-
-                                        </div>
-
-                                        <div class="caption">
-                                            <div class="product-name"><a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/bokorezy/bokorez-lux-professional-6-%5b6120%5d.html">Бокорез
-                                                    LUX professional №6 [6/120]</a></div>
-                                            <div class="product-model">0661</div>
-                                            <div class="rating">
-                                                <span class="rating-box">
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-
-                                                    <span class="quantity-reviews"><a data-placement="right" data-toggle="tooltip" title="отзывов" href="stroy-instrumenty-i-tovary/ruchnoy-instrument/bokorezy/bokorez-lux-professional-6-%5b6120%5d/index.html#tab-review">0</a></span>
-                                                </span>
-                                            </div>
-
-                                            <div class="quantity_plus_minus">
-                                                <div class="quantity_cont">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_productany48624_3022('1');" type="button">-</button>
-                                                        </span>
-                                                        <input id="input_quantity_mod_productany48624_3022" class="form-control input-number-quantity3022" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(3022,1, ,'','.carousel_numb_productany48624','productany48624');" size="2" value="1">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_productany48624_3022('1');" type="button">+</button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <script>
-                                                function btnminus_cat_price_productany48624_3022(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_3022');
-                                                    var count = parseInt($input.val()) - parseInt(minimum);
-                                                    count = count < parseInt(1) ? parseInt(1) : count;
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(3022, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                }
-
-                                                function btnplus_cat_price_productany48624_3022(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_3022');
-                                                    var count = parseInt($input.val()) + parseInt(minimum);
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(3022, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                };
-                                            </script>
-                                            <div class="actions">
-                                                <div class="wishlist">
-                                                    <button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('3022');"><i class="fa fa-heart"></i></button>
-                                                </div>
-                                                <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="cart.add('3022','productany48624', get_cart_quantity('3022','.carousel_numb_productany48624'));">
-                                                        <i class="fa fa-shopping-basket"></i> <span>В корзину</span>
-                                                    </button>
-                                                </div>
-
-                                                <div class="compare">
-                                                    <button class="btn btn-compare" type="button" data-toggle="tooltip" title="В сравнение" onclick="compare.add('3022');"><i class="fa fa-exchange"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="actions-quick-order">
-                                                <div class="quick-order">
-                                                    <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(3022);" title="Купить в 1 клик">
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="product-thumb transition">
-                                        <div class="quickview">
-                                            <button class="btn btn-quickview" onclick="quickview_open(3942,'4208,3022,3942,3201,4281');"><i class="fa fa-external-link fa-fw"></i>Просмотр
-                                            </button>
-                                        </div>
-                                        <div class="image">
-                                            <div class="stickers-ns">
-                                                <div class="sticker-ns popular">
-                                                    <i class="fa fa fa-eye "></i>
-                                                    <span>Самые просматриваемые</span>
-                                                </div>
-                                            </div>
-
-                                            <a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-razvodnoy/klyuch-razvodnoy-10-250mm-metall-siniy-%5b60%5d.html"><img data-status="Нет в наличии" data-src="categories/image/cache/catalog/1/1/2/1128/1128-200x200.jpg" src="img/image/catalog/lazyload/lazyload.html" alt="Ключ &quot;Разводной&quot; №10 250мм (металл,синий) [60]" title="Ключ &quot;Разводной&quot; №10 250мм (металл,синий) [60]" class="img-responsive lazyload" /></a>
-
-
-                                        </div>
-
-                                        <div class="caption">
-                                            <div class="product-name"><a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-razvodnoy/klyuch-razvodnoy-10-250mm-metall-siniy-%5b60%5d.html">Ключ
-                                                    &quot;Разводной&quot; №10 250мм (металл,синий) [60]</a></div>
-                                            <div class="product-model">1128</div>
-                                            <div class="rating">
-                                                <span class="rating-box">
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-
-                                                    <span class="quantity-reviews"><a data-placement="right" data-toggle="tooltip" title="отзывов" href="stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-razvodnoy/klyuch-razvodnoy-10-250mm-metall-siniy-%5b60%5d/index.html#tab-review">0</a></span>
-                                                </span>
-                                            </div>
-
-                                            <div class="quantity_plus_minus">
-                                                <div class="quantity_cont">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_productany48624_3942('1');" type="button">-</button>
-                                                        </span>
-                                                        <input id="input_quantity_mod_productany48624_3942" class="form-control input-number-quantity3942" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(3942,1, ,'','.carousel_numb_productany48624','productany48624');" size="2" value="1">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_productany48624_3942('1');" type="button">+</button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <script>
-                                                function btnminus_cat_price_productany48624_3942(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_3942');
-                                                    var count = parseInt($input.val()) - parseInt(minimum);
-                                                    count = count < parseInt(1) ? parseInt(1) : count;
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(3942, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                }
-
-                                                function btnplus_cat_price_productany48624_3942(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_3942');
-                                                    var count = parseInt($input.val()) + parseInt(minimum);
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(3942, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                };
-                                            </script>
-                                            <div class="actions">
-                                                <div class="wishlist">
-                                                    <button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('3942');"><i class="fa fa-heart"></i></button>
-                                                </div>
-                                                <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="cart.add('3942','productany48624', get_cart_quantity('3942','.carousel_numb_productany48624'));">
-                                                        <span>Нет в наличии</span></button>
-                                                </div>
-
-                                                <div class="compare">
-                                                    <button class="btn btn-compare" type="button" data-toggle="tooltip" title="В сравнение" onclick="compare.add('3942');"><i class="fa fa-exchange"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="actions-quick-order">
-                                                <div class="quick-order">
-                                                    <button class="btn btn-fastorder hidden-quick-order" type="button" data-toggle="tooltip" onclick="fastorder_open(3942);" title="Купить в 1 клик" disabled>
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="product-thumb transition">
-                                        <div class="quickview">
-                                            <button class="btn btn-quickview" onclick="quickview_open(3201,'4208,3022,3942,3201,4281');"><i class="fa fa-external-link fa-fw"></i>Просмотр
-                                            </button>
-                                        </div>
-                                        <div class="image">
-                                            <div class="stickers-ns">
-                                                <div class="sticker-ns popular">
-                                                    <i class="fa fa fa-eye "></i>
-                                                    <span>Самые просматриваемые</span>
-                                                </div>
-                                            </div>
-
-                                            <a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-germetika/germetik/germetik-spark-lux-310ml-belyy-universalnyy-silikonovyy-5s-do-40s-%5b2448%5d.html"><img data-status="Нет в наличии" data-src="categories/image/cache/catalog/0/3/2/0322/0321-200x200.jpg" src="img/image/catalog/lazyload/lazyload.html" alt="Герметик &quot;SPARK LUX&quot; 310мл (Белый) Универсальный Силиконовый (+5С до +40С) [24/48]" title="Герметик &quot;SPARK LUX&quot; 310мл (Белый) Универсальный Силиконовый (+5С до +40С) [24/48]" class="img-responsive lazyload" /></a>
-
-
-                                        </div>
-
-                                        <div class="caption">
-                                            <div class="product-name"><a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-germetika/germetik/germetik-spark-lux-310ml-belyy-universalnyy-silikonovyy-5s-do-40s-%5b2448%5d.html">Герметик
-                                                    &quot;SPARK LUX&quot; 310мл (Белый) Универсальный Силиконовый
-                                                    (+5С до
-                                                    +40С) [24/48]</a></div>
-                                            <div class="product-model">0322</div>
-                                            <div class="rating">
-                                                <span class="rating-box">
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-
-                                                    <span class="quantity-reviews"><a data-placement="right" data-toggle="tooltip" title="отзывов" href="stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-germetika/germetik/germetik-spark-lux-310ml-belyy-universalnyy-silikonovyy-5s-do-40s-%5b2448%5d/index.html#tab-review">0</a></span>
-                                                </span>
-                                            </div>
-
-                                            <div class="quantity_plus_minus">
-                                                <div class="quantity_cont">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_productany48624_3201('1');" type="button">-</button>
-                                                        </span>
-                                                        <input id="input_quantity_mod_productany48624_3201" class="form-control input-number-quantity3201" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(3201,1, ,'','.carousel_numb_productany48624','productany48624');" size="2" value="1">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_productany48624_3201('1');" type="button">+</button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <script>
-                                                function btnminus_cat_price_productany48624_3201(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_3201');
-                                                    var count = parseInt($input.val()) - parseInt(minimum);
-                                                    count = count < parseInt(1) ? parseInt(1) : count;
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(3201, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                }
-
-                                                function btnplus_cat_price_productany48624_3201(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_3201');
-                                                    var count = parseInt($input.val()) + parseInt(minimum);
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(3201, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                };
-                                            </script>
-                                            <div class="actions">
-                                                <div class="wishlist">
-                                                    <button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('3201');"><i class="fa fa-heart"></i></button>
-                                                </div>
-                                                <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="cart.add('3201','productany48624', get_cart_quantity('3201','.carousel_numb_productany48624'));">
-                                                        <span>Нет в наличии</span></button>
-                                                </div>
-
-                                                <div class="compare">
-                                                    <button class="btn btn-compare" type="button" data-toggle="tooltip" title="В сравнение" onclick="compare.add('3201');"><i class="fa fa-exchange"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="actions-quick-order">
-                                                <div class="quick-order">
-                                                    <button class="btn btn-fastorder hidden-quick-order" type="button" data-toggle="tooltip" onclick="fastorder_open(3201);" title="Купить в 1 клик" disabled>
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="product-thumb transition">
-                                        <div class="quickview">
-                                            <button class="btn btn-quickview" onclick="quickview_open(4281,'4208,3022,3942,3201,4281');"><i class="fa fa-external-link fa-fw"></i>Просмотр
-                                            </button>
-                                        </div>
-                                        <div class="image">
-                                            <div class="stickers-ns">
-                                                <div class="sticker-ns popular">
-                                                    <i class="fa fa fa-eye "></i>
-                                                    <span>Самые просматриваемые</span>
-                                                </div>
-                                            </div>
-
-                                            <a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/shestigrannik/nabor-shestigranikov-spark-lux-sl-m312-skladnoy-9-klyuchey-1-5-6-%5b48%5d.html"><img data-status="Нет в наличии" data-src="categories/image/cache/catalog/2/4/4/2440/2440-200x200.jpg" src="img/image/catalog/lazyload/lazyload.html" alt="Набор Шестиграников &quot;Spark Lux SL-M312&quot; Складной (9 ключей) (1,5-6) [48]" title="Набор Шестиграников &quot;Spark Lux SL-M312&quot; Складной (9 ключей) (1,5-6) [48]" class="img-responsive lazyload" /></a>
-
-
-                                        </div>
-
-                                        <div class="caption">
-                                            <div class="product-name"><a href="stroy-instrumenty-i-tovary/ruchnoy-instrument/shestigrannik/nabor-shestigranikov-spark-lux-sl-m312-skladnoy-9-klyuchey-1-5-6-%5b48%5d.html">Набор
-                                                    Шестиграников &quot;Spark Lux SL-M312&quot; Складной (9 ключей)
-                                                    (1,5-6)
-                                                    [48]</a></div>
-                                            <div class="product-model">2440</div>
-                                            <div class="rating">
-                                                <span class="rating-box">
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                    <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-
-                                                    <span class="quantity-reviews"><a data-placement="right" data-toggle="tooltip" title="отзывов" href="stroy-instrumenty-i-tovary/ruchnoy-instrument/shestigrannik/nabor-shestigranikov-spark-lux-sl-m312-skladnoy-9-klyuchey-1-5-6-%5b48%5d/index.html#tab-review">0</a></span>
-                                                </span>
-                                            </div>
-
-                                            <div class="quantity_plus_minus">
-                                                <div class="quantity_cont">
-                                                    <div class="input-group">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_productany48624_4281('1');" type="button">-</button>
-                                                        </span>
-                                                        <input id="input_quantity_mod_productany48624_4281" class="form-control input-number-quantity4281" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(4281,1, ,'','.carousel_numb_productany48624','productany48624');" size="2" value="1">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_productany48624_4281('1');" type="button">+</button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <script>
-                                                function btnminus_cat_price_productany48624_4281(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_4281');
-                                                    var count = parseInt($input.val()) - parseInt(minimum);
-                                                    count = count < parseInt(1) ? parseInt(1) : count;
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(4281, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                }
-
-                                                function btnplus_cat_price_productany48624_4281(minimum) {
-                                                    var $input = $('#input_quantity_mod_productany48624_4281');
-                                                    var count = parseInt($input.val()) + parseInt(minimum);
-                                                    $input.val(count);
-                                                    $input.change();
-                                                    recalc_quantity(4281, count, , '', '.carousel_numb_productany48624', 'productany48624');
-                                                };
-                                            </script>
-                                            <div class="actions">
-                                                <div class="wishlist">
-                                                    <button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('4281');"><i class="fa fa-heart"></i></button>
-                                                </div>
-                                                <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="cart.add('4281','productany48624', get_cart_quantity('4281','.carousel_numb_productany48624'));">
-                                                        <span>Нет в наличии</span></button>
-                                                </div>
-
-                                                <div class="compare">
-                                                    <button class="btn btn-compare" type="button" data-toggle="tooltip" title="В сравнение" onclick="compare.add('4281');"><i class="fa fa-exchange"></i></button>
-                                                </div>
-                                            </div>
-                                            <div class="actions-quick-order">
-                                                <div class="quick-order">
-                                                    <button class="btn btn-fastorder hidden-quick-order" type="button" data-toggle="tooltip" onclick="fastorder_open(4281);" title="Купить в 1 клик" disabled>
-                                                        <i class="fa fa-shopping-bag fa-fw"></i>
-                                                        Купить в 1 клик
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        <script>
-                            $(document).ready(function() {
-                                $('.carousel_numb_productany48624').owlCarousel({
-                                    responsiveBaseWidth: ".carousel_numb_productany48624",
-                                    itemsCustom: [
-                                        [0, 1],
-                                        [500, 2],
-                                        [750, 3],
-                                        [950, 4],
-                                        [1150, 5]
-                                    ],
-                                    slideSpeed: 200,
-                                    paginationSpeed: 300,
-                                    navigation: true,
-                                    stopOnHover: true,
-                                    mouseDrag: false,
-                                    pagination: false,
-                                    autoPlay: false,
-                                    navigationText: ['<div class="btn btn-carousel-module next-prod"><i class="fa fa-angle-left arrow"></i></div>', '<div class="btn btn-carousel-module prev-prod"><i class="fa fa-angle-right arrow"></i></div>'],
-                                });
-                            });
-                            $(window).load(function() {
-                                $(".productany48624 .additional-image").removeClass('hidden');
-                            });
-                        </script>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-6 pos3">
-                <div>
-                    <script>
-                        var style = document.createElement('style');
-                        style.type = 'text/css';
-                        var bb = '.productany22882 .title-module:after{border-bottom:2px solid #0AA839}';
-                        var border_bottom = document.createTextNode(bb);
-                        var head = document.getElementsByTagName('head')[0];
-                        style.appendChild(border_bottom);
-                        head.appendChild(style);
-                    </script>
-                    <div class="container-module-productany productany22882">
+                        </div>
+                        <div class="col-sm-6 col-md-6 pos3">
                         <div class="container-module">
-                        <div class="title-module"><span style="color:#0AA839;">Сезонные товары</span></div>
-                        <div class="product-slider">
-                            <div class="container-modules latest_gv latest_grid0">
-                                <?php
-                                $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `third_id`='0'");
-                                foreach ($elems as $elem) {
-                                    switch (strlen($elem['id'])) {
-                                        case 1:
-                                            $elem['id'] = '000' . $elem['id'];
-                                            break;
-                                        case 2:
-                                            $elem['id'] = '00' . $elem['id'];
-                                            break;
-                                        case 3:
-                                            $elem['id'] = '0' . $elem['id'];
-                                            break;
-                                        default:
-                                            break;
-                                    }
-                                    if ($img = glob($dir_img . $elem['id'] . '.*')) {
-                                        $img = basename($img[0]);
-                                    } else {
-                                        $img = 'null.png';
-                                    }
-                                ?>
-                                    <style>
-                                        .item {
-                                            display: none;
-                                        }
-                                    </style>
-                                    <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
-                                        <div class="product-thumb transition">
-                                            <div class="image">
-                                                <div class="stickers-ns">
-                                                    <!-- <div class="sticker-ns bestseller">
-                                                <i class="fa fa fa-rocket "></i>
-                                                <span>Лидер продаж!</span>
-                                            </div>
-                                            <div class="sticker-ns popular">
-                                                <i class="fa fa fa-eye "></i>
-                                                <span>Самые просматриваемые</span>
-                                            </div> -->
-                                                </div>
-                                                <a href="#">
-                                                    <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                    <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
-                                                </a>
-                                            </div>
+                                <div class="title-module""><span style="color:#0AA839;">Вам может понравиться</span></div>
+                                <div class="product-slider">
+                                    <div class="container-modules latest_gv latest_grid0">
+                                        <?php
+                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `first_id`= 'rand(0, 267)' limit 10");
+                                        foreach ($elems as $elem) {
+                                            switch (strlen($elem['id'])) {
+                                                case 1:
+                                                    $elem['id'] = '000' . $elem['id'];
+                                                    break;
+                                                case 2:
+                                                    $elem['id'] = '00' . $elem['id'];
+                                                    break;
+                                                case 3:
+                                                    $elem['id'] = '0' . $elem['id'];
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
+                                            if ($img = glob($dir_img . $elem['id'] . '.*')) {
+                                                $img = basename($img[0]);
+                                            } else {
+                                                $img = 'null.png';
+                                            }
+                                        ?>
 
-                                            <div class="caption">
-                                                <div class="product-name">
-                                                    <a href="#"><?= $elem['name'] ?></a>
-                                                    <!-- FIXME Сделать ссылку на элемент -->
-                                                </div>
-                                                <div class="product-model"><?= $elem['id'] ?></div>
-                                                <div class="rating">
-                                                    <span class="rating-box">
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                                        <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                            <div class="item no-slider col-xs-12 col-sm-6" id="hide-items">
+                                                <div class="product-thumb transition">
+                                                    <div class="image">
+                                                        <div class="stickers-ns">
+                                                            <!-- <div class="sticker-ns bestseller">
+                                                            <i class="fa fa fa-rocket "></i>
+                                                            <span>Лидер продаж!</span>
+                                                        </div>
+                                                        <div class="sticker-ns popular">
+                                                            <i class="fa fa fa-eye "></i>
+                                                            <span>Самые просматриваемые</span>
+                                                        </div> -->
+                                                        </div>
+                                                        <a href="#">
+                                                            <!-- FIXME '#' Сделать ссылку на элемент -->
+                                                            <img src="img/tovaru/<?= $img ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                        </a>
+                                                    </div>
 
-                                                        <span class="quantity-reviews">
+                                                    <div class="caption">
+                                                        <div class="product-name">
+                                                            <a href="#"><?= $elem['name'] ?></a>
                                                             <!-- FIXME Сделать ссылку на элемент -->
-                                                            <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
-                                                        </span>
-                                                    </span>
-                                                </div>
-                                                <div class="quantity_plus_minus">
-                                                    <div class="quantity_cont">
-                                                        <div class="input-group">
-                                                            <span class="input-group-btn">
-                                                                <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
-                                                            </span>
-                                                            <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
-                                                            <span class="input-group-btn">
-                                                                <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                        </div>
+                                                        <div class="product-model"><?= $elem['id'] ?></div>
+                                                        <div class="rating">
+                                                            <span class="rating-box">
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                                                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+
+                                                                <span class="quantity-reviews">
+                                                                    <!-- FIXME Сделать ссылку на элемент -->
+                                                                    <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
+                                                                </span>
                                                             </span>
                                                         </div>
+                                                        <div class="quantity_plus_minus">
+                                                            <div class="quantity_cont">
+                                                                <div class="input-group">
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
+                                                                    </span>
+                                                                    <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="actions">
+                                                            <div class="cart">
+                                                                <button class="btn btn-general" type="button" onclick="">
+                                                                    <i class="fa fa-shopping-basket"></i><span>В корзину</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="actions-quick-order">
+                                                            <div class="quick-order">
+                                                                <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                                    <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                                </button>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="actions">
-                                                    <div class="cart">
-                                                        <button class="btn btn-general" type="button" onclick="">
-                                                            <i class="fa fa-shopping-basket"></i><span>В корзину</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <div class="actions-quick-order">
-                                                    <div class="quick-order">
-                                                        <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
-                                                            <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
-                                                        </button>
-                                                    </div>
+
+
                                                 </div>
                                             </div>
-
-
-                                        </div>
+                                        <?php
+                                        };
+                                        ?>
                                     </div>
-                                <?php
-                                };
-                                ?>
-                            </div>
-                            <div class="showmore-latest0 box-showmore">
-                                <div class="ajaxloadingLatest"></div>
-                                <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
+                                    <div class="showmore-latest0 box-showmore">
+                                        <div class="ajaxloadingLatest"></div>
+                                        <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    var itemms = document.querySelectorAll('.item');
+                                    show__more = document.getElementById('show_more');
+                                    var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
+                                    nn = 5;
+
+                                    function MoreShow(n) {
+                                        for (var i = 0; i < itemms.length; i++) {
+                                            if (i < nn) {
+                                                itemms[i].style.display = 'block';
+                                                ajaxloadingLatest.classList.add('spin-ajax');
+                                                if (nn === itemms.length) {}
+                                            } else {
+                                                break;
+                                            }
+                                        }
+                                    }
+
+                                    MoreShow(nn);
+                                    show__more.onclick = function(e) {
+                                        e.preventDefault();
+                                        nn += 5;
+                                        MoreShow(nn);
+                                    }
+                                </script>
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function(event) {
+                                        // let item = $('.container-modules');
+                                        //             let show_more = $('#hide-items');
+                                        //             let n = 5;
+                                        //             function showMore_(n){
+                                        //                 for(let i=0; i<item.length; i++){
+
+                                        //                     $(item[i]).slice(5).toggleClass('item_hidden');
+                                        //                     if(n===item.length) $(show_more).attr('display', 'none');
+
+                                        //             }
+                                        //         };
+                                        $('.item').slice(3);
+
+                                        $(document).on('click', '.latest-ajax-load0', function() {
+                                            $.ajax({
+                                                url: 'index.php?route=extension/module/latest_grid/getNextPage',
+                                                type: 'post',
+                                                dataType: 'html',
+                                                beforeSend: function() {
+                                                    $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
+                                                },
+                                                complete: function() {
+                                                    $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
+                                                },
+                                                success: function(data) {
+                                                    $data = $(data);
+                                                    var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
+                                                    $('.latest_grid0').append($products); // ебашим его после каждого блока
+                                                }
+                                            });
+                                        })
+                                    });
+                                </script>
+                                <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
+
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        $('.latest_grid0').each(function() {
+                                            if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
+                                                var items = $(this).children('div.item');
+                                                items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
+                                                items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
+                                            }
+                                        });
+
+                                        if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
+                                    });
+                                </script>
                             </div>
                         </div>
-
-                        <!-- ПОКАЗАТЬ ЕЩЁ -->
-                        <style>
-                            .modalka-buy {
-                                display: block;
-                                opacity: 1;
-                                background-color: #f9f9f9;
-                                border: 1px solid #dfe4eb;
-                                border-radius: 4px;
-                                width: 600px;
-                                height: 520px;
-                                position: absolute;
-                                top: 50%;
-                                left: 25%;
-                            }
-
-                            .modalka-buy #close-call {
-                                color: black;
-                                z-index: 21321;
-                                font-size: 49px;
-                            }
-
-                            .buy-hidden {
-                                opacity: 0.7;
-                                filter: blur(4px);
-                            }
-
-                            .ebat {
-                                display: none;
-                            }
-
-                            .modalka-buy button.btn-callback {
-                                background-color: #47c843;
-                                border-color: #2cad28;
-                                border-style: solid;
-                                border-width: 1px 1px 2px;
-                                color: #fff;
-                                font-size: 13px;
-                                padding: 8px 20px;
-                                text-transform: uppercase;
-                                font-weight: bold;
-                            }
-
-                            .modalka-buy button.btn-callback:hover {
-                                opacity: 0.8;
-                                font-weight: 700;
-                            }
-
-                            @media (max-width: 800px) {
-                                .modalka-buy {
-                                    width: auto;
-                                    left: 10;
-                                }
-                            }
-                        </style>
-
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function(event) {
-                                $('[data-toggle-buy]').click(function() {
-                                    $('.container').toggleClass('buy-hidden');
-
-                                });
-                                // $('[close-buy]').click(function () {
-                                //         $('.modalka-buy').toggleClass('ebat');
-                                //     });           
-                            });
-                        </script>
-
-                        <script>
-                            var itemms = document.querySelectorAll('.item');
-                            show__more = document.getElementById('show_more');
-                            var ajaxloadingLatest = document.querySelector('.ajaxloadingLatest');
-                            nn = 5;
-
-                            function MoreShow(n) {
-                                for (var i = 0; i < itemms.length; i++) {
-                                    if (i < nn) {
-                                        itemms[i].style.display = 'block';
-                                        ajaxloadingLatest.classList.add('spin-ajax');
-                                        if (nn === itemms.length) {}
-                                    } else {
-                                        break;
-                                    }
-                                }
-                            }
-
-                            MoreShow(nn);
-                            show__more.onclick = function(e) {
-                                e.preventDefault();
-                                nn += 5;
-                                MoreShow(nn);
-                            }
-                        </script>
-                        <script>
-                            document.addEventListener("DOMContentLoaded", function(event) {
-                                // let item = $('.container-modules');
-                                //             let show_more = $('#hide-items');
-                                //             let n = 5;
-                                //             function showMore_(n){
-                                //                 for(let i=0; i<item.length; i++){
-
-                                //                     $(item[i]).slice(5).toggleClass('item_hidden');
-                                //                     if(n===item.length) $(show_more).attr('display', 'none');
-
-                                //             }
-                                //         };
-                                $('.item').slice(3);
-
-                                $(document).on('click', '.latest-ajax-load0', function() {
-                                    $.ajax({
-                                        url: 'index.php?route=extension/module/latest_grid/getNextPage',
-                                        type: 'post',
-                                        dataType: 'html',
-                                        beforeSend: function() {
-                                            $('.showmore-latest0 .ajaxloadingLatest').addClass('spin-ajax');
-                                        },
-                                        complete: function() {
-                                            $('.showmore-latest0 .ajaxloadingLatest').removeClass('spin-ajax');
-                                        },
-                                        success: function(data) {
-                                            $data = $(data);
-                                            var $products = $data.find('.latest_grid0 > div.item'); // в родителе ищем блок товара
-                                            $('.latest_grid0').append($products); // ебашим его после каждого блока
-                                        }
-                                    });
-                                })
-                            });
-                        </script>
-                        <!-- КОНЕЦ ПОКАЗАТЬ ЕЩЁ -->
-
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                $('.latest_grid0').each(function() {
-                                    if ($(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {
-                                        var items = $(this).children('div.item');
-                                        items.removeClass('col-xs-12 col-sm-6 col-md-4 col-lg-3');
-                                        items.addClass('col-xs-12 col-sm-12 col-md-12 col-lg-12');
-                                    }
-                                });
-
-                                if (!$(".latest_grid0").parents("#column-left, #column-right, .position-no-owl").length) {}
-                            });
-                        </script>
                     </div>
-                        <script>
-                            $(document).ready(function() {
-                                $('.carousel_numb_productany22882').owlCarousel({
-                                    responsiveBaseWidth: ".carousel_numb_productany22882",
-                                    itemsCustom: [
-                                        [0, 1],
-                                        [500, 2],
-                                        [750, 3],
-                                        [950, 4],
-                                        [1150, 5]
-                                    ],
-                                    slideSpeed: 200,
-                                    paginationSpeed: 300,
-                                    navigation: true,
-                                    stopOnHover: true,
-                                    mouseDrag: false,
-                                    pagination: false,
-                                    autoPlay: false,
-                                    navigationText: ['<div class="btn btn-carousel-module next-prod"><i class="fa fa-angle-left arrow"></i></div>', '<div class="btn btn-carousel-module prev-prod"><i class="fa fa-angle-right arrow"></i></div>'],
-                                });
-                            });
-                            $(window).load(function() {
-                                $(".productany22882 .additional-image").removeClass('hidden');
-                            });
-                        </script>
-                    </div>
-                </div>
+                </div>                                                    
             </div>
         </div>
     </div>
-    </div>
-
-    <style>
-
-    </style>
 
     <!-- скрипт звонка -->
+    
     <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
     <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;">
         <div class="mfp-container mfp-ajax-holder mfp-s-ready">
@@ -2912,96 +2061,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
             <div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div>
         </div>
     </div>
-    <!-- конец его бля -->
 
-
-    <div class="box-bg-full bg_mode_pos_22">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 pos22">
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <script>
-        function validateEmail($email) {
-            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            return emailReg.test($email);
-        }
-
-        $(document).ready(function() {
-            $('#subcribe').click(function() {
-                var email = $('#input-newsletter').val();
-
-                if (email == '') {
-                    var error = 'Пожалуйста, введите адрес электронной почты!';
-                }
-
-                if (!validateEmail(email)) {
-                    var error = 'Пожалуйста, введите действующий адрес электронной почты!';
-                }
-
-                if (error != null) {
-                    $('#error-msg').html('');
-                    $('#error-msg').append('<b style=\"color:red\">' + error + '</b>');
-                } else {
-
-                    var dataString = 'email=' + email;
-                    $.ajax({
-                        url: 'index.php?route=common/footer/addToNewsletter',
-                        type: 'post',
-                        data: dataString,
-                        dataType: 'json',
-                        success: function(json) {
-                            if (json['warning']) {
-                                $('#error-msg').empty('');
-                                $('#input-newsletter').val('');
-                                $('#error-msg').append('<b style=\"color:green\">' + json['warning'] + '</b>');
-                            }
-                            if (json['success']) {
-                                $('#error-msg').empty('');
-                                $('#input-newsletter').val('');
-                                $('#error-msg').append('<b style=\"color:green\">' + json['success'] + '</b>');
-                            }
-
-                        }
-
-                    });
-                }
-
-            })
-        });
-    </script>
-
-
-    <script>
-        < !--
-        function price_format(n) {
-            c = 2;
-            d = '.';
-            t = ' ';
-            s_left = '';
-            s_right = ' р.';
-            n = n * 1.00000000;
-            i = parseInt(n = Math.abs(n).toFixed(c)) + '';
-            j = ((j = i.length) > 3) ? j % 3 : 0;
-            return s_left + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '') + s_right;
-        }
-
-        //-->
-    </script>
-
-    <div id="tcb-call">
-        <div class="tcb-phone">
-            <div class="tcb-phone-img"></div>
-        </div>
-        <div class="tcb-layout1"></div>
-        <div class="tcb-layout2"></div>
-        <div class="tcb-layout3"></div>
-    </div>
     <script>
         // function get_modal_callbacking() {
         //     $.magnificPopup.open({
