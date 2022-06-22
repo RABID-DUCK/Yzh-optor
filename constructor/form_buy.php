@@ -29,7 +29,7 @@
 									<span class="input-group-btn">
 										<input class="btn btn-update-popup" type="button" id="decrease_quickorder" value="-" onclick="btnminus_quickorder()">									
 									</span>
-									<input type="text" class="form-control input-sm qty_quickorder" name="quantity" id="htop_quickorder" size="2" value="1">
+									<input type="text" class="form-control input-sm qty_quickorder" oninput="input_quickorder()" maxlength="6" name="quantity" id="htop_quickorder" size="2" value="1">
 									<span class="input-group-btn">
 										<input class="btn btn-update-popup" type="button" id="increase_quickorder" value="+" onclick="btnplus_quickorder()">
 									</span>
@@ -49,7 +49,7 @@
                             var input = $('#htop_quickorder');
                             var price = $('#formated_price_quickorder');
                             function btnminus_quickorder(){
-                                if ($(input).val() > 0) {
+                                if ($(input).val() > 1) {
                                     $(input).val(parseInt($(input).val()-1));
                                     $(price).html(<?=$elem['price']?>*$(input).val() + ' руб.');
                                 }
@@ -60,6 +60,16 @@
                                     $(price).html(<?=$elem['price']?>*$(input).val() + ' руб.');
                                 }
                             }
+							function input_quickorder(){
+								if ($(input).val() <= 999999 && $(input).val() > 0) {
+                                    $(input).val(parseInt($(input).val()));
+                                    $(price).html(<?=$elem['price']?>*$(input).val() + ' руб.');
+                                } else
+								{
+									$(input).val(1);
+                                    $(price).html(<?=$elem['price']?>*$(input).val() + ' руб.');
+								}
+							}
                         </script>
 						</div>						
 					</div>

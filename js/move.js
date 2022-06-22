@@ -34,20 +34,14 @@ function item_click(object, e) {
 
     id = $(obj).children('.product-model').text();
 
-    minus = $(obj).children('.quantity_plus_minus')
-    .children('.quantity_cont').children('.input-group')
-    .children().children('.btn-quantity-minus');
-
-    plus = $(obj).children('.quantity_plus_minus')
-    .children('.quantity_cont').children('.input-group')
-    .children().children('.btn-quantity-plus');
-
     num = $(obj).children('.quantity_plus_minus')
     .children('.quantity_cont').children('.input-group')
     .children('.form-control');
 
-    btn_buy = $(obj).children('.actions-quick-order').children('.quick-order')
-    .children('.btn-fastorder');
+    price = $(obj).children('.quantity_plus_minus')
+    .children('.quantity_price').children('.quantity_price_sum');
+
+    console.log(object);
 
     if ($(elem).hasClass('btn-fastorder') || $(elem).parent().hasClass('btn-fastorder')) // Быcтрый заказ
     {
@@ -69,6 +63,27 @@ function item_click(object, e) {
     else if ($(elem).hasClass('btn-general') || $(elem).parent().hasClass('btn-general')) // Заказ в корзину
     {
         console.log('Корзина');
+    }
+    else if ($(elem).hasClass('btn-quantity-plus')) // + кол-во
+    {
+        if ($(num).val() < 999999) {
+            $(num).val(parseInt(parseInt($(num).val())+1));
+            $(price).text(parseInt($(price).attr('price'))*parseInt($(num).val())+' руб.');
+        }
+    }
+    else if ($(elem).hasClass('btn-quantity-minus')) // - кол-во
+    {
+        if ($(num).val() > 1) {
+            $(num).val(parseInt($(num).val()-1));
+            $(price).text(parseInt($(price).attr('price'))*parseInt($(num).val())+' руб.');
+        }
+    } else if ($(object).hasClass('form-control')) // Изменение кол-ва
+    {
+        if ($(object).val() < 1 || $(object).val()>999999) {$(object).val(1)};
+        $(object).attr('value', $(object).val());
+        var temp =  $(object).parent('.input-group').parent('.quantity_cont').parent('.quantity_plus_minus')
+        .children('.quantity_price').children('.quantity_price_sum');
+        $(temp).text(parseInt($(temp).attr('price'))*parseInt($(object).val())+' руб.');
     }
 };
 

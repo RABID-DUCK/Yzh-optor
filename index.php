@@ -794,11 +794,14 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                         <span class="input-group-btn">
                                                             <button class="btn btn-quantity-minus" type="button">-</button>
                                                         </span>
-                                                        <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
+                                                        <input id="input_quantity_mod_latest_grid" oninput="item_click(this, event)" maxlength="6" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                         <span class="input-group-btn">
                                                             <button class="btn btn-quantity-plus" type="button">+</button>
                                                         </span>
                                                     </div>
+                                                </div>
+                                                <div class="quantity_price">
+                                                    <div class="quantity_price_sum" price="<?=$elem['price']?>"><?=$elem['price']?> руб.</div>
                                                 </div>
                                             </div>
                                             <div class="actions">
@@ -896,11 +899,14 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                         <span class="input-group-btn">
                                                             <button class="btn btn-quantity-minus" type="button">-</button>
                                                         </span>
-                                                        <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
+                                                        <input id="input_quantity_mod_latest_grid" oninput="item_click(this, event)" maxlength="6" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                         <span class="input-group-btn">
                                                             <button class="btn btn-quantity-plus" type="button">+</button>
                                                         </span>
                                                     </div>
+                                                </div>
+                                                <div class="quantity_price">
+                                                    <div class="quantity_price_sum" price="<?=$elem['price']?>"><?=$elem['price']?> руб.</div>
                                                 </div>
                                             </div>
                                             <div class="actions">
@@ -1116,11 +1122,14 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                         <span class="input-group-btn">
                                                             <button class="btn btn-quantity-minus" type="button">-</button>
                                                         </span>
-                                                        <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
+                                                        <input id="input_quantity_mod_latest_grid" oninput="item_click(this, event)" maxlength="6" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                         <span class="input-group-btn">
                                                             <button class="btn btn-quantity-plus" type="button">+</button>
                                                         </span>
                                                     </div>
+                                                </div>
+                                                <div class="quantity_price">
+                                                    <div class="quantity_price_sum" price="<?=$elem['price']?>"><?=$elem['price']?> руб.</div>
                                                 </div>
                                             </div>
                                             <div class="actions">
@@ -1224,11 +1233,14 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                                     <span class="input-group-btn">
                                                                         <button class="btn btn-quantity-minus" type="button">-</button>
                                                                     </span>
-                                                                    <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
+                                                                    <input id="input_quantity_mod_latest_grid" oninput="item_click(this, event)" maxlength="6" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                                     <span class="input-group-btn">
                                                                         <button class="btn btn-quantity-plus" type="button">+</button>
                                                                     </span>
                                                                 </div>
+                                                            </div>
+                                                            <div class="quantity_price">
+                                                                <div class="quantity_price_sum" price="<?=$elem['price']?>"><?=$elem['price']?> руб.</div>
                                                             </div>
                                                         </div>
                                                         <div class="actions">
@@ -1318,11 +1330,14 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                                     <span class="input-group-btn">
                                                                         <button class="btn btn-quantity-minus" type="button">-</button>
                                                                     </span>
-                                                                    <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
+                                                                    <input id="input_quantity_mod_latest_grid" oninput="item_click(this, event)" maxlength="6" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                                     <span class="input-group-btn">
                                                                         <button class="btn btn-quantity-plus" type="button">+</button>
                                                                     </span>
                                                                 </div>
+                                                            </div>
+                                                            <div class="quantity_price">
+                                                                <div class="quantity_price_sum" price="<?=$elem['price']?>"><?=$elem['price']?> руб.</div>
                                                             </div>
                                                         </div>
                                                         <div class="actions">

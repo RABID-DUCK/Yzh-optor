@@ -161,6 +161,17 @@ table > tbody > tr:hover {
   width: 100%;
   height: 100%;
 }
+.quantity_price {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+}
+.quantity_price_sum {
+  min-width: 50%;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+}
 @media (min-width: 992px) {
   #column-left {
     margin-top: 320px;
