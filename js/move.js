@@ -1,5 +1,3 @@
-document.addEventListener("click", function (e) {});
-
 function take_items(elem, category, id, start=0, end=5, limit=5) {
     {
         $.ajax({
@@ -29,8 +27,7 @@ function take_items(elem, category, id, start=0, end=5, limit=5) {
 };
 
 
-function item_click(object, Event e) {
-    click = $(object).target;
+function item_click(object, e) {
     obj = $(object).children('.product-thumb').children('.caption');
 
     id = $(obj).children('.product-model').text();

@@ -749,7 +749,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                 }   
                             ?>
-                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this)">
+                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this, event)">
                                     <div class="product-thumb transition">
                                         <div class="image">
                                             <div class="stickers-ns">
@@ -851,7 +851,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                 }   
                             ?>
-                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this)">
+                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this, event)">
                                     <div class="product-thumb transition">
                                         <div class="image">
                                             <div class="stickers-ns">
@@ -1071,7 +1071,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                 }   
                             ?>
-                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this)">
+                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this, event)">
                                     <div class="product-thumb transition">
                                         <div class="image">
                                             <div class="stickers-ns">
@@ -1179,7 +1179,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             }
                                         ?>
 
-                                            <div class="item no-slider col-xs-12 col-md-6" id="hide-items" onclick="item_click(this)">
+                                            <div class="item no-slider col-xs-12 col-md-6" id="hide-items" onclick="item_click(this, event)">
                                                 <div class="product-thumb transition">
                                                     <div class="image">
                                                         <div class="stickers-ns">
@@ -1273,7 +1273,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             }
                                         ?>
 
-                                            <div class="item no-slider col-xs-12 col-md-6" id="hide-items" onclick="item_click(this)">
+                                            <div class="item no-slider col-xs-12 col-md-6" id="hide-items" onclick="item_click(this, event)">
                                                 <div class="product-thumb transition">
                                                     <div class="image">
                                                         <div class="stickers-ns">
