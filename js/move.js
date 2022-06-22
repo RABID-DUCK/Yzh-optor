@@ -50,7 +50,7 @@ function item_click(object, e) {
     btn_buy = $(obj).children('.actions-quick-order').children('.quick-order')
     .children('.btn-fastorder');
 
-    console.log($(click));
+    console.log(e.target);
 
     if ($(obj)) // Быcтрый заказ
     {
