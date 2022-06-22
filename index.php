@@ -1445,19 +1445,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
         </div>
     </div>
 
-    <script>
-        // function get_modal_callbacking() {
-        //     $.magnificPopup.open({
-        //         tLoading: loading_masked_img,
-        //         items: {
-        //             src: 'index.php?route=extension/module/callback',
-        //             type: 'ajax'
-        //         },
-        //     });
-        // }
-    </script>
-
-    <div id="close-yey" class="hider">
+    <div id="close-yey" class="modal-yey hider">
 
     </div>
     <footer>

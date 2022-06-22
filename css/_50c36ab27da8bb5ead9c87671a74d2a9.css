@@ -15630,18 +15630,6 @@ footer h3 {
     right: 4px
 }
 
-#close-yey{
-    font-size: 40px;
-    color: black;
-    position: fixed;
-    top: 15%;
-    right: 22%;
-    z-index: 234324234;
-    width: 50%;
-    height: 480px;
-    background-color: silver;
-    border-radius: 4px;
-}
 .quick-cell-content{
     font-size: 14px;
 }

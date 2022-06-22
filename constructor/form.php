@@ -19,11 +19,13 @@
       $headers)){
         echo "<script>";
         echo "alert('Звонок запрошен. С вами свяжутся в ближайшее время!');";
+        echo "window.location.href = '../index.php'";
         echo "</script>";
      }
      else{
         echo "<script>";
         echo "alert('Упс! Что-то пошло не так :/ ');";
+        echo "window.location.href = '404.php'";
         echo "</script>";
      }
 

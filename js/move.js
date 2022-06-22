@@ -29,6 +29,8 @@ function take_items(elem, category, id, start=0, end=5, limit=5) {
 
 function item_click(object, e) {
     obj = $(object).children('.product-thumb').children('.caption');
+    e.preventDefault();
+    elem = e.target;
 
     id = $(obj).children('.product-model').text();
 
@@ -43,16 +45,11 @@ function item_click(object, e) {
     num = $(obj).children('.quantity_plus_minus')
     .children('.quantity_cont').children('.input-group')
     .children('.form-control');
-    
-    btn_add_cart = $(obj).children('.actions').children('.cart')
-    .children('.actions').children('.btn-general');
 
     btn_buy = $(obj).children('.actions-quick-order').children('.quick-order')
     .children('.btn-fastorder');
 
-    console.log(e.target);
-
-    if ($(obj)) // Быcтрый заказ
+    if ($(elem).hasClass('btn-fastorder') || $(elem).parent().hasClass('btn-fastorder')) // Быcтрый заказ
     {
         console.log('Быстрый заказ');
         $(document).ready(function() {
@@ -64,12 +61,31 @@ function item_click(object, e) {
                 },
                 success: function(response) {
                     $('#close-yey').html(response);
+                    $('#close-yey').removeClass('hider');
                 }
             });
         });
     }
-    else if ($(obj) == $(btn_buy)) // Заказ в корзину
+    else if ($(elem).hasClass('btn-general') || $(elem).parent().hasClass('btn-general')) // Заказ в корзину
     {
         console.log('Корзина');
     }
 };
+
+function close_modal() {
+    $('#close-yey').addClass('hider');
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    $('#feedback').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "../constructor/form.php",
+            data: $(this).serialize(),
+            success: function(response){
+                
+            }
+        });
+    });
+});       
