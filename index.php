@@ -321,7 +321,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
                         <div id="search" class="input-group pt20">
-                            <input type="text" name="search" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
+                            <input type="text" name="search_" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
                             <div class="input-group-btn categories">
                                 <button id="change_category" type="button" class="btn btn-search-select dropdown-toggle" data-toggle="dropdown">
                                     <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
