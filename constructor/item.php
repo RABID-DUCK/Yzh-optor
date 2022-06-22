@@ -6,7 +6,7 @@
     $elem_start_i = $_POST['elem_start_i'];
     $elem_end_i = $_POST['elem_end_i'];
     $elem_lim = $_POST['elem_lim'];
-$elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `$elem_category`=$elem_id limit $elem_lim");
+    $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `$elem_category`=$elem_id limit $elem_lim");
 foreach ($elems as $i => $elem) {
     if ($i >= $elem_start_i && $i < $elem_end_i) {
         switch (strlen($elem['id'])) {

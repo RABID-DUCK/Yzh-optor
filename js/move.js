@@ -5,7 +5,7 @@ function take_items(elem, category, id, start=0, end=5, limit=5) {
         $.ajax({
             type: "POST",
             url: 'constructor/item.php',
-            data: {                        
+            data: {
                 'elem_category': category,
                 'elem_id': id,
                 'elem_start_i': start,
@@ -36,22 +36,22 @@ function item_click(object, Event e) {
     id = $(obj).children('.product-model').text();
 
     minus = $(obj).children('.quantity_plus_minus')
-    .children('.quantity_cont').children('.input-group')
-    .children().children('.btn-quantity-minus');
+        .children('.quantity_cont').children('.input-group')
+        .children().children('.btn-quantity-minus');
 
     plus = $(obj).children('.quantity_plus_minus')
-    .children('.quantity_cont').children('.input-group')
-    .children().children('.btn-quantity-plus');
+        .children('.quantity_cont').children('.input-group')
+        .children().children('.btn-quantity-plus');
 
     num = $(obj).children('.quantity_plus_minus')
-    .children('.quantity_cont').children('.input-group')
-    .children('.form-control');
-    
+        .children('.quantity_cont').children('.input-group')
+        .children('.form-control');
+
     btn_add_cart = $(obj).children('.actions').children('.cart')
-    .children('.actions').children('.btn-general');
+        .children('.actions').children('.btn-general');
 
     btn_buy = $(obj).children('.actions-quick-order').children('.quick-order')
-    .children('.btn-fastorder');
+        .children('.btn-fastorder');
 
     console.log($(click));
 

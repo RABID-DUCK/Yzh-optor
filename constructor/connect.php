@@ -8,6 +8,6 @@
     // Проверяем соединение
     mysqli_set_charset($conn, "utf8");
     if (!$conn) {
-        header("Location: ../constructor/404.php"); 
+        header("Location: 404.php");
         die("Connection failed: " . mysqli_connect_error());
     }
