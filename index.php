@@ -321,8 +321,12 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
                         <div id="search" class="input-group pt20">
-                            <input type="text" name="search" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
-                            <div class="input-group-btn categories">
+
+                            <form action="constructor/search.php?go" class="form-search">
+                            <input id="searching" type="text" name="search_text" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
+                            <img src="" alt="">
+                            <p id="items_search"></p>
+                            <!-- <div class="input-group-btn categories">
                                 <button id="change_category" type="button" class="btn btn-search-select dropdown-toggle" data-toggle="dropdown">
                                     <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
                                 </button>
@@ -355,10 +359,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 </ul>
                                 <input id="selected_category" type="hidden" name="category_id" value="0" />
 
-                            </div>
+                            </div> -->
                             <span class="input-group-btn button_search">
-                                <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
+                                <input type="submit" class="btn btn-search" name="search_form" value="Поиск"><i class="fa fa-search"></i>
                             </span>
+                            </form>
                         </div>
                         <div id="search_word" class="hidden-xs hidden-sm">Я ищу, например, <a>Шланги</a></div>
                     </div>

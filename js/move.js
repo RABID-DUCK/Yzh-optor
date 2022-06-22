@@ -50,7 +50,7 @@ function item_click(object, e) {
     btn_buy = $(obj).children('.actions-quick-order').children('.quick-order')
     .children('.btn-fastorder');
 
-    console.log(e.target);
+    console.log($(obj));
 
     if ($(obj)) // Быcтрый заказ
     {
@@ -73,3 +73,12 @@ function item_click(object, e) {
         console.log('Корзина');
     }
 };
+
+const input = document.getElementById('searching');
+const pe = document.getElementById('items_search');
+input.addEventListener('input', updateValue);
+
+function updateValue(e){
+    pe.classList.add('item_searching');
+    pe.textContent = input.value;
+}
