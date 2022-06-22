@@ -749,7 +749,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                 }   
                             ?>
-                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
+                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this)">
                                     <div class="product-thumb transition">
                                         <div class="image">
                                             <div class="stickers-ns">
@@ -792,25 +792,25 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <div class="quantity_cont">
                                                     <div class="input-group">
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
+                                                            <button class="btn btn-quantity-minus" type="button">-</button>
                                                         </span>
                                                         <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                            <button class="btn btn-quantity-plus" type="button">+</button>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="">
+                                                    <button class="btn btn-general" type="button" >
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder" type="button" onclick="" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -851,7 +851,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                 }   
                             ?>
-                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
+                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this)">
                                     <div class="product-thumb transition">
                                         <div class="image">
                                             <div class="stickers-ns">
@@ -894,25 +894,25 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <div class="quantity_cont">
                                                     <div class="input-group">
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
+                                                            <button class="btn btn-quantity-minus" type="button">-</button>
                                                         </span>
                                                         <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                            <button class="btn btn-quantity-plus" type="button">+</button>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="">
+                                                    <button class="btn btn-general" type="button" >
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder" type="button" onclick="" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -1071,7 +1071,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         break;
                                 }   
                             ?>
-                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items">
+                                <div class="item no-slider col-xs-12 col-sm-6 col-md-4 col-lg-1-5" id="hide-items" onclick="item_click(this)">
                                     <div class="product-thumb transition">
                                         <div class="image">
                                             <div class="stickers-ns">
@@ -1114,25 +1114,25 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <div class="quantity_cont">
                                                     <div class="input-group">
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
+                                                            <button class="btn btn-quantity-minus" type="button">-</button>
                                                         </span>
                                                         <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                         <span class="input-group-btn">
-                                                            <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                            <button class="btn btn-quantity-plus" type="button">+</button>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" onclick="">
+                                                    <button class="btn btn-general" type="button" >
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder" type="button" onclick="" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -1162,7 +1162,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 <div class="product-slider">
                                     <div class="container-modules latest_gv latest_grid0">
                                         <?php
-                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='22' limit 10");
+                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='22' limit 2");
                                         foreach ($elems as $elem) {
                                             switch (strlen($elem['id'])) {
                                                 case 1:
@@ -1179,7 +1179,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             }
                                         ?>
 
-                                            <div class="item no-slider col-xs-12 col-sm-6" id="hide-items">
+                                            <div class="item no-slider col-xs-12 col-md-6" id="hide-items" onclick="item_click(this)">
                                                 <div class="product-thumb transition">
                                                     <div class="image">
                                                         <div class="stickers-ns">
@@ -1222,42 +1222,28 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                             <div class="quantity_cont">
                                                                 <div class="input-group">
                                                                     <span class="input-group-btn">
-                                                                        <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
+                                                                        <button class="btn btn-quantity-minus" type="button">-</button>
                                                                     </span>
                                                                     <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                                     <span class="input-group-btn">
-                                                                        <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                                        <button class="btn btn-quantity-plus" type="button">+</button>
                                                                     </span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="actions">
                                                             <div class="cart">
-                                                                <button class="btn btn-general" type="button" onclick="">
+                                                                <button class="btn btn-general" type="button" >
                                                                     <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                        <div class="actions-quick-order">
-                                                            <div class="quick-order">
-                                                                <?php $name = str_replace('"', "", $elem['name']); ?>
-                                                                <button class="btn btn-fastorder " onclick="pokaz_modal('<?= (int)$elem['id'] ?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
-                                                                    <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
-                                                                </button>
-                                                            </div>
-                                                        </div>
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         <?php
                                         };
                                         ?>
-                                    </div>
-                                    <div class="showmore-latest0 box-showmore">
-                                        <div class="ajaxloadingLatest"></div>
-                                        <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
                                     </div>
                                 </div>
                             </div>
@@ -1268,7 +1254,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                 <div class="product-slider">
                                     <div class="container-modules latest_gv latest_grid0">
                                         <?php
-                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `first_id`= 'rand(0, 267)' limit 10");
+                                        $rnd_mass = mysqli_query($conn, "SELECT DISTINCT `first_id` FROM `items`")->fetch_all(MYSQLI_ASSOC);
+                                        $rnd = $rnd_mass[array_rand($rnd_mass, 1)]['first_id'];
+                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `first_id`= $rnd limit 2");
                                         foreach ($elems as $elem) {
                                             switch (strlen($elem['id'])) {
                                                 case 1:
@@ -1285,7 +1273,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                             }
                                         ?>
 
-                                            <div class="item no-slider col-xs-12 col-sm-6" id="hide-items">
+                                            <div class="item no-slider col-xs-12 col-md-6" id="hide-items" onclick="item_click(this)">
                                                 <div class="product-thumb transition">
                                                     <div class="image">
                                                         <div class="stickers-ns">
@@ -1300,7 +1288,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                         </div>
                                                         <a href="#">
                                                             <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                            <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                            <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' class="img-responsive lazyloaded">
                                                         </a>
                                                     </div>
 
@@ -1328,42 +1316,35 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                             <div class="quantity_cont">
                                                                 <div class="input-group">
                                                                     <span class="input-group-btn">
-                                                                        <button class="btn btn-quantity-minus" onclick="" type="button">-</button>
+                                                                        <button class="btn btn-quantity-minus" type="button">-</button>
                                                                     </span>
                                                                     <input id="input_quantity_mod_latest_grid06243" class="form-control input-number-quantity6243" name="quantity" size="2" value="1">
                                                                     <span class="input-group-btn">
-                                                                        <button class="btn btn-quantity-plus" onclick="" type="button">+</button>
+                                                                        <button class="btn btn-quantity-plus" type="button">+</button>
                                                                     </span>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="actions">
                                                             <div class="cart">
-                                                                <button class="btn btn-general" type="button" onclick="">
+                                                                <button class="btn btn-general" type="button" >
                                                                     <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                                 </button>
                                                             </div>
                                                         </div>
                                                         <div class="actions-quick-order">
                                                             <div class="quick-order">
-                                                                <button class="btn btn-fastorder " type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                                <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
                                                                     <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                                 </button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="actions">
-                                                    <div class="cart">
-                                                        <button class="btn btn-general" type="button" onclick="">
-                                                            <i class="fa fa-shopping-basket"></i><span>В корзину</span>
-                                                        </button>
-                                                    </div>
-                                                </div>
                                                 <div class="actions-quick-order">
                                                     <div class="quick-order">
                                                         <?php $name = str_replace('"', "", $elem['name']); ?>
-                                                        <button class="btn btn-fastorder " onclick="pokaz_modal('<?= (int)$elem['id'] ?>')" type="button" data-toggle-buy data-original-title="Купить в 1 клик">
+                                                        <button class="btn btn-fastorder " type="button" data-original-title="Купить в 1 клик">
                                                             <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                         </button>
                                                     </div>
@@ -1372,10 +1353,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         <?php
                                         };
                                         ?>
-                                    </div>
-                                    <div class="showmore-latest0 box-showmore">
-                                        <div class="ajaxloadingLatest"></div>
-                                        <span data-nextpage="2" class="latest-ajax-load0" id="show_more">Показать еще</span>
                                     </div>
                                 </div>
                             </div>
@@ -1483,60 +1460,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
     <div id="close-yey" class="hider">
 
     </div>
-    <script>
-        function pokaz_modal(id) {
-            $(document).ready(function() {
-                $.ajax({
-                    type: "post",
-                    url: 'constructor/form_buy.php',
-                    data: {
-                        'name': id
-                    },
-                    success: function(response) {
-
-                        $('#close-yey').html(response);
-
-                        $('[data-toggle-buy]').on('click', function() {
-                            $('#close-yey').removeClass('hider');
-                        });
-
-                        $('#close-buy-block').on('click', function() {
-                            $('#close-yey').toggleClass('hider');
-                        });
-
-                    }
-                });
-            });
-        };
-
-        function take_items(elem, category, id, start=0, end=5, limit=5) {
-            {
-                $.ajax({
-                    type: "POST",
-                    url: 'constructor/item.php',
-                    data: {                        
-                        'elem_category': category,
-                        'elem_id': id,
-                        'elem_start_i': start,
-                        'elem_end_i': end,
-                        'elem_lim': limit
-                    },
-                    success: function(response) {
-                        obj = $('#'+elem);
-                        if (response.length<20000)
-                        {
-                            obj.siblings('.box-showmore').addClass('item_hidden');
-                        }
-                        else {
-                            var btn = obj.siblings('.box-showmore').children('#show_more');
-                            btn.attr('onclick', "take_items('"+elem+"', '"+category+"', '"+id+"', '"+end+"', '"+(parseInt(end)+5)+"')");
-                        }
-                        obj.html(obj.html() + response);
-                    }
-                });
-            };
-        };
-    </script>
     <footer>
         <div class="footer-top">
             <div class="container">
@@ -1689,6 +1612,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
             </div>
         </div>
     </footer>
+    <script src="js/move.js"></script>
 </body>
-
 </html>
