@@ -41,7 +41,9 @@ function item_click(object, e) {
     price = $(obj).children('.quantity_plus_minus')
     .children('.quantity_price').children('.quantity_price_sum');
 
-    console.log(object);
+    count = $(num).val()
+
+    console.log(object, id, count, price);
 
     if ($(elem).hasClass('btn-fastorder') || $(elem).parent().hasClass('btn-fastorder')) // Быcтрый заказ
     {
@@ -51,7 +53,8 @@ function item_click(object, e) {
                 type: "post",
                 url: '../constructor/form_buy.php',
                 data: {
-                    'name': id
+                    'name': id,
+                    'count': count
                 },
                 success: function(response) {
                     $('#close-yey').html(response);

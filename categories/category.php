@@ -487,7 +487,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                         <ul id="menu-list" class="dropdown-menu">
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.html">Доставка</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.html">Оплата</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.html">О нас</a></li>
+                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.hp">О нас</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.html">Контакты</a></li>
                             <?php
                                 $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
@@ -530,7 +530,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                         Доставка</a></li>
                                 <li><a class="no-img-parent-link" href="../oplata.html">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="../about_us.html">
+                                <li><a class="no-img-parent-link" href="../about_us.hp">
                                         О нас</a></li>
                                 <li><a class="no-img-parent-link" href="../Kontakct.html">
                                         Контакты</a></li>
@@ -1163,7 +1163,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Информация</h3>
                         <ul class="list-unstyled">
-                            <li><a href="about_us.html">О нас</a></li>
+                            <li><a href="about_us.hp">О нас</a></li>
                             <li><a href="delivery.html">Информация о доставке</a></li>
                             <li><a href="terms.html">Условия соглашения</a></li>
                         </ul>
@@ -1362,24 +1362,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
 
             })
         });
-    </script>
-
-
-
-    <script>
-        < !--
-        function price_format(n) {
-            c = 2;
-            d = '.';
-            t = ' ';
-            s_left = '';
-            s_right = ' р.';
-            n = n * 1.00000000;
-            i = parseInt(n = Math.abs(n).toFixed(c)) + '';
-            j = ((j = i.length) > 3) ? j % 3 : 0;
-            return s_left + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '') + s_right;
-        }
-        //-->
     </script>
 
     <div id="tcb-call">

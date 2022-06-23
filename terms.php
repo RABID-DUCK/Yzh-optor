@@ -862,7 +862,7 @@
 
 							</li>
 							<li class="hidden-md hidden-lg">
-								<a class="dropdown-img" href="about_us.html">
+								<a class="dropdown-img" href="about_us.hp">
 									О нас </a>
 							</li>
 							<li class="dropdown ">
@@ -2285,7 +2285,7 @@
 										Доставка</a></li>
 								<li><a class="no-img-parent-link" href="oplata.html">
 										Оплата</a></li>
-								<li><a class="no-img-parent-link" href="about_us.html">
+								<li><a class="no-img-parent-link" href="about_us.hp">
 										О нас</a></li>
 								<li><a class="no-img-parent-link" href="contact-us/index.html">
 										Контакты</a></li>
@@ -2526,7 +2526,7 @@
 					<div class="col-sm-3">
 						<h3> Информация</h3>
 						<ul class="list-unstyled">
-							<li><a href="about_us.html">О нас</a></li>
+							<li><a href="about_us.hp">О нас</a></li>
 							<li><a href="delivery.html">Информация о доставке</a></li>
 							<li><a href="terms.html">Условия соглашения</a></li>
 						</ul>

@@ -386,7 +386,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         <ul id="menu-list" class="dropdown-menu hide-cat">
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.html">Доставка</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.html">Оплата</a></li>
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.html">О нас</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.hp">О нас</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.html">Контакты</a></li>
                             <?php
                             $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
@@ -428,7 +428,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         Доставка</a></li>
                                 <li><a class="no-img-parent-link" href="oplata.html">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="about_us.html">
+                                <li><a class="no-img-parent-link" href="about_us.hp">
                                         О нас</a></li>
                                 <li><a class="no-img-parent-link" href="Kontakct.html">
                                         Контакты</a></li>
@@ -729,11 +729,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
         <div class="row">
             <div class="col-sm-12">
                 <div class="container-module">
-                    <div class="title-module"><span>Перчатки</span></div>
+                    <div class="title-module"><span>Электротовары</span></div>
                     <div class="product-slider">
                         <div class="container-modules latest_gv latest_grid0" id="cont1">
                         <?php
-                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='14' limit 5");
+                            $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `third_id`='7' limit 5");
                             foreach ($elems as $elem) {
                                 switch (strlen($elem['id'])) {
                                     case 1:
@@ -829,7 +829,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         </div>
                         <div class="showmore-latest0 box-showmore">
                             <div class="ajaxloadingLatest spin-ajax"></div>
-                            <span data-nextpage="2" onclick="take_items('cont1', 'second_id', '14', 5, 10)" class="latest-ajax-load0" id="show_more">Показать еще</span>
+                            <span data-nextpage="2" onclick="take_items('cont1', 'third_id', '7', 5, 10)" class="latest-ajax-load0" id="show_more">Показать еще</span>
                         </div>
                     </div>
                 </div>
@@ -1165,13 +1165,13 @@ $dir_img = __DIR__ . '/img/tovaru/';
             <div class="box-bg-full bg_mode_pos_2">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 col-md-6 pos2">
+                    <div class="col-sm-6 col-md-6 pos3">
                             <div class="container-module">
-                                <div class="title-module"><span style="color:#FF760D;">Ручной инструмент</span></div>
+                                <div class="title-module""><span style="color:#FF760D;">Ручной инструмент</span></div>
                                 <div class="product-slider">
                                     <div class="container-modules latest_gv latest_grid0">
                                         <?php
-                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`='22' limit 2");
+                                        $elems = mysqli_query($conn, "SELECT * FROM `items` WHERE `second_id`= 22 limit 2");
                                         foreach ($elems as $elem) {
                                             switch (strlen($elem['id'])) {
                                                 case 1:
@@ -1201,15 +1201,15 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                             <span>Самые просматриваемые</span>
                                                         </div> -->
                                                         </div>
-                                                        <a>
+                                                        <a href="#">
                                                             <!-- FIXME '#' Сделать ссылку на элемент -->
-                                                            <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' title="<?= $elem['name'] ?>" class="img-responsive lazyloaded">
+                                                            <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>' class="img-responsive lazyloaded">
                                                         </a>
                                                     </div>
 
                                                     <div class="caption">
                                                         <div class="product-name">
-                                                            <a><?= $elem['name'] ?></a>
+                                                            <a href="#"><?= $elem['name'] ?></a>
                                                             <!-- FIXME Сделать ссылку на элемент -->
                                                         </div>
                                                         <div class="product-model"><?= $elem['id'] ?></div>
@@ -1223,7 +1223,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
                                                                 <span class="quantity-reviews">
                                                                     <!-- FIXME Сделать ссылку на элемент -->
-                                                                    <a data-placement="right" data-toggle="tooltip" title="" data-original-title="отзывов">0</a>
+                                                                    <a data-placement="right" data-toggle="tooltip" title="" href="#" data-original-title="отзывов">0</a>
                                                                 </span>
                                                             </span>
                                                         </div>
@@ -1250,6 +1250,21 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                                 </button>
                                                             </div>
                                                         </div>
+                                                        <div class="actions-quick-order">
+                                                            <div class="quick-order">
+                                                                <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
+                                                                    <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="actions-quick-order">
+                                                    <div class="quick-order">
+                                                        <?php $name = str_replace('"', "", $elem['name']); ?>
+                                                        <button class="btn btn-fastorder " type="button" data-original-title="Купить в 1 клик">
+                                                            <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1546,7 +1561,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Информация</h3>
                         <ul class="list-unstyled">
-                            <li><a href="about_us.html">О нас</a></li>
+                            <li><a href="about_us.hp">О нас</a></li>
                             <li><a href="delivery.html">Информация о доставке</a></li>
                             <li><a href="terms.html">Условия соглашения</a></li>
                         </ul>

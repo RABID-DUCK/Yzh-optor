@@ -4167,7 +4167,7 @@
                                         Доставка</a></li>
                                 <li><a class="no-img-parent-link" href="oplata.html">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="about_us.html">
+                                <li><a class="no-img-parent-link" href="about_us.hp">
                                         О нас</a></li>
                                 <li><a class="no-img-parent-link" href="Kontakct.html">
                                         Контакты</a></li>

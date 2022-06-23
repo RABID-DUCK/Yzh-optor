@@ -1584,7 +1584,7 @@
                         <ul id="menu-list" class="dropdown-menu">
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.html">Доставка</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.html">Оплата</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.html">О нас</a></li>
+                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.hp">О нас</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.html">Контакты</a></li>
                             <?php
                                 $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
@@ -1627,7 +1627,7 @@
                                         Доставка</a></li>
                                 <li><a class="no-img-parent-link" href="../oplata.html">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="../about_us.html">
+                                <li><a class="no-img-parent-link" href="../about_us.hp">
                                         О нас</a></li>
                                 <li><a class="no-img-parent-link" href="../Kontakct.html">
                                         Контакты</a></li>
@@ -2190,7 +2190,7 @@ function price_format(n) {
                 <div class="col-sm-3">
                     <h3> Информация</h3>
                     <ul class="list-unstyled">
-                        <li><a href="about_us.html">О нас</a></li>
+                        <li><a href="about_us.hp">О нас</a></li>
                         <li><a href="delivery.html">Информация о доставке</a></li>
                         <li><a href="terms.html">Условия соглашения</a></li>
                     </ul>

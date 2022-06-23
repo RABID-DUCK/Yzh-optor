@@ -45,6 +45,11 @@ table > thead > tr > td > input[type="text"],
 table > thead > tr th > input[type="text"] {
   padding-left: 5px;
 }
+table > thead > tr > td > textarea,
+table > thead > tr th > textarea {
+  background-color: #36393F;
+  color: white;
+}
 table > thead > tr > td > select.actual > option[value="0"],
 table > thead > tr th > select.actual > option[value="0"] {
   color: #F04747;

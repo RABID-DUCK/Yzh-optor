@@ -1,6 +1,7 @@
 <?php 
     require "connect.php";
     $name = $_POST['name'];
+	$count = $_POST['count'];
     $elem = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `items` WHERE `id`=$name"));
 ?>
 
@@ -29,7 +30,7 @@
 									<span class="input-group-btn">
 										<input class="btn btn-update-popup" type="button" id="decrease_quickorder" value="-" onclick="btnminus_quickorder()">									
 									</span>
-									<input type="text" class="form-control input-sm qty_quickorder" oninput="input_quickorder()" maxlength="6" name="quantity" id="htop_quickorder" size="2" value="1">
+									<input type="text" class="form-control input-sm qty_quickorder" oninput="input_quickorder()" maxlength="6" name="quantity" id="htop_quickorder" size="2" value="<?=$count?>">
 									<span class="input-group-btn">
 										<input class="btn btn-update-popup" type="button" id="increase_quickorder" value="+" onclick="btnplus_quickorder()">
 									</span>
@@ -45,9 +46,12 @@
 																	
 								</div>
 							</div>
-                            <script>
+                            <script>   
+
                             var input = $('#htop_quickorder');
                             var price = $('#formated_price_quickorder');
+							$(price).html(<?=$elem['price']?>*count + ' руб.');
+
                             function btnminus_quickorder(){
                                 if ($(input).val() > 1) {
                                     $(input).val(parseInt($(input).val()-1));

@@ -49,7 +49,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     </tr>
                     <tr>
                         <td><input type="text" name="id" id="bd_id" placeholder="Индекс"></td>
-                        <td><input type="textarea" name="name" id="bd_name" placeholder="Имя"></td>
+                        <td><textarea type="textarea" name="name" id="bd_name" placeholder="Имя" style="width: 310px; height: 60px;"></textarea></td>
                         <td><input type="text" name="price" id="bd_price" placeholder="Цена"></td>
                         <td><select type="text" name="category" id="bd_category" placeholder="Категории">
                                 <?php
