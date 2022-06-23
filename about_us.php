@@ -1961,157 +1961,157 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
 </div>
 <footer>
-    <div class="footer-top">
-        <div class="container">
-            <div class="footer-ribbon">
-                <span>Мы ценим каждого покупателя!</span>
-            </div>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-ribbon">
+                    <span>Мы ценим каждого покупателя!</span>
+                </div>
 
-            <div class="row">
-                <div class="newsletter">
-                    <div class="col-xs-12 col-md-3 text-xs-center-newsletter text-newsletter text-md-right">
-                        <span>Подписаться на рассылку</span>
-                    </div>
-                    <div class="col-xs-12 col-md-6 text-xs-center-newsletter">
-                        <input type="text" class="form-control" id="input-newsletter" placeholder="Введите ваш адрес электронной почты" value="">
-                        <span id="error-msg"></span>
-                    </div>
-                    <div class="col-xs-12 col-md-3 text-xs-center-newsletter text-md-left">
-                        <button type="button" id="subcribe" class="btn btn-newsletter" value="Подписаться"><i class="fa fa-envelope fa-fw"></i>Подписаться
-                        </button>
+                <div class="row">
+                    <div class="newsletter">
+                        <div class="col-xs-12 col-md-3 text-xs-center-newsletter text-newsletter text-md-right">
+                            <span>Подписаться на рассылку</span>
+                        </div>
+                        <div class="col-xs-12 col-md-6 text-xs-center-newsletter">
+                            <input type="text" class="form-control" id="input-newsletter" placeholder="Введите ваш адрес электронной почты" value="">
+                            <span id="error-msg"></span>
+                        </div>
+                        <div class="col-xs-12 col-md-3 text-xs-center-newsletter text-md-left">
+                            <button type="button" id="subcribe" class="btn btn-newsletter" value="Подписаться"><i class="fa fa-envelope fa-fw"></i>Подписаться
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row banner-footer">
-                <div class="col-sm-6 col-md-3">
-                    <div class="block-banner-footer  ">
-                        <div class="icon-banner-footer">
-                            <i class="fa fa-shopping-cart"></i>
-                        </div>
-                        <div class="text-footer-banner">
-                            <div class="banner-title-footer">
-                                <h3>ЗАКАЗ ПО ТЕЛЕФОНУ</h3>
+                <div class="row banner-footer">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="block-banner-footer  ">
+                            <div class="icon-banner-footer">
+                                <i class="fa fa-shopping-cart"></i>
                             </div>
-                            <span class="banner-description-footer">+7 (926) 880-08-93 <br>+7 (982) 304-89-35</span>
+                            <div class="text-footer-banner">
+                                <div class="banner-title-footer">
+                                    <h3>ЗАКАЗ ПО ТЕЛЕФОНУ</h3>
+                                </div>
+                                <span class="banner-description-footer">+7 (926) 880-08-93 <br>+7 (982) 304-89-35</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="block-banner-footer  ">
-                        <div class="icon-banner-footer">
-                            <i class="fa fa-percent"></i>
-                        </div>
-                        <div class="text-footer-banner">
-                            <div class="banner-title-footer">
-                                <h3>СКИДКИ</h3>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="block-banner-footer  ">
+                            <div class="icon-banner-footer">
+                                <i class="fa fa-percent"></i>
                             </div>
-                            <span class="banner-description-footer">ПОСТОЯННЫМ ПОКУПАТЕЛЯМ!</span>
+                            <div class="text-footer-banner">
+                                <div class="banner-title-footer">
+                                    <h3>СКИДКИ</h3>
+                                </div>
+                                <span class="banner-description-footer">ПОСТОЯННЫМ ПОКУПАТЕЛЯМ!</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="block-banner-footer  ">
-                        <div class="icon-banner-footer">
-                            <i class="fa fa-truck"></i>
-                        </div>
-                        <div class="text-footer-banner">
-                            <div class="banner-title-footer">
-                                <h3> ДОСТАВКА ЗАКАЗОВ</h3>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="block-banner-footer  ">
+                            <div class="icon-banner-footer">
+                                <i class="fa fa-truck"></i>
                             </div>
-                            <span class="banner-description-footer">По России и СНГ!</span>
+                            <div class="text-footer-banner">
+                                <div class="banner-title-footer">
+                                    <h3> ДОСТАВКА ЗАКАЗОВ</h3>
+                                </div>
+                                <span class="banner-description-footer">По России и СНГ!</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="block-banner-footer  ">
-                        <div class="icon-banner-footer">
-                            <i class="fa fa-clock-o"></i>
-                        </div>
-                        <div class="text-footer-banner">
-                            <div class="banner-title-footer">
-                                <h3>График Работы</h3>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="block-banner-footer  ">
+                            <div class="icon-banner-footer">
+                                <i class="fa fa-clock-o"></i>
                             </div>
-                            <span class="banner-description-footer">Ежедневно C 9:00 до 21:00</span>
+                            <div class="text-footer-banner">
+                                <div class="banner-title-footer">
+                                    <h3>График Работы</h3>
+                                </div>
+                                <span class="banner-description-footer">Ежедневно C 9:00 до 21:00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h3> Информация</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="about_us.php">О нас</a></li>
-                        <li><a href="delivery.php">Информация о доставке</a></li>
-                        <li><a href="terms.php">Условия соглашения</a></li>
-                    </ul>
-                    <h3></h3>
-                    <ul class="list-unstyled">
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3> Дополнительно</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="constructor/404.php">Карта сайта</a></li>
-                        <li><a href="constructor/404.php">Связаться с нами</a></li>
-                        <li><a href="constructor/404.php">Возврат товара</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3> Личный кабинет</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="constructor/404.php">Личный кабинет</a></li>
-                        <li><a href="constructor/404.php">История заказов</a></li>
-                        <li><a href="constructor/404.php">Мои закладки</a></li>
-                        <li><a href="constructor/404.php">Рассылка новостей</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h3>Наши Контакты</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="tel:+79268800893" target="_blank"><i class=" fa-width"></i>+7 (926)
-                                880-08-93</a>
-                        <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
-                                304-89-35</a>
-                        </li>
-                        <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
-                                Yuzh.Optor@mail.ru</a></li>
-                        <li>
-                            <a href="https://api.whatsapp.com/send/?phone=79268800893"><i class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a><br />
-                            <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>
-                        </li>
-                    </ul>
-                    <p>Торговая компания Yuzh.Optor &copy; 2022</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <h3>О нашем магазине</h3>
-                    <div class="description_store_footer">
-                        <div class="shop-about-description-short" style="outline-color: rgb(0, 156, 240); margin: 0px 0px 15px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Строительные и
-                        хозтовары по самым низким
-                        ценам !!!
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h3> Информация</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="about_us.php">О нас</a></li>
+                            <li><a href="delivery.php">Информация о доставке</a></li>
+                            <li><a href="terms.php">Условия соглашения</a></li>
+                        </ul>
+                        <h3></h3>
+                        <ul class="list-unstyled">
+                        </ul>
                     </div>
-                    <div class="shop-about-description-full" style="outline-color: rgb(0, 156, 240); margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Наша компания
-                    предлагает большой ассортимент
-                    строительных инструментов , садово-огородный инвентарь , сантехника ,крепёж ,
-                    автоаксессуары ,
-                    хозяйственные товары.
+                    <div class="col-sm-3">
+                        <h3> Дополнительно</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="constructor/404.php">Карта сайта</a></li>
+                            <li><a href="constructor/404.php">Связаться с нами</a></li>
+                            <li><a href="constructor/404.php">Возврат товара</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3> Личный кабинет</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="constructor/404.php">Личный кабинет</a></li>
+                            <li><a href="constructor/404.php">История заказов</a></li>
+                            <li><a href="constructor/404.php">Мои закладки</a></li>
+                            <li><a href="constructor/404.php">Рассылка новостей</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Наши Контакты</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="tel:+79268800893" target="_blank"><i class=" fa-width"></i>+7 (926)
+                                    880-08-93</a>
+                            <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
+                                    304-89-35</a>
+                            </li>
+                            <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
+                                    Yuzh.Optor@mail.ru</a></li>
+                            <li>
+                                <a href="https://api.whatsapp.com/send/?phone=79268800893"><i class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a><br />
+                                <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>
+                            </li>
+                        </ul>
+                        <p>Торговая компания Yuzh.Optor &copy; 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <h3>О нашем магазине</h3>
+                        <div class="description_store_footer">
+                            <div class="shop-about-description-short" style="outline-color: rgb(0, 156, 240); margin: 0px 0px 15px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Строительные и
+                                хозтовары по самым низким
+                                ценам !!!
+                            </div>
+                            <div class="shop-about-description-full" style="outline-color: rgb(0, 156, 240); margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Наша компания
+                                предлагает большой ассортимент
+                                строительных инструментов , садово-огородный инвентарь , сантехника ,крепёж ,
+                                автоаксессуары ,
+                                хозяйственные товары.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="container">
-        <div class="row">
-        </div>
-    </div>
-    </div>
-</footer>
+    </footer>
 <div id="tcb-call">
     <div class="tcb-phone">
         <div class="tcb-phone-img"></div>

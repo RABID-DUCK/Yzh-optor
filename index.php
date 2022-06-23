@@ -457,22 +457,6 @@ require 'constructor/connect.php';
                         });
                     });
                 </script>
-                <div class="col-md-9 hidden-xs hidden-sm clearfix">
-                    <nav id="additional-menu" class="navbar hmenu_type">
-                        <div>
-                            <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="delivery.php">
-                                        Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="oplata.php">
-                                        Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="about_us.php">
-                                        О нас</a></li>
-                                <li><a class="no-img-parent-link" href="Kontakct.php">
-                                        Контакты</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
             </div>
         </div>
         <script>
@@ -959,119 +943,8 @@ require 'constructor/connect.php';
                 <div class="categorywall-container categorywall-0">
                     <div class="title-module"><span>Популярные категории</span></div>
                     <div class="wall-category-box">
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category  parent_category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/95921_2-150x150.jpg" alt="СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ">
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/">СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
-                                    </div>
-                                </div>
-                                <div class="item-sub-category nswc-host">
-                                    <div class="nswc-viewport" style="padding-right: 14px; height: 155px; overflow: hidden;">
-                                        <div class="nswc-container" style="overflow: hidden;">
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/gaz-plita-gorelki/">ГАЗ-ПЛИТА-ГОРЕЛКИ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/zamki/">ЗАМКИ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/">ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/">ИНСТРУМЕНТ МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/krepezh/">КРЕПЕЖ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/">РАСХОДНЫЕ МАТЕРИАЛЫ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/ruchnoy-instrument/">РУЧНОЙ ИНСТРУМЕНТ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/">СВАРОЧНОЕ ОБОРУДОВАНИЕ</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="nswc-scrollbar" style="position: absolute; top: 0px; right: 0px; overflow: hidden; height: 152px;">
-                                        <div class="nswc-thumb" style="position: absolute; left: 0px; width: 100%; top: 0px; height: 118.575px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/27953642163111e8ae1fe8039a18cbef_a781eb93299111ebbe151c1b0db29d29-500x500-150x150.png" alt="Ведра"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/">Ведра</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2cc86d6cc67a11e68c733c970e011047_3bd1db41361011ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Диск Алмазный "></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/">Диск Алмазный </a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/elektrotovary/svetilniki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/7876e744c27411eabe0c1c1b0db29d29_40f93b3f5fc911ebbe1a1c1b0db29d29-500x500-150x150.jpg" alt="Светильники"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/elektrotovary/svetilniki/">Светильники</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/5972713_image_large-150x150.jpg" alt="Серпянка,Сетка Штукатурная"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/">Серпянка,Сетка Штукатурная</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/autosalfetki-150x150.jpg" alt="Авто салфетки"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/">Авто салфетки</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/3af342b3459d11e5aad6f835ddca8acb_327c7180348c11ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Уголок-линейка"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/">Уголок-линейка</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2e9f6a214a5711ebbe181c1b0db29d29_ebda8048a35611ebbe1c1c1b0db29d29-500x500-150x150.jpg" alt="Шпатель"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/">Шпатель</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                            
                     </div>
                 </div>
                 <div class="container-module">
