@@ -11675,6 +11675,7 @@ header #search_word a {
 }
 
 #menu #menu-list {
+    display: none;
     width: 100%;
     border-color: #ddd;
     border-radius: 0px 0px 4px 4px;
