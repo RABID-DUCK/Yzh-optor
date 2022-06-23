@@ -1,4 +1,5 @@
 <?php
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 require '../constructor/connect.php';
 $dir_img = __DIR__ . './../img/tovaru/';
 ?>
@@ -6,7 +7,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
 
 <!DOCTYPE HTML>
 <html dir="ltr" lang="ru">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="UTF-8" />
@@ -18,10 +18,10 @@ $dir_img = __DIR__ . './../img/tovaru/';
     <meta name="keywords" content="Торговая компания Yuzh.Optor" />
     <meta property="og:title" content="Торговая компания Yuzh.Optor" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="index.html" />
-    <meta property="og:image" content="img/LOGO.png" />
+    <meta property="og:url" content="index.php" />
+    <meta property="og:image" content="../img/LOGO.png" />
     <meta property="og:site_name" content="Торговая компания Yuzh.Optor" />
-    <link href="../index.html" rel="canonical" />
+    <link href="../index.php" rel="canonical" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -190,8 +190,8 @@ $dir_img = __DIR__ . './../img/tovaru/';
 
         var button_shopping = "Продолжить покупки";
         var button_checkout = "Оформление заказа";
-        var link_checkout = "checkout/index.html";
-        var link_newstorecheckout = "cart/index.html?route=checkout/newstorecheckout";
+        var link_checkout = "checkout/index.php";
+        var link_newstorecheckout = "../cart/index.php?route=checkout/newstorecheckout";
         var color_schem = '3';
         var loading_masked_img = '<img src="../img/catalog/view/theme/newstore/image/ring-alt-' + color_schem + '.svg" />';
 
@@ -361,7 +361,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
             <div class="row vertical-align">
                 <div class="col-xs-6 col-sm-12 col-md-3 text-center text-left-md logo-top">
                     <div id="logo">
-                        <a href="../index.html">
+                        <a href="../index.php">
                             <img src="../img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
                         </a>
                     </div>
@@ -437,30 +437,30 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                     <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" onclick="return false;" data-idsearch="0">Везде</a></li>
-                                    <li><a href="#" onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
+                                    <li><a onclick="return false;" data-idsearch="0">Везде</a></li>
+                                    <li><a onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="21">Все для сантехники</a>
+                                    <li><a onclick="return false;" data-idsearch="21">Все для сантехники</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
+                                    <li><a onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
+                                    <li><a onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
                                             ИНВЕНТАРЬ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
+                                    <li><a onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
                                             ЗАЩИТЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
+                                    <li><a onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
                                             ТОВАРЫ</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
 
                                 </ul>
                                 <input id="selected_category" type="hidden" name="category_id" value="0" />
@@ -475,42 +475,58 @@ $dir_img = __DIR__ . './../img/tovaru/';
                 </div>
             </div>
         </div>
+        <style>
+            .hide-cat {
+                display: block;
+            }
+
+            .hide-cat-hide {
+                display: none !important;
+            }
+        </style>
         <div class="container" id="category">
             <div class="row">
                 <div class="col-sm-12 col-md-3 menu-box ">
-                    <nav id="menu" class="btn-group btn-block">
-                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown">
+                    <nav id="menu" class="btn-group btn-block open">
+                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown" id="but">
                             <i class="fa fa-bars"></i>
                             <span class="text-category">Категории</span>
                         </button>
 
+<<<<<<< HEAD
                         <ul id="menu-list" class="dropdown-menu">
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.html">Доставка</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.html">Оплата</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.hp">О нас</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.html">Контакты</a></li>
+=======
+                        <ul id="menu-list" class="dropdown-menu hide-cat">
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.php">Доставка</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.php">Оплата</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.php">О нас</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.php">Контакты</a></li>
+>>>>>>> routes
                             <?php
-                                $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
-                                foreach ($elems1 as $i1 => $elem1) { ?>
+                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name`, `third_id` FROM `category`");
+                            foreach ($elems1 as $i1 => $elem1) { ?>
                                 <li class="dropdown">
                                     <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                        <a href="#" class="parent-link dropdown-img"><?=$elem1['third_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
+                                    <a id="route_id" href="category.php?id=<?=$elem1['third_id'] ?>" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                         <div class="dropdown-inner">
+                                        <div class="dropdown-inner">
                                             <ul class="list-unstyled nsmenu-haschild">
-                                            <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
-                                                foreach ($elems2 as $i2 => $elem2) 
-                                                { ?>
-                                                <li class="nsmenu-issubchild">
-                                                    <a href="#"><?=$elem2['second_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
+                                                foreach ($elems2 as $i2 => $elem2) { ?>
+                                                    <li class="nsmenu-issubchild">
+                                                        <a href="category.php?id=<?= $elem2['second_id'] ?>"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
-                                                            foreach ($elems3 as $i3 => $elem3 ) { ?>    
-                                                            <li class=""><a href="#"><?=$elem3['first_name']?></a></li> <!-- Категория 1 -->
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            foreach ($elems3 as $i3 => $elem3) { ?>
+                                                                <li class=""><a href="category.php?id=<?= $elem3['first_id'] ?>"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
                                                         </ul>
-                                                </li>
+                                                    </li>
                                                 <?php } ?>
                                             </ul>
                                         </div>
@@ -526,13 +542,17 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="../delivery.html">
+                                <li><a class="no-img-parent-link" href="../delivery.php">
                                         Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="../oplata.html">
+                                <li><a class="no-img-parent-link" href="../oplata.php">
                                         Оплата</a></li>
+<<<<<<< HEAD
                                 <li><a class="no-img-parent-link" href="../about_us.hp">
+=======
+                                <li><a class="no-img-parent-link" href="../about_us.php">
+>>>>>>> routes
                                         О нас</a></li>
-                                <li><a class="no-img-parent-link" href="../Kontakct.html">
+                                <li><a class="no-img-parent-link" href="../Kontakct.php">
                                         Контакты</a></li>
                             </ul>
                         </div>
@@ -542,6 +562,19 @@ $dir_img = __DIR__ . './../img/tovaru/';
         </div>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
+                $(window).scroll(function() {
+                            if ($(this).scrollTop() > 200) {
+                                $('#menu-list').removeClass('hide-cat');
+                                $('#menu-list').addClass('hide-cat-hide');
+                            } else {
+                                $('#menu-list').removeClass('hide-cat-hide');
+                                $('#menu-list').addClass('hide-cat');
+                            }
+                        });
+                        $('#but').on("click", function() {
+                            console.log('adasd');
+                            $('#menu-list').removeClass('hide-cat-hide');
+                });
                 $(document).ready(function() {
                     var width_fmns = viewport().width;
                     if (width_fmns >= 300) {
@@ -636,7 +669,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
                         }
                     });
 
-
                     $(window).scroll(function() {
                         if ($(this).scrollTop() > 200) {
                             $('#category').addClass('category');
@@ -684,7 +716,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                         $('#top-fixed .category-name').html($(this).html());
                     });
                     $('#top-fixed .btn-search').bind('click', function() {
-                        url = $('base').attr('href') + 'index.php?route=product/search';
+                        url = $('base').attr('href') + '../index.php?route=product/search';
 
                         var value = $('#top-fixed input[name=\'search\']').val();
 
@@ -709,7 +741,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
     <div class="container">
         <ul class="breadcrumb " itemscope="" itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a itemprop="item" href="../index.html">
+                <a itemprop="item" href="../index.php">
                     <meta itemprop="name" content="Главная">
                     <span><i class="fa fa-home"></i></span>
                 </a>
@@ -723,288 +755,43 @@ $dir_img = __DIR__ . './../img/tovaru/';
         </ul>
         <div class="row">
             <div id="content" class="col-sm-12 ns-smv">
+                <?php
 
+                $url = 'http://localhost/Yzh-optor/category.php?id=1&ct=first_id';
+                $temp = explode("?", $url)[1];
+                $result = explode("&", $temp);
+                $id = explode("=", $result[0])[1];
+                $category = explode("=", $result[1])[1];
+                print_r($id . ' '. $category);
+
+                ?>
 
                 <h1>АВТОПРИНАДЛЕЖНОСТИ</h1>
                 <div class="text_refine">Уточнить поиск <i class="fa fa-level-down"></i></div>
                 <div class="row">
+                  
+
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail subcategory">
-                            <a href="#/avtoaksessuary/">
+                            <a href="<?= $page['second_id'] ?>">
                                 <div>
                                     <img alt="Автоаксессуары" src="../img/image/cache/no_image-120x120.png">
                                 </div>
                                 <div class="name-wrapper">
                                     <div class="display-table">
                                         <div class="display-table-cell">
-                                            <h5>Автоаксессуары</h5>
+                                            <h5><?= $page['second_name'] ?></h5>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="thumbnail subcategory">
-                            <a href="#/avtoinstrumenty/">
-                                <div>
-                                    <img alt="Автоинструменты" src="../img/image/cache/no_image-120x120.png">
-                                </div>
-                                <div class="name-wrapper">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <h5>Автоинструменты</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="thumbnail subcategory">
-                            <a href="#/avtokhimiya/">
-                                <div>
-                                    <img alt="Автохимия" src="../img/image/cache/no_image-120x120.png">
-                                </div>
-                                <div class="name-wrapper">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <h5>Автохимия</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
+                    </div>      
                 </div>
                 <div>
-
-
-
-                    <div class="row row-price category-page" style="margin-left: -10px; margin-right: -10px;">
-                        <div class="product-layout product-grid grid4 col-lg-1-5 col-md-3 col-sm-6 col-xs-12">
-                            <div class="product-thumb">
-                                <div class="quickview"><a class="btn btn-quickview" onclick="quickview_open(1,'1,25,3007,3299,3527,3488,3557,6372,4089,3896,4145,3869,4127,4729,6197');"><i class="fa fa-external-link fa-fw"></i>Просмотр</a></div>
-                                <div class="image">
-                                    <div class="stickers-ns">
-                                        <div class="sticker-ns popular">
-                                            <i class="fa fa fa-eye "></i>
-                                            <span>Самые просматриваемые</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="image-carousel-category owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                        <div class="owl-wrapper-outer">
-                                            <div class="owl-wrapper" style="width: 344px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-                                                <div class="owl-item" style="width: 172px;"><a href="#/avtoaksessuary/shchetki-skrebki/batareyki-alkalinovye-gp-super-alkaline-lr03-24a-aaa-2sht-na-blistere-"><img data-src="../img/image/cache/catalog/2/4/5/2455/2455-228x228.jpg" src="../img/image/cache/catalog/2/4/5/2455/2455-228x228.jpg" alt="Авто щетка 20см АВ019 (Турция) [36]" title="Авто щетка 20см АВ019 (Турция) [36]" class="img-responsive lazyloaded"></a></div>
-                                            </div>
-                                        </div>
-                                        <div class="owl-controls clickable" style="display: none;">
-                                            <div class="owl-buttons">
-                                                <div class="owl-prev">
-                                                    <div class="btn btn-carousel-image-additional next-prod"><i class="fa fa-angle-left arrow"></i></div>
-                                                </div>
-                                                <div class="owl-next">
-                                                    <div class="btn btn-carousel-image-additional prev-prod"><i class="fa fa-angle-right arrow"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="caption">
-                                    <div class="product-name"><a href="#/avtoaksessuary/shchetki-skrebki/batareyki-alkalinovye-gp-super-alkaline-lr03-24a-aaa-2sht-na-blistere-">Авто
-                                            щетка 20см АВ019 (Турция) [36]</a></div>
-                                    <div class="product-model">2455</div>
-                                    <div class="product-description">..</div>
-
-                                    <div id="option_productpage_1" class="option productpage-opt" style="height: 0px;">
-                                    </div>
-
-                                    <div class="rating">
-                                        <span class="rating-box">
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="quantity-reviews"><a data-placement="right" data-toggle="tooltip" title="" href="#/avtoaksessuary/shchetki-skrebki/batareyki-alkalinovye-gp-super-alkaline-lr03-24a-aaa-2sht-na-blistere-/#tab-review" data-original-title="отзывов">0</a></span>
-                                        </span>
-                                    </div>
-                                    <div class="quantity_plus_minus">
-                                        <div class="quantity_cont">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_page1('1');" type="button">-</button>
-                                                </span>
-                                                <input id="input_quantity_page1" class="form-control input-number-quantity1" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(1,1, ,'','.row-price','productpage');" size="2" value="1">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_page1('1');" type="button">+</button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <script>
-                                        function btnminus_cat_price_page1(minimum) {
-                                            var $input = $('#input_quantity_page1');
-                                            var count = parseInt($input.val()) - parseInt(minimum);
-                                            count = count < parseInt(1) ? parseInt(1) : count;
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(1, count, , '', '.row-price', 'productpage');
-                                        }
-
-                                        function btnplus_cat_price_page1(minimum) {
-                                            var $input = $('#input_quantity_page1');
-                                            var count = parseInt($input.val()) + parseInt(minimum);
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(1, count, , '', '.row-price', 'productpage');
-                                        };
-                                    </script>
-                                    <div class="actions">
-                                        <div class="wishlist"><button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="" onclick="wishlist.add('1');" data-original-title="В закладки"><i class="fa fa-heart"></i></button>
-                                        </div>
-                                        <div class="cart"><button class="btn btn-general" type="button" onclick="cart.add('1','productpage', get_cart_quantity('1','.row-price'));"><i class="fa fa-shopping-basket"></i> <span>В корзину</span></button>
-                                        </div>
-
-                                        <div class="compare"><button class="btn btn-compare" type="button" data-toggle="tooltip" title="" onclick="compare.add('1');" data-original-title="В сравнение"><i class="fa fa-exchange"></i></button></div>
-                                        <div class="list-quick-order">
-                                            <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(1);" title="" data-original-title="Купить в 1 клик">
-                                                <i class="fa fa-shopping-bag fa-fw"></i>
-                                                <span class="hidden-xs">Купить в 1 клик</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="actions-quick-order grid-quick-order">
-                                        <div class="quick-order">
-                                            <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(1);" title="" data-original-title="Купить в 1 клик">
-                                                <i class="fa fa-shopping-bag fa-fw"></i>
-                                                Купить в 1 клик </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                        <div class="product-layout product-grid grid4 col-lg-1-5 col-md-3 col-sm-6 col-xs-12">
-                            <div class="product-thumb">
-                                <div class="quickview"><a class="btn btn-quickview" onclick="quickview_open(25,'1,25,3007,3299,3527,3488,3557,6372,4089,3896,4145,3869,4127,4729,6197');"><i class="fa fa-external-link fa-fw"></i>Просмотр</a></div>
-                                <div class="image">
-                                    <div class="stickers-ns">
-                                        <div class="sticker-ns popular">
-                                            <i class="fa fa fa-eye "></i>
-                                            <span>Самые просматриваемые</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="image-carousel-category owl-carousel owl-theme" style="opacity: 1; display: block;">
-                                        <div class="owl-wrapper-outer">
-                                            <div class="owl-wrapper" style="width: 344px; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px);">
-                                                <div class="owl-item" style="width: 172px;"><a href="#/avtoaksessuary/shchetki-skrebki/avto-shchetka-17sm-av021turtsiya-%5B36%5D"><img data-src="../img/image/cache/catalog/2/4/5/2454/2455-228x228.jpg" src="../img/image/cache/catalog/2/4/5/2454/2455-228x228.jpg" alt="Авто-щетка 17см АВ021(Турция) [36]" title="Авто-щетка 17см АВ021(Турция) [36]" class="img-responsive lazyloaded"></a></div>
-                                            </div>
-                                        </div>
-                                        <div class="owl-controls clickable" style="display: none;">
-                                            <div class="owl-buttons">
-                                                <div class="owl-prev">
-                                                    <div class="btn btn-carousel-image-additional next-prod"><i class="fa fa-angle-left arrow"></i></div>
-                                                </div>
-                                                <div class="owl-next">
-                                                    <div class="btn btn-carousel-image-additional prev-prod"><i class="fa fa-angle-right arrow"></i></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="caption">
-                                    <div class="product-name"><a href="#/avtoaksessuary/shchetki-skrebki/avto-shchetka-17sm-av021turtsiya-%5B36%5D">Авто-щетка
-                                            17см АВ021(Турция) [36]</a></div>
-                                    <div class="product-model">2454</div>
-                                    <div class="product-description">..</div>
-
-                                    <div id="option_productpage_25" class="option productpage-opt" style="height: 0px;">
-                                    </div>
-
-                                    <div class="rating">
-                                        <span class="rating-box">
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                                            <span class="quantity-reviews"><a data-placement="right" data-toggle="tooltip" title="" href="#/avtoaksessuary/shchetki-skrebki/avto-shchetka-17sm-av021turtsiya-%5B36%5D/#tab-review" data-original-title="отзывов">0</a></span>
-                                        </span>
-                                    </div>
-                                    <div class="quantity_plus_minus">
-                                        <div class="quantity_cont">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-quantity-minus" onclick="btnminus_cat_price_page25('1');" type="button">-</button>
-                                                </span>
-                                                <input id="input_quantity_page25" class="form-control input-number-quantity25" name="quantity" onkeyup="validate_quantity(this,'1')" oninput="recalc_quantity(25,1, ,'','.row-price','productpage');" size="2" value="1">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-quantity-plus" onclick="btnplus_cat_price_page25('1');" type="button">+</button>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <script>
-                                        function btnminus_cat_price_page25(minimum) {
-                                            var $input = $('#input_quantity_page25');
-                                            var count = parseInt($input.val()) - parseInt(minimum);
-                                            count = count < parseInt(1) ? parseInt(1) : count;
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(25, count, , '', '.row-price', 'productpage');
-                                        }
-
-                                        function btnplus_cat_price_page25(minimum) {
-                                            var $input = $('#input_quantity_page25');
-                                            var count = parseInt($input.val()) + parseInt(minimum);
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(25, count, , '', '.row-price', 'productpage');
-                                        };
-                                    </script>
-                                    <div class="actions">
-                                        <div class="wishlist"><button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="" onclick="wishlist.add('25');" data-original-title="В закладки"><i class="fa fa-heart"></i></button>
-                                        </div>
-                                        <div class="cart"><button class="btn btn-general" type="button" onclick="cart.add('25','productpage', get_cart_quantity('25','.row-price'));"><i class="fa fa-shopping-basket"></i> <span>В корзину</span></button>
-                                        </div>
-
-                                        <div class="compare"><button class="btn btn-compare" type="button" data-toggle="tooltip" title="" onclick="compare.add('25');" data-original-title="В сравнение"><i class="fa fa-exchange"></i></button></div>
-                                        <div class="list-quick-order">
-                                            <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(25);" title="" data-original-title="Купить в 1 клик">
-                                                <i class="fa fa-shopping-bag fa-fw"></i>
-                                                <span class="hidden-xs">Купить в 1 клик</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="actions-quick-order grid-quick-order">
-                                        <div class="quick-order">
-                                            <button class="btn btn-fastorder " type="button" data-toggle="tooltip" onclick="fastorder_open(25);" title="" data-original-title="Купить в 1 клик">
-                                                <i class="fa fa-shopping-bag fa-fw"></i>
-                                                Купить в 1 клик </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-
-
-
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
+            <div class="clearfix"></div>
             </div>
-
-            <br>
+        </div><br>
             <div class="category_description psbt">
                 <div>АВТОПРИНАДЛЕЖНОСТИ</div>
             </div>
@@ -1080,7 +867,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
             });
         });
     </script>
-    <footer>
+   <footer>
         <div class="footer-top">
             <div class="container">
                 <div class="footer-ribbon">
@@ -1163,9 +950,15 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Информация</h3>
                         <ul class="list-unstyled">
+<<<<<<< HEAD
                             <li><a href="about_us.hp">О нас</a></li>
                             <li><a href="delivery.html">Информация о доставке</a></li>
                             <li><a href="terms.html">Условия соглашения</a></li>
+=======
+                            <li><a href="../about_us.php">О нас</a></li>
+                            <li><a href="../delivery.php">Информация о доставке</a></li>
+                            <li><a href="../terms.php">Условия соглашения</a></li>
+>>>>>>> routes
                         </ul>
                         <h3></h3>
                         <ul class="list-unstyled">
@@ -1174,18 +967,18 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Дополнительно</h3>
                         <ul class="list-unstyled">
-                            <li><a href="sitemap/index.html">Карта сайта</a></li>
-                            <li><a href="contact-us/index.html">Связаться с нами</a></li>
-                            <li><a href="add-return/index.html">Возврат товара</a></li>
+                            <li><a href="../constructor/404.php">Карта сайта</a></li>
+                            <li><a href="../constructor/404.php">Связаться с нами</a></li>
+                            <li><a href="../constructor/404.php">Возврат товара</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
                         <h3> Личный кабинет</h3>
                         <ul class="list-unstyled">
-                            <li><a href="my-account/index.html">Личный кабинет</a></li>
-                            <li><a href="order-history/index.html">История заказов</a></li>
-                            <li><a href="wishlist/index.html">Мои закладки</a></li>
-                            <li><a href="newsletter/index.html">Рассылка новостей</a></li>
+                            <li><a href="../constructor/404.php">Личный кабинет</a></li>
+                            <li><a href="../constructor/404.php">История заказов</a></li>
+                            <li><a href="../constructor/404.php">Мои закладки</a></li>
+                            <li><a href="../constructor/404.php">Рассылка новостей</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
@@ -1193,18 +986,17 @@ $dir_img = __DIR__ . './../img/tovaru/';
                         <ul class="list-unstyled">
                             <li><a href="tel:+79268800893" target="_blank"><i class=" fa-width"></i>+7 (926)
                                     880-08-93</a>
-                            </li>
                             <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
                                     304-89-35</a>
                             </li>
                             <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
                                     Yuzh.Optor@mail.ru</a></li>
                             <li>
-                                <a href="https://api.whatsapp.com/send/?phone=79268800893"><i class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a><br>
+                                <a href="https://api.whatsapp.com/send/?phone=79268800893"><i class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a><br />
                                 <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>
                             </li>
                         </ul>
-                        <p>Торговая компания Yuzh.Optor © 2022</p>
+                        <p>Торговая компания Yuzh.Optor &copy; 2022</p>
                     </div>
                 </div>
             </div>
@@ -1213,11 +1005,11 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <div class="col-xs-12 col-md-12">
                         <h3>О нашем магазине</h3>
                         <div class="description_store_footer">
-                            <div class="shop-about-description-short" style="outline-color: rgb(0, 156, 240); margin: 0px 0px 15px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " helvetica="" neue="" ",="" helvetica,="" sans-serif;="" vertical-align:="" baseline;"="">Строительные и
+                            <div class="shop-about-description-short" style="outline-color: rgb(0, 156, 240); margin: 0px 0px 15px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Строительные и
                                 хозтовары по самым низким
                                 ценам !!!
                             </div>
-                            <div class="shop-about-description-full" style="outline-color: rgb(0, 156, 240); margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " helvetica="" neue="" ",="" helvetica,="" sans-serif;="" vertical-align:="" baseline;"="">Наша компания
+                            <div class="shop-about-description-full" style="outline-color: rgb(0, 156, 240); margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Наша компания
                                 предлагает большой ассортимент
                                 строительных инструментов , садово-огородный инвентарь , сантехника ,крепёж ,
                                 автоаксессуары ,
@@ -1231,86 +1023,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
                 <div class="row">
                 </div>
             </div>
-            <!-- скрипт звонка -->
-            <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
-            <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;">
-                <div class="mfp-container mfp-ajax-holder mfp-s-ready">
-                    <div class="mfp-content">
-                        <div id="popup-callback" class="wcb-4">
-                            <div class="popup-heading"><i class=""></i>&nbsp;&nbsp;Заказать обратный звонок</div>
-                            <div class="popup-center">
-                                <form id="callback_data" data-ajax-submit="" enctype="multipart/form-data" method="post">
-                                    <div class="col-xs-12">
-                                        <div class="form-group sections_block_rquaired">
-                                            <div class="input-group margin-bottom-sm">
-                                                <input id="contact-name" class="form-control contact-name" type="text" placeholder="Ваше имя" value="" name="name">
-                                                <span class="input-group-addon"><i class="icon-append-1 fa fa-user fa-fw"></i></span>
-                                            </div>
-                                            <div id="error_name_callback" class="error_callback"></div>
-                                        </div>
-                                        <div class="form-group sections_block_rquaired">
-                                            <div class="input-group margin-bottom-sm">
-                                                <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone">
-                                                <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
-                                            </div>
-                                            <div id="error_phone_callback" class="error_callback"></div>
-                                        </div>
-                                        <div class="form-group sections_block">
-                                            <div class="input-group margin-bottom-sm">
-                                                <input id="contact-email" class="form-control contact-email" type="text" placeholder="Email" value="" name="email_buyer">
-                                                <span class="input-group-addon"><i class="icon-append-1 fa fa-envelope fa-fw"></i></span>
-                                            </div>
-                                            <div id="error_email_callback" class="error_callback"></div>
-                                        </div>
-                                        <div class="form-group sections_block">
-                                            <div class="input-group margin-bottom-sm">
-                                                <input id="contact-comment" class="form-control contact-comment" type="text" placeholder="Комментарий" value="" name="comment_buyer">
-                                                <span class="input-group-addon"><i class="icon-append-1 fa fa-comment fa-fw"></i></span>
-                                            </div>
-                                            <div id="error_comment_callback" class="error_callback"></div>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" name="time_callback_on" value="" class="form-control start" placeholder="Когда Вам Перезвонить:">
-                                            <input type="hidden" name="time_callback_off" value="">
-                                        </div>
-
-                                        <input type="hidden" id="callback_url" value="" name="url_site">
-                                    </div>
-
-
-                                    <div class="anytext-callback marb col-xs-12 text-center"></div>
-                                </form>
-                            </div>
-                            <div class="popup-footer">
-                                <div class="col-xs-12 text-center">
-                                    <button onclick="sendCallback();" type="submit" class="btn-callback ladda-button" data-style="expand-left"><span class="ladda-label">Заказать звонок</span></button>
-                                </div>
-                            </div>
-                            <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css">
-                            <script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
-                            <script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-                            <script>
-                                $('.start').datetimepicker({
-                                    pickDate: true,
-                                    minDate: moment(),
-                                    pickTime: true
-                                });
-                                $(document).ready(function() {
-                                    var ContactouterHeight = $('#callbackpro_contacts').outerHeight() - 6;
-                                    $(function() {
-                                        $('#callbackpro_contacts').css({
-                                            'top': -ContactouterHeight
-                                        });
-                                    });
-                                });
-                            </script>
-                            <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button>
-                        </div>
-                    </div>
-                    <div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div>
-                </div>
-            </div>
-            <!-- конец его бля -->
         </div>
     </footer>
 
@@ -1339,7 +1051,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
 
                     var dataString = 'email=' + email;
                     $.ajax({
-                        url: 'index.php?route=common/footer/addToNewsletter',
+                        url: '../index.php?route=common/footer/addToNewsletter',
                         type: 'post',
                         data: dataString,
                         dataType: 'json',
@@ -1364,6 +1076,10 @@ $dir_img = __DIR__ . './../img/tovaru/';
         });
     </script>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> routes
     <div id="tcb-call">
         <div class="tcb-phone">
             <div class="tcb-phone-img"></div>
@@ -1372,5 +1088,5 @@ $dir_img = __DIR__ . './../img/tovaru/';
         <div class="tcb-layout2"></div>
         <div class="tcb-layout3"></div>
     </div>
-
+<script src="../js/move.js"></script>
 </body>

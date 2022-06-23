@@ -1,3 +1,7 @@
+<?php
+require 'constructor/connect.php';
+$dir_img = __DIR__ . '/img/tovaru/';
+?>
 <!DOCTYPE html>
 <!-- saved from url=(0032)categories/contact-us/ -->
 <html dir="ltr" lang="ru">
@@ -255,1692 +259,6 @@
                             <i class="fa fa-bars"></i>
                             <span class="text-category">Категории</span>
                         </button>
-                        <ul id="menu-list" class="dropdown-menu">
-
-                            <li>
-                                <a class="dropdown-img" href="javascript:void(0);">
-                                </a>
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="delivery.html">
-                                    Доставка </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/AVTOPRINADLEZhNOSTI" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    АВТОПРИНАДЛЕЖНОСТИ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/avtoprinadlezhnosti/avtoaksessuary/"><i
-                                                        class="fa fa-angle-down arrow"></i> Автоаксессуары </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/">
-                                                            Авто салфетки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/zhilet-signalnyy/">
-                                                            Жилет сигнальный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/kanistra/">
-                                                            Канистра </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/prikurivatel/">
-                                                            Прикуриватель </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/shchetki-skrebki/">
-                                                            Щетки-скребки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/avtoprinadlezhnosti/avtoinstrumenty/"><i
-                                                        class="fa fa-angle-down arrow"></i> Автоинструменты </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/blok-odnorolnyy-s-kryukom/">
-                                                            Блок однорольный с крюком </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/vorotok/">
-                                                            Вороток </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/klyuch-balonnyy/">
-                                                            Ключ балонный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/kompressory-/">
-                                                            Компрессоры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/lebedka/">
-                                                            Лебедка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/montazhka/">
-                                                            Монтажка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/nabor-dlya-remonta/">
-                                                            Набор для ремонта </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/styazhka-gruza/">
-                                                            Стяжка груза </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/tal-tsepnaya/">
-                                                            Таль Цепная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/tross-buksirovochnyy/">
-                                                            Тросс буксировочный </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/avtoprinadlezhnosti/avtokhimiya/"><i
-                                                        class="fa fa-angle-down arrow"></i> Автохимия </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtokhimiya/antirzhavchina-smazka/">
-                                                            Антиржавчина - Смазка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtokhimiya/maslo/">
-                                                            Масло </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li>
-                                <a class="dropdown-img" href="categories/Vse-dlya-santekhniki">
-                                    Все для сантехники </a>
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="categories/oplata">
-                                    Оплата </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/ZIMNIE-TOVARY" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    ЗИМНИЕ ТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/zimnie-tovary/novogodnie-tovary/"><i
-                                                        class="fa fa-angle-down arrow"></i> НОВОГОДНИЕ ТОВАРЫ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/girlyandy/">
-                                                            Гирлянды </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/elochnye-igrushki/">
-                                                            Елочные игрушки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/mishura-/">
-                                                            Мишура </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/snezhinki/">
-                                                            Снежинки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/zimnie-tovary/snegouborochnyy-inventar/"><i
-                                                        class="fa fa-angle-down arrow"></i> СНЕГОУБОРОЧНЫЙ ИНВЕНТАРЬ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/snegouborochnyy-inventar/ledorub/">
-                                                            Ледоруб </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/snegouborochnyy-inventar/lopaty-snegovye/">
-                                                            Лопаты снеговые </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/snegouborochnyy-inventar/skreper-tolkach-dvizhok/">
-                                                            Скрепер,Толкач,Движок </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/"><i
-                                                        class="fa fa-angle-down arrow"></i> ВСЕ ДЛЯ ЗИМНЕГО РАЗВЛЕЧЕНИЯ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/valenki/">
-                                                            Валенки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/okhotnichi-ledyanki/">
-                                                            Охотничьи ледянки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/sanki-kolyaski/">
-                                                            Санки - коляски </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/tyubingi-ledyanki/">
-                                                            Тюбинги, ледянки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="categories/about_us">
-                                    О нас </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/SADOVO-OGORODNYY-INVENTAR" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    САДОВО-ОГОРОДНЫЙ ИНВЕНТАРЬ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/"><i
-                                                        class="fa fa-angle-down arrow"></i> ИНСТРУМЕНТЫ ДЛЯ САДА </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/">
-                                                            Ведра </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vily/">
-                                                            Вилы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/grabli/">
-                                                            Грабли </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/kosa/">
-                                                            Коса </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/kustorez/">
-                                                            Кусторез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/lopaty-/">
-                                                            Лопаты </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/nozhovka-sadovaya/">
-                                                            Ножовка садовая </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/nosilki/">
-                                                            Носилки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/sadovye-nabory/">
-                                                            Садовые наборы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/sekatory/">
-                                                            Секаторы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/serp/">
-                                                            Серп </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/suchkorez/">
-                                                            Сучкорез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/trimmer-i-ego-komplektuyushchie/">
-                                                            Триммер и его комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/tyapka/">
-                                                            Тяпка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/cherenki/">
-                                                            Черенки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/"><i
-                                                        class="fa fa-angle-down arrow"></i> ВСЕ ДЛЯ РАССАДЫ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/grunt/">
-                                                            Грунт </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/parnik/">
-                                                            ПАРНИК </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/yashchik-dlya-rassady/">
-                                                            Ящик для рассады </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="categories/sadovo-ogorodnyy-inventar/ograzhdenie/">
-                                                    Ограждение </a>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/tachki-sadovye-i-prinadlezhnosti/"><i
-                                                        class="fa fa-angle-down arrow"></i> ТАЧКИ САДОВЫЕ И
-                                                    ПРИНАДЛЕЖНОСТИ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/tachki-sadovye-i-prinadlezhnosti/kolesa-dlya-tachki/">
-                                                            Колеса для тачки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/tachki-sadovye-i-prinadlezhnosti/tachki/">
-                                                            Тачки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/"><i
-                                                        class="fa fa-angle-down arrow"></i> ПОЛИВОЧНЫЙ ИНВЕНТАРЬ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/leyki/">
-                                                            Лейки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/opryskivatel-i-nasadki/">
-                                                            Опрыскиватель и насадки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/shlangi-/">
-                                                            Шланги </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="Kontakct.html">
-                                    Контакты </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/SREDSTVA-INDIVIDUALNOY-ZAShchITY"
-                                    class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    СРЕДСТВА ИНДИВИДУАЛЬНОЙ ЗАЩИТЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/spetsodezhda/">
-                                                    Спецодежда </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/dozhdevik/">
-                                                    Дождевик </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/sredstva-individualnoy-zashchity/kaska-/">
-                                                    Каска </a>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/perchatki-siz/"><i
-                                                        class="fa fa-angle-down arrow"></i> Перчатки СИЗ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-kragi-dielektricheskie/">
-                                                            Перчатки "Краги" Диэлектрические </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-kragi-letnie/">
-                                                            Перчатки "Краги" Летние </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-kragi-uteplennye/">
-                                                            Перчатки "Краги" Утепленные </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-neylon/">
-                                                            Перчатки "Нейлон" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-nitril/">
-                                                            Перчатки "Нитрил" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-rukavitsy/">
-                                                            Перчатки "Рукавицы" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-uteplennye/">
-                                                            Перчатки "Утепленные" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-vinil/">
-                                                            Перчатки ВИНИЛ </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-lateksnye/">
-                                                            Перчатки Латексные </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-khb/">
-                                                            Перчатки Х/Б </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/maska-zashchitnaya/">
-                                                    Маска Защитная </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/maska-svarshchika/">
-                                                    Маска сварщика </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/lenta-signalnaya-ogoroditelnaya/">
-                                                    Лента сигнальная огородительная </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/respirator/">
-                                                    Респиратор </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/ochki-zashchitnye/">
-                                                    Очки Защитные </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/naushniki/">
-                                                    Наушники </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/strakhovka-poyas-dlya-instrumentov/">
-                                                    Страховка+пояс для инструментов </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/STROY-INSTRUMENTY-I-TOVARY"
-                                    class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/"><i
-                                                        class="fa fa-angle-down arrow"></i> СВАРОЧНОЕ ОБОРУДОВАНИЕ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/apparat-dlya-svarki-plasttrub-/">
-                                                            Аппарат для сварки пласт.труб </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/derzhatel-massy/">
-                                                            Держатель массы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/derzhatel-elektrodov/">
-                                                            Держатель электродов </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/plita-ogneupornaya/">
-                                                            Плита "Огнеупорная" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/provolka-dlya-svarki-/">
-                                                            Проволка для сварки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/ugolok-magnit-dlya-svarki/">
-                                                            Уголок - магнит для сварки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/kholodnaya-svarka/">
-                                                            Холодная сварка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/elektrody/">
-                                                            Электроды </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/"><i
-                                                        class="fa fa-angle-down arrow"></i> РУЧНОЙ ИНСТРУМЕНТ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/benzopila-i-ee-komplektuyushchie/">
-                                                            Бензопила и ее комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/bokorezy/">
-                                                            Бокорезы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/bolgarka-i-ee-komplektuyushchie/">
-                                                            Болгарка и ее комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/boltorez/">
-                                                            Болторез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/zaklepochnik/">
-                                                            Заклепочник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/zvezdochka/">
-                                                            Звездочка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/zubila-pika/">
-                                                            Зубила,пика </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kirka/">
-                                                            Кирка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kiyanka/">
-                                                            Киянка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kleshchi-perestavnye/">
-                                                            Клещи Переставные </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-alligator/">
-                                                            Ключ АЛЛИГАТОР </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-gaechnyy/">
-                                                            Ключ Гаечный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-gazovyy/">
-                                                            Ключ Газовый </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-razvodnoy/">
-                                                            Ключ Разводной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-universalnyy/">
-                                                            Ключ Универсальный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/koronka-i-khvostovik/">
-                                                            Коронка и хвостовик </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kryuchok-dlya-vyazki-/">
-                                                            Крючок для вязки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kuvalda-cherenok/">
-                                                            Кувалда,Черенок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/lobzik-ruchnoy-/">
-                                                            Лобзик ручной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/lom-gvozdoder/">
-                                                            Лом-Гвоздодер </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/molotok-i-cherenok/">
-                                                            Молоток и черенок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nabor-golovok/">
-                                                            Набор Головок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nabor-nakidnykh-klyuchey/">
-                                                            Набор Накидных Ключей </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nadfil/">
-                                                            Надфиль </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/napilnik/">
-                                                            Напильник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozh-kantselyarskiy/">
-                                                            Нож Канцелярский </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhnitsy-po-metallu/">
-                                                            Ножницы по Металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhovka-po-derevu/">
-                                                            Ножовка по Дереву </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhovka-po-metallu/">
-                                                            Ножовка по Металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhovka-po-penobloku/">
-                                                            Ножовка по Пеноблоку </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/otvertki/">
-                                                            Отвертки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/passatizhi/">
-                                                            Пассатижи </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-germetika/"><i
-                                                                class="fa fa-angle-down arrow"></i> Пистолет для
-                                                            Герметика
-                                                        </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-germetika/germetik/">Герметик</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-peny/"><i
-                                                                class="fa fa-angle-down arrow"></i> Пистолет для Пены
-                                                        </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-peny/pena/">Пена</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/plitkorez-krestiki-dlya-plitki/"><i
-                                                                class="fa fa-angle-down arrow"></i> Плиткорез,Крестики
-                                                            для
-                                                            плитки </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/plitkorez-krestiki-dlya-plitki/krestiki-dlya-plitki/">Крестики
-                                                                    для Плитки</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/plitkorez-krestiki-dlya-plitki/plitkorez/">Плиткорез</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/polotno-dlya-nozhovki/">
-                                                            Полотно для Ножовки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/rubanok/">
-                                                            Рубанок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/santekhnicheskiy-tros/">
-                                                            Сантехнический трос </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stameski/">
-                                                            Стамески </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/steklorez/">
-                                                            Стеклорез </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stepler-skoby/"><i
-                                                                class="fa fa-angle-down arrow"></i> Степлер,Скобы </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stepler-skoby/skoby/">Скобы</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stepler-skoby/stepler-mebelnyy/">Степлер
-                                                                    Мебельный</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/strubtsina/">
-                                                            Струбцина </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stuslo/">
-                                                            Стусло </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/termopistolet-termokley/">
-                                                            ТермоПистолет,Термоклей </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/teski/">
-                                                            Тески </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/topor-kolun/">
-                                                            Топор,Колун </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/treshchetka/">
-                                                            Трещетка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/truborez/">
-                                                            Труборез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/shestigrannik/">
-                                                            Шестигранник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/shchetki-po-metallu/">
-                                                            Щетки по металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/yashchik-dlya-instrumentov/">
-                                                            Ящик для инструментов </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/"><i
-                                                        class="fa fa-angle-down arrow"></i> РАСХОДНЫЕ МАТЕРИАЛЫ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bity-i-nasadki/"><i
-                                                                class="fa fa-angle-down arrow"></i> Биты и Насадки </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bity-i-nasadki/bity-/">Биты
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bity-i-nasadki/nasadki-na-kroveln-samorez/">Насадки
-                                                                    на кровельн саморез</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/brusok-tochilnyy/">
-                                                            Брусок точильный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bury/">
-                                                            Буры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/">
-                                                            Диск Алмазный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-dlya-tsirkulyarki/">
-                                                            Диск для Циркулярки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-shlifovalnyy/">
-                                                            Диск Шлифовальный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-shchetka-dlya-ushm/">
-                                                            Диск Щетка для УШМ </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/drobilka-i-ee-komplektuyushchie-/">
-                                                            Дробилка и ее комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/kley/">
-                                                            Клей </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/kraska-aerozolnaya/">
-                                                            Краска аэрозольная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/krug-nazhdachnyy/">
-                                                            Круг Наждачный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/krug-otreznoy-po-metallu/">
-                                                            Круг Отрезной по металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/pilka-dlya-lobzika/">
-                                                            Пилка для Лобзика </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/pprs-amerikanka/">
-                                                            ППРС Американка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/sverla/">
-                                                            Сверла </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/skotch-izolenta-/">
-                                                            Скотч,Изолента, </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/streych-plenka/">
-                                                            Стрейч - пленка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/uplotnitel/">
-                                                            Уплотнитель </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/fum-lenta-lenta-bardyurnaya/">
-                                                            Фум-лента , Лента бардюрная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/chasha-almaznaya-po-betonu/">
-                                                            Чаша Алмазная по Бетону </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/chek-lenta-/">
-                                                            Чек - лента </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/shlif-bumaga/">
-                                                            Шлиф-Бумага </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/shchetka-kratsovka/">
-                                                            Щетка-крацовка </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/stroy-instrumenty-i-tovary/zamki/"><i
-                                                        class="fa fa-angle-down arrow"></i> ЗАМКИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/dvernaya-ruchka/">
-                                                            Дверная Ручка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/dovodchik-dvernoy/">
-                                                            Доводчик дверной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/zamok-vreznoy/">
-                                                            Замок Врезной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/zamok-navesnoy/">
-                                                            Замок Навесной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/zamok-nakladnoy/">
-                                                            Замок Накладной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/naves-gorazhnyy/">
-                                                            Навес Горажный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/petli/">
-                                                            Петли </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/serdtsevina/">
-                                                            Сердцевина </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/shpingalet/">
-                                                            Шпингалет </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/"><i
-                                                        class="fa fa-angle-down arrow"></i> ИНСТРУМЕНТ МАЛЯРНЫЙ И
-                                                    ШТУКАТУРНЫЙ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/valik/">
-                                                            Валик </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kelma/">
-                                                            Кельма </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kist-malyarnaya/">
-                                                            Кисть-малярная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kovsh/">
-                                                            Ковш </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kraskopult/">
-                                                            Краскопульт </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/marker-stroitelnyy/">
-                                                            Маркер строительный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/miksery/">
-                                                            Миксеры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/pravilo/">
-                                                            Правило </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/">
-                                                            Серпянка,Сетка Штукатурная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/setkoderzhatel/">
-                                                            Сеткодержатель </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/skrebok-oboynyy/">
-                                                            Скребок обойный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/terka/">
-                                                            Терка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/">
-                                                            Шпатель </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/"><i
-                                                        class="fa fa-angle-down arrow"></i> ГАЗ-ПЛИТА-ГОРЕЛКИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/gaz-benzin/">
-                                                            Газ,Бензин </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/gorelki-i-payalnaya-lampa/">
-                                                            Горелки и Паяльная лампа </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/zazhigalki/">
-                                                            Зажигалки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/plita-gazovaya/">
-                                                            Плита Газовая </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/reduktor-shlang-fum/">
-                                                            Редуктор, шланг, фум </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/"><i
-                                                        class="fa fa-angle-down arrow"></i> ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/lineyki/">
-                                                            Линейки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/otves-shnur-otbivochnyy/">
-                                                            Отвес,шнур отбивочный </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/"><i
-                                                                class="fa fa-angle-down arrow"></i> Рулетки </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/ruletka/">Рулетка</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/ruletka-v-lente/">Рулетка
-                                                                    в ленте</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/ruletka-geodezicheskaya-/">Рулетка-Геодезическая
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/">
-                                                            Уголок-линейка </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/"><i
-                                                                class="fa fa-angle-down arrow"></i> Уровень </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/gidrouroven/">Гидроуровень</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/lazernyy-uroven/">Лазерный
-                                                                    Уровень</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/urovn-stroitelnyy/">Уровнь
-                                                                    Строительный</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/shtangentsirkul/">
-                                                            Штангенциркуль </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/stroy-instrumenty-i-tovary/krepezh/"><i
-                                                        class="fa fa-angle-down arrow"></i> КРЕПЕЖ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/gvozdi/">
-                                                            Гвозди </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/dyubel-gvozd/">
-                                                            Дюбель-гвоздь </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/zaklepki/">
-                                                            Заклепки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/korabin/">
-                                                            Корабин </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/kranshteyn-dlya-radiatora/">
-                                                            Кранштейн для радиатора </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/samorezy/">
-                                                            Саморезы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/skoba-stroitelnaya/">
-                                                            Скоба строительная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/skoby-dlya-kabelya/">
-                                                            Скобы для кабеля </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/khomuty/">
-                                                            Хомуты </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/shurup/">
-                                                            Шуруп </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/KhOZ-TOVARY" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    ХОЗТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li>
-                                                <a href="categories/khoz-tovary/prochie-khoz-tovary/"> ПРОЧИЕ
-                                                    ХОЗ
-                                                    ТОВАРЫ </a>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/"><i
-                                                        class="fa fa-angle-down arrow"></i> СРЕДСТВА ЗАЩИТЫ ОТ НАСЕКОМЫХ
-                                                    И
-                                                    ГРЫЗУНОВ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/bioaktivator/">
-                                                            Биоактиватор </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/dikhlofos/">
-                                                            Дихлофос </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/setka-moskitnaya/">
-                                                            Сетка москитная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/sredstva-zashchity-ot-gryzunov/">
-                                                            Средства защиты от грызунов </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/sredstva-zashchity-ot-nasekomykh/">
-                                                            Средства защиты от насекомых </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/sport-inventar/"><i
-                                                        class="fa fa-angle-down arrow"></i> СПОРТ ИНВЕНТАРЬ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sport-inventar/badminton/">
-                                                            Бадминтон </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sport-inventar/velosipednye-zamki/">
-                                                            Велосипедные Замки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sport-inventar/mylnye-puzyri/">
-                                                            Мыльные пузыри </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a href="categories/khoz-tovary/sport-inventar/myachi/">
-                                                            Мячи </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/vse-dlya-uborki-doma/"><i
-                                                        class="fa fa-angle-down arrow"></i> ВСЕ ДЛЯ УБОРКИ ДОМА </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/bytovaya-khimiya/">
-                                                            Бытовая химия </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/venik/">
-                                                            Веник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/verevka-nit-kanat-shpagat/">
-                                                            Веревка,нить,канат,шпагат </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/vodosgony/">
-                                                            Водосгоны </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/gubka-dlya-mytya-posudy/">
-                                                            Губка для мытья посуды </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/metla/">
-                                                            Метла </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/meshki/">
-                                                            Мешки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/musornye-pakety-/">
-                                                            Мусорные пакеты </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/prishchepki/">
-                                                            Прищепки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/pylevybivalka/">
-                                                            Пылевыбивалка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/salfetki-tryapki/">
-                                                            Салфетки-тряпки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/sushilka-dlya-belya/">
-                                                            Сушилка для белья </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/tros-belevoy/">
-                                                            Трос бельевой </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/shvabry-i-nasadki/">
-                                                            Швабры и насадки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/shchetki-sovok/">
-                                                            Щетки,Совок </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/"><i
-                                                        class="fa fa-angle-down arrow"></i> ТОВАРЫ ДЛЯ ОТДЫХА И ТУРИЗМА
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/zhidkost-dlya-rozzhiga/">
-                                                            Жидкость для розжига </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/mangal/">
-                                                            Мангал </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/polog-polipropilenovyy/">
-                                                            Полог полипропиленовый </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/reshetka-gril-shampury/">
-                                                            Решетка Гриль - Шампуры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/ugol-drevesnyy/">
-                                                            Уголь древесный </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/"><i
-                                                        class="fa fa-angle-down arrow"></i> КУХОННЫЕ ПРИНАДЛЕЖНОСТИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/vesy-/">
-                                                            Весы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/doska-razdelochnaya/">
-                                                            Доска разделочная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/zapekanie/">
-                                                            Запекание </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/konservirovaniya/">
-                                                            Консервирования </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/kukhonnyy-inventar/">
-                                                            Кухонный инвентарь </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/paket-fasovochnyy-plenka/">
-                                                            Пакет фасовочный,пленка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/tualetnaya-bumaga/">
-                                                            Туалетная бумага </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/tovary-dlya-zhivotnykh/"><i
-                                                        class="fa fa-angle-down arrow"></i> ТОВАРЫ ДЛЯ ЖИВОТНЫХ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-zhivotnykh/nozhnitsy-dlya-strizhki-ovets/">
-                                                            Ножницы для стрижки овец </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-zhivotnykh/osheyniki/">
-                                                            Ошейники </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-zhivotnykh/tsep-vertushka/">
-                                                            Цепь,Вертушка </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/bannye-prinadlezhnosti/"><i
-                                                        class="fa fa-angle-down arrow"></i> БАННЫЕ ПРИНАДЛЕЖНОСТИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/bannye-prinadlezhnosti/mochalki-gubki/">
-                                                            Мочалки,Губки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/bannye-prinadlezhnosti/taz-kovsh/">
-                                                            Таз, ковш </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/vse-dlya-doma/"><i
-                                                        class="fa fa-angle-down arrow"></i> Все для дома </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-doma/kovriki-shchetinistoe-pokrytie/">
-                                                            Коврики, щетинистое покрытие </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/ELEKTROTOVARY" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    ЭЛЕКТРОТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li>
-                                                <a href="categories/elektrotovary/avtomat-rubilniki/">
-                                                    Автомат,рубильники </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/batareyki/"> Батарейки </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/elektrotovary/ventilyatory-i-reshetka-ventilyatsionnaya/">
-                                                    Вентиляторы и Решетка вентиляционная </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/vyzhigatel-po-derevu/">
-                                                    Выжигатель по дереву </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/lampochki/"> Лампочки </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/katushka/"> Катушка </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/udlinitel-troynik-kolodka/">
-                                                    Удлинитель,тройник,колодка </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/zvonok-besprovodnoy/"> Звонок
-                                                    беспроводной </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/svetilniki/"> Светильники </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/perenoska/"> Переноска </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/payalnik/"> Паяльник </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/obogrevateli-/">
-                                                    Обогреватели </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/multimetr/"> Мультиметр </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/patron-na-lampochku/"> Патрон
-                                                    на
-                                                    лампочку </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/pribory-dlya-osveshcheniya/">
-                                                    Приборы для освещения </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/plita-elektr/"> Плита
-                                                    электр. </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/ten-dlya-vodonogrevatelya/">
-                                                    Тэн
-                                                    для водоногревателя </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/chaynik/"> Чайник </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                        </ul>
                     </nav>
                 </div>
                 <div class="phone_fix col-sm-2 col-md-3 ">
@@ -2078,8 +396,9 @@
             <div class="row vertical-align">
                 <div class="col-xs-6 col-sm-12 col-md-3 text-center text-left-md logo-top">
                     <div id="logo">
-                        <a href="index.html"><img src="img/LOGO.png" title="Торговая компания Yzh.Optor"
-                                alt="Торговая компания Yzh.Optor" class="img-responsive"></a>
+                        <a href="index.php">
+                            <img src="img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
+                        </a>
                     </div>
                 </div>
                 <div class="phone-box col-xs-6 col-sm-12 col-md-3  text-xs-right text-sm-center text-md-center">
@@ -2092,22 +411,18 @@
                                     <a href="tel:+79823048935" target="_blank">
                                         +7 (982) 304-89-35 </a>
                                 </div>
-                                <span class="drop-icon-info"><i class=" fa fa-angle-down"
-                                        style="animation: none"></i></span>
+                                <span class="drop-icon-info"><i class=" fa fa-angle-down" style="animation: none"></i></span>
                             </div>
                             <ul class="dropdown-menu drop-contacts">
                                 <li class="info-contact">
-                                    <a href="javascript:void(0)" onclick="get_modal_callbacking()"><i
-                                            class="fa fa-phone-square" aria-hidden="true">
+                                    <a href="javascript:void(0)" onclick="get_modal_callbacking()"><i class="fa fa-phone-square" aria-hidden="true">
 
                                         </i> Заказать звонок</a>
                                 </li>
                                 <li class="line-contact"></li>
                                 <li>
                                     <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                        <div class="icon-image"><img
-                                                src="img/image/cache/catalog/image/znacki/i-20x20.jpg"
-                                                alt="Yuzh.Optor@mail.ru" /></div>
+                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
                                         Yuzh.Optor@mail.ru
                                     </a>
                                 </li>
@@ -2133,12 +448,10 @@
                 <div class="box-cart  col-xs-12 col-xs-12 col-sm-4 col-md-2 col-md-push-4 col-sm-push-8">
                     <div class="shopping-cart ">
                         <div id="cart" class="btn-group btn-block">
-                            <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..."
-                                class="btn btn-block dropdown-toggle">
+                            <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn btn-block dropdown-toggle">
                                 <i class="shop-bag fa fa-cart-plus"></i>
                                 <i class="car-down fa fa-angle-down"></i>
-                                <span class="cart-total"><span class="products"><b>0</b> <span
-                                            class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
+                                <span class="cart-total"><span class="products"><b>0</b> <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
                                             р.</b></span></span>
                             </button>
 
@@ -2151,2025 +464,135 @@
                     </div>
                 </div>
                 <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
-                    <script>
-                        $(document).ready(function () {
-                            var category_id_page = $('#content select[name=\'category_id\']').find("option:selected").attr("value");
-                            var category_id_html = $('#content select[name=\'category_id\']').find("option:selected").html();
-
-                            $("#selected_category").val(category_id_page);
-                            $("#category_now").val(category_id_page);
-                            $(".category-name").html(category_id_html);
-                            $('.select-category').find('.filter-option').html(category_id_html)
-                        });
-                    </script>
                     <div id="searchtop">
                         <div id="search" class="input-group pt20">
-                            <input type="text" name="search" value="" placeholder="Поиск товара по каталогу"
-                                class="form-control input-lg search-autocomplete" autocompleteserach="off">
-                            <ul class="dropdown-menu autosearch"></ul>
+                            <input type="text" name="search" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
                             <div class="input-group-btn categories">
-                                <button id="change_category" type="button" class="btn btn-search-select dropdown-toggle"
-                                    data-toggle="dropdown">
-                                    <span class="category-name">Везде&nbsp;</span>&nbsp;<span
-                                        class="fa fa-angle-down fa-fw car-down"></span>
+                                <button id="change_category" type="button" class="btn btn-search-select dropdown-toggle" data-toggle="dropdown">
+                                    <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="categories/#" onclick="return false;"
-                                            data-idsearch="0">Везде</a>
-                                    </li>
-                                    <li><a href="categories/#" onclick="return false;"
-                                            data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
+                                    <li><a onclick="return false;" data-idsearch="0">Везде</a></li>
+                                    <li><a onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
                                     </li>
 
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="21">Все
-                                            для
-                                            сантехники</a></li>
+                                    <li><a onclick="return false;" data-idsearch="21">Все для сантехники</a>
+                                    </li>
 
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="64">ЗИМНИЕ
-                                            ТОВАРЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;"
-                                            data-idsearch="312">ножницы
-                                            бытовые</a></li>
+                                    <li><a onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;"
-                                            data-idsearch="55">САДОВО-ОГОРОДНЫЙ
+                                    <li><a onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
                                             ИНВЕНТАРЬ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;"
-                                            data-idsearch="68">СРЕДСТВА
-                                            ИНДИВИДУАЛЬНОЙ ЗАЩИТЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
+                                            ЗАЩИТЫ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="9">СТРОЙ
-                                            ИНСТРУМЕНТЫ И ТОВАРЫ</a></li>
-
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="6">ХОЗ
-                                            ТОВАРЫ</a></li>
-
-                                    <li><a href="categories/#" onclick="return false;"
-                                            data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a>
+                                    <li><a onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
+                                            ТОВАРЫ</a>
                                     </li>
 
+                                    <li><a onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
+
+                                    <li><a onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
+
                                 </ul>
-                                <input id="selected_category" type="hidden" name="category_id" value="">
+                                <input id="selected_category" type="hidden" name="category_id" value="0" />
 
                             </div>
                             <span class="input-group-btn button_search">
                                 <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
                             </span>
                         </div>
-                        <div id="search_word" class="hidden-xs hidden-sm">Я ищу, например, <a> Ведра</a></div>
+                        <div id="search_word" class="hidden-xs hidden-sm">Я ищу, например, <a>Шланги</a></div>
                     </div>
-                    <script>
-                        $('#search a').click(function () {
-                            $("#selected_category").val($(this).attr('data-idsearch'));
-                            $('.category-name').html($(this).html());
-                        });
-                    </script>
-                    <script>
-                        $(document).ready(function () {
-                            var autoSearch = $('#searchtop input[name="search"]');
-
-                            var customAutocompleteSearchtop = null;
-                            autoSearch.autocompleteSerach({
-                                delay: 500,
-                                responsea: function (items) {
-                                    if (items.length) {
-                                        for (i = 0; i < items.length; i++) {
-                                            this.items[items[i]['value']] = items[i];
-                                        }
-                                    }
-                                    var html = '';
-                                    if (items.length) {
-                                        $.each(items, function (key, item) {
-                                            if (item.product_id != 0) {
-                                                html += '<li><a href="' + item.href + '" class="autosearch_link">';
-                                                html += '<div class="ajaxadvance">';
-                                                html += '<div class="image">';
-                                                if (item.image) {
-                                                    html += '<img title="' + item.name + '" src="' + item.image + '"/>';
-                                                }
-                                                html += '</div>';
-                                                html += '<div class="content">';
-                                                html += '<h3 class="name">' + item.label + '</h3>';
-                                                if (item.model) {
-                                                    html += '<div class="model">';
-                                                    html += 'Модель: ' + item.model;
-                                                    html += '</div>';
-                                                }
-                                                if (item.manufacturer) {
-                                                    html += '<div class="manufacturer">';
-                                                    html += 'Производитель: ' + item.manufacturer;
-                                                    html += '</div>';
-                                                }
-                                                if (item.stock_status) {
-                                                    html += '<div class="stock_status">';
-                                                    html += 'Наличие: ' + item.stock_status;
-                                                    html += '</div>';
-                                                }
-                                                if (item.price) {
-                                                    html += '<div class="price"> ';
-                                                    if (!item.special) {
-                                                        html += item.price;
-                                                    } else {
-                                                        html += '<span class="price-old">' + item.price + '</span> <span class="price-new">' + item.special + '</span>';
-                                                    }
-                                                    html += '</div>';
-                                                }
-
-                                                if (item.rating) {
-                                                    html += '<div class="ratings"> ';
-                                                    for (var i = 1; i <= 5; i++) {
-                                                        if (item.rating < i) {
-                                                            html += '<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>';
-                                                        } else {
-                                                            html += '<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>';
-                                                        }
-                                                    }
-                                                    html += '</div>';
-                                                }
-                                                html += '</div>';
-                                                html += '</div></a></li>'
-                                            }
-                                        });
-                                        html += '<li><a class="search-view-all-result" href="index.php?route=product/search&search=' + autoSearch.val() + '">Просмотреть все результаты</a></li>';
-                                    }
-                                    if (html) {
-                                        autoSearch.siblings('ul.dropdown-menu').show();
-                                    } else {
-                                        autoSearch.siblings('ul.dropdown-menu').hide();
-                                    }
-
-                                    $(autoSearch).siblings('ul.dropdown-menu').html(html);
-                                },
-                                source: function (request, response) {
-                                    customAutocompleteSearchtop = this;
-                                    $.ajax({
-                                        url: 'index.php?route=extension/module/autosearch/ajaxLiveSearch&filter_name=' + encodeURIComponent(request),
-                                        dataType: 'json',
-                                        success: function (json) {
-                                            customAutocompleteSearchtop.responsea($.map(json, function (item) {
-                                                return {
-                                                    label: item.name,
-                                                    name: item.name1,
-                                                    value: item.product_id,
-                                                    model: item.model,
-                                                    stock_status: item.stock_status,
-                                                    image: item.image,
-                                                    manufacturer: item.manufacturer,
-                                                    price: item.price,
-                                                    special: item.special,
-                                                    category: item.category,
-                                                    rating: item.rating,
-                                                    reviews: item.reviews,
-                                                    href: item.href,
-                                                }
-                                            }));
-                                        }
-                                    });
-                                },
-                                select: function (ui) {
-                                    return false;
-                                },
-                                selecta: function (ui) {
-                                    if (ui.href) {
-                                        location = ui.href;
-                                    }
-                                    return false;
-                                },
-                                focus: function (event, ui) {
-                                    return false;
-                                }
-                            });
-                        });
-                    </script>
-                    <script>
-                        $(document).on('click', '#search-fixed-top input[name="search"]', function () {
-                            var autoSearchFixed = $('#search-fixed-top input[name="search"]');
-                            var customAutocomplete = null;
-                            $('#search-fixed-top ul.dropdown-menu.autosearch').remove();
-                            autoSearchFixed.autocompleteSerach({
-                                delay: 500,
-                                responsea: function (items) {
-                                    if (items.length) {
-                                        for (i = 0; i < items.length; i++) {
-                                            this.items[items[i]['value']] = items[i];
-                                        }
-                                    }
-                                    var html = '';
-                                    if (items.length) {
-                                        $.each(items, function (key, item) {
-                                            if (item.product_id != 0) {
-                                                html += '<li><a href="' + item.href + '" class="autosearch_link">';
-                                                html += '<div class="ajaxadvance">';
-                                                html += '<div class="image">';
-                                                if (item.image) {
-                                                    html += '<img title="' + item.name + '" src="' + item.image + '"/>';
-                                                }
-                                                html += '</div>';
-                                                html += '<div class="content">';
-                                                html += '<h3 class="name">' + item.label + '</h3>';
-                                                if (item.model) {
-                                                    html += '<div class="model">';
-                                                    html += 'Модель: ' + item.model;
-                                                    html += '</div>';
-                                                }
-                                                if (item.manufacturer) {
-                                                    html += '<div class="manufacturer">';
-                                                    html += 'Производитель: ' + item.manufacturer;
-                                                    html += '</div>';
-                                                }
-                                                if (item.stock_status) {
-                                                    html += '<div class="stock_status">';
-                                                    html += 'Наличие: ' + item.stock_status;
-                                                    html += '</div>';
-                                                }
-                                                if (item.price) {
-                                                    html += '<div class="price"> ';
-                                                    if (!item.special) {
-                                                        html += item.price;
-                                                    } else {
-                                                        html += '<span class="price-old">' + item.price + '</span> <span class="price-new">' + item.special + '</span>';
-                                                    }
-                                                    html += '</div>';
-                                                }
-
-                                                if (item.rating) {
-                                                    html += '<div class="ratings"> ';
-                                                    for (var i = 1; i <= 5; i++) {
-                                                        if (item.rating < i) {
-                                                            html += '<span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i></span>';
-                                                        } else {
-                                                            html += '<span class="fa fa-stack"><i class="fa fa-star fa-stack-1x"></i><i class="fa fa-star-o fa-stack-1x"></i></span>';
-                                                        }
-                                                    }
-                                                    html += '</div>';
-                                                }
-                                                html += '</div>';
-                                                html += '</div></a></li>'
-                                            }
-                                        });
-                                        html += '<li><a class="search-view-all-result" href="index.php?route=product/search&search=' + autoSearchFixed.val() + '">Просмотреть все результаты</a></div>';
-                                    }
-                                    if (html) {
-                                        autoSearchFixed.siblings('ul.dropdown-menu').show();
-                                    } else {
-                                        autoSearchFixed.siblings('ul.dropdown-menu').hide();
-                                    }
-
-                                    $(autoSearchFixed).siblings('ul.dropdown-menu').html(html);
-                                },
-                                source: function (request, response) {
-                                    customAutocomplete = this;
-                                    $.ajax({
-                                        url: 'index.php?route=extension/module/autosearch/ajaxLiveSearch&filter_name=' + encodeURIComponent(request),
-                                        dataType: 'json',
-                                        success: function (json) {
-                                            customAutocomplete.responsea($.map(json, function (item) {
-                                                return {
-                                                    label: item.name,
-                                                    name: item.name1,
-                                                    value: item.product_id,
-                                                    model: item.model,
-                                                    stock_status: item.stock_status,
-                                                    image: item.image,
-                                                    manufacturer: item.manufacturer,
-                                                    price: item.price,
-                                                    special: item.special,
-                                                    category: item.category,
-                                                    rating: item.rating,
-                                                    reviews: item.reviews,
-                                                    href: item.href
-                                                }
-                                            }));
-                                        }
-                                    });
-                                },
-                                select: function (ui) {
-                                    return false;
-                                },
-                                selecta: function (ui) {
-                                    if (ui.href) {
-                                        location = +ui.href;
-                                    }
-                                    return false;
-                                },
-                                focus: function (event, ui) {
-                                    return false;
-                                }
-                            });
-                        });
-                    </script>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <style>
+            .hide-cat {
+                display: block;
+            }
+
+            .hide-cat-hide {
+                display: none !important;
+            }
+        </style>
+        <div class="container" id="category">
             <div class="row">
                 <div class="col-sm-12 col-md-3 menu-box ">
-                    <nav id="menu" class="btn-group btn-block">
-                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown">
+                    <nav id="menu" class="btn-group btn-block open">
+                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown" id="but">
                             <i class="fa fa-bars"></i>
                             <span class="text-category">Категории</span>
                         </button>
-                        <ul id="menu-list" class="dropdown-menu">
 
-                            <li>
-                                <a class="dropdown-img" href="javascript:void(0);">
-                                </a>
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="categories/delivery">
-                                    Доставка </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/AVTOPRINADLEZhNOSTI" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    АВТОПРИНАДЛЕЖНОСТИ </a>
+                        <ul id="menu-list" class="dropdown-menu hide-cat">
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.php">О нас</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.php">Контакты</a></li>
+                            <?php
+                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
+                            foreach ($elems1 as $i1 => $elem1) { ?>
+                                <li class="dropdown">
+                                    <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
+                                    <a class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/avtoprinadlezhnosti/avtoaksessuary/"><i
-                                                        class="fa fa-angle-down arrow"></i> Автоаксессуары </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/">
-                                                            Авто салфетки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/zhilet-signalnyy/">
-                                                            Жилет сигнальный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/kanistra/">
-                                                            Канистра </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/prikurivatel/">
-                                                            Прикуриватель </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoaksessuary/shchetki-skrebki/">
-                                                            Щетки-скребки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/avtoprinadlezhnosti/avtoinstrumenty/"><i
-                                                        class="fa fa-angle-down arrow"></i> Автоинструменты </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/blok-odnorolnyy-s-kryukom/">
-                                                            Блок однорольный с крюком </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/vorotok/">
-                                                            Вороток </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/klyuch-balonnyy/">
-                                                            Ключ балонный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/kompressory-/">
-                                                            Компрессоры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/lebedka/">
-                                                            Лебедка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/montazhka/">
-                                                            Монтажка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/nabor-dlya-remonta/">
-                                                            Набор для ремонта </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/styazhka-gruza/">
-                                                            Стяжка груза </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/tal-tsepnaya/">
-                                                            Таль Цепная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtoinstrumenty/tross-buksirovochnyy/">
-                                                            Тросс буксировочный </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/avtoprinadlezhnosti/avtokhimiya/"><i
-                                                        class="fa fa-angle-down arrow"></i> Автохимия </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtokhimiya/antirzhavchina-smazka/">
-                                                            Антиржавчина - Смазка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/avtoprinadlezhnosti/avtokhimiya/maslo/">
-                                                            Масло </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li>
-                                <a class="dropdown-img" href="categories/Vse-dlya-santekhniki">
-                                    Все для сантехники </a>
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="categories/oplata">
-                                    Оплата </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/ZIMNIE-TOVARY" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    ЗИМНИЕ ТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/zimnie-tovary/novogodnie-tovary/"><i
-                                                        class="fa fa-angle-down arrow"></i> НОВОГОДНИЕ ТОВАРЫ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/girlyandy/">
-                                                            Гирлянды </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/elochnye-igrushki/">
-                                                            Елочные игрушки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/mishura-/">
-                                                            Мишура </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/novogodnie-tovary/snezhinki/">
-                                                            Снежинки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/zimnie-tovary/snegouborochnyy-inventar/"><i
-                                                        class="fa fa-angle-down arrow"></i> СНЕГОУБОРОЧНЫЙ ИНВЕНТАРЬ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/snegouborochnyy-inventar/ledorub/">
-                                                            Ледоруб </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/snegouborochnyy-inventar/lopaty-snegovye/">
-                                                            Лопаты снеговые </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/snegouborochnyy-inventar/skreper-tolkach-dvizhok/">
-                                                            Скрепер,Толкач,Движок </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/"><i
-                                                        class="fa fa-angle-down arrow"></i> ВСЕ ДЛЯ ЗИМНЕГО РАЗВЛЕЧЕНИЯ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/valenki/">
-                                                            Валенки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/okhotnichi-ledyanki/">
-                                                            Охотничьи ледянки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/sanki-kolyaski/">
-                                                            Санки - коляски </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/zimnie-tovary/vse-dlya-zimnego-razvlecheniya/tyubingi-ledyanki/">
-                                                            Тюбинги, ледянки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="categories/about_us">
-                                    О нас </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/SADOVO-OGORODNYY-INVENTAR" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    САДОВО-ОГОРОДНЫЙ ИНВЕНТАРЬ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/"><i
-                                                        class="fa fa-angle-down arrow"></i> ИНСТРУМЕНТЫ ДЛЯ САДА </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/">
-                                                            Ведра </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vily/">
-                                                            Вилы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/grabli/">
-                                                            Грабли </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/kosa/">
-                                                            Коса </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/kustorez/">
-                                                            Кусторез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/lopaty-/">
-                                                            Лопаты </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/nozhovka-sadovaya/">
-                                                            Ножовка садовая </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/nosilki/">
-                                                            Носилки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/sadovye-nabory/">
-                                                            Садовые наборы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/sekatory/">
-                                                            Секаторы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/serp/">
-                                                            Серп </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/suchkorez/">
-                                                            Сучкорез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/trimmer-i-ego-komplektuyushchie/">
-                                                            Триммер и его комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/tyapka/">
-                                                            Тяпка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/cherenki/">
-                                                            Черенки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/"><i
-                                                        class="fa fa-angle-down arrow"></i> ВСЕ ДЛЯ РАССАДЫ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/grunt/">
-                                                            Грунт </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/parnik/">
-                                                            ПАРНИК </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/vse-dlya-rassady/yashchik-dlya-rassady/">
-                                                            Ящик для рассады </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="categories/sadovo-ogorodnyy-inventar/ograzhdenie/">
-                                                    Ограждение </a>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/tachki-sadovye-i-prinadlezhnosti/"><i
-                                                        class="fa fa-angle-down arrow"></i> ТАЧКИ САДОВЫЕ И
-                                                    ПРИНАДЛЕЖНОСТИ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/tachki-sadovye-i-prinadlezhnosti/kolesa-dlya-tachki/">
-                                                            Колеса для тачки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/tachki-sadovye-i-prinadlezhnosti/tachki/">
-                                                            Тачки </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/"><i
-                                                        class="fa fa-angle-down arrow"></i> ПОЛИВОЧНЫЙ ИНВЕНТАРЬ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/leyki/">
-                                                            Лейки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/opryskivatel-i-nasadki/">
-                                                            Опрыскиватель и насадки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sadovo-ogorodnyy-inventar/polivochnyy-inventar/shlangi-/">
-                                                            Шланги </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="hidden-md hidden-lg">
-                                <a class="dropdown-img" href="Kontakct.html">
-                                    Контакты </a>
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/SREDSTVA-INDIVIDUALNOY-ZAShchITY"
-                                    class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    СРЕДСТВА ИНДИВИДУАЛЬНОЙ ЗАЩИТЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/spetsodezhda/">
-                                                    Спецодежда </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/dozhdevik/">
-                                                    Дождевик </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/sredstva-individualnoy-zashchity/kaska-/">
-                                                    Каска </a>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/perchatki-siz/"><i
-                                                        class="fa fa-angle-down arrow"></i> Перчатки СИЗ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-kragi-dielektricheskie/">
-                                                            Перчатки "Краги" Диэлектрические </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-kragi-letnie/">
-                                                            Перчатки "Краги" Летние </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-kragi-uteplennye/">
-                                                            Перчатки "Краги" Утепленные </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-neylon/">
-                                                            Перчатки "Нейлон" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-nitril/">
-                                                            Перчатки "Нитрил" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-rukavitsy/">
-                                                            Перчатки "Рукавицы" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-uteplennye/">
-                                                            Перчатки "Утепленные" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-vinil/">
-                                                            Перчатки ВИНИЛ </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-lateksnye/">
-                                                            Перчатки Латексные </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/sredstva-individualnoy-zashchity/perchatki-siz/perchatki-khb/">
-                                                            Перчатки Х/Б </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/maska-zashchitnaya/">
-                                                    Маска Защитная </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/maska-svarshchika/">
-                                                    Маска сварщика </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/lenta-signalnaya-ogoroditelnaya/">
-                                                    Лента сигнальная огородительная </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/respirator/">
-                                                    Респиратор </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/ochki-zashchitnye/">
-                                                    Очки Защитные </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/naushniki/">
-                                                    Наушники </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/sredstva-individualnoy-zashchity/strakhovka-poyas-dlya-instrumentov/">
-                                                    Страховка+пояс для инструментов </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/STROY-INSTRUMENTY-I-TOVARY"
-                                    class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/"><i
-                                                        class="fa fa-angle-down arrow"></i> СВАРОЧНОЕ ОБОРУДОВАНИЕ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/apparat-dlya-svarki-plasttrub-/">
-                                                            Аппарат для сварки пласт.труб </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/derzhatel-massy/">
-                                                            Держатель массы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/derzhatel-elektrodov/">
-                                                            Держатель электродов </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/plita-ogneupornaya/">
-                                                            Плита "Огнеупорная" </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/provolka-dlya-svarki-/">
-                                                            Проволка для сварки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/ugolok-magnit-dlya-svarki/">
-                                                            Уголок - магнит для сварки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/kholodnaya-svarka/">
-                                                            Холодная сварка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/elektrody/">
-                                                            Электроды </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/"><i
-                                                        class="fa fa-angle-down arrow"></i> РУЧНОЙ ИНСТРУМЕНТ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/benzopila-i-ee-komplektuyushchie/">
-                                                            Бензопила и ее комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/bokorezy/">
-                                                            Бокорезы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/bolgarka-i-ee-komplektuyushchie/">
-                                                            Болгарка и ее комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/boltorez/">
-                                                            Болторез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/zaklepochnik/">
-                                                            Заклепочник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/zvezdochka/">
-                                                            Звездочка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/zubila-pika/">
-                                                            Зубила,пика </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kirka/">
-                                                            Кирка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kiyanka/">
-                                                            Киянка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kleshchi-perestavnye/">
-                                                            Клещи Переставные </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-alligator/">
-                                                            Ключ АЛЛИГАТОР </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-gaechnyy/">
-                                                            Ключ Гаечный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-gazovyy/">
-                                                            Ключ Газовый </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-razvodnoy/">
-                                                            Ключ Разводной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/klyuch-universalnyy/">
-                                                            Ключ Универсальный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/koronka-i-khvostovik/">
-                                                            Коронка и хвостовик </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kryuchok-dlya-vyazki-/">
-                                                            Крючок для вязки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/kuvalda-cherenok/">
-                                                            Кувалда,Черенок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/lobzik-ruchnoy-/">
-                                                            Лобзик ручной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/lom-gvozdoder/">
-                                                            Лом-Гвоздодер </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/molotok-i-cherenok/">
-                                                            Молоток и черенок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nabor-golovok/">
-                                                            Набор Головок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nabor-nakidnykh-klyuchey/">
-                                                            Набор Накидных Ключей </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nadfil/">
-                                                            Надфиль </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/napilnik/">
-                                                            Напильник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozh-kantselyarskiy/">
-                                                            Нож Канцелярский </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhnitsy-po-metallu/">
-                                                            Ножницы по Металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhovka-po-derevu/">
-                                                            Ножовка по Дереву </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhovka-po-metallu/">
-                                                            Ножовка по Металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/nozhovka-po-penobloku/">
-                                                            Ножовка по Пеноблоку </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/otvertki/">
-                                                            Отвертки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/passatizhi/">
-                                                            Пассатижи </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-germetika/"><i
-                                                                class="fa fa-angle-down arrow"></i> Пистолет для
-                                                            Герметика
-                                                        </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-germetika/germetik/">Герметик</a>
-                                                            </li>
+                                    <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
+                                        <div class="dropdown-inner">
+                                            <ul class="list-unstyled nsmenu-haschild">
+                                                <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
+                                                foreach ($elems2 as $i2 => $elem2) { ?>
+                                                    <li class="nsmenu-issubchild">
+                                                        <a><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                        <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            foreach ($elems3 as $i3 => $elem3) { ?>
+                                                                <li class=""><a><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
+                                                            <?php } ?>
                                                         </ul>
                                                     </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-peny/"><i
-                                                                class="fa fa-angle-down arrow"></i> Пистолет для Пены
-                                                        </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/pistolet-dlya-peny/pena/">Пена</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/plitkorez-krestiki-dlya-plitki/"><i
-                                                                class="fa fa-angle-down arrow"></i> Плиткорез,Крестики
-                                                            для
-                                                            плитки </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/plitkorez-krestiki-dlya-plitki/krestiki-dlya-plitki/">Крестики
-                                                                    для Плитки</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/plitkorez-krestiki-dlya-plitki/plitkorez/">Плиткорез</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/polotno-dlya-nozhovki/">
-                                                            Полотно для Ножовки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/rubanok/">
-                                                            Рубанок </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/santekhnicheskiy-tros/">
-                                                            Сантехнический трос </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stameski/">
-                                                            Стамески </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/steklorez/">
-                                                            Стеклорез </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stepler-skoby/"><i
-                                                                class="fa fa-angle-down arrow"></i> Степлер,Скобы </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stepler-skoby/skoby/">Скобы</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stepler-skoby/stepler-mebelnyy/">Степлер
-                                                                    Мебельный</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/strubtsina/">
-                                                            Струбцина </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/stuslo/">
-                                                            Стусло </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/termopistolet-termokley/">
-                                                            ТермоПистолет,Термоклей </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/teski/">
-                                                            Тески </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/topor-kolun/">
-                                                            Топор,Колун </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/treshchetka/">
-                                                            Трещетка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/truborez/">
-                                                            Труборез </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/shestigrannik/">
-                                                            Шестигранник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/shchetki-po-metallu/">
-                                                            Щетки по металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/ruchnoy-instrument/yashchik-dlya-instrumentov/">
-                                                            Ящик для инструментов </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/"><i
-                                                        class="fa fa-angle-down arrow"></i> РАСХОДНЫЕ МАТЕРИАЛЫ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bity-i-nasadki/"><i
-                                                                class="fa fa-angle-down arrow"></i> Биты и Насадки </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bity-i-nasadki/bity-/">Биты
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bity-i-nasadki/nasadki-na-kroveln-samorez/">Насадки
-                                                                    на кровельн саморез</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/brusok-tochilnyy/">
-                                                            Брусок точильный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/bury/">
-                                                            Буры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/">
-                                                            Диск Алмазный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-dlya-tsirkulyarki/">
-                                                            Диск для Циркулярки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-shlifovalnyy/">
-                                                            Диск Шлифовальный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-shchetka-dlya-ushm/">
-                                                            Диск Щетка для УШМ </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/drobilka-i-ee-komplektuyushchie-/">
-                                                            Дробилка и ее комплектующие </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/kley/">
-                                                            Клей </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/kraska-aerozolnaya/">
-                                                            Краска аэрозольная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/krug-nazhdachnyy/">
-                                                            Круг Наждачный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/krug-otreznoy-po-metallu/">
-                                                            Круг Отрезной по металлу </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/pilka-dlya-lobzika/">
-                                                            Пилка для Лобзика </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/pprs-amerikanka/">
-                                                            ППРС Американка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/sverla/">
-                                                            Сверла </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/skotch-izolenta-/">
-                                                            Скотч,Изолента, </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/streych-plenka/">
-                                                            Стрейч - пленка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/uplotnitel/">
-                                                            Уплотнитель </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/fum-lenta-lenta-bardyurnaya/">
-                                                            Фум-лента , Лента бардюрная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/chasha-almaznaya-po-betonu/">
-                                                            Чаша Алмазная по Бетону </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/chek-lenta-/">
-                                                            Чек - лента </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/shlif-bumaga/">
-                                                            Шлиф-Бумага </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/raskhodnye-materialy/shchetka-kratsovka/">
-                                                            Щетка-крацовка </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/stroy-instrumenty-i-tovary/zamki/"><i
-                                                        class="fa fa-angle-down arrow"></i> ЗАМКИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/dvernaya-ruchka/">
-                                                            Дверная Ручка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/dovodchik-dvernoy/">
-                                                            Доводчик дверной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/zamok-vreznoy/">
-                                                            Замок Врезной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/zamok-navesnoy/">
-                                                            Замок Навесной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/zamok-nakladnoy/">
-                                                            Замок Накладной </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/naves-gorazhnyy/">
-                                                            Навес Горажный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/petli/">
-                                                            Петли </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/serdtsevina/">
-                                                            Сердцевина </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/zamki/shpingalet/">
-                                                            Шпингалет </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/"><i
-                                                        class="fa fa-angle-down arrow"></i> ИНСТРУМЕНТ МАЛЯРНЫЙ И
-                                                    ШТУКАТУРНЫЙ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/valik/">
-                                                            Валик </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kelma/">
-                                                            Кельма </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kist-malyarnaya/">
-                                                            Кисть-малярная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kovsh/">
-                                                            Ковш </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/kraskopult/">
-                                                            Краскопульт </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/marker-stroitelnyy/">
-                                                            Маркер строительный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/miksery/">
-                                                            Миксеры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/pravilo/">
-                                                            Правило </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/">
-                                                            Серпянка,Сетка Штукатурная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/setkoderzhatel/">
-                                                            Сеткодержатель </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/skrebok-oboynyy/">
-                                                            Скребок обойный </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/terka/">
-                                                            Терка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/">
-                                                            Шпатель </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/"><i
-                                                        class="fa fa-angle-down arrow"></i> ГАЗ-ПЛИТА-ГОРЕЛКИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/gaz-benzin/">
-                                                            Газ,Бензин </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/gorelki-i-payalnaya-lampa/">
-                                                            Горелки и Паяльная лампа </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/zazhigalki/">
-                                                            Зажигалки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/plita-gazovaya/">
-                                                            Плита Газовая </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/gaz-plita-gorelki/reduktor-shlang-fum/">
-                                                            Редуктор, шланг, фум </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/"><i
-                                                        class="fa fa-angle-down arrow"></i> ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/lineyki/">
-                                                            Линейки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/otves-shnur-otbivochnyy/">
-                                                            Отвес,шнур отбивочный </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/"><i
-                                                                class="fa fa-angle-down arrow"></i> Рулетки </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/ruletka/">Рулетка</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/ruletka-v-lente/">Рулетка
-                                                                    в ленте</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ruletki/ruletka-geodezicheskaya-/">Рулетка-Геодезическая
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/">
-                                                            Уголок-линейка </a>
-                                                    </li>
-                                                    <li class=" ischild_4level_simple">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/"><i
-                                                                class="fa fa-angle-down arrow"></i> Уровень </a>
-                                                        <ul class="list-unstyled child_4level_simple">
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/gidrouroven/">Гидроуровень</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/lazernyy-uroven/">Лазерный
-                                                                    Уровень</a>
-                                                            </li>
-                                                            <li>
-                                                                <a
-                                                                    href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/uroven/urovn-stroitelnyy/">Уровнь
-                                                                    Строительный</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/shtangentsirkul/">
-                                                            Штангенциркуль </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/stroy-instrumenty-i-tovary/krepezh/"><i
-                                                        class="fa fa-angle-down arrow"></i> КРЕПЕЖ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/gvozdi/">
-                                                            Гвозди </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/dyubel-gvozd/">
-                                                            Дюбель-гвоздь </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/zaklepki/">
-                                                            Заклепки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/korabin/">
-                                                            Корабин </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/kranshteyn-dlya-radiatora/">
-                                                            Кранштейн для радиатора </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/samorezy/">
-                                                            Саморезы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/skoba-stroitelnaya/">
-                                                            Скоба строительная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/skoby-dlya-kabelya/">
-                                                            Скобы для кабеля </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/khomuty/">
-                                                            Хомуты </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/stroy-instrumenty-i-tovary/krepezh/shurup/">
-                                                            Шуруп </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
+                                </li>
+                            <?php } ?>
 
-
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/KhOZ-TOVARY" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    ХОЗТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li>
-                                                <a href="categories/khoz-tovary/prochie-khoz-tovary/"> ПРОЧИЕ
-                                                    ХОЗ
-                                                    ТОВАРЫ </a>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a
-                                                    href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/"><i
-                                                        class="fa fa-angle-down arrow"></i> СРЕДСТВА ЗАЩИТЫ ОТ НАСЕКОМЫХ
-                                                    И
-                                                    ГРЫЗУНОВ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/bioaktivator/">
-                                                            Биоактиватор </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/dikhlofos/">
-                                                            Дихлофос </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/setka-moskitnaya/">
-                                                            Сетка москитная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/sredstva-zashchity-ot-gryzunov/">
-                                                            Средства защиты от грызунов </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sredstva-zashchity-ot-nasekomykh-i-gryzunov/sredstva-zashchity-ot-nasekomykh/">
-                                                            Средства защиты от насекомых </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/sport-inventar/"><i
-                                                        class="fa fa-angle-down arrow"></i> СПОРТ ИНВЕНТАРЬ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sport-inventar/badminton/">
-                                                            Бадминтон </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sport-inventar/velosipednye-zamki/">
-                                                            Велосипедные Замки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/sport-inventar/mylnye-puzyri/">
-                                                            Мыльные пузыри </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a href="categories/khoz-tovary/sport-inventar/myachi/">
-                                                            Мячи </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/vse-dlya-uborki-doma/"><i
-                                                        class="fa fa-angle-down arrow"></i> ВСЕ ДЛЯ УБОРКИ ДОМА </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/bytovaya-khimiya/">
-                                                            Бытовая химия </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/venik/">
-                                                            Веник </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/verevka-nit-kanat-shpagat/">
-                                                            Веревка,нить,канат,шпагат </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/vodosgony/">
-                                                            Водосгоны </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/gubka-dlya-mytya-posudy/">
-                                                            Губка для мытья посуды </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/metla/">
-                                                            Метла </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/meshki/">
-                                                            Мешки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/musornye-pakety-/">
-                                                            Мусорные пакеты </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/prishchepki/">
-                                                            Прищепки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/pylevybivalka/">
-                                                            Пылевыбивалка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/salfetki-tryapki/">
-                                                            Салфетки-тряпки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/sushilka-dlya-belya/">
-                                                            Сушилка для белья </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/tros-belevoy/">
-                                                            Трос бельевой </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/shvabry-i-nasadki/">
-                                                            Швабры и насадки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-uborki-doma/shchetki-sovok/">
-                                                            Щетки,Совок </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/"><i
-                                                        class="fa fa-angle-down arrow"></i> ТОВАРЫ ДЛЯ ОТДЫХА И ТУРИЗМА
-                                                </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/zhidkost-dlya-rozzhiga/">
-                                                            Жидкость для розжига </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/mangal/">
-                                                            Мангал </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/polog-polipropilenovyy/">
-                                                            Полог полипропиленовый </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/reshetka-gril-shampury/">
-                                                            Решетка Гриль - Шампуры </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-otdykha-i-turizma/ugol-drevesnyy/">
-                                                            Уголь древесный </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/"><i
-                                                        class="fa fa-angle-down arrow"></i> КУХОННЫЕ ПРИНАДЛЕЖНОСТИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/vesy-/">
-                                                            Весы </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/doska-razdelochnaya/">
-                                                            Доска разделочная </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/zapekanie/">
-                                                            Запекание </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/konservirovaniya/">
-                                                            Консервирования </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/kukhonnyy-inventar/">
-                                                            Кухонный инвентарь </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/paket-fasovochnyy-plenka/">
-                                                            Пакет фасовочный,пленка </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/kukhonnye-prinadlezhnosti/tualetnaya-bumaga/">
-                                                            Туалетная бумага </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/tovary-dlya-zhivotnykh/"><i
-                                                        class="fa fa-angle-down arrow"></i> ТОВАРЫ ДЛЯ ЖИВОТНЫХ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-zhivotnykh/nozhnitsy-dlya-strizhki-ovets/">
-                                                            Ножницы для стрижки овец </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-zhivotnykh/osheyniki/">
-                                                            Ошейники </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/tovary-dlya-zhivotnykh/tsep-vertushka/">
-                                                            Цепь,Вертушка </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/bannye-prinadlezhnosti/"><i
-                                                        class="fa fa-angle-down arrow"></i> БАННЫЕ ПРИНАДЛЕЖНОСТИ </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/bannye-prinadlezhnosti/mochalki-gubki/">
-                                                            Мочалки,Губки </a>
-                                                    </li>
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/bannye-prinadlezhnosti/taz-kovsh/">
-                                                            Таз, ковш </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="nsmenu-issubchild">
-                                                <a href="categories/khoz-tovary/vse-dlya-doma/"><i
-                                                        class="fa fa-angle-down arrow"></i> Все для дома </a>
-                                                <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                    <li class="">
-                                                        <a
-                                                            href="categories/khoz-tovary/vse-dlya-doma/kovriki-shchetinistoe-pokrytie/">
-                                                            Коврики, щетинистое покрытие </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
-                            <li class="dropdown ">
-                                <span class="toggle-child">
-                                    <i class="fa fa-plus plus"></i>
-                                    <i class="fa fa-minus minus"></i>
-                                </span>
-                                <a href="categories/ELEKTROTOVARY" class="parent-link dropdown-img">
-                                    <i class="fa fa-angle-down arrow"></i>
-                                    ЭЛЕКТРОТОВАРЫ </a>
-
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <li>
-                                                <a href="categories/elektrotovary/avtomat-rubilniki/">
-                                                    Автомат,рубильники </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/batareyki/"> Батарейки </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="categories/elektrotovary/ventilyatory-i-reshetka-ventilyatsionnaya/">
-                                                    Вентиляторы и Решетка вентиляционная </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/vyzhigatel-po-derevu/">
-                                                    Выжигатель по дереву </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/lampochki/"> Лампочки </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/katushka/"> Катушка </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/udlinitel-troynik-kolodka/">
-                                                    Удлинитель,тройник,колодка </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/zvonok-besprovodnoy/"> Звонок
-                                                    беспроводной </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/svetilniki/"> Светильники </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/perenoska/"> Переноска </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/payalnik/"> Паяльник </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/obogrevateli-/">
-                                                    Обогреватели </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/multimetr/"> Мультиметр </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/patron-na-lampochku/"> Патрон
-                                                    на
-                                                    лампочку </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/pribory-dlya-osveshcheniya/">
-                                                    Приборы для освещения </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/plita-elektr/"> Плита
-                                                    электр. </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/ten-dlya-vodonogrevatelya/">
-                                                    Тэн
-                                                    для водоногревателя </a>
-                                            </li>
-                                            <li>
-                                                <a href="categories/elektrotovary/chaynik/"> Чайник </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                            </li>
                         </ul>
                     </nav>
+
                 </div>
+                <script>
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        $(window).scroll(function() {
+                            if ($(this).scrollTop() > 200) {
+                                $('#menu-list').removeClass('hide-cat');
+                                $('#menu-list').addClass('hide-cat-hide');
+                            } else {
+                                $('#menu-list').removeClass('hide-cat-hide');
+                                $('#menu-list').addClass('hide-cat');
+                            }
+                        });
+                        $('#but').on("click", function() {
+                            console.log('adasd');
+                            $('#menu-list').removeClass('hide-cat-hide');
+                        });
+                    });
+                </script>
                 <div class="col-md-9 hidden-xs hidden-sm clearfix">
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="delivery.html">
+                                <li><a class="no-img-parent-link" href="delivery.php">
                                         Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="oplata.html">
+                                <li><a class="no-img-parent-link" href="oplata.php">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="about_us.hp">
+                                <li><a class="no-img-parent-link" href="about_us.php">
                                         О нас</a></li>
-                                <li><a class="no-img-parent-link" href="Kontakct.html">
+                                <li><a class="no-img-parent-link" href="Kontakct.php">
                                         Контакты</a></li>
                             </ul>
                         </div>
@@ -4179,28 +602,9 @@
         </div>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
-                $(document).ready(function () {
-                var width_fmns = viewport().width;
-                if (width_fmns >= 992) {
-                    if ($("#top-fixed").length == 0) {
-                        var menu_fix = '<div class="menu_fix col-sm-3 col-md-3"></div>';
-                        var phone_fix = '<div class="phone_fix col-sm-2 col-md-3 "></div>';
-                        var search_fix = '<div class="search_fix col-md-4 col-md-pull-2"><div id="search-fixed-top"></div></div>';
-                        var cart_fix = '<div class="col-sm-3 col-md-2 col-md-push-4 cart_fix"></div>';
-
-                        $('#top').before('<div id="top-fixed" class="hidden-xs hidden-sm"><div class="container"><div class="row">' + menu_fix + ' ' + phone_fix + ' ' + cart_fix + ' ' + search_fix + ' </div></div></div>');
-                        $('#menu').clone().appendTo('#top-fixed .menu_fix');
-                        $('#phone').clone().appendTo('#top-fixed .phone_fix');
-                        $('#search').clone().appendTo('#top-fixed #search-fixed-top');
-                        $('header .shopping-cart').clone().appendTo('#top-fixed .cart_fix');
-                    }
-                } else {
-                    $('#top-fixed').remove();
-                }
-                $(window).resize(function () {
+                $(document).ready(function() {
                     var width_fmns = viewport().width;
-
-                    if (width_fmns >= 992) {
+                    if (width_fmns >= 300) {
                         if ($("#top-fixed").length == 0) {
                             var menu_fix = '<div class="menu_fix col-sm-3 col-md-3"></div>';
                             var phone_fix = '<div class="phone_fix col-sm-2 col-md-3 "></div>';
@@ -4212,138 +616,154 @@
                             $('#phone').clone().appendTo('#top-fixed .phone_fix');
                             $('#search').clone().appendTo('#top-fixed #search-fixed-top');
                             $('header .shopping-cart').clone().appendTo('#top-fixed .cart_fix');
-                            $('#menu #menu-list').menuAim({
-                                activateCallback: activateSubmenu,
-                                deactivateCallback: deactivateSubmenu,
-                            });
-
-                            function activateSubmenu(row) {
-                                if ($(row).hasClass('dropdown')) {
-                                    $(row).addClass('menu-open');
-                                }
-                            }
-
-                            function deactivateSubmenu(row) {
-                                $(row).removeClass('menu-open');
-                            }
-
-                            function exitMenu(row) {
-                                return true;
-                            }
-
-                            $('.dropdown-menu-simple .nsmenu-haschild').menuAim({
-                                activateCallback: activateSubmenu2level,
-                                deactivateCallback: deactivateSubmenu2level,
-                            });
-
-                            function activateSubmenu2level(row) {
-                                if ($(row).hasClass('nsmenu-issubchild')) {
-                                    $(row).addClass('menu-open-2level');
-                                }
-                            }
-
-                            function deactivateSubmenu2level(row) {
-                                $(row).removeClass('menu-open-2level');
-                            }
-
-                            function exitMenu2level(row) {
-                                return true;
-                            }
-
-                            $('.dropdown-menu-simple .nsmenu-ischild-simple').menuAim({
-                                activateCallback: activateSubmenu4level,
-                                deactivateCallback: deactivateSubmenu4level,
-                            });
-
-                            function activateSubmenu4level(row) {
-
-                                $(row).addClass('menu-open-4level');
-                            }
-
-                            function deactivateSubmenu4level(row) {
-                                $(row).removeClass('menu-open-4level');
-                            }
-
-                            function exitMenu4level(row) {
-                                return true;
-                            }
                         }
                     } else {
                         $('#top-fixed').remove();
                     }
-                });
+                    $(window).resize(function() {
+                        var width_fmns = viewport().width;
 
+                        if (width_fmns >= 992) {
+                            if ($("#top-fixed").length == 0) {
+                                var menu_fix = '<div class="menu_fix col-sm-3 col-md-3"></div>';
+                                var phone_fix = '<div class="phone_fix col-sm-2 col-md-3 "></div>';
+                                var search_fix = '<div class="search_fix col-md-4 col-md-pull-2"><div id="search-fixed-top"></div></div>';
+                                var cart_fix = '<div class="col-sm-3 col-md-2 col-md-push-4 cart_fix"></div>';
 
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 200) {
-                        $('header .shopping-cart #cart').removeClass('open');
-                        $('#top-fixed').addClass('sticky-header-1');
-                    } else {
-                        $('#top-fixed').removeClass('sticky-header-1');
+                                $('#top').before('<div id="top-fixed" class="hidden-xs hidden-sm"><div class="container"><div class="row">' + menu_fix + ' ' + phone_fix + ' ' + cart_fix + ' ' + search_fix + ' </div></div></div>');
+                                $('#menu').clone().appendTo('#top-fixed .menu_fix');
+                                $('#phone').clone().appendTo('#top-fixed .phone_fix');
+                                $('#search').clone().appendTo('#top-fixed #search-fixed-top');
+                                $('header .shopping-cart').clone().appendTo('#top-fixed .cart_fix');
+                                $('#menu #menu-list').menuAim({
+                                    activateCallback: activateSubmenu,
+                                    deactivateCallback: deactivateSubmenu,
+                                });
+
+                                function activateSubmenu(row) {
+                                    if ($(row).hasClass('dropdown')) {
+                                        $(row).addClass('menu-open');
+                                    }
+                                }
+
+                                function deactivateSubmenu(row) {
+                                    $(row).removeClass('menu-open');
+                                }
+
+                                function exitMenu(row) {
+                                    return true;
+                                }
+
+                                $('.dropdown-menu-simple .nsmenu-haschild').menuAim({
+                                    activateCallback: activateSubmenu2level,
+                                    deactivateCallback: deactivateSubmenu2level,
+                                });
+
+                                function activateSubmenu2level(row) {
+                                    if ($(row).hasClass('nsmenu-issubchild')) {
+                                        $(row).addClass('menu-open-2level');
+                                    }
+                                }
+
+                                function deactivateSubmenu2level(row) {
+                                    $(row).removeClass('menu-open-2level');
+                                }
+
+                                function exitMenu2level(row) {
+                                    return true;
+                                }
+
+                                $('.dropdown-menu-simple .nsmenu-ischild-simple').menuAim({
+                                    activateCallback: activateSubmenu4level,
+                                    deactivateCallback: deactivateSubmenu4level,
+                                });
+
+                                function activateSubmenu4level(row) {
+
+                                    $(row).addClass('menu-open-4level');
+                                }
+
+                                function deactivateSubmenu4level(row) {
+                                    $(row).removeClass('menu-open-4level');
+                                }
+
+                                function exitMenu4level(row) {
+                                    return true;
+                                }
+                            }
+                        } else {
+                            $('#top-fixed').remove();
+                        }
+                    });
+
+                    $(window).scroll(function() {
+                        if ($(this).scrollTop() > 200) {
+                            $('#category').addClass('category');
+                        } else {
+                            $('#category').removeClass('category');
+                        }
+                    });
+                    $('#category #menu-list').menuAim({
+                        activateCallback: activateSubmenu_fixed,
+                        deactivateCallback: deactivateSubmenu_fixed,
+                    });
+
+                    function activateSubmenu_fixed(row) {
+                        $(row).addClass('menu-open');
                     }
-                });
-                $('#top-fixed #menu-list').menuAim({
-                    activateCallback: activateSubmenu_fixed,
-                    deactivateCallback: deactivateSubmenu_fixed,
-                });
 
-                function activateSubmenu_fixed(row) {
-                    $(row).addClass('menu-open');
-                }
-
-                function deactivateSubmenu_fixed(row) {
-                    $(row).removeClass('menu-open');
-                }
-
-                function exitMenu_fixed(row) {
-                    return true;
-                }
-
-                $('#top-fixed .dropdown-menu-simple .nsmenu-haschild').menuAim({
-                    activateCallback: activateSubmenu2level_fixed,
-                    deactivateCallback: deactivateSubmenu2level_fixed,
-                });
-
-                function activateSubmenu2level_fixed(row) {
-                    $(row).addClass('menu-open-2level');
-                }
-
-                function deactivateSubmenu2level_fixed(row) {
-                    $(row).removeClass('menu-open-2level');
-                }
-
-                function exitMenu2level_fixed(row) {
-                    return true;
-                }
-
-
-                $('#top-fixed #search a').bind('click', function () {
-                    $("#top-fixed #selected_category").val($(this).attr('data-idsearch'));
-                    $('#top-fixed .category-name').html($(this).html());
-                });
-                $('#top-fixed .btn-search').bind('click', function () {
-                    url = $('base').attr('href') + 'index.php?route=product/search';
-
-                    var value = $('#top-fixed input[name=\'search\']').val();
-
-                    if (value) {
-                        url += '&search=' + encodeURIComponent(value);
-                    } else {
-                        url += '&search=';
+                    function deactivateSubmenu_fixed(row) {
+                        $(row).removeClass('menu-open');
                     }
 
-                    var category_id = $('#top-fixed input[name=\'category_id\']').prop('value');
-
-                    if (category_id > 0) {
-                        url += '&category_id=' + encodeURIComponent(category_id) + '&sub_category=true';
+                    function exitMenu_fixed(row) {
+                        return true;
                     }
-                    location = url;
 
+                    $('#top-fixed .dropdown-menu-simple .nsmenu-haschild').menuAim({
+                        activateCallback: activateSubmenu2level_fixed,
+                        deactivateCallback: deactivateSubmenu2level_fixed,
+                    });
+
+                    function activateSubmenu2level_fixed(row) {
+                        $(row).addClass('menu-open-2level');
+                    }
+
+                    function deactivateSubmenu2level_fixed(row) {
+                        $(row).removeClass('menu-open-2level');
+                    }
+
+                    function exitMenu2level_fixed(row) {
+                        return true;
+                    }
+
+
+                    $('#top-fixed #search a').bind('click', function() {
+                        $("#top-fixed #selected_category").val($(this).attr('data-idsearch'));
+                        $('#top-fixed .category-name').html($(this).html());
+                    });
+                    $('#top-fixed .btn-search').bind('click', function() {
+                        url = $('base').attr('href') + 'index.php?route=product/search';
+
+                        var value = $('#top-fixed input[name=\'search\']').val();
+
+                        if (value) {
+                            url += '&search=' + encodeURIComponent(value);
+                        } else {
+                            url += '&search=';
+                        }
+
+                        var category_id = $('#top-fixed input[name=\'category_id\']').prop('value');
+
+                        if (category_id > 0) {
+                            url += '&category_id=' + encodeURIComponent(category_id) + '&sub_category=true';
+                        }
+                        location = url;
+
+                    });
                 });
             });
-        });  
         </script>
-
     </header>
     <div class="container">
         <ul class="breadcrumb">
@@ -4581,13 +1001,11 @@
                             <span>Подписаться на рассылку</span>
                         </div>
                         <div class="col-xs-12 col-md-6 text-xs-center-newsletter">
-                            <input type="text" class="form-control" id="input-newsletter"
-                                placeholder="Введите ваш адрес электронной почты" value="">
+                            <input type="text" class="form-control" id="input-newsletter" placeholder="Введите ваш адрес электронной почты" value="">
                             <span id="error-msg"></span>
                         </div>
                         <div class="col-xs-12 col-md-3 text-xs-center-newsletter text-md-left">
-                            <button type="button" id="subcribe" class="btn btn-newsletter" value="Подписаться"><i
-                                    class="fa fa-envelope fa-fw"></i>Подписаться
+                            <button type="button" id="subcribe" class="btn btn-newsletter" value="Подписаться"><i class="fa fa-envelope fa-fw"></i>Подписаться
                             </button>
                         </div>
                     </div>
@@ -4603,7 +1021,7 @@
                                 <div class="banner-title-footer">
                                     <h3>ЗАКАЗ ПО ТЕЛЕФОНУ</h3>
                                 </div>
-                                <span class="banner-description-footer">+7 (926) 880-08-93</span>
+                                <span class="banner-description-footer">+7 (926) 880-08-93 <br>+7 (982) 304-89-35</span>
                             </div>
                         </div>
                     </div>
@@ -4653,9 +1071,9 @@
                     <div class="col-sm-3">
                         <h3> Информация</h3>
                         <ul class="list-unstyled">
-                            <li><a href="categories/about_us">О нас</a></li>
-                            <li><a href="categories/delivery">Информация о доставке</a></li>
-                            <li><a href="categories/terms">Условия соглашения</a></li>
+                            <li><a href="about_us.php">О нас</a></li>
+                            <li><a href="delivery.php">Информация о доставке</a></li>
+                            <li><a href="terms.php">Условия соглашения</a></li>
                         </ul>
                         <h3></h3>
                         <ul class="list-unstyled">
@@ -4664,39 +1082,36 @@
                     <div class="col-sm-3">
                         <h3> Дополнительно</h3>
                         <ul class="list-unstyled">
-                            <li><a href="categories/sitemap/">Карта сайта</a></li>
-                            <li><a href="categories/contact-us/">Связаться с нами</a></li>
-                            <li><a href="categories/add-return/">Возврат товара</a></li>
+                            <li><a href="constructor/404.php">Карта сайта</a></li>
+                            <li><a href="constructor/404.php">Связаться с нами</a></li>
+                            <li><a href="constructor/404.php">Возврат товара</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
                         <h3> Личный кабинет</h3>
                         <ul class="list-unstyled">
-                            <li><a href="categories/my-account/">Личный кабинет</a></li>
-                            <li><a href="categories/order-history/">История заказов</a></li>
-                            <li><a href="categories/wishlist/">Мои закладки</a></li>
-                            <li><a href="categories/newsletter/">Рассылка новостей</a></li>
+                            <li><a href="constructor/404.php">Личный кабинет</a></li>
+                            <li><a href="constructor/404.php">История заказов</a></li>
+                            <li><a href="constructor/404.php">Мои закладки</a></li>
+                            <li><a href="constructor/404.php">Рассылка новостей</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
                         <h3>Наши Контакты</h3>
                         <ul class="list-unstyled">
-                            <li>
-                                <a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i> +7 (982)
-                                    304-89-35</a>
-                                <a href="tel:+79268800893" target="_blank"><i class=" fa-width"></i> +7 (926)
+                            <li><a href="tel:+79268800893" target="_blank"><i class=" fa-width"></i>+7 (926)
                                     880-08-93</a>
+                            <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
+                                    304-89-35</a>
                             </li>
                             <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
                                     Yuzh.Optor@mail.ru</a></li>
                             <li>
-                                <a href="https://api.whatsapp.com/send/?phone=79823048935"><i
-                                        class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a><br>
-                                <a href="https://api.whatsapp.com/send/?phone=79268800893"><i
-                                        class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a>
+                                <a href="https://api.whatsapp.com/send/?phone=79268800893"><i class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a><br />
+                                <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>
                             </li>
                         </ul>
-                        <p>Торговая компания Yzh.Optor © 2022</p>
+                        <p>Торговая компания Yuzh.Optor &copy; 2022</p>
                     </div>
                 </div>
             </div>
@@ -4705,28 +1120,24 @@
                     <div class="col-xs-12 col-md-12">
                         <h3>О нашем магазине</h3>
                         <div class="description_store_footer">
-                            <div class="shop-about-description-short"
-                                style="outline-color: rgb(0, 156, 240); margin: 0px 0px 15px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, "
-                                helvetica="" neue ",="" helvetica,="" sans-serif;="" vertical-align:="" baseline;"="">
-                                Строительные и хозтовары по
-                                самым низким ценам !!!
-                            </div>
-                            <div class="shop-about-description-full"
-                                style="outline-color: rgb(0, 156, 240); margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, "
-                                helvetica="" neue ",="" helvetica,="" sans-serif;="" vertical-align:="" baseline;"="">
-                                Наша компания предлагает большой
-                                ассортимент строительных инструментов , садово-огородный инвентарь , сантехника ,крепёж
-                                ,
-                                автоаксессуары , хозяйственные товары.
-                            </div>
+                            <div class="shop-about-description-short" style="outline-color: rgb(0, 156, 240); margin: 0px 0px 15px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-weight: 700; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Строительные и
+                            хозтовары по самым низким
+                            ценам !!!
                         </div>
+                        <div class="shop-about-description-full" style="outline-color: rgb(0, 156, 240); margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: Arial, " Helvetica Neue ", Helvetica, sans-serif; vertical-align: baseline;">Наша компания
+                        предлагает большой ассортимент
+                        строительных инструментов , садово-огородный инвентарь , сантехника ,крепёж ,
+                        автоаксессуары ,
+                        хозяйственные товары.
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="row">
-                </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row">
             </div>
+        </div>
         </div>
     </footer>
 </body>

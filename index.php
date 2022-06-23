@@ -1,6 +1,8 @@
 <?php
 require 'constructor/connect.php';
-$dir_img = __DIR__ . '/img/tovaru/';
+    $dir_img = __DIR__ . '/img/tovaru/';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +19,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
     <meta name="keywords" content="Торговая компания Yuzh.Optor" />
     <meta property="og:title" content="Торговая компания Yuzh.Optor" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="index.html" />
+    <meta property="og:url" content="index.php" />
     <meta property="og:image" content="img/LOGO.png" />
     <meta property="og:site_name" content="Торговая компания Yuzh.Optor" />
-    <link href="index.html" rel="canonical" />
+    <link href="index.php" rel="canonical" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -184,8 +186,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
         var button_shopping = "Продолжить покупки";
         var button_checkout = "Оформление заказа";
-        var link_checkout = "checkout/index.html";
-        var link_newstorecheckout = "cart/index.html?route=checkout/newstorecheckout";
+        var link_checkout = "checkout/index.php";
+        var link_newstorecheckout = "cart/index.php?route=checkout/newstorecheckout";
         var text_showmore = 'Показать еще';
         var color_schem = '3';
         var loading_masked_img = '<img src="img/catalog/view/theme/newstore/image/ring-alt-' + color_schem + '.svg" />';
@@ -251,7 +253,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
             <div class="row vertical-align">
                 <div class="col-xs-6 col-sm-12 col-md-3 text-center text-left-md logo-top">
                     <div id="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
                         </a>
                     </div>
@@ -383,17 +385,17 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             <span class="text-category">Категории</span>
                         </button>
 
-                        <ul id="menu-list" class="dropdown-menu hide-cat">
+                        <ul id="menu-list" class="dropdown-menu hide-cat" style="display: block;">
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.html">Доставка</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.html">Оплата</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.hp">О нас</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.html">Контакты</a></li>
                             <?php
-                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
+                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name`, `third_id` FROM `category`");
                             foreach ($elems1 as $i1 => $elem1) { ?>
                                 <li class="dropdown">
                                     <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                    <a class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
+                                    <a id="route_id" href="categories/category.php?id=<?=$elem1['third_id'] ?>" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
                                         <div class="dropdown-inner">
@@ -401,11 +403,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
                                                 foreach ($elems2 as $i2 => $elem2) { ?>
                                                     <li class="nsmenu-issubchild">
-                                                        <a><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                        <a href="categories/category.php?id=<?= $elem2['second_id'] ?>"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
                                                             foreach ($elems3 as $i3 => $elem3) { ?>
-                                                                <li class=""><a><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
+                                                                <li class=""><a href="categories/category.php?id=<?= $elem3['first_id'] ?>"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
                                                         </ul>
                                                     </li>
@@ -424,13 +426,13 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="delivery.html">
+                                <li><a class="no-img-parent-link" href="delivery.php">
                                         Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="oplata.html">
+                                <li><a class="no-img-parent-link" href="oplata.php">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="about_us.hp">
+                                <li><a class="no-img-parent-link" href="about_us.php">
                                         О нас</a></li>
-                                <li><a class="no-img-parent-link" href="Kontakct.html">
+                                <li><a class="no-img-parent-link" href="Kontakct.php">
                                         Контакты</a></li>
                             </ul>
                         </div>
@@ -452,7 +454,13 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         $('#but').on("click", function() {
                             console.log('adasd');
                             $('#menu-list').removeClass('hide-cat-hide');
-                });
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
                 $(document).ready(function() {
                     var width_fmns = viewport().width;
                     if (width_fmns >= 300) {
@@ -941,119 +949,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 <div class="categorywall-container categorywall-0">
                     <div class="title-module"><span>Популярные категории</span></div>
                     <div class="wall-category-box">
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category  parent_category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/95921_2-150x150.jpg" alt="СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ">
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/">СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
-                                    </div>
-                                </div>
-                                <div class="item-sub-category nswc-host">
-                                    <div class="nswc-viewport" style="padding-right: 14px; height: 155px; overflow: hidden;">
-                                        <div class="nswc-container" style="overflow: hidden;">
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/gaz-plita-gorelki/">ГАЗ-ПЛИТА-ГОРЕЛКИ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/zamki/">ЗАМКИ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/">ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/">ИНСТРУМЕНТ МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/krepezh/">КРЕПЕЖ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/">РАСХОДНЫЕ МАТЕРИАЛЫ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/ruchnoy-instrument/">РУЧНОЙ ИНСТРУМЕНТ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/">СВАРОЧНОЕ ОБОРУДОВАНИЕ</a></div>
-                                        </div>
-                                    </div>
-                                    <div class="nswc-scrollbar" style="position: absolute; top: 0px; right: 0px; overflow: hidden; height: 152px;">
-                                        <div class="nswc-thumb" style="position: absolute; left: 0px; width: 100%; top: 0px; height: 118.575px;"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/27953642163111e8ae1fe8039a18cbef_a781eb93299111ebbe151c1b0db29d29-500x500-150x150.png" alt="Ведра"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/">Ведра</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2cc86d6cc67a11e68c733c970e011047_3bd1db41361011ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Диск Алмазный "></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/">Диск Алмазный </a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/elektrotovary/svetilniki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/7876e744c27411eabe0c1c1b0db29d29_40f93b3f5fc911ebbe1a1c1b0db29d29-500x500-150x150.jpg" alt="Светильники"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/elektrotovary/svetilniki/">Светильники</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/5972713_image_large-150x150.jpg" alt="Серпянка,Сетка Штукатурная"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/">Серпянка,Сетка Штукатурная</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/autosalfetki-150x150.jpg" alt="Авто салфетки"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/">Авто салфетки</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/3af342b3459d11e5aad6f835ddca8acb_327c7180348c11ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Уголок-линейка"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/">Уголок-линейка</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="item-category ">
-                                <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2e9f6a214a5711ebbe181c1b0db29d29_ebda8048a35611ebbe1c1c1b0db29d29-500x500-150x150.jpg" alt="Шпатель"></a>
-                                </div>
-                                <div class="wall-cat-name">
-                                    <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/">Шпатель</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
+                            
                     </div>
                 </div>
                 <div class="container-module">
@@ -1478,6 +1375,137 @@ $dir_img = __DIR__ . '/img/tovaru/';
     <div id="close-yey" class="modal-yey hider">
 
     </div>
+    <script>
+        function pokaz_modal(id) {
+            $(document).ready(function() {
+                $.ajax({
+                    type: "post",
+                    url: 'constructor/form_buy.php',
+                    data: {
+                        'name': id
+                    },
+                    success: function(response) {
+
+                        $('#close-yey').html(response);
+
+                        $('[data-toggle-buy]').on('click', function() {
+                            $('#close-yey').removeClass('hider');
+                        });
+
+                        $('#close-buy-block').on('click', function() {
+                            $('#close-yey').toggleClass('hider');
+                        });
+
+                    }
+                });
+            });
+        };
+    </script>
+    <!-- скрипт звонка -->
+    <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
+    <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;"><div class="mfp-container mfp-ajax-holder mfp-s-ready"><div class="mfp-content"><div id="popup-callback" class="wcb-4">
+                    <div class="popup-heading"><i class=""></i>&nbsp;&nbsp;Заказать обратный звонок</div>
+                    <div class="popup-center">
+                        <form id="callback_data" data-ajax-submit="" enctype="multipart/form-data" method="post">
+                            <div class="col-xs-12">
+                                <div class="form-group sections_block_rquaired">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-name" class="form-control contact-name" type="text" placeholder="Ваше имя" value="" name="name">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-user fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_name_callback" class="error_callback"></div>
+                                </div>
+                                <div class="form-group sections_block_rquaired">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_phone_callback" class="error_callback"></div>
+                                </div>
+                                <div class="form-group sections_block">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-email" class="form-control contact-email" type="text" placeholder="Email" value="" name="email_buyer">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-envelope fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_email_callback" class="error_callback"></div>
+                                </div>
+                                <div class="form-group sections_block">
+                                    <div class="input-group margin-bottom-sm">
+                                        <input id="contact-comment" class="form-control contact-comment" type="text" placeholder="Комментарий" value="" name="comment_buyer">
+                                        <span class="input-group-addon"><i class="icon-append-1 fa fa-comment fa-fw"></i></span>
+                                    </div>
+                                    <div id="error_comment_callback" class="error_callback"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="time_callback_on" value="" class="form-control start" placeholder="Когда Вам Перезвонить:">
+                                    <input type="hidden" name="time_callback_off" value="">
+                                </div>
+
+                                <input type="hidden" id="callback_url" value="" name="url_site">
+                            </div>
+
+
+                            <div class="anytext-callback marb col-xs-12 text-center"></div>
+                        </form>
+                    </div>
+                    <div class="popup-footer">
+                        <div class="col-xs-12 text-center">
+                            <button onclick="sendCallback();" type="submit" class="btn-callback ladda-button" data-style="expand-left"><span class="ladda-label">Заказать звонок</span></button>
+                        </div>
+                    </div>
+                    <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css">
+                    <script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
+                    <script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+                    <script>
+                        $('.start').datetimepicker({
+                            pickDate: true,
+                            minDate : moment(),
+                            pickTime: true
+                        });
+                        $(document).ready(function() {
+                            var ContactouterHeight = $('#callbackpro_contacts').outerHeight()-6;
+                            $(function(){$('#callbackpro_contacts').css({'top':-ContactouterHeight});});
+                        });
+                    </script>
+                    <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
+    <!-- конец его бля -->
+    <div id="tcb-call">
+        <div class="tcb-phone">
+            <div class="tcb-phone-img"></div>
+        </div>
+        <div class="tcb-layout1"></div>
+        <div class="tcb-layout2"></div>
+        <div class="tcb-layout3"></div>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+           $('.mfp-close').on('click', function() {
+           $('.hide-call').addClass('hide-zvonok');
+        });
+    });
+    </script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            $('#feedback').submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    url: "constructor/form.php",
+                    data: $(this).serialize(),
+                    success: function(response){
+                        // let jsonData = JSON.parse(response);
+                        if(response.success == "1"){
+                            alert('Упс! Что-то пошло не так...');
+                        }
+                        else{
+                            $('.hide-call, .mfp-wrap').addClass('hide-zvonok');
+                            alert('Звонок запрошен. С вами свяжутся в ближайшее время!');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
     <footer>
         <div class="footer-top">
             <div class="container">
@@ -1561,9 +1589,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Информация</h3>
                         <ul class="list-unstyled">
-                            <li><a href="about_us.hp">О нас</a></li>
-                            <li><a href="delivery.html">Информация о доставке</a></li>
-                            <li><a href="terms.html">Условия соглашения</a></li>
+                            <li><a href="about_us.php">О нас</a></li>
+                            <li><a href="delivery.php">Информация о доставке</a></li>
+                            <li><a href="terms.php">Условия соглашения</a></li>
                         </ul>
                         <h3></h3>
                         <ul class="list-unstyled">
