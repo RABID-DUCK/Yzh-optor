@@ -89,3 +89,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });       
+
+var url = document.location;
+url = url.toString();
+var getVal = url.split("#");
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open('GET', 'categories/category.php'+getVal[1], true);
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        alert(xmlhttp.responseText);
+    }
+}
+xmlhttp.send();

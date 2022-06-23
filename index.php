@@ -1,6 +1,8 @@
 <?php
 require 'constructor/connect.php';
-$dir_img = __DIR__ . '/img/tovaru/';
+    $dir_img = __DIR__ . '/img/tovaru/';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +19,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
     <meta name="keywords" content="Торговая компания Yuzh.Optor" />
     <meta property="og:title" content="Торговая компания Yuzh.Optor" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="index.html" />
+    <meta property="og:url" content="index.php" />
     <meta property="og:image" content="img/LOGO.png" />
     <meta property="og:site_name" content="Торговая компания Yuzh.Optor" />
-    <link href="index.html" rel="canonical" />
+    <link href="index.php" rel="canonical" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -184,8 +186,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
 
         var button_shopping = "Продолжить покупки";
         var button_checkout = "Оформление заказа";
-        var link_checkout = "checkout/index.html";
-        var link_newstorecheckout = "cart/index.html?route=checkout/newstorecheckout";
+        var link_checkout = "checkout/index.php";
+        var link_newstorecheckout = "cart/index.php?route=checkout/newstorecheckout";
         var text_showmore = 'Показать еще';
         var color_schem = '3';
         var loading_masked_img = '<img src="img/catalog/view/theme/newstore/image/ring-alt-' + color_schem + '.svg" />';
@@ -251,7 +253,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
             <div class="row vertical-align">
                 <div class="col-xs-6 col-sm-12 col-md-3 text-center text-left-md logo-top">
                     <div id="logo">
-                        <a href="index.html">
+                        <a href="index.php">
                             <img src="img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
                         </a>
                     </div>
@@ -384,16 +386,16 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         </button>
 
                         <ul id="menu-list" class="dropdown-menu hide-cat">
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.html">Доставка</a></li>
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.html">Оплата</a></li>
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.html">О нас</a></li>
-                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.html">Контакты</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.php">О нас</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.php">Контакты</a></li>
                             <?php
-                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
+                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name`, `third_id` FROM `category`");
                             foreach ($elems1 as $i1 => $elem1) { ?>
                                 <li class="dropdown">
                                     <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                    <a class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
+                                    <a id="route_id" href="categories/category.php?id=<?=$elem1['third_id'] ?>" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
                                         <div class="dropdown-inner">
@@ -401,11 +403,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                 <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
                                                 foreach ($elems2 as $i2 => $elem2) { ?>
                                                     <li class="nsmenu-issubchild">
-                                                        <a><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                        <a href="categories/category.php?id=<?= $elem2['second_id'] ?>"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
                                                             foreach ($elems3 as $i3 => $elem3) { ?>
-                                                                <li class=""><a><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
+                                                                <li class=""><a href="categories/category.php?id=<?= $elem3['first_id'] ?>"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
                                                         </ul>
                                                     </li>
@@ -424,13 +426,13 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="delivery.html">
+                                <li><a class="no-img-parent-link" href="delivery.php">
                                         Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="oplata.html">
+                                <li><a class="no-img-parent-link" href="oplata.php">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="about_us.html">
+                                <li><a class="no-img-parent-link" href="about_us.php">
                                         О нас</a></li>
-                                <li><a class="no-img-parent-link" href="Kontakct.html">
+                                <li><a class="no-img-parent-link" href="Kontakct.php">
                                         Контакты</a></li>
                             </ul>
                         </div>
@@ -1531,9 +1533,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Информация</h3>
                         <ul class="list-unstyled">
-                            <li><a href="about_us.html">О нас</a></li>
-                            <li><a href="delivery.html">Информация о доставке</a></li>
-                            <li><a href="terms.html">Условия соглашения</a></li>
+                            <li><a href="about_us.php">О нас</a></li>
+                            <li><a href="delivery.php">Информация о доставке</a></li>
+                            <li><a href="terms.php">Условия соглашения</a></li>
                         </ul>
                         <h3></h3>
                         <ul class="list-unstyled">

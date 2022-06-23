@@ -1,4 +1,5 @@
 <?php
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 require '../constructor/connect.php';
 $dir_img = __DIR__ . './../img/tovaru/';
 ?>
@@ -6,7 +7,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
 
 <!DOCTYPE HTML>
 <html dir="ltr" lang="ru">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="UTF-8" />
@@ -18,10 +18,10 @@ $dir_img = __DIR__ . './../img/tovaru/';
     <meta name="keywords" content="Торговая компания Yuzh.Optor" />
     <meta property="og:title" content="Торговая компания Yuzh.Optor" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="index.html" />
+    <meta property="og:url" content="index.php" />
     <meta property="og:image" content="img/LOGO.png" />
     <meta property="og:site_name" content="Торговая компания Yuzh.Optor" />
-    <link href="../index.html" rel="canonical" />
+    <link href="../index.php" rel="canonical" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -190,8 +190,8 @@ $dir_img = __DIR__ . './../img/tovaru/';
 
         var button_shopping = "Продолжить покупки";
         var button_checkout = "Оформление заказа";
-        var link_checkout = "checkout/index.html";
-        var link_newstorecheckout = "cart/index.html?route=checkout/newstorecheckout";
+        var link_checkout = "checkout/index.php";
+        var link_newstorecheckout = "cart/index.php?route=checkout/newstorecheckout";
         var color_schem = '3';
         var loading_masked_img = '<img src="../img/catalog/view/theme/newstore/image/ring-alt-' + color_schem + '.svg" />';
 
@@ -361,8 +361,8 @@ $dir_img = __DIR__ . './../img/tovaru/';
             <div class="row vertical-align">
                 <div class="col-xs-6 col-sm-12 col-md-3 text-center text-left-md logo-top">
                     <div id="logo">
-                        <a href="../index.html">
-                            <img src="../img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
+                        <a href="index.php">
+                            <img src="img/LOGO.png" title="Торговая компания Yuzh.Optor" alt="Торговая компания Yuzh.Optor" class="img-responsive" style="filter: invert(1);" />
                         </a>
                     </div>
                 </div>
@@ -387,7 +387,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                 <li class="line-contact"></li>
                                 <li>
                                     <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                        <div class="icon-image"><img src="../img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
+                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
                                         Yuzh.Optor@mail.ru
                                     </a>
                                 </li>
@@ -437,30 +437,30 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                     <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" onclick="return false;" data-idsearch="0">Везде</a></li>
-                                    <li><a href="#" onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
+                                    <li><a onclick="return false;" data-idsearch="0">Везде</a></li>
+                                    <li><a onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="21">Все для сантехники</a>
+                                    <li><a onclick="return false;" data-idsearch="21">Все для сантехники</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
+                                    <li><a onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
+                                    <li><a onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
                                             ИНВЕНТАРЬ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
+                                    <li><a onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
                                             ЗАЩИТЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
+                                    <li><a onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
                                             ТОВАРЫ</a>
                                     </li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
 
-                                    <li><a href="#" onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
+                                    <li><a onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
 
                                 </ul>
                                 <input id="selected_category" type="hidden" name="category_id" value="0" />
@@ -475,42 +475,50 @@ $dir_img = __DIR__ . './../img/tovaru/';
                 </div>
             </div>
         </div>
+        <style>
+            .hide-cat {
+                display: block;
+            }
+
+            .hide-cat-hide {
+                display: none !important;
+            }
+        </style>
         <div class="container" id="category">
             <div class="row">
                 <div class="col-sm-12 col-md-3 menu-box ">
-                    <nav id="menu" class="btn-group btn-block">
-                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown">
+                    <nav id="menu" class="btn-group btn-block open">
+                        <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown" id="but">
                             <i class="fa fa-bars"></i>
                             <span class="text-category">Категории</span>
                         </button>
 
-                        <ul id="menu-list" class="dropdown-menu">
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.html">Доставка</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.html">Оплата</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.html">О нас</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.html">Контакты</a></li>
+                        <ul id="menu-list" class="dropdown-menu hide-cat">
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.php">О нас</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.php">Контакты</a></li>
                             <?php
-                                $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
-                                foreach ($elems1 as $i1 => $elem1) { ?>
+                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name`, `third_id` FROM `category`");
+                            foreach ($elems1 as $i1 => $elem1) { ?>
                                 <li class="dropdown">
                                     <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                        <a href="#" class="parent-link dropdown-img"><?=$elem1['third_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
+                                    <a id="route_id" href="categories/category.php?id=<?=$elem1['third_id'] ?>" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                         <div class="dropdown-inner">
+                                        <div class="dropdown-inner">
                                             <ul class="list-unstyled nsmenu-haschild">
-                                            <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
-                                                foreach ($elems2 as $i2 => $elem2) 
-                                                { ?>
-                                                <li class="nsmenu-issubchild">
-                                                    <a href="#"><?=$elem2['second_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
+                                                foreach ($elems2 as $i2 => $elem2) { ?>
+                                                    <li class="nsmenu-issubchild">
+                                                        <a href="categories/category.php?id=<?= $elem2['second_id'] ?>"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
-                                                            foreach ($elems3 as $i3 => $elem3 ) { ?>    
-                                                            <li class=""><a href="#"><?=$elem3['first_name']?></a></li> <!-- Категория 1 -->
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            foreach ($elems3 as $i3 => $elem3) { ?>
+                                                                <li class=""><a href="categories/category.php?id=<?= $elem3['first_id'] ?>"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
                                                         </ul>
-                                                </li>
+                                                    </li>
                                                 <?php } ?>
                                             </ul>
                                         </div>
@@ -526,13 +534,13 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <nav id="additional-menu" class="navbar hmenu_type">
                         <div>
                             <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="../delivery.html">
+                                <li><a class="no-img-parent-link" href="delivery.php">
                                         Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="../oplata.html">
+                                <li><a class="no-img-parent-link" href="oplata.php">
                                         Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="../about_us.html">
+                                <li><a class="no-img-parent-link" href="about_us.php">
                                         О нас</a></li>
-                                <li><a class="no-img-parent-link" href="../Kontakct.html">
+                                <li><a class="no-img-parent-link" href="Kontakct.php">
                                         Контакты</a></li>
                             </ul>
                         </div>
@@ -542,6 +550,19 @@ $dir_img = __DIR__ . './../img/tovaru/';
         </div>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
+                $(window).scroll(function() {
+                            if ($(this).scrollTop() > 200) {
+                                $('#menu-list').removeClass('hide-cat');
+                                $('#menu-list').addClass('hide-cat-hide');
+                            } else {
+                                $('#menu-list').removeClass('hide-cat-hide');
+                                $('#menu-list').addClass('hide-cat');
+                            }
+                        });
+                        $('#but').on("click", function() {
+                            console.log('adasd');
+                            $('#menu-list').removeClass('hide-cat-hide');
+                });
                 $(document).ready(function() {
                     var width_fmns = viewport().width;
                     if (width_fmns >= 300) {
@@ -636,7 +657,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
                         }
                     });
 
-
                     $(window).scroll(function() {
                         if ($(this).scrollTop() > 200) {
                             $('#category').addClass('category');
@@ -709,7 +729,7 @@ $dir_img = __DIR__ . './../img/tovaru/';
     <div class="container">
         <ul class="breadcrumb " itemscope="" itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a itemprop="item" href="../index.html">
+                <a itemprop="item" href="../index.php">
                     <meta itemprop="name" content="Главная">
                     <span><i class="fa fa-home"></i></span>
                 </a>
@@ -723,59 +743,37 @@ $dir_img = __DIR__ . './../img/tovaru/';
         </ul>
         <div class="row">
             <div id="content" class="col-sm-12 ns-smv">
+                <?php
+                    
 
+                $url = pathinfo('http://localhost/Yzh-optor/categories/category.php?id=1firstname');
+                intval($url);
+                // preg_match('#/categories/category/php#', $url, $params);
+                // echo $params;
+                echo intval($url['extension']);
+                ?>
 
                 <h1>АВТОПРИНАДЛЕЖНОСТИ</h1>
                 <div class="text_refine">Уточнить поиск <i class="fa fa-level-down"></i></div>
                 <div class="row">
+                  
+
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="thumbnail subcategory">
-                            <a href="#/avtoaksessuary/">
+                            <a href="<?= '/categories/' .$page['second_id'] ?>">
                                 <div>
                                     <img alt="Автоаксессуары" src="../img/image/cache/no_image-120x120.png">
                                 </div>
                                 <div class="name-wrapper">
                                     <div class="display-table">
                                         <div class="display-table-cell">
-                                            <h5>Автоаксессуары</h5>
+                                            <h5><?= $page['second_name'] ?></h5>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="thumbnail subcategory">
-                            <a href="#/avtoinstrumenty/">
-                                <div>
-                                    <img alt="Автоинструменты" src="../img/image/cache/no_image-120x120.png">
-                                </div>
-                                <div class="name-wrapper">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <h5>Автоинструменты</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="thumbnail subcategory">
-                            <a href="#/avtokhimiya/">
-                                <div>
-                                    <img alt="Автохимия" src="../img/image/cache/no_image-120x120.png">
-                                </div>
-                                <div class="name-wrapper">
-                                    <div class="display-table">
-                                        <div class="display-table-cell">
-                                            <h5>Автохимия</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    </div>      
 
                 </div>
                 <div>
@@ -845,24 +843,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                             </div>
                                         </div>
                                     </div>
-                                    <script>
-                                        function btnminus_cat_price_page1(minimum) {
-                                            var $input = $('#input_quantity_page1');
-                                            var count = parseInt($input.val()) - parseInt(minimum);
-                                            count = count < parseInt(1) ? parseInt(1) : count;
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(1, count, , '', '.row-price', 'productpage');
-                                        }
-
-                                        function btnplus_cat_price_page1(minimum) {
-                                            var $input = $('#input_quantity_page1');
-                                            var count = parseInt($input.val()) + parseInt(minimum);
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(1, count, , '', '.row-price', 'productpage');
-                                        };
-                                    </script>
                                     <div class="actions">
                                         <div class="wishlist"><button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="" onclick="wishlist.add('1');" data-original-title="В закладки"><i class="fa fa-heart"></i></button>
                                         </div>
@@ -951,24 +931,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                             </div>
                                         </div>
                                     </div>
-                                    <script>
-                                        function btnminus_cat_price_page25(minimum) {
-                                            var $input = $('#input_quantity_page25');
-                                            var count = parseInt($input.val()) - parseInt(minimum);
-                                            count = count < parseInt(1) ? parseInt(1) : count;
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(25, count, , '', '.row-price', 'productpage');
-                                        }
-
-                                        function btnplus_cat_price_page25(minimum) {
-                                            var $input = $('#input_quantity_page25');
-                                            var count = parseInt($input.val()) + parseInt(minimum);
-                                            $input.val(count);
-                                            $input.change();
-                                            recalc_quantity(25, count, , '', '.row-price', 'productpage');
-                                        };
-                                    </script>
                                     <div class="actions">
                                         <div class="wishlist"><button class="btn btn-wishlist" type="button" data-toggle="tooltip" title="" onclick="wishlist.add('25');" data-original-title="В закладки"><i class="fa fa-heart"></i></button>
                                         </div>
@@ -992,19 +954,11 @@ $dir_img = __DIR__ . './../img/tovaru/';
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
-
-
-
-
                     </div>
-                    <div class="clearfix"></div>
-                </div>
+                <div class="clearfix"></div>
             </div>
-
-            <br>
+        </div><br>
             <div class="category_description psbt">
                 <div>АВТОПРИНАДЛЕЖНОСТИ</div>
             </div>
@@ -1163,9 +1117,9 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Информация</h3>
                         <ul class="list-unstyled">
-                            <li><a href="about_us.html">О нас</a></li>
-                            <li><a href="delivery.html">Информация о доставке</a></li>
-                            <li><a href="terms.html">Условия соглашения</a></li>
+                            <li><a href="about_us.php">О нас</a></li>
+                            <li><a href="delivery.php">Информация о доставке</a></li>
+                            <li><a href="terms.php">Условия соглашения</a></li>
                         </ul>
                         <h3></h3>
                         <ul class="list-unstyled">
@@ -1174,18 +1128,18 @@ $dir_img = __DIR__ . './../img/tovaru/';
                     <div class="col-sm-3">
                         <h3> Дополнительно</h3>
                         <ul class="list-unstyled">
-                            <li><a href="sitemap/index.html">Карта сайта</a></li>
-                            <li><a href="contact-us/index.html">Связаться с нами</a></li>
-                            <li><a href="add-return/index.html">Возврат товара</a></li>
+                            <li><a href="sitemap/index.php">Карта сайта</a></li>
+                            <li><a href="contact-us/index.php">Связаться с нами</a></li>
+                            <li><a href="add-return/index.php">Возврат товара</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
                         <h3> Личный кабинет</h3>
                         <ul class="list-unstyled">
-                            <li><a href="my-account/index.html">Личный кабинет</a></li>
-                            <li><a href="order-history/index.html">История заказов</a></li>
-                            <li><a href="wishlist/index.html">Мои закладки</a></li>
-                            <li><a href="newsletter/index.html">Рассылка новостей</a></li>
+                            <li><a href="my-account/index.php">Личный кабинет</a></li>
+                            <li><a href="order-history/index.php">История заказов</a></li>
+                            <li><a href="wishlist/index.php">Мои закладки</a></li>
+                            <li><a href="newsletter/index.php">Рассылка новостей</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-3">
@@ -1365,23 +1319,6 @@ $dir_img = __DIR__ . './../img/tovaru/';
     </script>
 
 
-
-    <script>
-        < !--
-        function price_format(n) {
-            c = 2;
-            d = '.';
-            t = ' ';
-            s_left = '';
-            s_right = ' р.';
-            n = n * 1.00000000;
-            i = parseInt(n = Math.abs(n).toFixed(c)) + '';
-            j = ((j = i.length) > 3) ? j % 3 : 0;
-            return s_left + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '') + s_right;
-        }
-        //-->
-    </script>
-
     <div id="tcb-call">
         <div class="tcb-phone">
             <div class="tcb-phone-img"></div>
@@ -1390,5 +1327,5 @@ $dir_img = __DIR__ . './../img/tovaru/';
         <div class="tcb-layout2"></div>
         <div class="tcb-layout3"></div>
     </div>
-
+<script src="../js/move.js"></script>
 </body>
