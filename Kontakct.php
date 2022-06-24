@@ -798,31 +798,31 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         </div>
                     </div>
                 </div>
-                <form action="Kontakct.php" method="post" enctype="multipart/form-data" class="form-horizontal">
+                <form id="feedback" action="constructor/form.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                     <fieldset>
                         <legend>Форма связи</legend>
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-name">Ваше имя</label>
                             <div class="col-sm-10">
-                                <input type="text" name="name" value="" id="input-name" class="form-control">
+                                <input type="text" name="comment_buyer" value="" id="input-name" class="form-control">
                             </div>
                         </div>
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-email">E-Mail для связи</label>
                             <div class="col-sm-10">
-                                <input type="text" name="email" value="" id="input-email" class="form-control">
+                                <input type="text" name="email_buyer" value="" id="input-email" class="form-control">
                             </div>
                         </div>
                         <div class="form-group required">
                             <label class="col-sm-2 control-label" for="input-enquiry">Сообщение</label>
                             <div class="col-sm-10">
-                                <textarea name="enquiry" rows="10" id="input-enquiry" class="form-control"></textarea>
+                                <textarea name="comment_buyer" rows="10" id="input-enquiry" class="form-control"></textarea>
                             </div>
                         </div>
                     </fieldset>
                     <div class="buttons">
                         <div class="pull-right">
-                            <input class="btn btn-primary" type="submit" value="Отправить">
+                        <input class="btn-callback ladda-button" type="submit" name="submit" value="Отправить" style="margin-left: 72px;" style="background-color: #2b8cdb;">
                         </div>
                     </div>
                 </form>
@@ -1140,6 +1140,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
         </div>
         </div>
     </footer>
+    <script src="js/move.js"></script>
 </body>
 
 </html>

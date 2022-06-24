@@ -1,6 +1,9 @@
 if (localStorage.getItem('display') === null) {
     localStorage.setItem('display', 'grid');
 }
+
+
+
 function init(elem, options) {
     elem.addClass('countdownHolder');
     $.each(['Days', 'Hours', 'Minutes', 'Sec'], function (i) {

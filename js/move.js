@@ -108,3 +108,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });       
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    $('#subcribe').click( function() {
+        alert('Вы подписались на рассылку новых новостей нашего сайта. Спасибо!');
+    });
+  });
+
