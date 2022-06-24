@@ -503,7 +503,7 @@ $dir_img = __DIR__ . './img/tovaru/';
                             foreach ($elems1 as $i1 => $elem1) { ?>
                                 <li class="dropdown">
                                     <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                    <a id="route_id" href="category.php?id=<?= $i1 ?>&ct=third_id" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
+                                    <a id="route_id" href="category.php?id=<?= $elem1['third_id'] ?>&ct=third_id" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
                                     <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
                                         <div class="dropdown-inner">
@@ -511,11 +511,11 @@ $dir_img = __DIR__ . './img/tovaru/';
                                                 <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
                                                 foreach ($elems2 as $i2 => $elem2) { ?>
                                                     <li class="nsmenu-issubchild">
-                                                        <a href="category.php?id=<?= $i2 ?>&ct=second_id"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                        <a href="category.php?id=<?= $elem2['second_id'] ?>&ct=second_id"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
                                                             <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
                                                             foreach ($elems3 as $i3 => $elem3) { ?>
-                                                                <li class=""><a href="category.php?id=<?= $i3 ?>&ct=first_id"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
+                                                                <li class=""><a href="category.php?id=<?= $elem3['first_id'] ?>&ct=first_id"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
                                                         </ul>
                                                     </li>
@@ -726,38 +726,72 @@ $dir_img = __DIR__ . './img/tovaru/';
             });
         </script>
     </header>
+
+    <?php
+        $url = $_SERVER["REQUEST_URI"];
+        $temp = explode("?", $url)[1];
+        $result = explode("&", $temp);
+
+        $id = explode("=", $result[0])[1];
+
+        $category = explode("=", $result[1])[1];
+
+        // <li  itemtype="http://schema.org/ListItem">
+        // <a itemprop="name" href="index.php"> Кактегории3 </a>
+        // </li>
+    ?>
+
     <div class="container">
-        <ul class="breadcrumb " itemscope="" itemtype="https://schema.org/BreadcrumbList">
+        <ul class="breadcrumb" itemscope="" itemtype="https://schema.org/BreadcrumbList">
             <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                 <a itemprop="item" href="index.php">
                     <meta itemprop="name" content="Главная">
                     <span><i class="fa fa-home"></i></span>
                 </a>
-                <meta itemprop="position" content="1">
             </li>
-            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <link itemprop="item" href="#/">
-                <span itemprop="name">АВТОПРИНАДЛЕЖНОСТИ</span>
-                <meta itemprop="position" content="2">
-            </li>
+            <?php 
+                $ct = mysqli_fetch_assoc(mysqli_query($conn, "SELECT DISTINCT * FROM `category` WHERE `$category`='$id'")); 
+                switch ($category) {
+                    case 'first_id':
+                        $path_name = $ct['first_name'];
+                        // ============================================================================================= ?>
+                        <li itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="category.php?id=<?=$ct['third_id']?>&ct=third_id"><?=$ct['third_name']?></a>
+                        </li>
+                        <li itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="category.php?id=<?=$ct['second_id']?>&ct=second_id"><?=$ct['second_name']?></a>
+                        </li>
+                        <li itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                            <span itemprop="item"><?=$ct['first_name']?></span>
+                        </li>
+            <?php   break;
+                    case 'second_id':
+                        $path_name = $ct['second_name'];
+                        // ============================================================================================= ?>
+                        <li itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="category.php?id=<?=$ct['third_id']?>&ct=third_id"><?=$ct['third_name']?></a>
+                        </li>
+                        <li itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                            <span itemprop="item"><?=$ct['second_name']?></span>
+                        </li>
+            <?php   break;
+                    case 'third_id':
+                        $path_name = $ct['third_name'];
+                        // ============================================================================================= ?>
+                        <li itemprop="itemListElement" itemtype="http://schema.org/ListItem">
+                            <span itemprop="item"><?=$ct['third_name']?></span>
+                        </li>
+            <?php
+                    break;
+                    
+                    default:
+                        break;
+                }   
+            ?>
         </ul>
         <div class="row">
             <div id="content" class="col-sm-12 ns-smv">
-                <?php
-                $url = $_SERVER["REQUEST_URI"];
-                $temp = explode("?", $url)[1];
-                $result = explode("&", $temp);
-
-                $id = explode("=", $result[0])[1];
-
-                $category = explode("=", $result[1])[1];
-                print_r($result);
-
-
-                ?>
-
-
-                <h1>CODE PHP</h1>
+                <h1><?=$path_name?></h1>
                 <div class="text_refine">Уточнить поиск <i class="fa fa-level-down"></i></div>
                 <div class="row">
                         
