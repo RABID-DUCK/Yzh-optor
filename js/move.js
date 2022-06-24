@@ -131,17 +131,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         search: name
                     },
                     success: function(response){
-                        console.log('ajax');
-                        $("#life_search").html(response).show();
+                        console.log('ajax'.response);
+                        $("#life_search").html(response);
+                        $("#life_search").show();
                     }
                 });
             }
         });
     
-    function fill(value){
-        console.log("fill");
-        $("#search").val(value);
-        $("life_search").hide();
-    }
-  });
 
+  });
