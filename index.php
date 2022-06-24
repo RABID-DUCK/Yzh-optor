@@ -1,6 +1,6 @@
 <?php
 require 'constructor/connect.php';
-$dir_img = __DIR__ . '/img/tovaru/';
+$dir_img = '/img/tovaru/';
 ?>
 
 <!DOCTYPE html>

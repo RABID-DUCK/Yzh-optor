@@ -747,12 +747,17 @@ $dir_img = __DIR__ . './img/tovaru/';
                 $url = $_SERVER["REQUEST_URI"];
                 $temp = explode("?", $url)[1];
                 $result = explode("&", $temp);
+
                 $id = explode("=", $result[0])[1];
+
                 $category = explode("=", $result[1])[1];
+                print_r($result);
+
 
                 ?>
 
-                <h1>АВТОПРИНАДЛЕЖНОСТИ</h1>
+
+                <h1>CODE PHP</h1>
                 <div class="text_refine">Уточнить поиск <i class="fa fa-level-down"></i></div>
                 <div class="row">
                         
