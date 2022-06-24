@@ -3,7 +3,7 @@ require 'constructor/connect.php';
 $dir_img = __DIR__ . '/img/tovaru/';
 ?>
 <!DOCTYPE html>
-<!-- saved from url=(0032)categories/contact-us/ -->
+<!-- saved from url=(0032)contact-us/ -->
 <html dir="ltr" lang="ru">
 
 <head>
@@ -342,39 +342,39 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         class="fa fa-angle-down fa-fw car-down"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="categories/#" onclick="return false;"
+                                    <li><a href="#" onclick="return false;"
                                             data-idsearch="0">Везде</a>
                                     </li>
-                                    <li><a href="categories/#" onclick="return false;"
+                                    <li><a href="#" onclick="return false;"
                                             data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
                                     </li>
 
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="21">Все
+                                    <li><a href="#" onclick="return false;" data-idsearch="21">Все
                                             для
                                             сантехники</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="64">ЗИМНИЕ
+                                    <li><a href="#" onclick="return false;" data-idsearch="64">ЗИМНИЕ
                                             ТОВАРЫ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;"
+                                    <li><a href="#" onclick="return false;"
                                             data-idsearch="312">ножницы
                                             бытовые</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;"
+                                    <li><a href="#" onclick="return false;"
                                             data-idsearch="55">САДОВО-ОГОРОДНЫЙ
                                             ИНВЕНТАРЬ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;"
+                                    <li><a href="#" onclick="return false;"
                                             data-idsearch="68">СРЕДСТВА
                                             ИНДИВИДУАЛЬНОЙ ЗАЩИТЫ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="9">СТРОЙ
+                                    <li><a href="#" onclick="return false;" data-idsearch="9">СТРОЙ
                                             ИНСТРУМЕНТЫ И ТОВАРЫ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;" data-idsearch="6">ХОЗ
+                                    <li><a href="#" onclick="return false;" data-idsearch="6">ХОЗ
                                             ТОВАРЫ</a></li>
 
-                                    <li><a href="categories/#" onclick="return false;"
+                                    <li><a href="#" onclick="return false;"
                                             data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a>
                                     </li>
 
@@ -767,7 +767,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
     </header>
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="categories/"><i class="fa fa-home"></i></a></li>
+            <li><a href=""><i class="fa fa-home"></i></a></li>
             <li>Связаться с нами</li>
         </ul>
         <div class="row">

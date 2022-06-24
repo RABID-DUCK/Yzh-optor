@@ -2665,38 +2665,38 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         <input type="text" name="search" value="" placeholder="Поиск товара по каталогу"
                                class="form-control input-lg search-autocomplete" autocompleteserach="off">
                         <ul class="dropdown-menu autosearch"></ul>
-                        <div class="input-group-btn categories/">
+                        <div class="input-group-btn ">
                             <button id="change_category" type="button" class="btn btn-search-select dropdown-toggle"
                                     data-toggle="dropdown">
                                 <span class="category-name">Везде&nbsp;</span>&nbsp;<span
                                     class="fa fa-angle-down fa-fw car-down"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="0">Везде</a></li>
-                                <li><a href="categories/#" onclick="return false;"
+                                <li><a href="#" onclick="return false;" data-idsearch="0">Везде</a></li>
+                                <li><a href="#" onclick="return false;"
                                        data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a></li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="21">Все для
+                                <li><a href="#" onclick="return false;" data-idsearch="21">Все для
                                     сантехники</a></li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a>
+                                <li><a href="#" onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a>
                                 </li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="312">ножницы
+                                <li><a href="#" onclick="return false;" data-idsearch="312">ножницы
                                     бытовые</a></li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
+                                <li><a href="#" onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
                                     ИНВЕНТАРЬ</a></li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="68">СРЕДСТВА
+                                <li><a href="#" onclick="return false;" data-idsearch="68">СРЕДСТВА
                                     ИНДИВИДУАЛЬНОЙ ЗАЩИТЫ</a></li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
+                                <li><a href="#" onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
                                     ТОВАРЫ</a></li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
+                                <li><a href="#" onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
 
-                                <li><a href="categories/#" onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a>
+                                <li><a href="#" onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a>
                                 </li>
 
                             </ul>
@@ -3089,14 +3089,14 @@ $dir_img = __DIR__ . '/img/tovaru/';
 <div class="container">
     <ul class="breadcrumb " itemscope="" itemtype="https://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-            <a itemprop="item" href="categories/">
+            <a itemprop="item" href="">
                 <meta itemprop="name" content="Главная">
                 <span><i class="fa fa-home"></i></span>
             </a>
             <meta itemprop="position" content="1">
         </li>
         <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-            <link itemprop="item" href="categories/oplata">
+            <link itemprop="item" href="oplata">
             <span itemprop="name">Оплата</span>
             <meta itemprop="position" content="2">
         </li>

@@ -18,13 +18,16 @@ function take_items(elem, category, id, start=0, end=5, limit=5) {
                 }
                 else {
                     var btn = obj.siblings('.box-showmore').children('#show_more');
-                    btn.attr('onclick', "take_items('"+elem+"', '"+category+"', '"+id+"', '"+end+"', '"+(parseInt(end)+5)+"')");
+                    btn.attr('onclick', "take_items('"+elem+"', '"+category+"', '"+id+"', '"+end+"', '"+(parseInt(end)+parseInt(start))+"')");
                 }
                 obj.html(obj.html() + response);
             }
         });
     };
 };
+
+
+
 
 
 function item_click(object, e) {
@@ -43,14 +46,12 @@ function item_click(object, e) {
 
     count = $(num).val()
 
-    console.log(object, id, count, price);
 
     if ($(elem).hasClass('btn-fastorder') || $(elem).parent().hasClass('btn-fastorder')) // Быcтрый заказ
     {
-        console.log('Быстрый заказ');
         $(document).ready(function() {
             $.ajax({
-                type: "post",
+                type: "POST",
                 url: '../constructor/form_buy.php',
                 data: {
                     'name': id,
@@ -107,15 +108,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });       
-
-var url = document.location;
-url = url.toString();
-var getVal = url.split("#");
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open('GET', 'categories/category.php'+getVal[1], true);
-xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        alert(xmlhttp.responseText);
-    }
-}
-xmlhttp.send();
