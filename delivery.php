@@ -400,65 +400,11 @@
                                             р.</b></span></span>
                         </button>
 
-                        <ul id="menu-list" class="dropdown-menu">
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../delivery.html">Доставка</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../oplata.html">Оплата</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../about_us.hp">О нас</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="../Kontakct.html">Контакты</a></li>
-                            <?php
-                                $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
-                                foreach ($elems1 as $i1 => $elem1) { ?>
-                                <li class="dropdown">
-                                    <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                        <a href="#" class="parent-link dropdown-img"><?=$elem1['third_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
-
-                                    <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                            <div class="dropdown-inner">
-                                            <ul class="list-unstyled nsmenu-haschild">
-                                            <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
-                                                foreach ($elems2 as $i2 => $elem2) 
-                                                { ?>
-                                                <li class="nsmenu-issubchild">
-                                                    <a href="#"><?=$elem2['second_name']?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
-                                                        <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
-                                                            foreach ($elems3 as $i3 => $elem3 ) { ?>    
-                                                            <li class=""><a href="#"><?=$elem3['first_name']?></a></li> <!-- Категория 1 -->
-                                                            <?php } ?>
-                                                        </ul>
-                                                </li>
-                                                <?php } ?>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            <?php } ?>
-
-                        </ul>
+                        
+                    
                     </div>
                 </div>
-                <div class="col-md-9 hidden-xs hidden-sm clearfix">
-                    <nav id="additional-menu" class="navbar hmenu_type">
-                        <div>
-                            <ul class="nav navbar-nav">
-                                <li><a class="no-img-parent-link" href="../delivery.html">
-                                        Доставка</a></li>
-                                <li><a class="no-img-parent-link" href="../oplata.html">
-                                        Оплата</a></li>
-                                <li><a class="no-img-parent-link" href="../about_us.hp">
-                                        О нас</a></li>
-                                <li><a class="no-img-parent-link" href="../Kontakct.html">
-                                        Контакты</a></li>
-                            </ul>
-                            <input id="selected_category" type="hidden" name="category_id" value="0" />
-
-                        </div>
-                        <span class="input-group-btn button_search">
-                                <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
-                            </span>
-                    </div>
-                    <div id="search_word" class="hidden-xs hidden-sm">Я ищу, например, <a>Шланги</a></div>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -481,39 +427,39 @@
                     </button>
 
                     <ul id="menu-list" class="dropdown-menu hide-cat">
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.php">О нас</a></li>
-                        <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.php">Контакты</a></li>
-                        <?php
-                        $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
-                        foreach ($elems1 as $i1 => $elem1) { ?>
-                            <li class="dropdown">
-                                <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
-                                <a class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.php">О нас</a></li>
+                            <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.php">Контакты</a></li>
+                            <?php
+                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name`, `third_id` FROM `category`");
+                            foreach ($elems1 as $i1 => $elem1) { ?>
+                                <li class="dropdown">
+                                    <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
+                                    <a id="route_id" href="category.php?id=<?= $i1 ?>&ct=third_id" class="parent-link dropdown-img"><?= $elem1['third_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 3 -->
 
-                                <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
-                                    <div class="dropdown-inner">
-                                        <ul class="list-unstyled nsmenu-haschild">
-                                            <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
-                                            foreach ($elems2 as $i2 => $elem2) { ?>
-                                                <li class="nsmenu-issubchild">
-                                                    <a><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
-                                                    <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                        <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
-                                                        foreach ($elems3 as $i3 => $elem3) { ?>
-                                                            <li class=""><a><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
-                                                        <?php } ?>
-                                                    </ul>
-                                                </li>
-                                            <?php } ?>
-                                        </ul>
+                                    <div class="ns-dd dropdown-menu-simple nsmenu-type-category-simple">
+                                        <div class="dropdown-inner">
+                                            <ul class="list-unstyled nsmenu-haschild">
+                                                <?php $elems2 = mysqli_query($conn, "SELECT DISTINCT `second_name`, `second_id`, `third_id` FROM `category` WHERE `third_id`= '$i1'");
+                                                foreach ($elems2 as $i2 => $elem2) { ?>
+                                                    <li class="nsmenu-issubchild">
+                                                        <a href="category.php?id=<?= $i2 ?>&ct=second_id"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
+                                                        <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            foreach ($elems3 as $i3 => $elem3) { ?>
+                                                                <li class=""><a href="category.php?id=<?= $i3 ?>&ct=first_id"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
+                                                            <?php } ?>
+                                                        </ul>
+                                                    </li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        <?php } ?>
+                                </li>
+                            <?php } ?>
 
-                    </ul>
+                        </ul>
                 </nav>
 
             </div>
