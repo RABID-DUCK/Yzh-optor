@@ -466,45 +466,15 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 </div>
                 <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
-                        <div id="search" class="input-group pt20">
-                            <input type="text" name="search" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
-                            <div class="input-group-btn categories">
-                                <button id="change_category" type="button" class="btn btn-search-select dropdown-toggle" data-toggle="dropdown">
-                                    <span class="category-name">Везде&nbsp;</span>&nbsp;<span class="fa fa-angle-down fa-fw car-down"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a onclick="return false;" data-idsearch="0">Везде</a></li>
-                                    <li><a onclick="return false;" data-idsearch="1">АВТОПРИНАДЛЕЖНОСТИ</a>
-                                    </li>
+                        <div class="input-group pt20">
+                            <input  id="search" type="text" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
 
-                                    <li><a onclick="return false;" data-idsearch="21">Все для сантехники</a>
-                                    </li>
-
-                                    <li><a onclick="return false;" data-idsearch="64">ЗИМНИЕ ТОВАРЫ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="312">ножницы бытовые</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="55">САДОВО-ОГОРОДНЫЙ
-                                            ИНВЕНТАРЬ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="68">СРЕДСТВА ИНДИВИДУАЛЬНОЙ
-                                            ЗАЩИТЫ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="9">СТРОЙ ИНСТРУМЕНТЫ И
-                                            ТОВАРЫ</a>
-                                    </li>
-
-                                    <li><a onclick="return false;" data-idsearch="6">ХОЗ ТОВАРЫ</a></li>
-
-                                    <li><a onclick="return false;" data-idsearch="4">ЭЛЕКТРОТОВАРЫ</a></li>
-
-                                </ul>
-                                <input id="selected_category" type="hidden" name="category_id" value="0" />
-
-                            </div>
                             <span class="input-group-btn button_search">
                                 <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
                             </span>
+                        </div>
+                        <div id="life_search">
+                            
                         </div>
                         <div id="search_word" class="hidden-xs hidden-sm">Я ищу, например, <a>Шланги</a></div>
                     </div>
@@ -579,7 +549,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             }
                         });
                         $('#but').on("click", function() {
-                            console.log('adasd');
+                            
                             $('#menu-list').removeClass('hide-cat-hide');
                         });
                     });

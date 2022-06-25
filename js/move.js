@@ -118,8 +118,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener("DOMContentLoaded", function(){
         $('#search').on('input', function() {
+            console.log('search');
             var name = $('#search').val();
-            console.log(name);
             if(name === ""){
                 $('#life_search').html("");
             }
@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         search: name
                     },
                     success: function(response){
-                        console.log('ajax'.response);
                         $("#life_search").html(response);
                         $("#life_search").show();
                     }
@@ -141,9 +140,58 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
         $('#but').on("click", function() {
-            console.log('adasd');
+            
             $('#menu-list').toggleClass('show_cat');
         });
   });
 
  
+
+  function take_items(elem, category, id, start=0, end=5, limit=5) {
+    {
+        $.ajax({
+            type: "POST",
+            url: 'constructor/item.php',
+            data: {                        
+                'elem_category': category,
+                'elem_id': id,
+                'elem_start_i': start,
+                'elem_end_i': end,
+                'elem_lim': limit
+            },
+            success: function(response) {
+                obj = $('#'+elem);
+                if (response.length<20000)
+                {
+                    obj.siblings('.box-showmore').addClass('item_hidden');
+                }
+                else {
+                    var btn = obj.siblings('.box-showmore').children('#show_more');
+                    btn.attr('onclick', "take_items('"+elem+"', '"+category+"', '"+id+"', '"+end+"', '"+(parseInt(end)+parseInt(start))+"')");
+                }
+                obj.html(obj.html() + response);
+            }
+        });
+    };
+};
+
+
+
+
+
+function item_click_search(id, e) {
+        $(document).ready(function() {
+            $.ajax({
+                type: "POST",
+                url: '../constructor/form_buy.php',
+                data: {
+                    'name': id,
+                    'count': 1
+                },
+                success: function(response) {
+                    $('#close-yey').html(response);
+                    $('#close-yey').removeClass('hider');
+                }
+            });
+        });  
+};

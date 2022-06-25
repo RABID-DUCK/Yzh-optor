@@ -412,7 +412,6 @@ $dir_img = '/img/tovaru/';
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
                 let width_display = window.innerWidth;
-                console.log(width_display);
                 $(window).scroll(function() {
                             if ($(this).scrollTop() > 800 && width_display > 991) {
                                 $('#menu-list').removeClass('hide-cat');
@@ -423,7 +422,7 @@ $dir_img = '/img/tovaru/';
                             }
                         });
                         $('#but').on("click", function() {
-                            console.log('adasd');
+                            
                             $('.pencil').toggleClass('hide-cat-hide');
                 });
                 $(document).ready(function() {
