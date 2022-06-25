@@ -110,9 +110,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });       
 
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
     $('#subcribe').click( function() {
         alert('Вы подписались на рассылку новых новостей нашего сайта. Спасибо!');
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function(){
+        $('#search').on('input', function() {
+            var name = $('#search').val();
+            console.log(name);
+            if(name === ""){
+                $('#life_search').html("");
+            }
+            else{
+                $.ajax({
+                    type: "POST",
+                    url: "../constructor/search.php",
+                    data: {
+                        search: name
+                    },
+                    success: function(response){
+                        console.log('ajax'.response);
+                        $("#life_search").html(response);
+                        $("#life_search").show();
+                    }
+                });
+            }
+        });
+    
+
+  });
