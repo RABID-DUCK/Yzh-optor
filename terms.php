@@ -18,6 +18,7 @@
 	<link href="index.php" rel="canonical" />
 	<link href="img/image/catalog/favicon(1).png" rel="icon" />
 	<link href="css/bootstrap.min.css" rel="preload" as="style" />
+	<link rel="stylesheet" href="css/style.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
 	<style>
 		@media (min-width: 992px) {
@@ -645,7 +646,7 @@
                                                     <li class="nsmenu-issubchild">
                                                         <a href="category.php?id=<?= $elem2['second_id'] ?>&ct=second_id"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `second_id`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
                                                             foreach ($elems3 as $i3 => $elem3) { ?>
                                                                 <li class=""><a href="category.php?id=<?= $elem3['first_id'] ?>&ct=first_id"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
@@ -752,9 +753,9 @@
 				});
 
 
-
+				let width_display = window.innerWidth; 
 				$(window).scroll(function () {
-					if ($(this).scrollTop() > 200) {
+					if ($(this).scrollTop() > 200 && width_display > 991) {
 						$('header .shopping-cart #cart').removeClass('open');
 						$('#top-fixed').addClass('sticky-header-1');
 					} else {
@@ -1060,6 +1061,6 @@
 			});
 		}
 	</script>
-
+	<script src="js/move.js"></script>
 </body>
 </html>

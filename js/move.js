@@ -140,4 +140,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     
 
+        $('#but').on("click", function() {
+            console.log('adasd');
+            $('#menu-list').toggleClass('show_cat');
+        });
   });
+
+ 

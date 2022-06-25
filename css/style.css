@@ -89,6 +89,12 @@ table > tbody > tr:hover {
 .product-thumb > .image > a > img {
   width: 100px;
 }
+.show_cat {
+  display: block !important;
+}
+.drop-icon-info {
+  background: none !important;
+}
 .connect_php {
   z-index: 223231231;
   position: fixed;

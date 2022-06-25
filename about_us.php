@@ -33,6 +33,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
     <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link rel="stylesheet" href="img/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/_50c36ab27da8bb5ead9c87671a74d2a9.css"/>
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/ns-cache/_64b8609b55b5e3556b172af674a9b309.js"></script>
     <style>
@@ -273,7 +274,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                                     <li class="nsmenu-issubchild">
                                                         <a href="category.php?id=<?= $elem2['second_id'] ?>&ct=second_id"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `second_id`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
                                                             foreach ($elems3 as $i3 => $elem3) { ?>
                                                                 <li class=""><a href="category.php?id=<?= $elem3['first_id'] ?>&ct=first_id"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
@@ -505,7 +506,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         <span class="text-category">Категории</span>
                     </button>
 
-                    <ul id="menu-list" class="dropdown-menu hide-cat">
+                    <ul id="menu-list" class="dropdown-menu pencil">
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
                         <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.php">О нас</a></li>
@@ -545,7 +546,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
             <script>
                 window.addEventListener('DOMContentLoaded', (event) => {
                     $(window).scroll(function() {
-                        if ($(this).scrollTop() > 200) {
+                        if ($(this).scrollTop() > 500 && width_display > 991) {
                             $('#menu-list').removeClass('hide-cat');
                             $('#menu-list').addClass('hide-cat-hide');
                         } else {
@@ -555,7 +556,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                     });
                     $('#but').on("click", function() {
                         console.log('adasd');
-                        $('#menu-list').removeClass('hide-cat-hide');
+                        $('.pencil').toggleClass('show_cat');
                     });
                 });
             </script>
@@ -674,7 +675,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 });
 
                 $(window).scroll(function() {
-                    if ($(this).scrollTop() > 200) {
+                    if ($(this).scrollTop() > 500 && width_display > 991) {
                         $('#category').addClass('category');
                     } else {
                         $('#category').removeClass('category');
@@ -973,7 +974,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                         <h3> Дополнительно</h3>
                         <ul class="list-unstyled">
                             <li><a href="constructor/404.php">Карта сайта</a></li>
-                            <li><a href="constructor/404.php">Связаться с нами</a></li>
+                            <li><a href="Kontakct.php">Связаться с нами</a></li>
                             <li><a href="constructor/404.php">Возврат товара</a></li>
                         </ul>
                     </div>
@@ -1039,6 +1040,6 @@ $dir_img = __DIR__ . '/img/tovaru/';
     <div class="tcb-layout3"></div>
 </div>
 
+<script src="js/move.js"></script>
 </body>
-
 </html>

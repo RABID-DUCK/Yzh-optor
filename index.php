@@ -28,6 +28,7 @@ $dir_img = '/img/tovaru/';
     <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
     <link rel="stylesheet" href="img/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/_50c36ab27da8bb5ead9c87671a74d2a9.css" />
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/ns-cache/_64b8609b55b5e3556b172af674a9b309.js"></script>
     <style>
@@ -353,7 +354,7 @@ $dir_img = '/img/tovaru/';
                             <span class="text-category">Категории</span>
                         </button>
 
-                        <ul id="menu-list" class="dropdown-menu hide-cat" style="display: block;">
+                        <ul id="menu-list" class="dropdown-menu hide-cat pencil" style="display: block;">
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.hp">О нас</a></li>
@@ -373,7 +374,7 @@ $dir_img = '/img/tovaru/';
                                                     <li class="nsmenu-issubchild">
                                                         <a href="category.php?id=<?= $elem2['second_id'] ?>&ct=second_id"><?= $elem2['second_name'] ?><i class="fa fa-angle-down arrow"></i></a> <!-- Категория 2 -->
                                                         <ul class="list-unstyled nsmenu-ischild nsmenu-ischild-simple">
-                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
+                                                            <?php $elems3 = mysqli_query($conn, "SELECT DISTINCT `first_name`, `second_id`, `first_id` FROM `category` WHERE `third_id`='$i1' AND `second_id` = '$elem2[second_id]'");
                                                             foreach ($elems3 as $i3 => $elem3) { ?>
                                                                 <li class=""><a href="category.php?id=<?= $elem3['first_id'] ?>&ct=first_id"><?= $elem3['first_name'] ?></a></li> <!-- Категория 1 -->
                                                             <?php } ?>
@@ -410,8 +411,10 @@ $dir_img = '/img/tovaru/';
         </div>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
+                let width_display = window.innerWidth;
+                console.log(width_display);
                 $(window).scroll(function() {
-                            if ($(this).scrollTop() > 200) {
+                            if ($(this).scrollTop() > 800 && width_display > 991) {
                                 $('#menu-list').removeClass('hide-cat');
                                 $('#menu-list').addClass('hide-cat-hide');
                             } else {
@@ -421,7 +424,7 @@ $dir_img = '/img/tovaru/';
                         });
                         $('#but').on("click", function() {
                             console.log('adasd');
-                            $('#menu-list').removeClass('hide-cat-hide');
+                            $('.pencil').toggleClass('hide-cat-hide');
                 });
                 $(document).ready(function() {
                     var width_fmns = viewport().width;
@@ -518,7 +521,8 @@ $dir_img = '/img/tovaru/';
                     });
 
                     $(window).scroll(function() {
-                        if ($(this).scrollTop() > 200) {
+                        let width_display = window.innerWidth; 
+                        if ($(this).scrollTop() > 500 && width_display > 991) {
                             $('#category').addClass('category');
                         } else {
                             $('#category').removeClass('category');
@@ -918,20 +922,20 @@ $dir_img = '/img/tovaru/';
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=5&ct=third_id">СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
                                     </div>
                                 </div>
                                 <div class="item-sub-category nswc-host">
                                     <div class="nswc-viewport" style="padding-right: 14px; height: 155px; overflow: hidden;">
                                         <div class="nswc-container" style="overflow: hidden;">
-                                            <div class="subcategory-name"><a href="#">ГАЗ-ПЛИТА-ГОРЕЛКИ</a></div>
-                                            <div class="subcategory-name"><a href="#">ЗАМКИ</a></div>
-                                            <div class="subcategory-name"><a href="#">ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></div>
-                                            <div class="subcategory-name"><a href="#">ИНСТРУМЕНТ МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
-                                            <div class="subcategory-name"><a href="#">КРЕПЕЖ</a></div>
-                                            <div class="subcategory-name"><a href="#">РАСХОДНЫЕ МАТЕРИАЛЫ</a></div>
-                                            <div class="subcategory-name"><a href="#">РУЧНОЙ ИНСТРУМЕНТ</a></div>
-                                            <div class="subcategory-name"><a href="#">СВАРОЧНОЕ ОБОРУДОВАНИЕ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=24&ct=second_id">ЗАМКИ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=26&ct=second_id">ГАЗ-ПЛИТА-ГОРЕЛКИ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=27&ct=second_id">ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=25&ct=second_id">ИНСТРУМЕНТ МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=28&ct=second_id">КРЕПЕЖ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=23&ct=second_id">РАСХОДНЫЕ МАТЕРИАЛЫ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=22&ct=second_id">РУЧНОЙ ИНСТРУМЕНТ</a></div>
+                                            <div class="subcategory-name"><a href="category.php?id=21&ct=second_id">СВАРОЧНОЕ ОБОРУДОВАНИЕ</a></div>
                                         </div>
                                     </div>
                                     <div class="nswc-scrollbar" style="position: absolute; top: 0px; right: 0px; overflow: hidden; height: 152px;">
@@ -943,11 +947,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/27953642163111e8ae1fe8039a18cbef_a781eb93299111ebbe151c1b0db29d29-500x500-150x150.png" alt="Ведра"></a>
+                                    <a href="category.php?id=29&ct=first_id"><img src="img/image/cache/catalog/image/pupular_category/27953642163111e8ae1fe8039a18cbef_a781eb93299111ebbe151c1b0db29d29-500x500-150x150.png" alt="Ведра"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">Ведра</a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=29&ct=first_id">Ведра</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -955,11 +959,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/2cc86d6cc67a11e68c733c970e011047_3bd1db41361011ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Диск Алмазный "></a>
+                                    <a href="category.php?id=137&ct=first_id"><img src="img/image/cache/catalog/image/pupular_category/2cc86d6cc67a11e68c733c970e011047_3bd1db41361011ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Диск Алмазный "></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">Диск Алмазный </a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=137&ct=first_id">Диск Алмазный </a></div>
                                     </div>
                                 </div>
                             </div>
@@ -967,11 +971,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/7876e744c27411eabe0c1c1b0db29d29_40f93b3f5fc911ebbe1a1c1b0db29d29-500x500-150x150.jpg" alt="Светильники"></a>
+                                    <a href="category.php?id=258&ct=first_id"><img src="img/image/cache/catalog/image/pupular_category/7876e744c27411eabe0c1c1b0db29d29_40f93b3f5fc911ebbe1a1c1b0db29d29-500x500-150x150.jpg" alt="Светильники"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">Светильники</a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=258&ct=first_id">Светильники</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -979,11 +983,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/5972713_image_large-150x150.jpg" alt="Серпянка,Сетка Штукатурная"></a>
+                                    <a href="category.php?id=178&ct=first_id"><img src="img/image/cache/catalog/image/pupular_category/5972713_image_large-150x150.jpg" alt="Серпянка,Сетка Штукатурная"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">Серпянка,Сетка Штукатурная</a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=178&ct=first_id">Серпянка,Сетка Штукатурная</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -991,11 +995,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/autosalfetki-150x150.jpg" alt="Авто салфетки"></a>
+                                    <a href="category.php?id=0&ct=first_id"><img src="img/image/cache/catalog/image/pupular_category/autosalfetki-150x150.jpg" alt="Авто салфетки"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">Авто салфетки</a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=0&ct=first_id">Авто салфетки</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -1003,11 +1007,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/3af342b3459d11e5aad6f835ddca8acb_327c7180348c11ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Уголок-линейка"></a>
+                                    <a href="category.php?id=78&ct=first_id"><img src="img/image/cache/catalog/image/pupular_category/3af342b3459d11e5aad6f835ddca8acb_327c7180348c11ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Уголок-линейка"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">Уголок-линейка</a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=78&ct=first_id">Уголок-линейка</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -1015,11 +1019,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/2e9f6a214a5711ebbe181c1b0db29d29_ebda8048a35611ebbe1c1c1b0db29d29-500x500-150x150.jpg" alt="Шпатель"></a>
+                                    <a href="category.php?id=182&ct=first_id"><img src="img/image/cache/catalog/image/pupular_category/2e9f6a214a5711ebbe181c1b0db29d29_ebda8048a35611ebbe1c1c1b0db29d29-500x500-150x150.jpg" alt="Шпатель"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="#">Шпатель</a></div>
+                                        <div class="display-table-cell"><a href="category.php?id=182&ct=first_id">Шпатель</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -1543,7 +1547,7 @@ $dir_img = '/img/tovaru/';
                         <h3> Дополнительно</h3>
                         <ul class="list-unstyled">
                             <li><a href="constructor/404.php">Карта сайта</a></li>
-                            <li><a href="constructor/404.php">Связаться с нами</a></li>
+                            <li><a href="Kontakct.php">Связаться с нами</a></li>
                             <li><a href="constructor/404.php">Возврат товара</a></li>
                         </ul>
                     </div>
