@@ -1,7 +1,7 @@
 <?php
     $servername = "localhost";
     $database = "yzh-optor";
-    $username = "admin";
+    $username = "root";
     $password = "d@fYjyvdq-8fAMOP";
     // Создаем соединение
     $conn = mysqli_connect($servername, $username, $password, $database);
