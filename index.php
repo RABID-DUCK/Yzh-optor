@@ -359,7 +359,7 @@ $dir_img = '/img/tovaru/';
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.hp">О нас</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="Kontakct.php">Контакты</a></li>
                             <?php
-                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name` FROM `category`");
+                            $elems1 = mysqli_query($conn, "SELECT DISTINCT `third_name`, `third_id` FROM `category`");
                             foreach ($elems1 as $i1 => $elem1) { ?>
                                 <li class="dropdown">
                                     <span class="toggle-child"><i class="fa fa-plus plus"></i><i class="fa fa-minus minus"></i></span>
@@ -914,24 +914,24 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category  parent_category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/95921_2-150x150.jpg" alt="СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ">
+                                    <img src="img/image/cache/catalog/image/pupular_category/95921_2-150x150.jpg" alt="СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ">
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/">СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
+                                        <div class="display-table-cell"><a href="#">СТРОЙ ИНСТРУМЕНТЫ И ТОВАРЫ</a></div>
                                     </div>
                                 </div>
                                 <div class="item-sub-category nswc-host">
                                     <div class="nswc-viewport" style="padding-right: 14px; height: 155px; overflow: hidden;">
                                         <div class="nswc-container" style="overflow: hidden;">
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/gaz-plita-gorelki/">ГАЗ-ПЛИТА-ГОРЕЛКИ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/zamki/">ЗАМКИ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/">ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/">ИНСТРУМЕНТ МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/krepezh/">КРЕПЕЖ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/">РАСХОДНЫЕ МАТЕРИАЛЫ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/ruchnoy-instrument/">РУЧНОЙ ИНСТРУМЕНТ</a></div>
-                                            <div class="subcategory-name"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/svarochnoe-oborudovanie/">СВАРОЧНОЕ ОБОРУДОВАНИЕ</a></div>
+                                            <div class="subcategory-name"><a href="#">ГАЗ-ПЛИТА-ГОРЕЛКИ</a></div>
+                                            <div class="subcategory-name"><a href="#">ЗАМКИ</a></div>
+                                            <div class="subcategory-name"><a href="#">ИЗМЕРИТЕЛЬНЫЕ ИНСТРУМЕНТЫ</a></div>
+                                            <div class="subcategory-name"><a href="#">ИНСТРУМЕНТ МАЛЯРНЫЙ И ШТУКАТУРНЫЙ</a></div>
+                                            <div class="subcategory-name"><a href="#">КРЕПЕЖ</a></div>
+                                            <div class="subcategory-name"><a href="#">РАСХОДНЫЕ МАТЕРИАЛЫ</a></div>
+                                            <div class="subcategory-name"><a href="#">РУЧНОЙ ИНСТРУМЕНТ</a></div>
+                                            <div class="subcategory-name"><a href="#">СВАРОЧНОЕ ОБОРУДОВАНИЕ</a></div>
                                         </div>
                                     </div>
                                     <div class="nswc-scrollbar" style="position: absolute; top: 0px; right: 0px; overflow: hidden; height: 152px;">
@@ -943,11 +943,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/27953642163111e8ae1fe8039a18cbef_a781eb93299111ebbe151c1b0db29d29-500x500-150x150.png" alt="Ведра"></a>
+                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/27953642163111e8ae1fe8039a18cbef_a781eb93299111ebbe151c1b0db29d29-500x500-150x150.png" alt="Ведра"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/sadovo-ogorodnyy-inventar/instrumenty-dlya-sada/vedra/">Ведра</a></div>
+                                        <div class="display-table-cell"><a href="#">Ведра</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -955,11 +955,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2cc86d6cc67a11e68c733c970e011047_3bd1db41361011ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Диск Алмазный "></a>
+                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/2cc86d6cc67a11e68c733c970e011047_3bd1db41361011ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Диск Алмазный "></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/raskhodnye-materialy/disk-almaznyy-/">Диск Алмазный </a></div>
+                                        <div class="display-table-cell"><a href="#">Диск Алмазный </a></div>
                                     </div>
                                 </div>
                             </div>
@@ -967,11 +967,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/elektrotovary/svetilniki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/7876e744c27411eabe0c1c1b0db29d29_40f93b3f5fc911ebbe1a1c1b0db29d29-500x500-150x150.jpg" alt="Светильники"></a>
+                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/7876e744c27411eabe0c1c1b0db29d29_40f93b3f5fc911ebbe1a1c1b0db29d29-500x500-150x150.jpg" alt="Светильники"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/elektrotovary/svetilniki/">Светильники</a></div>
+                                        <div class="display-table-cell"><a href="#">Светильники</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -979,11 +979,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/5972713_image_large-150x150.jpg" alt="Серпянка,Сетка Штукатурная"></a>
+                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/5972713_image_large-150x150.jpg" alt="Серпянка,Сетка Штукатурная"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/serpyanka-setka-shtukaturnaya/">Серпянка,Сетка Штукатурная</a></div>
+                                        <div class="display-table-cell"><a href="#">Серпянка,Сетка Штукатурная</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -991,11 +991,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/autosalfetki-150x150.jpg" alt="Авто салфетки"></a>
+                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/autosalfetki-150x150.jpg" alt="Авто салфетки"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/avtoprinadlezhnosti/avtoaksessuary/avto-salfetki/">Авто салфетки</a></div>
+                                        <div class="display-table-cell"><a href="#">Авто салфетки</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -1003,11 +1003,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/3af342b3459d11e5aad6f835ddca8acb_327c7180348c11ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Уголок-линейка"></a>
+                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/3af342b3459d11e5aad6f835ddca8acb_327c7180348c11ebbe161c1b0db29d29-500x500-150x150.jpg" alt="Уголок-линейка"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/izmeritelnye-instrumenty/ugolok-lineyka/">Уголок-линейка</a></div>
+                                        <div class="display-table-cell"><a href="#">Уголок-линейка</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -1015,11 +1015,11 @@ $dir_img = '/img/tovaru/';
                         <div class="box-item col-xs-12 col-sm-6 col-md-3 col-lg-3">
                             <div class="item-category ">
                                 <div class="wall-cat-image show-sub-cat-0">
-                                    <a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/"><img src="https://xpert-ufa.ru/image/cache/catalog/image/pupular_category/2e9f6a214a5711ebbe181c1b0db29d29_ebda8048a35611ebbe1c1c1b0db29d29-500x500-150x150.jpg" alt="Шпатель"></a>
+                                    <a href="#"><img src="img/image/cache/catalog/image/pupular_category/2e9f6a214a5711ebbe181c1b0db29d29_ebda8048a35611ebbe1c1c1b0db29d29-500x500-150x150.jpg" alt="Шпатель"></a>
                                 </div>
                                 <div class="wall-cat-name">
                                     <div class="display-table">
-                                        <div class="display-table-cell"><a href="https://xpert-ufa.ru/stroy-instrumenty-i-tovary/instrument-malyarnyy-i-shtukaturnyy/shpatel/">Шпатель</a></div>
+                                        <div class="display-table-cell"><a href="#">Шпатель</a></div>
                                     </div>
                                 </div>
                             </div>
