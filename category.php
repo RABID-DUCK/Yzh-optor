@@ -631,7 +631,7 @@ $dir_img = __DIR__ . './img/tovaru/';
 
                     $(window).scroll(function() {
                         let width_display = window.innerWidth; 
-                        if ($(this).scrollTop() > 200 width_display > 991) {
+                        if ($(this).scrollTop() > 200 && width_display > 991) {
                             $('#category').addClass('category');
                         } else {
                             $('#category').removeClass('category');
@@ -767,7 +767,36 @@ $dir_img = __DIR__ . './img/tovaru/';
                 <h1><?=$path_name?></h1>
                 <div class="text_refine">Уточнить поиск <i class="fa fa-level-down"></i></div>
                 <div class="row">
-                        
+                    <?php   switch ($category) {
+                            case 'third_id':
+                                $cts = mysqli_query($conn, "SELECT DISTINCT `second_id`, `second_name` FROM `category` WHERE `third_id`='$id'");
+                                $ct_bhnd = 'second';  
+                            break;
+                            case 'second_id':
+                                $cts = mysqli_query($conn, "SELECT DISTINCT `first_id`, `first_name` FROM `category` WHERE `second_id`='$id'");  
+                                $ct_bhnd = 'first';                   
+                            break;
+                            default:
+                                $cts = '';
+                            break;
+                        }   
+                        if ($cts != NULL) {
+                        ?>  
+                        <?php foreach ($cts as $cte) { ?>
+                        <div class="col-sm-6 col-md-4 col-lg-3">  	
+                            <div class="thumbnail subcategory">
+                                <a href="category.php?id=<?=$cte[$ct_bhnd.'_id']?>&ct=<?=$ct_bhnd.'_id'?>">
+                                    <div class="name-wrapper">
+                                        <div class="display-table">
+                                            <div class="display-table-cell">
+                                                <h5><?=$cte[$ct_bhnd.'_name']?></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <?php   } } ?>
                 </div>
 
                 <div class="row row-price category-page" style="margin-left: -10px; margin-right: -10px;" id="cont">
