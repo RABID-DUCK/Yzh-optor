@@ -177,6 +177,9 @@ table > tbody > tr:hover {
   white-space: nowrap;
   overflow: hidden;
 }
+.display-table-cell > h5 {
+  font-size: medium;
+}
 @media (min-width: 992px) {
   #column-left {
     margin-top: 320px;
