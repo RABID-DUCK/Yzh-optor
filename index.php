@@ -322,7 +322,7 @@ $dir_img = '/img/tovaru/';
                 <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
                         <div class="input-group pt20">
-                            <input  id="search" type="text" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
+                            <input  id="search" type="text" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" oninput="search()" />
 
                             <span class="input-group-btn button_search">
                                 <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
@@ -413,7 +413,7 @@ $dir_img = '/img/tovaru/';
             window.addEventListener('DOMContentLoaded', (event) => {
                 let width_display = window.innerWidth;
                 $(window).scroll(function() {
-                            if ($(this).scrollTop() > 800 && width_display > 991) {
+                            if ($(this).scrollTop() > 1000 && width_display > 991) {
                                 $('#menu-list').removeClass('hide-cat');
                                 $('#menu-list').addClass('hide-cat-hide');
                             } else {
@@ -521,7 +521,7 @@ $dir_img = '/img/tovaru/';
 
                     $(window).scroll(function() {
                         let width_display = window.innerWidth; 
-                        if ($(this).scrollTop() > 500 && width_display > 991) {
+                        if ($(this).scrollTop() > 1000 && width_display > 991) {
                             $('#category').addClass('category');
                         } else {
                             $('#category').removeClass('category');

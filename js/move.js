@@ -116,34 +116,30 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function(){
-        $('#search').on('input', function() {
-            console.log('search');
-            var name = $('#search').val();
-            if(name === ""){
-                $('#life_search').html("");
-            }
-            else{
-                $.ajax({
-                    type: "POST",
-                    url: "../constructor/search.php",
-                    data: {
-                        search: name
-                    },
-                    success: function(response){
-                        $("#life_search").html(response);
-                        $("#life_search").show();
-                    }
-                });
-            }
-        });
-    
-
-        $('#but').on("click", function() {
-            
-            $('#menu-list').toggleClass('show_cat');
-        });
-  });
+  function search(){
+        var name = $('#search').val();
+        if(name === ""){
+            $('#life_search').html("");
+            console.log('error');
+        }
+        else{
+            $.ajax({
+                type: "POST",
+                url: "../constructor/search.php",
+                data: {
+                    search: name
+                },
+                success: function(response){
+                    $("#life_search").html(response);
+                    $("#life_search").show();
+                }
+            });
+        }
+    $('#but').on("click", function() {
+        
+        $('#menu-list').toggleClass('show_cat');
+    });
+  }
 
  
 

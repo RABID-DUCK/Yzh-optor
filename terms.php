@@ -321,7 +321,7 @@
 				<div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
                         <div class="input-group pt20">
-                            <input  id="search" type="text" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" />
+                            <input  id="search" type="text" value="" placeholder="Поиск товара по каталогу" class="form-control input-lg search-autocomplete" oninput="search()" />
 
                             <span class="input-group-btn button_search">
                                 <button type="button" class="btn btn-search"><i class="fa fa-search"></i></button>
