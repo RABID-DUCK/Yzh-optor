@@ -269,7 +269,7 @@
 						<div class="contact-header">
 							<div class="dropdown-toggle">
 								<div class="additional-tel dth">
-									<a href="tel:+79268800893" target="_blank">
+									<a href="tel:+79000930556" target="_blank">
 										+7 (982) 304-89-35</a>
 								</div>
 								<span class="drop-icon-info"><i class="car-down fa fa-angle-down"></i></span>
@@ -288,7 +288,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="https://api.whatsapp.com/send/?phone=79268800893" target="_blank">
+									<a href="https://api.whatsapp.com/send/?phone=79000930556" target="_blank">
 										<div class="icon-image"><i class="fa fa-whatsapp"></i></div>
 										+7 (982) 304-89-35
 									</a>
@@ -656,11 +656,11 @@
 					<div class="col-sm-3">
 						<h3>Наши Контакты</h3>
 						<ul class="list-unstyled">
-							<li><a href="tel:+79268800893" target="_blank"><i class=" fa-width"></i> +7 (982)
+							<li><a href="tel:+79000930556" target="_blank"><i class=" fa-width"></i> +7 (982)
 									304-89-35</a></li>
 							<li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
 									Yuzh.Optor@mail.ru</a></li>
-							<li><a href="https://api.whatsapp.com/send/?phone=79268800893"><i
+							<li><a href="https://api.whatsapp.com/send/?phone=79000930556"><i
 										class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a></li>
 						</ul>
 						<p>Торговая компания Yuzh.Optor &copy; 2022</p>

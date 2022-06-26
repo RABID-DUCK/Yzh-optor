@@ -17,10 +17,7 @@
      if(mail($email, $tema_email, "Текст: ".$text."Номер телефона: ".$num_email."\n\r".
      "Почта покупателя: ".$user_email."\n\r"."Комментарий к форме: ".".
      $description_email.\n\r"."Когда перезвонить: ".$when_call_email)){
-        echo "<script>";
-        echo "alert('Звонок запрошен. С вами свяжутся в ближайшее время!');";
-        echo "window.location.href = '../index.php'";
-        echo "</script>";
+        
      }
      else{
         echo "<script>";

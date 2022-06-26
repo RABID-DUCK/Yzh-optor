@@ -261,8 +261,8 @@ $dir_img = __DIR__ . './img/tovaru/';
                         <div class="contact-header">
                             <div class="dropdown-toggle">
                                 <div class="additional-tel dth">
-                                    <a href="tel:+79268800893" target="_blank">
-                                        +7 (926) 880-08-93</a><br>
+                                    <a href="tel:+79000930556" target="_blank">
+                                        +7 (900) 093-05-56</a><br>
                                     <a href="tel:+9823048935" target="_blank">
                                         +7 (982) 304-89-35</a>
                                 </div>
@@ -277,9 +277,9 @@ $dir_img = __DIR__ . './img/tovaru/';
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://api.whatsapp.com/send/?phone=79268800893" target="_blank">
+                                    <a href="https://api.whatsapp.com/send/?phone=79000930556" target="_blank">
                                         <div class="icon-image"><i class="fa fa-whatsapp"></i></div>
-                                        +7 (926) 880-08-93
+                                        +7 (900) 093-05-56
                                     </a>
                                     <a href="https://api.whatsapp.com/send/?phone=9823048935" target="_blank">
                                         <div class="icon-image"><i class="fa fa-whatsapp"></i></div>
@@ -332,8 +332,8 @@ $dir_img = __DIR__ . './img/tovaru/';
                         <div class="contact-header">
                             <div class="dropdown-toggle">
                                 <div class="additional-tel dth">
-                                    <a href="tel:+79268800893" target="_blank">
-                                        +7 (926) 880-08-93 </a> <br>
+                                    <a href="tel:+79000930556" target="_blank">
+                                        +7 (900) 093-05-56 </a> <br>
                                     <a href="tel:+79823048935" target="_blank">
                                         +7 (982) 304-89-35 </a>
                                 </div>
@@ -353,11 +353,11 @@ $dir_img = __DIR__ . './img/tovaru/';
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://api.whatsapp.com/send/?phone=79268800893" target="_blank">
+                                    <a href="https://api.whatsapp.com/send/?phone=79000930556" target="_blank">
                                         <div class="icon-image"><i class="fa fa-whatsapp">
 
                                             </i></div>
-                                        +7 (926) 880-08-93
+                                        +7 (900) 093-05-56
                                     </a>
                                     <a href="https://api.whatsapp.com/send/?phone=79823048935" target="_blank">
                                         <div class="icon-image"><i class="fa fa-whatsapp">
@@ -901,7 +901,7 @@ $dir_img = __DIR__ . './img/tovaru/';
                                 <div class="banner-title-footer">
                                     <h3>ЗАКАЗ ПО ТЕЛЕФОНУ</h3>
                                 </div>
-                                <span class="banner-description-footer">+7 (926) 880-08-93 <br>+7 (982) 304-89-35</span>
+                                <span class="banner-description-footer">+7 (900) 093-05-56 <br>+7 (982) 304-89-35</span>
                             </div>
                         </div>
                     </div>
@@ -979,7 +979,7 @@ $dir_img = __DIR__ . './img/tovaru/';
                     <div class="col-sm-3">
                         <h3>Наши Контакты</h3>
                         <ul class="list-unstyled">
-                            <li><a href="tel:+79268800893" target="_blank"><i class=" fa-width"></i>+7 (926)
+                            <li><a href="tel:+79000930556" target="_blank"><i class=" fa-width"></i>+7 (926)
                                     880-08-93</a>
                             <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
                                     304-89-35</a>
@@ -987,7 +987,7 @@ $dir_img = __DIR__ . './img/tovaru/';
                             <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
                                     Yuzh.Optor@mail.ru</a></li>
                             <li>
-                                <a href="https://api.whatsapp.com/send/?phone=79268800893"><i class="fa fa-whatsapp fa-width"></i> +7 (926) 880-08-93</a><br />
+                                <a href="https://api.whatsapp.com/send/?phone=79000930556"><i class="fa fa-whatsapp fa-width"></i> +7 (900) 093-05-56</a><br />
                                 <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>
                             </li>
                         </ul>
