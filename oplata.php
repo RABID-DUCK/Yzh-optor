@@ -236,6 +236,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
             webvisor: true,
             ecommerce: "dataLayer"
         });
+
+        function open_cat(){
+            $('#menu-list').toggleClass('hide-cat');
+        }
     </script>
     <noscript>
         <div><img src="#" style="position:absolute; left:-9999px;" alt=""/></div>
@@ -2758,7 +2762,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
     </div>
     <style>
         .hide-cat {
-            display: block;
+            display: block !important;
         }
 
         .hide-cat-hide {
@@ -2769,12 +2773,12 @@ $dir_img = __DIR__ . '/img/tovaru/';
         <div class="row">
             <div class="col-sm-12 col-md-3 menu-box ">
                 <nav id="menu" class="btn-group btn-block open">
-                    <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown" id="but">
+                    <button type="button" class="btn btn-menu btn-block dropdown-toggle" data-toggle="dropdown" id="but" onclick="open_cat()">
                         <i class="fa fa-bars"></i>
                         <span class="text-category">Категории</span>
                     </button>
 
-                    <ul id="menu-list" class="dropdown-menu hide-cat">
+                    <ul id="menu-list" class="dropdown-menu">
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="delivery.php">Доставка</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="oplata.php">Оплата</a></li>
                             <li class="hidden-md hidden-lg"><a class="dropdown-img" href="about_us.php">О нас</a></li>
@@ -2815,12 +2819,11 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 window.addEventListener('DOMContentLoaded', (event) => {
                     let width_display = window.innerWidth; 
                     $(window).scroll(function() {
-                        if ($(this).scrollTop() > 200 && width_display > 991) {
+                        if ($(this).scrollTop() > 800 && width_display > 991) {
                             $('#menu-list').removeClass('hide-cat');
                             $('#menu-list').addClass('hide-cat-hide');
                         } else {
                             $('#menu-list').removeClass('hide-cat-hide');
-                            $('#menu-list').addClass('hide-cat');
                         }
                     });
                     $('#but').on("click", function() {
@@ -2944,7 +2947,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 });
                 let width_display = window.innerWidth; 
                 $(window).scroll(function() {
-                    if ($(this).scrollTop() > 200 && width_display > 991) {
+                    if ($(this).scrollTop() > 800 && width_display > 991) {
                         $('#category').addClass('category');
                     } else {
                         $('#category').removeClass('category');
@@ -3089,74 +3092,121 @@ $dir_img = __DIR__ . '/img/tovaru/';
             </p></div>
     </div>
 
-     <!-- скрипт звонка -->
-     <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
-     <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;"><div class="mfp-container mfp-ajax-holder mfp-s-ready"><div class="mfp-content"><div id="popup-callback" class="wcb-4">
-         <div class="popup-heading"><i class=""></i>&nbsp;&nbsp;Заказать обратный звонок</div>
-         <div class="popup-center">
-             <form id="callback_data" data-ajax-submit="" enctype="multipart/form-data" method="post">
-                     <div class="col-xs-12">
-                                 <div class="form-group sections_block_rquaired">
-                         <div class="input-group margin-bottom-sm">			
-                              <input id="contact-name" class="form-control contact-name" type="text" placeholder="Ваше имя" value="" name="name">		
-                             <span class="input-group-addon"><i class="icon-append-1 fa fa-user fa-fw"></i></span>
-                         </div>
-                         <div id="error_name_callback" class="error_callback"></div>
-                     </div>
-                                             <div class="form-group sections_block_rquaired">
-                         <div class="input-group margin-bottom-sm">			
-                              <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone">		
-                             <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
-                         </div>
-                         <div id="error_phone_callback" class="error_callback"></div>
-                     </div>
-                                             <div class="form-group sections_block">
-                         <div class="input-group margin-bottom-sm">			
-                              <input id="contact-email" class="form-control contact-email" type="text" placeholder="Email" value="" name="email_buyer">		
-                             <span class="input-group-addon"><i class="icon-append-1 fa fa-envelope fa-fw"></i></span>
-                         </div>
-                         <div id="error_email_callback" class="error_callback"></div>
-                     </div>
-                                             <div class="form-group sections_block">
-                         <div class="input-group margin-bottom-sm">			
-                              <input id="contact-comment" class="form-control contact-comment" type="text" placeholder="Комментарий" value="" name="comment_buyer">		
-                             <span class="input-group-addon"><i class="icon-append-1 fa fa-comment fa-fw"></i></span>
-                         </div>
-                         <div id="error_comment_callback" class="error_callback"></div>
-                     </div>
-                                             <div class="form-group">
-                         <input type="text" name="time_callback_on" value="" class="form-control start" placeholder="Когда Вам Перезвонить:">
-                         <input type="hidden" name="time_callback_off" value="">
-                     </div>
-                               
-                 <input type="hidden" id="callback_url" value="" name="url_site">	
-             </div>
-             
-             
-             <div class="anytext-callback marb col-xs-12 text-center"></div>
-             </form>
-         </div>
-         <div class="popup-footer">
-             <div class="col-xs-12 text-center">
-             <button onclick="sendCallback();" type="submit" class="btn-callback ladda-button" data-style="expand-left"><span class="ladda-label">Заказать звонок</span></button>
-             </div>
-         </div>
-     <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"> 
-     <script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
-     <script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-     <script>
-     $('.start').datetimepicker({
-         pickDate: true,
-         minDate : moment(),
-         pickTime: true
-     });
-     $(document).ready(function() {
-         var ContactouterHeight = $('#callbackpro_contacts').outerHeight()-6;
-         $(function(){$('#callbackpro_contacts').css({'top':-ContactouterHeight});});
-         });
-     </script>
-     <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
- <!-- конец его бля -->
+    <!-- скрипт звонка -->
+    <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
+    <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;">
+    <div class="mfp-container mfp-ajax-holder mfp-s-ready">
+        <div class="mfp-content">
+            <div id="popup-callback" class="wcb-4">
+        <style>
+            .mfp-close{
+                right: -30px !important;
+                background: transparent none repeat scroll 0 0;
+                border: 0 none;
+                color: #fff !important;
+                cursor: pointer !important;
+                font-size: 55px;
+                height: 45px;
+                outline: medium none;
+                position: absolute;
+                top: -10px;
+                width: 45px;
+                z-index: 1060;
+            }
+        </style>
+        <div class="popup-heading"><i class=""></i>&nbsp;&nbsp;Заказать обратный звонок</div>
+        <div class="popup-center">
+            <form id="feedback" action="constructor/form.php" method="post">
+                    <div class="col-xs-12">
+                                <div class="form-group sections_block_rquaired">
+                        <div class="input-group margin-bottom-sm">			
+                             <input id="contact-name" class="form-control contact-name" type="text" placeholder="Ваше имя" value="" name="text_polz">		
+                            <span class="input-group-addon"><i class="icon-append-1 fa fa-user fa-fw"></i></span>
+                        </div>
+                        <div id="error_name_callback" class="error_callback"></div>
+                    </div>
+                                            <div class="form-group sections_block_rquaired">
+                        <div class="input-group margin-bottom-sm">			
+                             <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone_polz">		
+                            <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
+                        </div>
+                        <div id="error_phone_callback" class="error_callback"></div>
+                    </div>
+                                            <div class="form-group sections_block">
+                        <div class="input-group margin-bottom-sm">			
+                             <input id="contact-email" class="form-control contact-email" type="text" placeholder="Email" value="" name="email_buyer">		
+                            <span class="input-group-addon"><i class="icon-append-1 fa fa-envelope fa-fw"></i></span>
+                        </div>
+                        <div id="error_email_callback" class="error_callback"></div>
+                    </div>
+                                            <div class="form-group sections_block">
+                        <div class="input-group margin-bottom-sm">			
+                             <input id="contact-comment" class="form-control contact-comment" type="text" placeholder="Комментарий" value="" name="comment_buyer">		
+                            <span class="input-group-addon"><i class="icon-append-1 fa fa-comment fa-fw"></i></span>
+                        </div>
+                        <div id="error_comment_callback" class="error_callback"></div>
+                    </div>
+                                            <div class="form-group">
+                        <input type="text" name="time_callback_on" value="" class="form-control start" placeholder="Когда Вам Перезвонить:">
+                        <input type="hidden" name="time_callback_off" value="">
+                    </div>
+
+                    <div class="popup-footer">
+                        <div class="col-xs-12 text-center"></div>
+                        <input class="btn-callback ladda-button" type="submit" name="submit" value="Заказать звонок" style="margin-left: 72px;">
+                    </div>
+                    
+                    </div>
+                <input type="hidden" value="" name="url_site">	
+            </div>
+            
+            
+            <div class="anytext-callback marb col-xs-12 text-center"></div>
+            </form>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                $('#feedback').submit(function(e) {
+                    e.preventDefault();
+                    $.ajax({
+                        type: "POST",
+                        url: "constructor/form.php",
+                        data: $(this).serialize(),
+                        success: function(response){
+                            // let jsonData = JSON.parse(response);
+                            if(response.success == "1"){
+                                alert('Упс! Что-то пошло не так...');
+                            }
+                            else{
+                                $('.hide-call, .mfp-wrap').addClass('hide-zvonok');
+                                alert('Звонок запрошен. С вами свяжутся в ближайшее время!');
+                            }
+                        }
+                    });
+                });
+        });       
+        </script>
+        <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div>
+        </div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
+    
+    
+    <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"> 
+    <script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
+    <script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            $('.start').datetimepicker({
+        pickDate: true,
+        minDate : moment(),
+        pickTime: true
+    });
+    $(document).ready(function() {
+        var ContactouterHeight = $('#callbackpro_contacts').outerHeight()-6;
+        $(function(){$('#callbackpro_contacts').css({'top':-ContactouterHeight});});
+        });
+    });
+    </script>
+    <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"></div></div></div>
 </div>
 <footer>
         <div class="footer-top">

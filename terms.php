@@ -387,7 +387,7 @@
 										Доставка</a></li>
 								<li><a class="no-img-parent-link" href="oplata.php">
 										Оплата</a></li>
-								<li><a class="no-img-parent-link" href="about_us.hp">
+								<li><a class="no-img-parent-link" href="about_us.php">
 										О нас</a></li>
 								<li><a class="no-img-parent-link" href="contact-us/index.php">
 										Контакты</a></li>
@@ -628,7 +628,7 @@
 					<div class="col-sm-3">
 						<h3> Информация</h3>
 						<ul class="list-unstyled">
-							<li><a href="about_us.hp">О нас</a></li>
+							<li><a href="about_us.php">О нас</a></li>
 							<li><a href="delivery.php">Информация о доставке</a></li>
 							<li><a href="terms.php">Условия соглашения</a></li>
 						</ul>

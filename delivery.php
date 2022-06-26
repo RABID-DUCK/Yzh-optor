@@ -157,6 +157,16 @@
             background: #000000 none repeat scroll 0 0;
             color: #000000;
         }
+        @media (max-width: 1000px){
+            .container{
+                width: 100%;
+            }
+        }
+        @media (max-width: 857px){
+            .apadt_img_2{
+                width: 100% !important;
+            }
+        }
     </style>
     <script src="js/ns-cache/_64b8609b55b5e3556b172af674a9b309.js"></script>
     <script>
@@ -228,7 +238,7 @@
             m[i].l = 1 * new Date();
             k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
         })
-            (window, document, "script", "../mc.yandex.ru/metrika/tag.js", "ym");
+            (window, document, "script", "mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(80874508, "init", {
             clickmap: true,
@@ -666,7 +676,7 @@
     <div class="row">
         <div id="content" class="col-sm-12">
             <h1>Информация о доставке | Торговая компания Yuzh.Optor</h1>
-            <p><img src="img/image/catalog/image/znacki/intermodal-header-2.jpg"
+            <p><img class="apadt_img_2" src="img/image/catalog/image/znacki/intermodal-header-2.jpg"
                     style="width: 831.168px; height: 207px;"><span
                     style="background-color: transparent; font-family: Arial; font-size: 12.5pt; font-weight: 700; white-space: pre-wrap;"><br></span>
             </p>
@@ -753,7 +763,10 @@
 
     <!-- скрипт звонка -->
     <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
-    <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;"><div class="mfp-container mfp-ajax-holder mfp-s-ready"><div class="mfp-content"><div id="popup-callback" class="wcb-4">
+    <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;">
+    <div class="mfp-container mfp-ajax-holder mfp-s-ready">
+        <div class="mfp-content">
+            <div id="popup-callback" class="wcb-4">
         <style>
             .mfp-close{
                 right: -30px !important;
@@ -776,14 +789,14 @@
                     <div class="col-xs-12">
                                 <div class="form-group sections_block_rquaired">
                         <div class="input-group margin-bottom-sm">			
-                             <input id="contact-name" class="form-control contact-name" type="text" placeholder="Ваше имя" value="" name="name">		
+                             <input id="contact-name" class="form-control contact-name" type="text" placeholder="Ваше имя" value="" name="text_polz">		
                             <span class="input-group-addon"><i class="icon-append-1 fa fa-user fa-fw"></i></span>
                         </div>
                         <div id="error_name_callback" class="error_callback"></div>
                     </div>
                                             <div class="form-group sections_block_rquaired">
                         <div class="input-group margin-bottom-sm">			
-                             <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone">		
+                             <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone_polz">		
                             <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
                         </div>
                         <div id="error_phone_callback" class="error_callback"></div>
@@ -845,7 +858,6 @@
         <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div>
         </div><div class="mfp-preloader"><img src="catalog/view/theme/newstore/image/ring-alt-3.svg"></div></div></div>
     
-    <!-- конец его бля -->
     
     <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"> 
     <script src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
@@ -865,7 +877,6 @@
     </script>
     <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"></div></div></div>
 
-<!-- конец его бля -->
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
