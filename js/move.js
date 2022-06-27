@@ -197,6 +197,16 @@ function item_click_search(id, e) {
 
 
 // скрипт корзины
+function korzina(){
+    $.ajax({
+        type: "POST",
+        url: "constructor/korzinka.php",
+        success: function(response){
+            $('#korzina').html(response);
+        }
+    });
+}
+
 const addBtn = document.getElementById("add_in_cart");
 const listCart = document.getElementById("korzina");
 

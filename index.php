@@ -332,7 +332,7 @@ $dir_img = '/img/tovaru/';
                             
                         </div>
                         <div id="search_word" class="hidden-xs hidden-sm">Я ищу, например, <a>Шланги</a></div>
-                    </div>
+                    </div>  
                 </div>
             </div>
         </div>
@@ -743,7 +743,7 @@ $dir_img = '/img/tovaru/';
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a href="#" id="name_tovara"><?= $elem['name'] ?></a>
+                                                <a href="#" id="name_tovara" name="text_cart"><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -779,7 +779,7 @@ $dir_img = '/img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" id="add_in_cart">
+                                                    <button class="btn btn-general" type="button" id="add_in_cart" >
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>

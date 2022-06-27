@@ -16,17 +16,27 @@ require "connect.php";
             }
             echo "<li style='background-color: #fff; padding: 2px; font-size: 12px;'>
             <a style='color: #2b8cdb;' class='search-view-all-result' href='../category.php?id=$result[first_id]&ct=first_id'>Просмотреть все результаты</a></li>";
-
+           
 ?>
     </ul>
+    <span class='input-group-btn button_search' id='ajara'>
+            <a href='../category.php?id=<?= $result['first_id']?>&ct=first_id' type='button' class='btn btn-search'><i class='fa fa-search'></i></a>
+    </span>;
+    
 
     <style>
+    #ajara{
+        position: absolute;
+        z-index: 23232323;
+        right: 58px;
+        top: 25px;
+    }
         .list_search{
             list-style: none;
             position: absolute;
             top: 67px;
             background-color: #fff ;
-            z-index: 10;
+            z-index: 11231231231230;
             width: 367px;
             border: 4px;
         }
@@ -44,5 +54,12 @@ require "connect.php";
            color: #333;
            margin-left: -24px;
         }
+
+         /* @media (max-width: 1200px){
+            #ajara{
+                right: 108px;
+            }
+        } */
+    
 
     </style>

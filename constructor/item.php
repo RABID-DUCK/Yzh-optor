@@ -44,7 +44,7 @@ foreach ($elems as $i => $elem) {
 
                 <div class="caption">
                     <div class="product-name">
-                        <a href=""><?= $elem['name'] ?></a>
+                        <a href="" id="name_tovara"><?= $elem['name'] ?></a>
                         <!-- FIXME Сделать ссылку на элемент -->
                     </div>
                     <div class="product-model"><?= $elem['id'] ?></div>
@@ -80,7 +80,7 @@ foreach ($elems as $i => $elem) {
                     </div>
                     <div class="actions">
                         <div class="cart">
-                            <button class="btn btn-general" type="button">
+                            <button class="btn btn-general" type="button" >
                                 <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                             </button>
                         </div>
