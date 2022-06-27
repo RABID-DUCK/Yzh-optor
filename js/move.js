@@ -191,3 +191,48 @@ function item_click_search(id, e) {
             });
         });  
 };
+
+// id=korzina
+// id = add_in_cart
+
+
+// скрипт корзины
+const addBtn = document.getElementById("add_in_cart");
+const listCart = document.getElementById("korzina");
+
+let korzonka = JSON.parse(localStorage.korzonka || "[]");
+for(let i=0; i<korzonka.length; i++){
+    let nameKor = document.getElementById("name_tovara").value;
+    const kor = document.createElement("li");
+    kor.innerHTML = "<p class='name_kor'>" + nameKor + "</p><span class='del_elem'>Удалить</span>";
+    listCart.append(kor);
+    
+}
+
+let add_elems = (e) =>{
+  e.preventDefault();
+  const kor = document.createElement("li");
+  let nameKor = document.getElementById("name_tovara").value;
+  kor.innerHTML = "<p class='name_kor'>" + nameKor + "</p><span class='del_elem'>Удалить</span>";
+  listCart.append(kor);
+  korzonka.push(nameKor);
+  localStorage.korzonka = JSON.stringify(korzonka);
+};
+
+addBtn.addEventListener('click', add_elems);
+
+
+function del_elem_cart(e){
+    let target = e.target;
+    if(target.classList.contains('del_elem')){
+        target.closest("li").remove();
+        let name_kor = target.closest("li").querySelector('.name_kor').textContent;
+        let curTasks = korzonka.indexOf(name_kor);
+        korzonka.splice(curTasks,1);
+        localStorage.korzonka=JSON.stringify(korzonka);
+    }
+}
+
+listCart.addEventListener('click', del_elem_cart);
+
+// конец её

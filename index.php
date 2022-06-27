@@ -311,7 +311,7 @@ $dir_img = '/img/tovaru/';
                                             р.</b></span></span>
                             </button>
 
-                            <ul class="dropdown-menu pull-right">
+                            <ul class="dropdown-menu pull-right" id="korzina">
                                 <li>
                                     <p class="text-center">В корзине пусто!</p>
                                 </li>
@@ -743,7 +743,7 @@ $dir_img = '/img/tovaru/';
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a href="#"><?= $elem['name'] ?></a>
+                                                <a href="#" id="name_tovara"><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -779,7 +779,7 @@ $dir_img = '/img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" >
+                                                    <button class="btn btn-general" type="button" id="add_in_cart">
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
