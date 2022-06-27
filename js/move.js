@@ -223,9 +223,7 @@ function updateCart(){
     for(var elem in localStorage){
         task.innerHTML = "<img src='"+img+"'"+
         "width='34px' height='34px'>"+"<span class='count_'>"
-        +text+"</span><i>x"+count+"</i><span class='del_elem'>Удалить</span><br>"+
-        `<button class="btn btn-fastorder" type="button" data-original-title="Оформить заказ">
-        <i class="fa fa-shopping-bag fa-fw"></i> Оформить заказ</button>`;
+        +text+"</span><i>x"+count+"</i><span class='del_elem'>Удалить</span><br>"
     }
     korzina.append(task);
     korzonka.push(task);
