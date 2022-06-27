@@ -313,9 +313,10 @@ $dir_img = '/img/tovaru/';
 
                             <ul class="dropdown-menu pull-right" id="korzina">
                                 <li>
-                                    <p class="text-center">В корзине пусто!</p>
                                 </li>
+                                
                             </ul>
+                           
                         </div>
                     </div>
                 </div>

@@ -37,6 +37,8 @@ function item_click(object, e) {
 
     id = $(obj).children('.product-model').text();
 
+    text = $(obj).children('.product-name').children().text(); 
+
     num = $(obj).children('.quantity_plus_minus')
     .children('.quantity_cont').children('.input-group')
     .children('.form-control');
@@ -46,6 +48,8 @@ function item_click(object, e) {
 
     count = $(num).val()
 
+    img = $(obj).parent('.product-thumb').children('.image')
+    .children('a').children('img').attr('src'); 
 
     if ($(elem).hasClass('btn-fastorder') || $(elem).parent().hasClass('btn-fastorder')) // Быcтрый заказ
     {
@@ -66,7 +70,7 @@ function item_click(object, e) {
     }
     else if ($(elem).hasClass('btn-general') || $(elem).parent().hasClass('btn-general')) // Заказ в корзину
     {
-        console.log('Корзина');
+        korzinka_list(id, img, count);
     }
     else if ($(elem).hasClass('btn-quantity-plus')) // + кол-во
     {
@@ -197,52 +201,43 @@ function item_click_search(id, e) {
 
 
 // скрипт корзины
-function korzina(){
-    $.ajax({
-        type: "POST",
-        url: "constructor/korzinka.php",
-        success: function(response){
-            $('#korzina').html(response);
-        }
-    });
-}
-
-const addBtn = document.getElementById("add_in_cart");
-const listCart = document.getElementById("korzina");
 
 let korzonka = JSON.parse(localStorage.korzonka || "[]");
-for(let i=0; i<korzonka.length; i++){
-    let nameKor = document.getElementById("name_tovara").value;
-    const kor = document.createElement("li");
-    kor.innerHTML = "<p class='name_kor'>" + nameKor + "</p><span class='del_elem'>Удалить</span>";
-    listCart.append(kor);
-    
+
+function korzinka_list(id, img, count, text){
+    localStorage.setItem('Teshka'+id, JSON.stringify({
+        id: id,
+        img: img,
+        name: text,
+        count: count
+    }));
+    updateCart();
+
 }
 
-let add_elems = (e) =>{
-  e.preventDefault();
-  const kor = document.createElement("li");
-  let nameKor = document.getElementById("name_tovara").value;
-  kor.innerHTML = "<p class='name_kor'>" + nameKor + "</p><span class='del_elem'>Удалить</span>";
-  listCart.append(kor);
-  korzonka.push(nameKor);
-  localStorage.korzonka = JSON.stringify(korzonka);
-};
+function updateCart(){
+    let korzonka = JSON.parse(localStorage.korzonka || "[]");
+    let korzina = document.getElementById('korzina');
+    let task = document.createElement('li');
 
-addBtn.addEventListener('click', add_elems);
+    for(var elem in localStorage){
+        task.innerHTML = "<img src='"+img+"'"+
+        "width='34px' height='34px'>"+"<span class='count_'>"
+        +text+"</span><i>x"+count+"</i><span class='del_elem'>Удалить</span><br>"+
+        `<button class="btn btn-fastorder" type="button" data-original-title="Оформить заказ">
+        <i class="fa fa-shopping-bag fa-fw"></i> Оформить заказ</button>`;
+    }
+    korzina.append(task);
+    korzonka.push(task);
+}
 
-
-function del_elem_cart(e){
+function delItem(e){
     let target = e.target;
-    if(target.classList.contains('del_elem')){
+    if(target.classList.contains("del_elem")){
         target.closest("li").remove();
-        let name_kor = target.closest("li").querySelector('.name_kor').textContent;
-        let curTasks = korzonka.indexOf(name_kor);
-        korzonka.splice(curTasks,1);
-        localStorage.korzonka=JSON.stringify(korzonka);
     }
 }
 
-listCart.addEventListener('click', del_elem_cart);
+korzina.addEventListener('click', delItem);
 
 // конец её
