@@ -35,6 +35,10 @@ function item_click(object, e) {
     e.preventDefault();
     elem = e.target;
 
+    $('#add_in_cart').on('click', function() {
+        $('#korzina_btnka').css('display', 'block !important');
+    });
+
     id = $(obj).children('.product-model').text();
 
     text = $(obj).children('.product-name').children().text(); 
@@ -70,7 +74,7 @@ function item_click(object, e) {
     }
     else if ($(elem).hasClass('btn-general') || $(elem).parent().hasClass('btn-general')) // Заказ в корзину
     {
-        korzinka_list(id, img, count);
+        korzinka_list(id, img, count, text);
     }
     else if ($(elem).hasClass('btn-quantity-plus')) // + кол-во
     {
@@ -145,7 +149,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
- 
+  function del_elem(id) {
+    $('[name=del_id]').val(id);
+}
+
+ function cancel_edit() {
+    $('#modal_edit').css('display') == 'none' ? $('#modal_edit').css('display', 'flex') : $('#modal_edit').css('display','none') ;  
+ }
+
+ function edit_elem(id, name, price, cat, img, avl) {
+    $('[name=m_id]').val(id);
+    $('[name=m_name]').text(name);
+    $('[name=m_name]').val(name);
+    $('[name=m_price]').val(price);
+    $('[name=m_cat]').val(cat);
+    $('[name=m_img]').val(img);
+    $('[name=m_avl]').val(avl);
+    $('[name=edit_id]').val(id);
+    $('#modal_edit').children().children('h2').text('Редактирование товара '+id);
+    cancel_edit();
+ }
 
   function take_items(elem, category, id, start=0, end=5, limit=5) {
     {
@@ -202,31 +225,62 @@ function item_click_search(id, e) {
 
 // скрипт корзины
 
+function korzina_btnka(object, e) {
+    e.preventDefault();
+
+    $('#add_in_cart').on('click', function() {
+        $('#korzina_btnka').css('display', 'block !important');
+    });
+
+    text = $("#korzina").children('li').children('span').text(); 
+    img = $('#korzina').children('li').children('img');
+    
+    if ($('#korzin-click')) // Быcтрый заказ
+    {
+        $(document).ready(function() {
+            $.ajax({
+                type: "POST",
+                url: '../constructor/korzina_buy.php',
+                data: {
+                    'name': text
+                },
+                success: function(response) {
+                    console.log(text);
+                    $('#oform').html(img+text);
+                    $('#oform').removeClass('hider');
+                }
+            });
+        });
+    }
+};
+
+
 let korzonka = JSON.parse(localStorage.korzonka || "[]");
 
 function korzinka_list(id, img, count, text){
-    localStorage.setItem('Teshka'+id, JSON.stringify({
+    localStorage.setItem('Tovar'+id, JSON.stringify({
         id: id,
         img: img,
         name: text,
         count: count
     }));
     updateCart();
-
+    res = JSON.parse(localStorage.getItem("Tovar"+id));
+    console.log(res.name);
 }
 
 function updateCart(){
     let korzonka = JSON.parse(localStorage.korzonka || "[]");
     let korzina = document.getElementById('korzina');
     let task = document.createElement('li');
-
     for(var elem in localStorage){
         task.innerHTML = "<img src='"+img+"'"+
         "width='34px' height='34px'>"+"<span class='count_'>"
-        +text+"</span><i>x"+count+"</i><span class='del_elem'>Удалить</span><br>"
+        +text+"</span><i style='color: blue; font-weight: 600'>x"+count+"</i><span class='del_elem'>Удалить</span><br>"
     }
     korzina.append(task);
     korzonka.push(task);
+    localStorage.setItem('Tovar', JSON.stringify(korzonka));
 }
 
 function delItem(e){
@@ -239,3 +293,12 @@ function delItem(e){
 korzina.addEventListener('click', delItem);
 
 // конец её
+
+// function Buy_cart(id, img, count, text){
+//     $('#korzin_btnka').on('click', function () {
+//         console.log(korzinka_list(id, img, count ,text));
+//     })
+// }
+
+
+

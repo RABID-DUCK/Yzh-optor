@@ -271,9 +271,9 @@ $dir_img = __DIR__ . './img/tovaru/';
                             <ul class="dropdown-menu drop-contacts">
                                 <li class="line-contact"></li>
                                 <li>
-                                    <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru"></div>
-                                        Yuzh.Optor@mail.ru
+                                    <a target="_blank" href="mailto:yzho-optor@mail.ru">
+                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="yzho-optor@mail.ru"></div>
+                                        yzho-optor@mail.ru
                                     </a>
                                 </li>
                                 <li>
@@ -293,7 +293,7 @@ $dir_img = __DIR__ . './img/tovaru/';
                 </div>
                 <div class="col-sm-3 col-md-2 col-md-push-4 cart_fix">
                     <div class="shopping-cart ">
-                        <div id="cart" class="btn-group btn-block">
+                    <div id="cart" class="btn-group btn-block">
                             <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn btn-block dropdown-toggle">
                                 <i class="shop-bag fa fa-cart-plus"></i>
                                 <i class="car-down fa fa-angle-down"></i>
@@ -301,11 +301,14 @@ $dir_img = __DIR__ . './img/tovaru/';
                                             р.</b></span></span>
                             </button>
 
-                            <ul class="dropdown-menu pull-right">
-                                <li>
-                                    <p class="text-center">В корзине пусто!</p>
+                            <ul class="dropdown-menu pull-right" id="korzina">
+                                <li name="name">
                                 </li>
+                                <form action="constructor/buy.php" method="POST">
+    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
+                                </form>
                             </ul>
+                           
                         </div>
                     </div>
                 </div>
@@ -316,7 +319,6 @@ $dir_img = __DIR__ . './img/tovaru/';
             </div>
         </div>
     </div>
-
     <header>
         <div class="container">
             <div class="row vertical-align">
@@ -347,9 +349,9 @@ $dir_img = __DIR__ . './img/tovaru/';
                                 </li>
                                 <li class="line-contact"></li>
                                 <li>
-                                    <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
-                                        Yuzh.Optor@mail.ru
+                                    <a target="_blank" href="mailto:yzho-optor@mail.ru">
+                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="yzho-optor@mail.ru" /></div>
+                                        yzho-optor@mail.ru
                                     </a>
                                 </li>
                                 <li>
@@ -381,11 +383,14 @@ $dir_img = __DIR__ . './img/tovaru/';
                                             р.</b></span></span>
                             </button>
 
-                            <ul class="dropdown-menu pull-right">
-                                <li>
-                                    <p class="text-center">В корзине пусто!</p>
+                            <ul class="dropdown-menu pull-right" id="korzina">
+                                <li name="name">
                                 </li>
+                                <form action="constructor/buy.php" method="POST">
+                                    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
+                                </form>
                             </ul>
+                           
                         </div>
                     </div>
                 </div>
@@ -830,14 +835,14 @@ $dir_img = __DIR__ . './img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" >
+                                                    <button class="btn btn-general" type="button" id="add_in_cart">
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                    <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
+                                                <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -1163,8 +1168,8 @@ $dir_img = __DIR__ . './img/tovaru/';
                             <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
                                     304-89-35</a>
                             </li>
-                            <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
-                                    Yuzh.Optor@mail.ru</a></li>
+                            <li><a target="_blank" href="mailto:yzho-optor@mail.ru"><i class=" fa-width"></i>
+                                    yzho-optor@mail.ru</a></li>
                             <li>
                                 <a href="https://api.whatsapp.com/send/?phone=79000930556"><i class="fa fa-whatsapp fa-width"></i> +7 (900) 093-05-56</a><br />
                                 <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>

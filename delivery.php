@@ -284,9 +284,9 @@
                 <a href="javascript:void(0)" onclick="get_modal_callbacking()"><i class="fa fa-phone-square" aria-hidden="true"></i> Заказать звонок</a>						</li>
             <li class="line-contact"></li>
                                                                                                 <li>
-                                                        <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                                                    <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru"></div>
-                                                                    Yuzh.Optor@mail.ru								</a>
+                                                        <a target="_blank" href="mailto:yzho-optor@mail.ru">
+                                                                    <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="yzho-optor@mail.ru"></div>
+                                                                    yzho-optor@mail.ru								</a>
                                                         </li>
                                                 <li>
                                                         <a href="https://api.whatsapp.com/send/?phone=79000930556" target="_blank">
@@ -345,9 +345,9 @@
                             </li>
                             <li class="line-contact"></li>
                             <li>
-                                <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                    <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
-                                    Yuzh.Optor@mail.ru
+                                <a target="_blank" href="mailto:yzho-optor@mail.ru">
+                                    <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="yzho-optor@mail.ru" /></div>
+                                    yzho-optor@mail.ru
                                 </a>
                             </li>
                             <li>
@@ -691,10 +691,10 @@
                     style="font-size:10.5pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">457040, Россия, г. Южноуральск, ул. Спортивная, 36</span>
             </p>
             <p dir="ltr" style="line-height:1.68;margin-top:0pt;margin-bottom:13pt;"><span
-                    style="font-size:12.499999999999998pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Доставка по Южноуральску:</span>
+                    style="font-size:12.499999999999998pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Доставка по Челябинской области:</span>
             </p>
             <p dir="ltr" style="line-height:1.68;margin-top:0pt;margin-bottom:13pt;"><span
-                    style="font-size:10.5pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">При заказе от 20 000 р. доставка по г. Южноуральску бесплатно!</span>
+                    style="font-size:10.5pt;font-family:Arial;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">При заказе от 20 000 р. доставка по Челябинской области бесплатно!</span>
             </p>
             <h3 dir="ltr"
                 style="line-height:1.32;text-align: justify;background-color:#f6f6f6;margin-top:0pt;margin-bottom:3pt;padding:-5pt 0pt 0pt 0pt;">
@@ -754,7 +754,7 @@
             <p dir="ltr"
                style="line-height:1.38;text-align: justify;background-color:#ffffff;margin-top:0pt;margin-bottom:12pt;">
                 <span style="fontsubcribe-size:10.5pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">Email:</span><span
-                    style="font-size:10.5pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> Yuzh.Optor@mail.ru</span>
+                    style="font-size:10.5pt;font-family:Arial;color:#000000;background-color:#ffffff;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> yzho-optor@mail.ru</span>
             </p>
         </div>
     </div>
@@ -1086,8 +1086,8 @@ function price_format(n) {
                         <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
                                 304-89-35</a>
                         </li>
-                        <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
-                                Yuzh.Optor@mail.ru</a></li>
+                        <li><a target="_blank" href="mailto:yzho-optor@mail.ru"><i class=" fa-width"></i>
+                                yzho-optor@mail.ru</a></li>
                         <li>
                             <a href="https://api.whatsapp.com/send/?phone=79000930556"><i class="fa fa-whatsapp fa-width"></i> +7 (900) 093-05-56</a><br />
                             <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>

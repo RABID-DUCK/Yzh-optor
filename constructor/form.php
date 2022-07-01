@@ -1,5 +1,5 @@
 <?php
-     $email = "onetaphack@gmail.com";
+     $email = "yzho-optor@yzh-optor.ru";
 
      $tema_email = "Заказать обратный звонок"; // tema 
      $text = $_POST['text_polz']; // text polz
@@ -8,7 +8,7 @@
      $description_email = $_POST['comment_buyer']; // opisaniye
      $when_call_email = $_POST['time_callback_on']; // kogda zvonit
 
-     if(mail($email, $tema_email, "Текст: ".$text."Номер телефона: ".$num_email."\n\r".
+     if(mail($email, $tema_email, "Текст: ".$text."\n\rНомер телефона: ".$num_email."\n\r".
      "Почта покупателя: ".$user_email."\n\r"."Комментарий к форме: ".".
      $description_email.\n\r"."Когда перезвонить: ".$when_call_email)){
         echo "<script>";

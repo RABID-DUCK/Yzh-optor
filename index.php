@@ -277,9 +277,9 @@ $dir_img = '/img/tovaru/';
                                 </li>
                                 <li class="line-contact"></li>
                                 <li>
-                                    <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
-                                        Yuzh.Optor@mail.ru
+                                    <a target="_blank" href="mailto:yzho-optor@mail.ru">
+                                        <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="yzho-optor@mail.ru" /></div>
+                                        yzho-optor@mail.ru
                                     </a>
                                 </li>
                                 <li>
@@ -307,14 +307,17 @@ $dir_img = '/img/tovaru/';
                             <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn btn-block dropdown-toggle">
                                 <i class="shop-bag fa fa-cart-plus"></i>
                                 <i class="car-down fa fa-angle-down"></i>
-                                <span class="cart-total"><span class="products"><b>0</b> <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
+                                <span class="cart-total"><span class="products"><b>0</b>
+                                 <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
                                             р.</b></span></span>
                             </button>
 
                             <ul class="dropdown-menu pull-right" id="korzina">
-                                <li>
+                                <li name="name">
                                 </li>
-                                
+                                <form action="constructor/buy.php" method="POST">
+    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
+                                </form>
                             </ul>
                            
                         </div>
@@ -600,7 +603,7 @@ $dir_img = '/img/tovaru/';
             <meta itemprop="addressCountry" content="Российская Федерация">
         </span>
         <meta itemprop="telephone" content="+7 (900) 093-05-56">
-        <meta itemprop="email" content="Yuzh.Optor@mail.ru">
+        <meta itemprop="email" content="yzho-optor@mail.ru">
     </span>
     <div class="container">
         <div class="row">
@@ -885,7 +888,7 @@ $dir_img = '/img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" >
+                                                    <button class="btn btn-general" type="button" id="add_in_cart">
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
@@ -1108,7 +1111,7 @@ $dir_img = '/img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" >
+                                                    <button class="btn btn-general" type="button" id="add_in_cart">
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
@@ -1219,7 +1222,7 @@ $dir_img = '/img/tovaru/';
                                                         </div>
                                                         <div class="actions">
                                                             <div class="cart">
-                                                                <button class="btn btn-general" type="button" >
+                                                                <button class="btn btn-general" type="button" id="add_in_cart">
                                                                     <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                                 </button>
                                                             </div>
@@ -1331,7 +1334,7 @@ $dir_img = '/img/tovaru/';
                                                         </div>
                                                         <div class="actions">
                                                             <div class="cart">
-                                                                <button class="btn btn-general" type="button" >
+                                                                <button class="btn btn-general" type="button" id="add_in_cart">
                                                                     <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                                 </button>
                                                             </div>
@@ -1566,7 +1569,18 @@ $dir_img = '/img/tovaru/';
         });
     });
     </script>
+    <div id="tcb-call">
+    <div class="tcb-phone">
+        <div class="tcb-phone-img"></div>
+    </div>
+    <div class="tcb-layout1"></div>
+    <div class="tcb-layout2"></div>
+    <div class="tcb-layout3"></div>
+</div>
     <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"></div></div></div>
+    <div class="oform hider" id="oform">
+
+    </div>
     <footer>
         <div class="footer-top">
             <div class="container">
@@ -1683,8 +1697,8 @@ $dir_img = '/img/tovaru/';
                             <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
                                     304-89-35</a>
                             </li>
-                            <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
-                                    Yuzh.Optor@mail.ru</a></li>
+                            <li><a target="_blank" href="mailto:yzho-optor@mail.ru"><i class=" fa-width"></i>
+                                    yzho-optor@mail.ru</a></li>
                             <li>
                                 <a href="https://api.whatsapp.com/send/?phone=79000930556"><i class="fa fa-whatsapp fa-width"></i> +7 (900) 093-05-56</a><br />
                                 <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>

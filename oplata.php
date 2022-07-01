@@ -2626,10 +2626,10 @@ $dir_img = __DIR__ . '/img/tovaru/';
                                         class="fa fa-phone-square" aria-hidden="true"></i> Заказать звонок</a></li>
                             <li class="line-contact"></li>
                             <li>
-                                <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
+                                <a target="_blank" href="mailto:yzho-optor@mail.ru">
                                     <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg"
-                                                                 alt="Yzh.Optor@mail.ru"></div>
-                                    Yuzh.Optor@mail.ru </a>
+                                                                 alt="yzho-optor@mail.ru"></div>
+                                    yzho-optor@mail.ru </a>
                             </li>
                             <li>
                                 <a href="https://api.whatsapp.com/send/?phone=79000930556" target="_blank">
@@ -2701,9 +2701,9 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             </li>
                             <li class="line-contact"></li>
                             <li>
-                                <a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
-                                    <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="Yuzh.Optor@mail.ru" /></div>
-                                    Yuzh.Optor@mail.ru
+                                <a target="_blank" href="mailto:yzho-optor@mail.ru">
+                                    <div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg" alt="yzho-optor@mail.ru" /></div>
+                                    yzho-optor@mail.ru
                                 </a>
                             </li>
                             <li>
@@ -3088,7 +3088,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
             <p dir="ltr"
                style="margin-top: 0pt; margin-bottom: 12pt; color: rgb(51, 51, 51); font-family: &quot;Roboto Condensed&quot;, sans-serif; font-size: 14px; line-height: 1.38; text-align: justify;">
                 <span style="font-size: 10.5pt; font-family: Arial; color: rgb(0, 0, 0); font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;">Email:</span><span
-                    style="font-size: 10.5pt; font-family: Arial; color: rgb(0, 0, 0); font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"> Yuzh.Optor@mail.ru</span>
+                    style="font-size: 10.5pt; font-family: Arial; color: rgb(0, 0, 0); font-variant-numeric: normal; font-variant-east-asian: normal; vertical-align: baseline; white-space: pre-wrap;"> yzho-optor@mail.ru</span>
             </p></div>
     </div>
 
@@ -3324,8 +3324,8 @@ $dir_img = __DIR__ . '/img/tovaru/';
                             <li><a href="tel:+79823048935" target="_blank"><i class=" fa-width"></i>+7 (982)
                                     304-89-35</a>
                             </li>
-                            <li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
-                                    Yuzh.Optor@mail.ru</a></li>
+                            <li><a target="_blank" href="mailto:yzho-optor@mail.ru"><i class=" fa-width"></i>
+                                    yzho-optor@mail.ru</a></li>
                             <li>
                                 <a href="https://api.whatsapp.com/send/?phone=79000930556"><i class="fa fa-whatsapp fa-width"></i> +7 (900) 093-05-56</a><br />
                                 <a href="https://api.whatsapp.com/send/?phone=79823048935"><i class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a>

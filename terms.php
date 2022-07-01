@@ -281,10 +281,10 @@
 								</li>
 								<li class="line-contact"></li>
 								<li>
-									<a target="_blank" href="mailto:Yuzh.Optor@mail.ru">
+									<a target="_blank" href="mailto:yzho-optor@mail.ru">
 										<div class="icon-image"><img src="img/image/cache/catalog/image/znacki/i-20x20.jpg"
-												alt="Yuzh.Optor@mail.ru" /></div>
-										Yuzh.Optor@mail.ru
+												alt="yzho-optor@mail.ru" /></div>
+										yzho-optor@mail.ru
 									</a>
 								</li>
 								<li>
@@ -658,8 +658,8 @@
 						<ul class="list-unstyled">
 							<li><a href="tel:+79000930556" target="_blank"><i class=" fa-width"></i> +7 (982)
 									304-89-35</a></li>
-							<li><a target="_blank" href="mailto:Yuzh.Optor@mail.ru"><i class=" fa-width"></i>
-									Yuzh.Optor@mail.ru</a></li>
+							<li><a target="_blank" href="mailto:yzho-optor@mail.ru"><i class=" fa-width"></i>
+									yzho-optor@mail.ru</a></li>
 							<li><a href="https://api.whatsapp.com/send/?phone=79000930556"><i
 										class="fa fa-whatsapp fa-width"></i> +7 (982) 304-89-35</a></li>
 						</ul>
