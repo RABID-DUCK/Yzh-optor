@@ -260,7 +260,11 @@ let korzina = document.getElementById('korzina');
 
 for(let i=0; i<localStorage.length; i++) {
     let key = localStorage.key(i);
-    var temp = [`${key}:${localStorage.getItem(key)}`];
+    result = JSON.parse(localStorage.getItem(key));
+    korzina.innerHTML += `<img src="../img/tovaru/${result.img}"><span>${result.name}</span>`;
+    // korzina.append(result.name);
+    // var temp = [`${key}:${localStorage.getItem(key)}`];
+    console.log(result.name); // так можно досатть по ключу всё
 }
 
 function korzinka_list(id, img, count, text){
