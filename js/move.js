@@ -256,6 +256,12 @@ function korzina_btnka(object, e) {
 
 
 let korzonka = JSON.parse(localStorage.korzonka || "[]");
+let korzina = document.getElementById('korzina');
+
+for(let i=0; i<localStorage.length; i++) {
+    let key = localStorage.key(i);
+    var temp = [`${key}:${localStorage.getItem(key)}`];
+}
 
 function korzinka_list(id, img, count, text){
     localStorage.setItem('Tovar'+id, JSON.stringify({
@@ -266,21 +272,21 @@ function korzinka_list(id, img, count, text){
     }));
     updateCart();
     res = JSON.parse(localStorage.getItem("Tovar"+id));
+    korzina.append(res.name);
     console.log(res.name);
 }
 
-function updateCart(){
+function updateCart(id){
     let korzonka = JSON.parse(localStorage.korzonka || "[]");
-    let korzina = document.getElementById('korzina');
     let task = document.createElement('li');
     for(var elem in localStorage){
         task.innerHTML = "<img src='"+img+"'"+
         "width='34px' height='34px'>"+"<span class='count_'>"
         +text+"</span><i style='color: blue; font-weight: 600'>x"+count+"</i><span class='del_elem'>Удалить</span><br>"
     }
-    korzina.append(task);
+    // korzina.append(localStorage.getItem("Tovar"+id));
     korzonka.push(task);
-    localStorage.setItem('Tovar', JSON.stringify(korzonka));
+    // localStorage.setItem('Tovar', JSON.stringify(korzonka));
 }
 
 function delItem(e){

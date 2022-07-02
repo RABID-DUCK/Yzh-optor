@@ -3,6 +3,9 @@
   width: 100%;
   background-color: #36393F;
 }
+.mfp-content {
+  margin: 50px auto !important;
+}
 .scroll {
   height: 892px;
   overflow-y: auto;

@@ -379,7 +379,8 @@ $dir_img = __DIR__ . './img/tovaru/';
                             <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn btn-block dropdown-toggle">
                                 <i class="shop-bag fa fa-cart-plus"></i>
                                 <i class="car-down fa fa-angle-down"></i>
-                                <span class="cart-total"><span class="products"><b>0</b> <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
+                                <span class="cart-total"><span class="products"><b>0</b>
+                                 <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
                                             р.</b></span></span>
                             </button>
 
@@ -387,13 +388,13 @@ $dir_img = __DIR__ . './img/tovaru/';
                                 <li name="name">
                                 </li>
                                 <form action="constructor/buy.php" method="POST">
-                                    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
+    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
                                 </form>
                             </ul>
                            
                         </div>
                     </div>
-                </div>
+                </div>  
                 <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
                         <div class="input-group pt20">
@@ -937,6 +938,9 @@ $dir_img = __DIR__ . './img/tovaru/';
             });
         });
     </script>
+    <div id="close-yey" class="modal-yey hider">
+
+</div>
      <!-- скрипт звонка -->
      <div class="hide-call mfp-bg mfp-ready hide-zvonok"></div>
     <div class="hide-call mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready hide-zvonok" tabindex="-1" style="overflow: hidden auto;">
