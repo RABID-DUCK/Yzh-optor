@@ -29,7 +29,7 @@ $dir_img = '/img/tovaru/';
     <link rel="stylesheet" href="img/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/_50c36ab27da8bb5ead9c87671a74d2a9.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/ns-cache/_64b8609b55b5e3556b172af674a9b309.js"></script>
     <style>
         @media (min-width: 992px) {

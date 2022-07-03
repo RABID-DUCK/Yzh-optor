@@ -12,15 +12,37 @@ if(isset($_POST['localStorage']) && !empty($_POST['localStorage'])){
     $localStorage = json_encode($_POST['localStorage']);
     header("Content-type:application/json");
     print_r($localStorage);
-   }else{
-    echo "GGGGGGGG";
-   }
+}else{
+    echo "GGGGG";
+}
+
 ?>
 <head>
     <link rel="stylesheet" href="../css/style.less">
     <link rel="stylesheet" href="../css/_50c36ab27da8bb5ead9c87671a74d2a9.css">
 </head>
-n<div class="mfp-bg mfp-ready"></div>
+<style>
+    form{
+        display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 20px;
+    background-color: gainsboro;
+    padding-top: 10px;
+    }
+    form input{
+        height: 26px;
+        font-size: 16px;
+    }
+    form input[type="submit"]{
+        height: 40px !important;
+        font-size: 18px;
+        margin-left: 100px;
+    }
+</style>
+<div id="davai"></div>
+<div class="mfp-bg mfp-ready"></div>
 <div class="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready" tabindex="-1" style="overflow: hidden auto;">
     <div class="mfp-cotainer mfp-ajax-holder mfp-s-ready">
         <div class="mfp-content">

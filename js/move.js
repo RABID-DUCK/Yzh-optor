@@ -224,37 +224,6 @@ function item_click_search(id, e) {
 
 
 // скрипт корзины
-
-function korzina_btnka(object, e) {
-    e.preventDefault();
-
-    $('#add_in_cart').on('click', function() {
-        $('#korzina_btnka').css('display', 'block !important');
-    });
-
-    text = $("#korzina").children('li').children('span').text(); 
-    img = $('#korzina').children('li').children('img');
-    
-    if ($('#korzin-click')) // Быcтрый заказ
-    {
-        $(document).ready(function() {
-            $.ajax({
-                type: "POST",
-                url: '../constructor/korzina_buy.php',
-                data: {
-                    'name': text
-                },
-                success: function(response) {
-                    console.log(text);
-                    $('#oform').html(img+text);
-                    $('#oform').removeClass('hider');
-                }
-            });
-        });
-    }
-};
-
-
 let korzonka = JSON.parse(localStorage.korzonka || "[]");
 let korzina = document.getElementById('korzina');
 let oform_cart = document.querySelector('.tovaru-by-cart');
@@ -329,24 +298,21 @@ korzina.addEventListener('click', delItem);
 var datak = JSON.stringify(localStorage);
 
 function buy_click() {
-    $('#korzin_btnka').click(function() {
-        $(document).ready(function() {
             $.ajax({
-                url: '../constructor/korzina_buy.php',
+                url: 'constructor/korzina_buy.php',
                 type: 'POST',
                 data: {
-                    localStorage: datak
+                    "localStorage": datak
                 },
-                success: function(datae){
-                    console.log(datae);
-                    window.location.href = "../constructor/korzina_buy.php";
+                success: function(response)
+                {
+                    console.log(response);
+                    window.location.href = "constructor/korzina_buy.php";
                 },
-                error: function(){
-                    console.log(datae);
+                error: function(response2){
+                    console.log(response2);
                 }
             });
-        });
-    });
 };
 
 
