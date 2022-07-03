@@ -257,14 +257,38 @@ function korzina_btnka(object, e) {
 
 let korzonka = JSON.parse(localStorage.korzonka || "[]");
 let korzina = document.getElementById('korzina');
+let oform_cart = document.querySelector('.tovaru-by-cart');
 
 for(let i=0; i<localStorage.length; i++) {
     let key = localStorage.key(i);
     result = JSON.parse(localStorage.getItem(key));
-    korzina.innerHTML += `<img src="../img/tovaru/${result.img}"><span>${result.name}</span>`;
-    // korzina.append(result.name);
-    // var temp = [`${key}:${localStorage.getItem(key)}`];
-    console.log(result.name); // так можно досатть по ключу всё
+    let temp_div = document.createElement('div');
+    temp_div.innerHTML = `<img src="${result.img}" width="34px" height="34px"><span>${result.name}</span><i class="del_elem" onclick="delItem(${i})">Удалить</i>`;
+    korzina.prepend(temp_div);
+    console.log(temp_div); 
+}
+
+function senclocalStorage(){
+    let korzina = document.getElementById('korzina');
+    var obj = {};
+
+    for(let i=0; i<localStorage.length; i++) {
+        let key = localStorage.key(i);
+        obj[key] = localStorage.getItem(key);
+    //     result = JSON.parse(localStorage.getItem(key));
+    // let temp_div = document.createElement('div');
+    //     temp_div.innerHTML = `<img src="${result.img}" width="34px" height="34px"><span>${result.name}</span><i class="del_elem" onclick="delItem(${i})">Удалить</i>`;
+    //     korzina.prepend(temp_div);
+    }
+    $.ajax({
+        url: '../constructor/korzina_buy.php',
+        method: 'post',
+        dataType: 'html',
+        data: {data: obj},
+        success: function(data){
+            $('#syda').html(data);
+        }
+    });
 }
 
 function korzinka_list(id, img, count, text){
@@ -275,9 +299,7 @@ function korzinka_list(id, img, count, text){
         count: count
     }));
     updateCart();
-    res = JSON.parse(localStorage.getItem("Tovar"+id));
-    korzina.append(res.name);
-    console.log(res.name);
+   
 }
 
 function updateCart(id){
@@ -296,7 +318,7 @@ function updateCart(id){
 function delItem(e){
     let target = e.target;
     if(target.classList.contains("del_elem")){
-        target.closest("li").remove();
+        target.closest("div").remove();
     }
 }
 
@@ -304,11 +326,27 @@ korzina.addEventListener('click', delItem);
 
 // конец её
 
-// function Buy_cart(id, img, count, text){
-//     $('#korzin_btnka').on('click', function () {
-//         console.log(korzinka_list(id, img, count ,text));
-//     })
-// }
+var datak = JSON.stringify(localStorage);
 
+function buy_click() {
+    $('#korzin_btnka').click(function() {
+        $(document).ready(function() {
+            $.ajax({
+                url: '../constructor/korzina_buy.php',
+                type: 'POST',
+                data: {
+                    localStorage: datak
+                },
+                success: function(datae){
+                    console.log(datae);
+                    window.location.href = "../constructor/korzina_buy.php";
+                },
+                error: function(){
+                    console.log(datae);
+                }
+            });
+        });
+    });
+};
 
 

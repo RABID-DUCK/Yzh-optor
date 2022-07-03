@@ -3,158 +3,90 @@ session_start();
 require "connect.php";
 $name = $_POST['name'];
 $count = $_POST['count'];
-$elem = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `items` WHERE `id`=$name"));
 
 $_SESSION['n_t'] = $elem['name'];
 $_SESSION['count_t'] = $count;
 $_SESSION['price_t'] = $elem['price'];
 
-$email = "yzho-optor@mail.ru";
-
-$tema_email = "Заказать обратный звонок"; // tema
-$text = $_POST['name_polz']; // text polz
-$num_email = $_POST['phone_polz']; // nomer telephone
-$user_email = $_POST['email_buyer']; // pochta usera
-$description_email = $_POST['comment_buyer']; // opisaniye
-
-$_SESSION['name_polz'] = $text;
-
-if (mail($email, $tema_email, "Текст: " . $text . "Номер телефона: " . $num_email . "\n\r" .
-    "Почта покупателя: " . $user_email . "\n\r" . "Комментарий к форме: " . ".
-     $description_email.\n\r")) {
-
-} else {
-    echo "<script>";
-    echo "alert('Упс! Что-то пошло не так :/ ');";
-    echo "window.location.href = '404.php'";
-    echo "</script>";
-}
+if(isset($_POST['localStorage']) && !empty($_POST['localStorage'])){
+    $localStorage = json_encode($_POST['localStorage']);
+    header("Content-type:application/json");
+    print_r($localStorage);
+   }else{
+    echo "GGGGGGGG";
+   }
 ?>
-
-<div class="mfp-bg mfp-ready"></div>
+<head>
+    <link rel="stylesheet" href="../css/style.less">
+    <link rel="stylesheet" href="../css/_50c36ab27da8bb5ead9c87671a74d2a9.css">
+</head>
+n<div class="mfp-bg mfp-ready"></div>
 <div class="mfp-wrap mfp-close-btn-in mfp-auto-cursor mfp-ready" tabindex="-1" style="overflow: hidden auto;">
     <div class="mfp-cotainer mfp-ajax-holder mfp-s-ready">
         <div class="mfp-content">
             <div id="popup-quickorder">
-                <div class="popup-heading">Оформить покупки в корзине</div>
+                <div class="popup-heading">Купить в 1 клик</div>
                 <div class="popup-center">
-                    <div class="panel-body">
-                        <div class="col-sm-12">
-                            <div class="well well-sm products" style="margin-top:10px;">
-                                <div class="product">
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-5">
-                                            <div class="image">
-                                                <img src="img/tovaru/<?= $elem['img'] ?>" alt='<?= $elem['name'] ?>'
-                                                     height="60px" width="60px">
-                                            </div>
-                                            <div class="pr-name quick-cell">
-                                                <div class="quick-cell-content"><?= $elem['name'] ?></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-12 col-sm-7">
-                                            <div class="col-xs-6 quantity_quickorder quick-cell">
-                                                <div class="quick-cell-content pquantity">
-                                                    <div class="input-group popup-quantity">
-									<span class="input-group-btn">
-										<input class="btn btn-update-popup" type="button" id="decrease_quickorder"
-                                               value="-" onclick="btnminus_quickorder()">
-									</span>
-                                                        <input type="text" class="form-control input-sm qty_quickorder" oninput="input_quickorder()" maxlength="6"
-                                                               name="quantity" id="htop_quickorder" size="2"
-                                                               value="<?= $count ?>">
-                                                        <span class="input-group-btn">
-										<input class="btn btn-update-popup" type="button" id="increase_quickorder"
-                                               value="+" onclick="btnplus_quickorder()">
-									</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6 text-center quick-cell">
-                                                <div class="quick-cell-content">
-                                                    <div class="price_fast"><span
-                                                                id="formated_price_quickorder"><?= $elem['price'] ?> руб.</span>
-                                                    </div>
-                                                    <input type="hidden" id="price_tax_plus_options"
-                                                           name="price_tax" value="24.96">
-                                                    <input type="hidden" id="price_no_tax_plus_options"
-                                                           name="price_no_tax" value="24.96">
-                                                    <input id="total_form" type="hidden" value="24.96"
-                                                           name="total_fast">
+                        <div class="panel-body">
+                            <div class="col-sm-12">
+                                <div class="well well-sm products" style="margin-top:10px;">
+                                    <div class="product">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-5" id="syda">
+                                                <script>
+                                                    let korzina = document.getElementById('syda');
+                                                    let oform_cart = document.querySelector('.tovaru-by-cart');
 
-                                                </div>
-                                            </div>
-                                            <script>
-
-                                                var input = $('#htop_quickorder');
-                                                var price = $('#formated_price_quickorder');
-                                                $(price).html(<?=$elem['price']?> * count + ' руб.');
-
-                                                function btnminus_quickorder() {
-                                                    if ($(input).val() > 1) {
-                                                        $(input).val(parseInt($(input).val() - 1));
-                                                        $(price).html(<?=$elem['price']?> * $(input).val() + ' руб.');
+                                                    for(let i=0; i<localStorage.length; i++) {
+                                                        let key = localStorage.key(i);
+                                                        result = JSON.parse(localStorage.getItem(key));
+                                                    let temp_div = document.createElement('div');
+                                                        temp_div.innerHTML = `<img src="../${result.img}" width="50px" height="50px"><span>${result.name}</span><i class="del_elem" onclick="delItem(${i})">Удалить</i>`;
+                                                        korzina.prepend(temp_div);
+                                                        console.log(temp_div); // так можно досатть по ключу всё
                                                     }
-                                                }
-
-                                                function btnplus_quickorder() {
-                                                    if ($(input).val() < 999999) {
-                                                        $(input).val(parseInt(parseInt($(input).val()) + 1));
-                                                        $(price).html(<?=$elem['price']?> * $(input).val() + ' руб.');
-                                                    }
-                                                }
-
-                                                function input_quickorder() {
-                                                    if ($(input).val() <= 999999 && $(input).val() > 0) {
-                                                        $(input).val(parseInt($(input).val()));
-                                                        $(price).html(<?=$elem['price']?> * $(input).val() + ' руб.');
-                                                    } else {
-                                                        $(input).val(1);
-                                                        $(price).html(<?=$elem['price']?> * $(input).val() + ' руб.');
-                                                    }
-                                                }
-                                            </script>
+                                                </script>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <form action="constructor/buy.php" method="POST">
+                            <form action="buy.php" method="POST">
                             <div class="col-sm-6 col-sm-12 form-group sections_block_rquaired">
-                                <div class="input-group margin-bottom-sm">
-                                    <input class="form-control contact-name" type="text" placeholder="Ваше Имя" value="" name="name_polz">
+                            <div class="input-group margin-bottom-sm">
+                                <input class="form-control contact-name" type="text" placeholder="Ваше Имя" value="" name="name_polz">
                                     <span class="input-group-addon"><i class="icon-append-1 fa fa-user fa-fw"></i></span>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 col-sm-12 form-group sections_block_rquaired">
                                 <div class="input-group margin-bottom-sm">
-                                    <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone_polz">
-                                    <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
+                            <input id="contact-phone" class="form-control contact-phone" type="text" placeholder="Ваш телефон" value="" name="phone_polz">
+                                <span class="input-group-addon"><i class="icon-append-1 fa fa-phone-square fa-fw"></i></span>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 col-sm-12 form-group sections_block">
                                 <div class="input-group margin-bottom-sm">
-                                    <input id="contact-email" class="form-control contact-email" type="text" placeholder="Ваш Email" value="" name="email_buyer">
+                        <input id="contact-email" class="form-control contact-email" type="text" placeholder="Ваш Email" value="" name="email_buyer">
                                     <span class="input-group-addon"><i class="icon-append-1 fa fa-envelope fa-fw"></i></span>
                                 </div>
                             </div>
 
                             <div class="col-sm-6 col-om-12 form-group sections_block">
                                 <div class="input-group margin-bottom-sm">
-                                    <input id="contact-comment" class="form-control contact-comment-buyer" name="comment_buyer" placeholder="Комментарий">
+                                    <input id="contact-comment" class="form-control contact-comment-buyer" name="comment_buyer" placeholder="Откуда вы">
                                     <span class="input-group-addon"><i class="icon-append-1 fa fa-comment fa-fw"></i></span>
 
                                 </div>
                             </div>
-                            <input type="submit" class="btn btn-quickorder-one" value="Оформить Заказ" style="display: block;"><i class=" fa-fw"></i>
-                            <input type="hidden" id="callback_url" value="" name="url_site">
+                                <input type="submit" class="btn btn-quickorder-one" value="Оформить Заказ" style="display: block;"><i class=" fa-fw"></i>
+                                <input type="hidden" id="callback_url" value="" name="url_site">
                             <input type="hidden" id="this_prod_id" value="6366" name="this_prod_id">
 
                             <div class="col-sm-12 form-group text-center"></div>
+                        </div>
                     </div>
-                </div>
                 <div class="popup-footer">
                     <div id="quickorder_btn">
                     </div>

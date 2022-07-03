@@ -94,11 +94,6 @@ $dir_img = '/img/tovaru/';
             transform: rotate(-180deg);
         }
     </style>
-    <script>
-        if (localStorage.getItem('display') === null) {
-            localStorage.setItem('display', 'grid');
-        }
-    </script>
     <style>
         .product-grid.grid4.col-1 .actions .cart .btn-general {
             padding: 7.5px 6px;
@@ -315,9 +310,7 @@ $dir_img = '/img/tovaru/';
                             <ul class="dropdown-menu pull-right" id="korzina">
                                 <li name="name">
                                 </li>
-                                <form action="constructor/buy.php" method="POST">
-    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
-                                </form>
+                                    <button class="korzin-click btn-cart" id="korzin_btnka" onclick="buy_click()">Оформить заказ</button>
                             </ul>
                            
                         </div>
@@ -1507,9 +1500,10 @@ $dir_img = '/img/tovaru/';
     <div class="tcb-layout3"></div>
 </div>
     <button title="Close (Esc)" type="button" class="mfp-close" id="close-call">×</button></div></div><div class="mfp-preloader"></div></div></div>
-    <div class="oform hider" id="oform">
-
-    </div>
+    <!-- <div class="oform" id="oform">
+        <div class="tovaru-by-cart"></div>
+        <div class="forma-cart"></div>
+    </div> -->
     <footer>
         <div class="footer-top">
             <div class="container">

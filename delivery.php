@@ -100,9 +100,7 @@
         }
     </style>
     <script>
-        if (localStorage.getItem('display') === null) {
-            localStorage.setItem('display', 'grid');
-        }
+        
     </script>
     <style>
         .product-grid.grid4.col-1 .actions .cart .btn-general {

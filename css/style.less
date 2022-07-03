@@ -255,14 +255,23 @@ table {
     margin-left: 8px;
 }
 
+.korzin-click{
+    position: absolute;
+    bottom:0;
+    right:0; 
+    background-color: orange;
+    color: white;
+    font-weight: 700;
+}
+
 
 
 .del_elem{
-    margin-left: 8px;
+    margin-left: 15px;
     color: red;
     font-weight: 700;
     cursor: pointer;
-    border: 1px solid silver;
+    border: 1px solid #8b8b8b;
     border-radius: 4px;
     height: 26px;
     padding: 2px;
@@ -521,14 +530,45 @@ table {
 }
 
 .oform{
-        position: absolute;
-        left: 31%;
-        top: 0;
-        width: 500px;
-        height: 500px;
-        z-index: 32432434;
-        opacity: 1;
-        background-color: silver;
+    margin: 50px auto;
+    position: absolute;
+    left: 31%;
+    top: 12%;
+    width: 500px;
+    height: 500px;
+    z-index: 32432434;
+    opacity: 1;
+    background-color: #fff;
+    border: 3px solid silver;
+}
+
+.tovaru-by-cart{
+    background-color: #e8e1d8;
+    width: 97%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 15px;
+    overflow: scroll;
+    margin: 6px;
+}
+.tovaru-by-cart div{
+    margin-bottom: 10px;
+}
+.tovaru-by-cart div span{
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 14px;
+}
+.tovaru-by-cart div img{
+    width: 50px;
+    height: 50px;
+}
+
+.forma-cart{
+
 }
 
 .section::-webkit-scrollbar-thumb {

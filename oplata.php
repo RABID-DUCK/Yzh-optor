@@ -103,9 +103,7 @@ $dir_img = __DIR__ . '/img/tovaru/';
     </style>
     <script async="" src="./Информация об оплате _ Торговая компания Yzh.Optor_files/tag.js.Без названия"></script>
     <script>
-        if (localStorage.getItem('display') === null) {
-            localStorage.setItem('display', 'grid');
-        }
+        
     </script>
     <style>
         .product-grid.grid4.col-1 .actions .cart .btn-general {
