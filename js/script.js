@@ -1,6 +1,9 @@
 if (localStorage.getItem('display') === null) {
     localStorage.setItem('display', 'grid');
 }
+
+
+
 function init(elem, options) {
     elem.addClass('countdownHolder');
     $.each(['Days', 'Hours', 'Minutes', 'Sec'], function (i) {
@@ -22,8 +25,8 @@ function init(elem, options) {
 }
 var button_shopping = "Продолжить покупки";
 var button_checkout = "Оформление заказа";
-var link_checkout = "checkout/index.html";
-var link_newstorecheckout = "cart/index.html?route=checkout/newstorecheckout";
+var link_checkout = "checkout/index.php";
+var link_newstorecheckout = "cart/index.php?route=checkout/newstorecheckout";
 var text_showmore = 'Показать еще';
 var color_schem = '3';
 var loading_masked_img = '<img src="img/catalog/view/theme/newstore/image/ring-alt-' + color_schem + '.svg" />';

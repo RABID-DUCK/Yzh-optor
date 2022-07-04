@@ -1,3 +1,21 @@
+.category{
+    left: 0;
+    margin: 0;
+    padding: 1px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1090;
+    background: #fafafa;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 5px 5pxrgba(0, 0, 0, 0.15);
+    transition: all 300ms ease-in-out 0s;
+}
+
+.fa-shopping-basket{
+    margin-right: 8px;
+}
+
 .mfp-bg {
     top: 0;
     left: 0;
@@ -61,7 +79,6 @@
 
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
-    width: 100%;
     cursor: auto
 }
 
@@ -494,7 +511,6 @@ screen and (max-height: 300px) {
 }
 
 .owl-carousel {
-    display: none;
     position: relative;
     width: 100%;
     -ms-touch-action: pan-y
@@ -4812,7 +4828,6 @@ div.required .control-label:before {
 
     #search {
         padding: 0px;
-        margin-bottom: 5px
     }
 
     .btn-search-select {
@@ -11659,6 +11674,7 @@ header #search_word a {
 }
 
 #menu #menu-list {
+    display: none;
     width: 100%;
     border-color: #ddd;
     border-radius: 0px 0px 4px 4px;
@@ -15612,6 +15628,55 @@ footer h3 {
     position: absolute;
     bottom: 4px;
     right: 4px
+}
+
+.quick-cell-content{
+    font-size: 14px;
+}
+
+.hider body{
+    overflow: hidden;
+}
+.hider{
+    display: none;
+}
+.modalka-buy:not(.hider) .container{
+    filter: none;
+}
+#close-buy-block{
+    position: absolute;
+    right: -40px;
+    top: 3px;
+}
+.blurchik{
+    filter: blur(4px);
+}
+.hider{
+    filter: none;
+}
+#close-yey .hider .container{
+    filter: blur(4px);
+}
+.ladda-button{
+    background-color: #47c843;
+    border-color: #2cad28;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ladda-button:hover{
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+#htop_quickorder{
+    text-align: center;
 }
 
 .bootstrap-datetimepicker-widget td.active,
