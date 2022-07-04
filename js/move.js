@@ -295,24 +295,22 @@ korzina.addEventListener('click', delItem);
 
 // конец её
 
-var datak = JSON.stringify(localStorage);
 
 function buy_click() {
-            $.ajax({
-                url: 'constructor/korzina_buy.php',
-                type: 'POST',
-                data: {
-                    "localStorage": datak
-                },
-                success: function(response)
-                {
-                    console.log(response);
-                    window.location.href = "constructor/korzina_buy.php";
-                },
-                error: function(response2){
-                    console.log(response2);
-                }
-            });
+        var datak = JSON.stringify(localStorage);
+        $.ajax({
+            url: '../constructor/korzina_buy.php',
+            type: 'POST',
+            data: {
+                'localStorage': datak
+            },
+            success: function(response)
+            {
+                $('#davai').html(response);
+                console.log(response);
+                window.location.href = "../constructor/korzinka.php";
+            }
+    });
 };
 
 

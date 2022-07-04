@@ -8,14 +8,7 @@ $_SESSION['n_t'] = $elem['name'];
 $_SESSION['count_t'] = $count;
 $_SESSION['price_t'] = $elem['price'];
 
-if(isset($_POST['localStorage']) && !empty($_POST['localStorage'])){
-    $localStorage = json_encode($_POST['localStorage']);
-    header("Content-type:application/json");
-    print_r($localStorage);
-}else{
-    echo "GGGGG";
-}
-
+        
 ?>
 <head>
     <link rel="stylesheet" href="../css/style.less">
@@ -102,7 +95,7 @@ if(isset($_POST['localStorage']) && !empty($_POST['localStorage'])){
 
                                 </div>
                             </div>
-                                <input type="submit" class="btn btn-quickorder-one" value="Оформить Заказ" style="display: block;"><i class=" fa-fw"></i>
+                                <input type="submit" class="btn btn-quickorder-one" value="Оформить Заказ" style="display: block;" onclick="buy_click()"><i class=" fa-fw"></i>
                                 <input type="hidden" id="callback_url" value="" name="url_site">
                             <input type="hidden" id="this_prod_id" value="6366" name="this_prod_id">
 
