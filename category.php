@@ -1,9 +1,15 @@
 <?php
+session_start();
+
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 require 'constructor/connect.php';
 $dir_img = __DIR__ . './img/tovaru/';
-?>
 
+$local2 = json_decode($_POST['localStorage']);
+$local = $_POST['localStorage'];
+
+$_SESSION['korzina'] = $local;
+?>
 
 <!DOCTYPE HTML>
 <html dir="ltr" lang="ru">
@@ -30,7 +36,7 @@ $dir_img = __DIR__ . './img/tovaru/';
     <link rel="stylesheet" href="img/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/_50c36ab27da8bb5ead9c87671a74d2a9.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/ns-cache/_64b8609b55b5e3556b172af674a9b309.js"></script>
     <script defer src="js/script.js"></script>
     <style>
@@ -289,27 +295,6 @@ $dir_img = __DIR__ . './img/tovaru/';
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-md-2 col-md-push-4 cart_fix">
-                    <div class="shopping-cart ">
-                    <div id="cart" class="btn-group btn-block">
-                            <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn btn-block dropdown-toggle">
-                                <i class="shop-bag fa fa-cart-plus"></i>
-                                <i class="car-down fa fa-angle-down"></i>
-                                <span class="cart-total"><span class="products"><b>0</b> <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
-                                            р.</b></span></span>
-                            </button>
-
-                            <ul class="dropdown-menu pull-right" id="korzina">
-                                <li name="name">
-                                </li>
-                                <form action="constructor/buy.php" method="POST">
-    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
-                                </form>
-                            </ul>
-                           
-                        </div>
-                    </div>
-                </div>
                 <div class="search_fix col-md-4 col-md-pull-2">
                     <div id="search-fixed-top">
                     </div>
@@ -385,14 +370,12 @@ $dir_img = __DIR__ . './img/tovaru/';
                             <ul class="dropdown-menu pull-right" id="korzina">
                                 <li name="name">
                                 </li>
-                                <form action="constructor/buy.php" method="POST">
-    <button class="korzin-click" id="korzin_btnka" style="position: absolute; bottom:0; right:0; background-color: orange; color: white; font-weight: 700;">Оформить заказ</button>
-                                </form>
+                                    <button class="korzin-click btn-cart" id="korzin_btnka" onclick="buy_click()">Оформить заказ</button>
                             </ul>
                            
                         </div>
                     </div>
-                </div>  
+                </div>
                 <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
                         <div class="input-group pt20">
@@ -789,6 +772,14 @@ $dir_img = __DIR__ . './img/tovaru/';
                                     <div class="product-thumb transition">
                                         <div class="image">
                                             <div class="stickers-ns">
+                                                <!-- <div class="sticker-ns bestseller">
+                                                <i class="fa fa fa-rocket "></i>
+                                                <span>Лидер продаж!</span>
+                                            </div>
+                                            <div class="sticker-ns popular">
+                                                <i class="fa fa fa-eye "></i>
+                                                <span>Самые просматриваемые</span>
+                                            </div> -->
                                             </div>
                                             <a href="#">
                                                 <!-- FIXME '#' Сделать ссылку на элемент -->
@@ -798,7 +789,7 @@ $dir_img = __DIR__ . './img/tovaru/';
 
                                         <div class="caption">
                                             <div class="product-name">
-                                                <a href="#"><?= $elem['name'] ?></a>
+                                                <a href="#" id="name_tovara" name="text_cart"><?= $elem['name'] ?></a>
                                                 <!-- FIXME Сделать ссылку на элемент -->
                                             </div>
                                             <div class="product-model"><?= $elem['id'] ?></div>
@@ -834,14 +825,14 @@ $dir_img = __DIR__ . './img/tovaru/';
                                             </div>
                                             <div class="actions">
                                                 <div class="cart">
-                                                    <button class="btn btn-general" type="button" id="add_in_cart">
+                                                    <button class="btn btn-general" type="button" id="add_in_cart" >
                                                         <i class="fa fa-shopping-basket"></i><span>В корзину</span>
                                                     </button>
                                                 </div>
                                             </div>
                                             <div class="actions-quick-order">
                                                 <div class="quick-order">
-                                                <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
+                                                    <button class="btn btn-fastorder" type="button" data-original-title="Купить в 1 клик">
                                                         <i class="fa fa-shopping-bag fa-fw"></i> Купить в 1 клик
                                                     </button>
                                                 </div>
@@ -869,17 +860,6 @@ $dir_img = __DIR__ . './img/tovaru/';
     </div>
 
     <script>
-        $(window).load(function() {
-            if (localStorage.getItem('display') != 'price') {
-                $(".additional-image").removeClass('hidden');
-                $(".image-carousel-category").owlCarousel({
-                    singleItem: true,
-                    navigation: true,
-                    pagination: false,
-                    navigationText: ['<div class="btn btn-carousel-image-additional next-prod"><i class="fa fa-angle-left arrow"></i></div>', '<div class="btn btn-carousel-image-additional prev-prod"><i class="fa fa-angle-right arrow"></i></div>'],
-                    transitionStyle: 'fade'
-                });
-            }
             $('#list-view').click(function(e) {
                 $(".additional-image").addClass('hidden');
                 e.preventDefault();
@@ -1207,55 +1187,7 @@ $dir_img = __DIR__ . './img/tovaru/';
         </div>
     </footer>
 
-    <script>
-        function validateEmail($email) {
-            var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            return emailReg.test($email);
-        }
-
-        $(document).ready(function() {
-            $('#subcribe').click(function() {
-                var email = $('#input-newsletter').val();
-
-                if (email == '') {
-                    var error = 'Пожалуйста, введите адрес электронной почты!';
-                }
-
-                if (!validateEmail(email)) {
-                    var error = 'Пожалуйста, введите действующий адрес электронной почты!';
-                }
-
-                if (error != null) {
-                    $('#error-msg').html('');
-                    $('#error-msg').append('<b style=\"color:red\">' + error + '</b>');
-                } else {
-
-                    var dataString = 'email=' + email;
-                    $.ajax({
-                        url: 'index.php?route=common/footer/addToNewsletter',
-                        type: 'post',
-                        data: dataString,
-                        dataType: 'json',
-                        success: function(json) {
-                            if (json['warning']) {
-                                $('#error-msg').empty('');
-                                $('#input-newsletter').val('');
-                                $('#error-msg').append('<b style=\"color:green\">' + json['warning'] + '</b>');
-                            }
-                            if (json['success']) {
-                                $('#error-msg').empty('');
-                                $('#input-newsletter').val('');
-                                $('#error-msg').append('<b style=\"color:green\">' + json['success'] + '</b>');
-                            }
-
-                        }
-
-                    });
-                }
-
-            })
-        });
-    </script>
+  <script src="js/move.js"></script>
 
     <div id="tcb-call">
         <div class="tcb-phone">
@@ -1265,5 +1197,5 @@ $dir_img = __DIR__ . './img/tovaru/';
         <div class="tcb-layout2"></div>
         <div class="tcb-layout3"></div>
     </div>
-<script src="js/move.js"></script>
 </body>
+</html>

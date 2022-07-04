@@ -8,7 +8,14 @@ $_SESSION['n_t'] = $elem['name'];
 $_SESSION['count_t'] = $count;
 $_SESSION['price_t'] = $elem['price'];
 
-        
+// $local2 = json_decode($_POST['localStorage']);
+// $local = $_POST['localStorage'];
+// var_dump($local);
+// var_dump($local2);
+
+// $_SESSION['korzina'] = $local;
+
+$cartonka = $_SESSION['korzina'];
 ?>
 <head>
     <link rel="stylesheet" href="../css/style.less">
@@ -66,7 +73,7 @@ $_SESSION['price_t'] = $elem['price'];
                                     </div>
                                 </div>
                             </div>
-                            <form action="buy.php" method="POST">
+                            <form action="korzinka.php" method="POST">
                             <div class="col-sm-6 col-sm-12 form-group sections_block_rquaired">
                             <div class="input-group margin-bottom-sm">
                                 <input class="form-control contact-name" type="text" placeholder="Ваше Имя" value="" name="name_polz">

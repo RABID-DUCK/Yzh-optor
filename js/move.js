@@ -299,16 +299,15 @@ korzina.addEventListener('click', delItem);
 function buy_click() {
         var datak = JSON.stringify(localStorage);
         $.ajax({
-            url: '../constructor/korzina_buy.php',
+            url: 'index.php',
             type: 'POST',
             data: {
                 'localStorage': datak
             },
             success: function(response)
             {
-                $('#davai').html(response);
                 console.log(response);
-                window.location.href = "../constructor/korzinka.php";
+                window.location.href = "../constructor/korzina_buy.php";
             }
     });
 };

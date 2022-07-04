@@ -1,6 +1,13 @@
 <?php
+session_start();
+
 require 'constructor/connect.php';
 $dir_img = __DIR__ . '/img/tovaru/';
+
+$local2 = json_decode($_POST['localStorage']);
+$local = $_POST['localStorage'];
+
+$_SESSION['korzina'] = $local;
 ?>
 <!DOCTYPE HTML>
 <html dir="ltr" lang="ru">
@@ -390,23 +397,25 @@ $dir_img = __DIR__ . '/img/tovaru/';
                 </div>
             </div>
             <div class="box-cart  col-xs-12 col-xs-12 col-sm-4 col-md-2 col-md-push-4 col-sm-push-8">
-                <div class="shopping-cart ">
-                    <div id="cart" class="btn-group btn-block">
-                        <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn btn-block dropdown-toggle">
-                            <i class="shop-bag fa fa-cart-plus"></i>
-                            <i class="car-down fa fa-angle-down"></i>
-                            <span class="cart-total"><span class="products"><b>0</b> <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
+                    <div class="shopping-cart ">
+                        <div id="cart" class="btn-group btn-block">
+                            <button type="button" data-toggle="dropdown" data-loading-text="Загрузка..." class="btn btn-block dropdown-toggle">
+                                <i class="shop-bag fa fa-cart-plus"></i>
+                                <i class="car-down fa fa-angle-down"></i>
+                                <span class="cart-total"><span class="products"><b>0</b>
+                                 <span class="text_product">Tоваров,</span></span><span class="prices">на <b>0.00
                                             р.</b></span></span>
-                        </button>
+                            </button>
 
-                        <ul class="dropdown-menu pull-right">
-                            <li>
-                                <p class="text-center">В корзине пусто!</p>
-                            </li>
-                        </ul>
+                            <ul class="dropdown-menu pull-right" id="korzina">
+                                <li name="name">
+                                </li>
+                                    <button class="korzin-click btn-cart" id="korzin_btnka" onclick="buy_click()">Оформить заказ</button>
+                            </ul>
+                           
+                        </div>
                     </div>
                 </div>
-            </div>
             <div class="box-search  col-xs-12  col-sm-8 col-md-4 col-sm-pull-4 col-md-pull-2 search-top">
                     <div id="searchtop">
                         <div class="input-group pt20">

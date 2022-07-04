@@ -1,6 +1,12 @@
 <?php
+session_start();
 require 'constructor/connect.php';
 $dir_img = '/img/tovaru/';
+
+$local2 = json_decode($_POST['localStorage']);
+$local = $_POST['localStorage'];
+
+$_SESSION['korzina'] = $local;
 ?>
 
 <!DOCTYPE html>
@@ -668,34 +674,34 @@ $dir_img = '/img/tovaru/';
                         <div class="banner-info">
                             <div class="banner-title">Оплата</div>
                             <div class="banner-description">Узнайте как оплатить!</div>
-                        </div>
                     </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="banner-item is_a_link">
-                        <div class="banner-image">
-                            <img src="img/image/cache/catalog/image/icon/truck_photo-60x60.png" alt="Доставка">
-                        </div>
-                        <div class="banner-info">
-                            <div class="banner-title">Доставка</div>
-                            <div class="banner-description">Мы отправим ваш заказ в любую точку России и СНГ!</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="banner-item ">
-                        <div class="banner-image">
-                            <img src="img/image/cache/catalog/image/icon/vopros-60x60.png" alt="Поддержка 24/7">
-                        </div>
-                        <div class="banner-info">
-                            <div class="banner-title">Поддержка 24/7</div>
-                            <div class="banner-description">У Вас возникли вопросы?</div>
-                        </div>
-                    </div>
-                </div>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-item is_a_link">
+                    <div class="banner-image">
+                        <img src="img/image/cache/catalog/image/icon/truck_photo-60x60.png" alt="Доставка">
+                    </div>
+                    <div class="banner-info">
+                        <div class="banner-title">Доставка</div>
+                        <div class="banner-description">Мы отправим ваш заказ в любую точку России и СНГ!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="banner-item ">
+                    <div class="banner-image">
+                        <img src="img/image/cache/catalog/image/icon/vopros-60x60.png" alt="Поддержка 24/7">
+                    </div>
+                    <div class="banner-info">
+                        <div class="banner-title">Поддержка 24/7</div>
+                        <div class="banner-description">У Вас возникли вопросы?</div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
+    </div>
         <div class="row">
             <div class="col-sm-12">
                 <div class="container-module">
